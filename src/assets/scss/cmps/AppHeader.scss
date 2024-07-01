@@ -1,0 +1,16 @@
+header {
+    gap: rem(8px);
+
+    a {
+        svg {
+            width: rem(30px);
+            height: rem(30px);
+            rotate: -90deg;
+        }
+    }
+
+    span {
+        font-family: AirbnbCereal-Medium;
+        font-size: rem(18px);
+    }
+}

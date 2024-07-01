@@ -5,6 +5,7 @@ import { Suspense, lazy } from 'react';
 import { store } from './store/store'
 
 import { Home } from './pages/Home'
+import AppHeader from './cmps/AppHeader';
 
 
 export function App() {
@@ -12,6 +13,7 @@ export function App() {
         <Provider store={store}>
             <Router>
                 <section className='main-app'>
+                    <AppHeader />
 
                     <main className='container'>
                         <Routes>

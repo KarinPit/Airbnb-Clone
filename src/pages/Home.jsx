@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react'
-import imgUrl from '../assets/imgs/react.png'
+import imgUrl from '../../public/images/react.png'
 import { utilService } from '../services/util.service'
 import { useDispatch, useSelector } from 'react-redux'
 
