@@ -14,7 +14,6 @@ export default function AppHeader() {
             <div className='nav-options'>
                 <a href="#" className='active'>Stays</a>
                 <a href="#">About me</a>
-                <a href="#">Contact</a>
             </div>
 
             <div className='user-nav'>
@@ -33,7 +32,7 @@ export default function AppHeader() {
                 </div>
             </div>
 
-            <div className='filter-stay'>
+            <div className='filter-search-container'>
                 <FilterStay />
             </div>
         </header>

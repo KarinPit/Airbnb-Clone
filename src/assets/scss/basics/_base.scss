@@ -34,6 +34,7 @@ p {
 }
 
 a {
+    display: flex;
     text-decoration: none;
     color: inherit;
     cursor: pointer;
@@ -47,6 +48,10 @@ a:not(.logo, .active):hover {
     // text-decoration: underline;
     background-color: rgb(247, 247, 247);
     border-radius: rem(20px);
+}
+
+a, p {
+    line-height: 1.5;
 }
 
 button {
@@ -101,15 +106,18 @@ input {
 
 
 .primary-bg {
-    background-color: #FF385C;
+    background: #FF385C;
+
+    // background: linear-gradient(90deg, #FF385C 95%, #E00B41 5%);
+
 }
 
 .primary-fill {
-    fill: #FF385C
+    fill: #FF385C;
 }
 
 .primary-color {
-    color: #FF385C
+    color: #FF385C;
 }
 
 .grey-border {
