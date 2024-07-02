@@ -4,12 +4,41 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: rem(20px);
 }
 
 /* GRIDS */
 .simple-cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    grid-gap: 10px;
+    grid-gap: rem(10px);
+}
+
+/* Responsive Layout */
+
+.main-app {
+    display: grid;
+    grid-template-columns: rem(80px) 1fr rem(80px);
+    grid-template-rows: rem(80px) 1fr auto;
+    padding: 0 rem(40px);
+
+    header {
+        grid-column: 1/-1;
+        grid-row: 1;
+    }
+
+    main {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    @include for-narrow-layout {}
+
+    @include for-extra-narrow-layout {}
+
+    @include for-normal-layout {}
+
+    @include for-wide-layout {
+        padding: 0 rem(80px);
+    }
 }

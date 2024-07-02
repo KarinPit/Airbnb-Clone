@@ -1,0 +1,30 @@
+.filter-search {
+    display: flex;
+    align-items: center;
+    gap: rem(10px);
+    padding: rem(8px) rem(16px);
+    border-radius: rem(30px);
+    box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+    font-family: AirbnbCereal-Book;
+
+    .border-div {
+        border-left: 1px solid rgb(169, 168, 168);
+        height: rem(24px);
+    }
+
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        border-radius: 50%;
+        padding: rem(10px);
+        margin-inline-start: rem(10px);
+
+        svg {
+            fill: white;
+            width: rem(20px);
+            height: rem(20px);
+        }
+    }
+}

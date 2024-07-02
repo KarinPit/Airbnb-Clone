@@ -39,8 +39,14 @@ a {
     cursor: pointer;
 }
 
-a:hover {
-    text-decoration: underline;
+a:not(.logo) {
+    padding: rem(10px) rem(14px);
+}
+
+a:not(.logo, .active):hover {
+    // text-decoration: underline;
+    background-color: rgb(247, 247, 247);
+    border-radius: rem(20px);
 }
 
 button {
@@ -88,13 +94,24 @@ input {
     width: 100%;
 }
 
-.main-app > footer {
+.main-app>footer {
     background-color: #111;
     color: white;
 }
 
-a.active {
-    color: rgb(84, 17, 147);
-    font-weight: 600;
-    font-size: 20px;
+
+.primary-bg {
+    background-color: #FF385C;
+}
+
+.primary-fill {
+    fill: #FF385C
+}
+
+.primary-color {
+    color: #FF385C
+}
+
+.grey-border {
+    border: 1px solid #DDDDDD;
 }
