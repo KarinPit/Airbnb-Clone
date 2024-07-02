@@ -1,7 +1,7 @@
 header {
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-template-rows: rem(80px) auto auto;
+    grid-template-rows: rem(80px) rem(80px) auto;
     align-items: center;
     justify-content: space-between;
     margin-block-start: rem(10px);
@@ -37,6 +37,7 @@ header {
             }
 
             span {
+                display: none;
                 font-family: AirbnbCereal-ExtraBold;
                 font-size: rem(22px);
             }
@@ -44,12 +45,11 @@ header {
 
         .nav-options {
             display: flex;
-            grid-column: 2;
+            grid-column: 1/-1;
             grid-row: 2;
             align-items: center;
-            justify-content: end;
+            justify-content: center;
             gap: rem(20px);
-            padding-inline-start: 10vw;
 
             a {
                 font-family: AirbnbCereal-Light;
@@ -129,8 +129,16 @@ header {
 
 @include for-wide-layout {
     header {
+        .logo {
+            span {
+                display: block;
+            }
+        }
+
         .nav-options {
+            grid-column: 2;
             grid-row: 1;
+            padding-inline-start: 10vw;
         }
 
         .filter-search-container {

@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: space-between;
     gap: rem(10px);
-    padding: rem(8px) rem(8px) rem(8px) rem(32px);
+    padding: rem(8px) rem(8px) rem(8px) rem(20px);
     min-width: rem(340px);
     width: 100%;
     max-width: rem(850px);
@@ -14,63 +14,113 @@
     font-size: rem(12px);
     color: rgb(92, 92, 92);
     z-index: 1;
-
-    .where-input {
-        flex: 2.5;
-    }
-
-    .checkin-input {
-        flex: 1;
-    }
-
-    .checkout-input {
-        flex: 1;
-    }
-
-    .who-input {
-        flex: 1.8;
-    }
-
-    .checkin-input,
-    .checkout-input,
-    .who-input {
-        padding-inline: rem(10px);
-    }
+    min-height: rem(56px);
 
     .where-input,
     .checkin-input,
     .checkout-input,
     .who-input {
-        p:nth-child(2) {
-            font-family: AirbnbCereal-Light;
-            font-size: rem(14px);
-        }
+        display: none;
     }
 
     .border-div {
-        border-left: 1px solid rgb(169, 168, 168);
-        height: rem(24px);
+        display: none;
     }
 
     button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: none;
-        border-radius: 50%;
-        padding: rem(14px);
-        margin-inline-start: rem(10px);
-        transition: background 300ms;
+        display: none;
+    }
 
-        &:hover {
-            background: #E00B41;
-            // background: linear-gradient(90deg, #FF385C 5%, #E00B41 95%);
-        }
+    .minimized-filter {
+        display: flex;
+        align-items: center;
+        gap: rem(14px);
 
         svg {
-            fill: white;
-            width: rem(20px);
-            height: rem(20px);
+            width: rem(24px);
+            height: rem(24px);
+        }
+
+        p:first-child {
+            font-size: rem(14px);
+            font-family: AirbnbCereal-Medium;
+        }
+
+        p:nth-child(2) {
+            font-size: rem(11px);
+            font-family: AirbnbCereal-Light;
+        }
+    }
+}
+
+@include for-normal-layout {
+    .filter-search {
+        padding: rem(8px) rem(8px) rem(8px) rem(32px);
+
+        .where-input {
+            flex: 2.5;
+        }
+
+        .checkin-input {
+            flex: 1;
+        }
+
+        .checkout-input {
+            flex: 1;
+        }
+
+        .who-input {
+            flex: 1.8;
+        }
+
+        .checkin-input,
+        .checkout-input,
+        .who-input {
+            padding-inline: rem(10px);
+        }
+
+        .where-input,
+        .checkin-input,
+        .checkout-input,
+        .who-input {
+            display: block;
+
+            p:nth-child(2) {
+                font-family: AirbnbCereal-Light;
+                font-size: rem(14px);
+            }
+        }
+
+        .border-div {
+            display: block;
+            border-left: 1px solid rgb(169, 168, 168);
+            height: rem(24px);
+        }
+
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            border-radius: 50%;
+            padding: rem(14px);
+            margin-inline-start: rem(10px);
+            transition: background 300ms;
+
+            &:hover {
+                background: #E00B41;
+                // background: linear-gradient(90deg, #FF385C 5%, #E00B41 95%);
+            }
+
+            svg {
+                fill: white;
+                width: rem(20px);
+                height: rem(20px);
+            }
+        }
+
+        .minimized-filter {
+            display: none;
         }
     }
 }
