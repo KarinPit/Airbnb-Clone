@@ -1,20 +1,60 @@
-import FilterStay from './FilterStay';
+import { useState, useEffect } from 'react';
+import { motion, useScroll, AnimatePresence } from "framer-motion"
+
+import { FilterStay, MinimizedFilter } from './FilterStay';
 
 import airbnbLogo from '../../public/svg/airbnb-logo.svg'
 
 
 export default function AppHeader() {
+    const [isScrolled, setIsScrolled] = useState(false)
+    const { scrollY } = useScroll()
+
+    useEffect(() => {
+        return scrollY.onChange((latest) => {
+            setIsScrolled(latest > 0);
+        });
+    }, [scrollY])
+
+
     return (
-        <header>
+        <header className={`${isScrolled ? 'scrolled' : ''}`}>
             <a href="" className="logo">
                 <img src={airbnbLogo} alt="airbnc logo" />
                 <span className="primary-color">airbnc</span>
             </a>
 
-            <div className='nav-options'>
-                <a href="#" className='active'>Stays</a>
-                <a href="#">About me</a>
-            </div>
+            <AnimatePresence>
+                {isScrolled ? (
+                    <motion.div
+                        key="nav-options-scrolled"
+                        className='nav-options'
+                        initial={{ opacity: 1, y: 0 }}
+                        animate={{ opacity: 0, y: -100, scale: 0 }}
+                        exit={{ opacity: 0, y: 0 }}
+                        transition={{
+                            y: { duration: 0.5 }
+                        }}
+                    >
+                        <a href="#" className='active'>Stays</a>
+                        <a href="#">About me</a>
+                    </motion.div>
+                ) : (
+                    <motion.div
+                        key="nav-options-default"
+                        className='nav-options'
+                        initial={{ y: -50 }}
+                        animate={{ y: 0 }}
+                        exit={{ y: 0 }}
+                        transition={{
+                            y: { duration: 0.1 }
+                        }}
+                    >
+                        <a href="#" className='active'>Stays</a>
+                        <a href="#">About me</a>
+                    </motion.div>
+                )}
+            </AnimatePresence>
 
             <div className='user-nav'>
                 <a href="#">Switch to hosting</a>
@@ -32,9 +72,39 @@ export default function AppHeader() {
                 </div>
             </div>
 
-            <div className='filter-search-container'>
-                <FilterStay />
-            </div>
+            <AnimatePresence>
+                {isScrolled ? (
+                    <motion.div
+                        key="MinimizedFilter"
+                        className="filter-search-container"
+                        initial={{ opacity: 0, y: 50, scale: 1 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 20, scale: 1 }}
+                        transition={{
+                            opacity: { duration: 0 },
+                            y: { duration: 0.25 },
+                            scale: { duration: 0.25 }
+                        }}
+                    >
+                        <MinimizedFilter />
+                    </motion.div>
+                ) : (
+                    <motion.div
+                        key="FilterStay"
+                        className="filter-search-container"
+                        initial={{ opacity: 0, y: -50, scale: 0.5 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: -20, scale: 0.5 }}
+                        transition={{
+                            opacity: { duration: 0 },
+                            scale: { duration: 0.25 },
+                            y: { duration: 0.25 }
+                        }}
+                    >
+                        <FilterStay />
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </header>
     )
 }

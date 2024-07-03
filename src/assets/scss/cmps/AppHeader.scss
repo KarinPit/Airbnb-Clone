@@ -1,6 +1,8 @@
 header {
+    position: sticky;
+    top: 0;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto 1fr auto;
     grid-template-rows: rem(80px) rem(80px) auto;
     align-items: center;
     justify-content: space-between;
@@ -17,6 +19,17 @@ header {
         justify-content: center;
         align-items: center;
         grid-column: 1/-1;
+    }
+
+    &.scrolled {
+
+        .filter-search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-column: 2;
+            grid-row: 1;
+        }
     }
 }
 
@@ -72,7 +85,7 @@ header {
             grid-row: 1;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: end;
 
             a {
                 font-family: AirbnbCereal-Book;
@@ -129,6 +142,8 @@ header {
 
 @include for-wide-layout {
     header {
+        grid-template-columns: 33% 1fr 33%;
+
         .logo {
             span {
                 display: block;
@@ -138,11 +153,16 @@ header {
         .nav-options {
             grid-column: 2;
             grid-row: 1;
-            padding-inline-start: 10vw;
         }
 
         .filter-search-container {
             grid-row: 2;
+        }
+
+        .user-nav {
+            a:first-child {
+                padding-inline-start: 0;
+            }
         }
     }
 }
