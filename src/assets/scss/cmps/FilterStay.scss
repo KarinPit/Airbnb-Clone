@@ -15,9 +15,6 @@
 }
 
 .filter-search {
-    min-height: rem(56px);
-    min-width: rem(340px);
-    max-width: rem(850px);
     width: 100%;
     font-size: rem(12px);
 
@@ -52,6 +49,10 @@
         }
 
         p:nth-child(2) {
+            white-space: nowrap;
+            overflow-x: hidden;
+            text-overflow: ellipsis;
+            width: 48vw;
             font-size: rem(11px);
             font-family: AirbnbCereal-Light;
         }
@@ -93,6 +94,9 @@
 
 @include for-normal-layout {
     .filter-search {
+        min-height: rem(56px);
+        min-width: rem(340px);
+        max-width: rem(850px);
         padding: rem(8px) rem(8px) rem(8px) rem(32px);
 
         .where-input {

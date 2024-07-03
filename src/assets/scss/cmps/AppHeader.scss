@@ -1,6 +1,6 @@
 header {
     position: sticky;
-    top: 0;
+    top: rem(10px);
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-template-rows: rem(80px) rem(80px) auto;
@@ -105,7 +105,6 @@ header {
                 padding: rem(8px) rem(8px) rem(8px) rem(14px);
                 border-radius: rem(30px);
                 transition: 200ms box-shadow;
-                margin-inline-start: rem(12px);
 
                 &:hover {
                     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
@@ -142,7 +141,7 @@ header {
 
 @include for-wide-layout {
     header {
-        grid-template-columns: 33% 1fr 33%;
+        grid-template-columns: 33% 33% 1fr;
 
         .logo {
             span {

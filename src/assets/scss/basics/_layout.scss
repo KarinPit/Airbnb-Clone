@@ -20,6 +20,7 @@
     display: grid;
     grid-template-columns: rem(80px) 1fr rem(80px);
     grid-template-rows: rem(80px) 1fr auto;
+    justify-content: center;
     padding: 0 rem(40px);
 
     header {

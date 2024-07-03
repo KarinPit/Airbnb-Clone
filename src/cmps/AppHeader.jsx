@@ -8,12 +8,23 @@ import airbnbLogo from '../../public/svg/airbnb-logo.svg'
 
 export default function AppHeader() {
     const [isScrolled, setIsScrolled] = useState(false)
+    const [isWideScreen, setIsWideScreen] = useState(window.innerWidth > 768)
     const { scrollY } = useScroll()
 
     useEffect(() => {
-        return scrollY.onChange((latest) => {
-            setIsScrolled(latest > 0);
-        });
+        function handleResize() {
+            setIsWideScreen(window.innerWidth > 768);
+        }
+
+        window.addEventListener('resize', handleResize)
+        scrollY.onChange((latest) => {
+            setIsScrolled(latest > 0)
+        })
+
+        return () => {
+            window.removeEventListener('resize', handleResize)
+        }
+
     }, [scrollY])
 
 
@@ -25,7 +36,7 @@ export default function AppHeader() {
             </a>
 
             <AnimatePresence>
-                {isScrolled ? (
+                {isScrolled && isWideScreen ? (
                     <motion.div
                         key="nav-options-scrolled"
                         className='nav-options'
@@ -73,13 +84,13 @@ export default function AppHeader() {
             </div>
 
             <AnimatePresence>
-                {isScrolled ? (
+                {isScrolled && isWideScreen ? (
                     <motion.div
                         key="MinimizedFilter"
                         className="filter-search-container"
-                        initial={{ opacity: 0, y: 50, scale: 1 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: 20, scale: 1 }}
+                        initial={{ opacity: 0, y: 50, }}
+                        animate={{ opacity: 1, y: 0, }}
+                        exit={{ opacity: 0, y: 20 }}
                         transition={{
                             opacity: { duration: 0 },
                             y: { duration: 0.25 },
