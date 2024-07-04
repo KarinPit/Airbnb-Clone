@@ -5,7 +5,7 @@ import { Suspense, lazy, useState } from 'react';
 import { store } from './store/store'
 import { Home } from './pages/Home'
 import AppHeader from './cmps/AppHeader';
-import FilterModalContext from './context/FilterModalContext';
+import FilterContext from './context/FilterContext';
 
 
 export function App() {
@@ -14,7 +14,7 @@ export function App() {
     return (
         <Provider store={store}>
             <Router>
-                <FilterModalContext.Provider value={{ openFilter, setOpenFilter }}>
+                <FilterContext.Provider value={{ openFilter, setOpenFilter }}>
                     <section className='main-app' onClick={(e) => {
                         if (e.target.className === 'container'
                             || e.target.className === 'main-app'
@@ -31,7 +31,7 @@ export function App() {
                         </main>
 
                     </section>
-                </FilterModalContext.Provider>
+                </FilterContext.Provider>
             </Router>
         </Provider >
 

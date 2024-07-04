@@ -1,11 +1,11 @@
 import { motion } from "framer-motion"
 import { useState, useRef, useContext } from "react"
-import FilterModalContext from "../context/FilterModalContext"
+import FilterContext from "../context/FilterContext"
 
 
 export function FilterStay() {
     const [clickedElement, setClickedElement] = useState(null)
-    const context = useContext(FilterModalContext)
+    const context = useContext(FilterContext)
     const whereRef = useRef(null)
     const checkInRef = useRef(null)
     const checkOutRef = useRef(null)

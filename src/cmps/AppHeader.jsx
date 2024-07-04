@@ -1,19 +1,22 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { motion, useScroll, AnimatePresence } from "framer-motion"
 
-import { FilterStay, MinimizedFilter } from './FilterStay';
+import { FilterStay, MinimizedFilter } from './FilterStay'
+import { FilterStayModal } from './FilterStayModal'
+import FilterContext from "../context/FilterContext"
 
 import airbnbLogo from '../../public/svg/airbnb-logo.svg'
 
 
-export default function AppHeader({ openFilter }) {
+export default function AppHeader() {
     const [isScrolled, setIsScrolled] = useState(false)
     const [isWideScreen, setIsWideScreen] = useState(window.innerWidth > 768)
     const { scrollY } = useScroll()
+    const context = useContext(FilterContext)
 
     useEffect(() => {
         function handleResize() {
-            setIsWideScreen(window.innerWidth > 768);
+            setIsWideScreen(window.innerWidth > 768)
         }
 
         window.addEventListener('resize', handleResize)
@@ -101,20 +104,26 @@ export default function AppHeader({ openFilter }) {
                         <MinimizedFilter isScrolled={isScrolled} />
                     </motion.div>
                 ) : (
-                    <motion.div
-                        key="FilterStay"
-                        className="filter-search-container"
-                        initial={{ opacity: 0, y: -50, scale: 0.5 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: -20, scale: 0.5 }}
-                        transition={{
-                            opacity: { duration: 0 },
-                            scale: { duration: 0.25 },
-                            y: { duration: 0.25 }
-                        }}
-                    >
-                        <FilterStay />
-                    </motion.div>
+                    <>
+                        <motion.div
+                            key="FilterStay"
+                            className="filter-search-container"
+                            initial={{ opacity: 0, y: -50, scale: 0.5 }}
+                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                            exit={{ opacity: 0, y: -20, scale: 0.5 }}
+                            transition={{
+                                opacity: { duration: 0 },
+                                scale: { duration: 0.25 },
+                                y: { duration: 0.25 }
+                            }}
+                        >
+                            <FilterStay />
+                            {context.openFilter ?
+                                <FilterStayModal />
+                                : ''}
+
+                        </motion.div>
+                    </>
                 )}
             </AnimatePresence>
         </header>
