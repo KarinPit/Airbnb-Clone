@@ -12,7 +12,7 @@ export function FilterStay() {
     const whoRef = useRef(null)
 
     function handleClick(element) {
-        context.setOpenFilter(true)
+        context.setOpenFilter(element.current.className)
     }
 
     return (

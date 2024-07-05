@@ -14,7 +14,7 @@ export function App() {
     return (
         <Provider store={store}>
             <Router>
-                <FilterContext.Provider value={{ openFilter, setOpenFilter }}>
+                <FilterContext.Provider value={{ openFilter, setOpenFilter}}>
                     <section className='main-app' onClick={(e) => {
                         if (e.target.className === 'container'
                             || e.target.className === 'main-app'
@@ -26,7 +26,7 @@ export function App() {
 
                         <main className='container'>
                             <Routes>
-                                {/* <Route path="/" element={<Home />} /> */}
+                                <Route path="/" element={<Home />} />
                             </Routes>
                         </main>
 
