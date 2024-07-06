@@ -18,11 +18,11 @@ const maps = [
 
 export function WhereModal() {
     const [clickedIndex, setClickedIndex] = useState(null)
-    const [focusedIndex, setFocusedIndex] = useState(null)
 
-    const handleClick = (index) => {
+    function handleClick(index) {
         setClickedIndex(index === clickedIndex ? null : index)
     }
+
 
     return (
         <div className="where-modal">
@@ -53,7 +53,8 @@ export function WhereModal() {
                         <div
                             key={index}
                             className={`country ${clickedIndex === index ? 'shrink' : ''}`}
-                            onClick={() => handleClick(index)}
+                            onMouseDown={() => handleClick(index)}
+                            onMouseOut={() => setClickedIndex(null)}
                         >
                             <img src={map.src} alt={map.label} />
                             <p>{map.label}</p>
