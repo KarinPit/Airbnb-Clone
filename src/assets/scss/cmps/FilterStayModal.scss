@@ -1,0 +1,11 @@
+.filter-modal {
+    position: absolute;
+    top: rem(80px);
+    min-width: rem(340px);
+    width: 100%;
+    max-width: rem(850px);
+    border-radius: rem(32px);
+    box-shadow: 0 3px 12px 0 rgb(0 0 0/0.15);
+    padding: rem(24px) rem(24px) rem(32px) rem(32px);
+    background-color: #fff;
+}

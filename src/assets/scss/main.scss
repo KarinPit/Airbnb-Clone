@@ -1,0 +1,25 @@
+/* Setup */
+
+@import "setup/variables";
+@import "setup/functions";
+@import "setup/mixins";
+@import "setup/typography";
+
+/*  Basics */
+
+@import "basics/base";
+@import "basics/helpers";
+@import "basics/layout";
+@import "basics/animations";
+
+/* Pages */
+
+@import "pages/Home.scss";
+
+/* Components */
+
+@import "cmps/AppHeader.scss";
+@import "cmps/FilterStay.scss";
+@import "cmps/FilterStayModal.scss";
+@import "cmps/WhereModal.scss";
+@import "cmps/CalendarPicker.scss";
