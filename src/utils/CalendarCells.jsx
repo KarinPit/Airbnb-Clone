@@ -40,7 +40,7 @@ export function CalendarCells({ monthDate, today, range, hoveredDate, onDateClic
                         } ${isSameDay(currentDateObj, hoveredDate)
                             ? 'hover-selected-date'
                             : ''
-                        }`}
+                        }`.replace(/\s+/g, ' ').trim()}
                     onClick={() => onDateClick(currentDateObj)}
                     onMouseEnter={() => onDateHover(currentDateObj)}
                     onMouseLeave={() => onDateHover(null)}
@@ -70,18 +70,17 @@ export function CalendarCells({ monthDate, today, range, hoveredDate, onDateClic
                 days.push(
                     <td
                         key={date}
-                        className={`col cell ${isSelectedStart ? 'selected selected-start' : ''
-                            } ${isSelectedEnd ? 'selected selected-end' : ''} ${isInRange ? 'in-range' : ''
-                            } ${isPassed ? 'passed' : ''} ${isWithinInterval(currentDateObj, {
+                        className={`col cell ${[
+                            isSelectedStart ? 'selected selected-start' : '',
+                            isSelectedEnd ? 'selected selected-end' : '',
+                            isInRange ? 'in-range' : '',
+                            isPassed ? 'passed' : '',
+                            isWithinInterval(currentDateObj, {
                                 start: startOfDay(range.start),
                                 end: endOfDay(hoveredDate),
-                            })
-                                ? 'hovered-date'
-                                : ''
-                            } ${isSameDay(currentDateObj, hoveredDate)
-                                ? 'hover-selected-date'
-                                : ''
-                            }`}
+                            }) ? 'hovered-date' : '',
+                            isSameDay(currentDateObj, hoveredDate) ? 'hover-selected-date' : ''
+                        ].join(' ')}`.replace(/\s+/g, ' ').trim()}
                         onClick={() => onDateClick(currentDateObj)}
                         onMouseEnter={() => onDateHover(currentDateObj)}
                         onMouseLeave={() => onDateHover(null)}
