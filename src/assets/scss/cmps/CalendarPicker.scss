@@ -10,7 +10,7 @@
             justify-content: center;
 
             tr:first-child {
-                margin-block-end: rem(16px);
+                margin-block-end: 16px;
             }
         }
 
@@ -23,90 +23,55 @@
         tr {
             display: flex;
             justify-content: space-between;
-            gap: rem(8px);
             width: 100%;
 
             td {
+                position: relative;
                 display: flex;
                 justify-content: center;
                 align-items: center;
 
-                &:hover:not(.passed) {
-                    border: 1px solid #000;
-                    border-radius: 50%;
+                &.in-range {
+                    background-color: #ddd;
                 }
 
-                &.passed {
-                    color: #b7b7b7;
+                &.selected-start.hovered-date {
+                    border-radius: 50% 0 0 50%;
+                    background-color: #ddd;
                 }
 
-                &.selected-start,
-                &.selected-end,
-                &.hover-selected-date {
-                    color: #fff;
-                    background-color: #000;
-                    border-radius: 50%;
-                    z-index: 1;
+                &.hover-selected-date.hovered-date {
+                    background-color: #ddd;
+                    border-radius: 0 50% 50% 0;
                 }
 
-                &.in-range:not(.selected-start, .selected-end),
-                &.hovered-date:not(.selected-start, .selected-end, .hover-selected-date) {
-                    position: relative;
-                    background-color: rgb(247, 247, 247);
-                }
+                div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: 100%;
 
-                &.in-range:not(.selected-start, .selected-end) {
-                    z-index: 0;
+                    &:hover:not(.passed) {
+                        border: 1px solid #000;
+                        border-radius: 50%;
+                    }
 
-                    &::before {
-                        position: absolute;
-                        top: 0;
-                        left: -50%;
-                        content: '';
-                        width: 50%;
-                        height: 100%;
+                    &.passed {
+                        color: #b7b7b7;
+                    }
+
+                    &.selected-start,
+                    &.selected-end,
+                    &.hover-selected-date {
+                        color: #fff;
+                        background-color: #000;
+                        border-radius: 50%;
+                    }
+
+                    &.in-range:not(.selected-start, .selected-end),
+                    &.hovered-date:not(.selected-start, .selected-end, .hover-selected-date) {
                         background-color: rgb(247, 247, 247);
-                        z-index: -1;
-                    }
-
-                    &::after {
-                        position: absolute;
-                        top: 0;
-                        left: 100%;
-                        content: '';
-                        width: 55%;
-                        height: 100%;
-                        background-color: rgb(247, 247, 247);
-                        z-index: -1;
-                    }
-
-                    &:first-child {
-
-                        
-                        &::before {
-                            position: absolute;
-                            top: 0;
-                            left: 100%;
-                            content: '';
-                            width: 0%;
-                            height: 100%;
-                            background-color: red;
-                            z-index: -1;
-                        }
-                    }
-
-                    &:last-child {
-
-                        &::after {
-                            position: absolute;
-                            top: 0;
-                            left: 100%;
-                            content: '';
-                            width: 0%;
-                            height: 100%;
-                            background-color: red;
-                            z-index: -1;
-                        }
                     }
                 }
             }
@@ -114,13 +79,13 @@
 
         th:not(.month-name),
         td {
-            width: rem(44px);
-            height: rem(44px)
+            width: 44px;
+            height: 44px;
         }
     }
 
     svg {
-        width: rem(20px);
-        height: rem(20px);
+        width: 20px;
+        height: 20px;
     }
 }

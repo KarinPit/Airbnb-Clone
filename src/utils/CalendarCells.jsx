@@ -27,9 +27,8 @@ export function CalendarCells({ monthDate, today, range, hoveredDate, onDateClic
                 })
 
             days.push(
-                <td
-                    key={date}
-                    className={`col cell ${isSelectedStart ? 'selected selected-start' : ''
+                <td key={date}>
+                    <div className={`${isSelectedStart ? 'selected selected-start' : ''
                         } ${isSelectedEnd ? 'selected selected-end' : ''} ${isInRange ? 'in-range' : ''
                         } ${isPassed ? 'passed' : ''} ${isWithinInterval(currentDateObj, {
                             start: startOfDay(range.start),
@@ -41,11 +40,11 @@ export function CalendarCells({ monthDate, today, range, hoveredDate, onDateClic
                             ? 'hover-selected-date'
                             : ''
                         }`.replace(/\s+/g, ' ').trim()}
-                    onClick={() => onDateClick(currentDateObj)}
-                    onMouseEnter={() => onDateHover(currentDateObj)}
-                    onMouseLeave={() => onDateHover(null)}
-                >
-                    {date}
+                        onClick={() => onDateClick(currentDateObj)}
+                        onMouseEnter={() => onDateHover(currentDateObj)}
+                        onMouseLeave={() => onDateHover(null)}>
+                        {date}
+                    </div>
                 </td>
             )
             date++
@@ -68,11 +67,22 @@ export function CalendarCells({ monthDate, today, range, hoveredDate, onDateClic
                     })
 
                 days.push(
-                    <td
-                        key={date}
-                        className={`col cell ${[
-                            isSelectedStart ? 'selected selected-start' : '',
-                            isSelectedEnd ? 'selected selected-end' : '',
+                    <td key={date}
+                        className={`${[
+                            isSelectedStart ? 'selected-start' : '',
+                            isSelectedEnd ? 'selected-end' : '',
+                            isInRange ? 'in-range' : '',
+                            isPassed ? 'passed' : '',
+                            isWithinInterval(currentDateObj, {
+                                start: startOfDay(range.start),
+                                end: endOfDay(hoveredDate),
+                            }) ? 'hovered-date' : '',
+                            isSameDay(currentDateObj, hoveredDate) ? 'hover-selected-date' : ''
+                        ].join(' ')}`.replace(/\s+/g, ' ').trim()}>
+
+                        <div className={`${[
+                            isSelectedStart ? 'selected-start' : '',
+                            isSelectedEnd ? 'selected-end' : '',
                             isInRange ? 'in-range' : '',
                             isPassed ? 'passed' : '',
                             isWithinInterval(currentDateObj, {
@@ -81,11 +91,11 @@ export function CalendarCells({ monthDate, today, range, hoveredDate, onDateClic
                             }) ? 'hovered-date' : '',
                             isSameDay(currentDateObj, hoveredDate) ? 'hover-selected-date' : ''
                         ].join(' ')}`.replace(/\s+/g, ' ').trim()}
-                        onClick={() => onDateClick(currentDateObj)}
-                        onMouseEnter={() => onDateHover(currentDateObj)}
-                        onMouseLeave={() => onDateHover(null)}
-                    >
-                        {date}
+                            onClick={() => onDateClick(currentDateObj)}
+                            onMouseEnter={() => onDateHover(currentDateObj)}
+                            onMouseLeave={() => onDateHover(null)}>
+                            {date}
+                        </div>
                     </td>
                 )
 
