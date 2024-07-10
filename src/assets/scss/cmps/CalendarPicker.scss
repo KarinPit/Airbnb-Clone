@@ -1,6 +1,18 @@
+:root {
+    --border-radius-full: 50%;
+    --border-radius-left: 50% 0 0 50%;
+    --border-radius-right: 0 50% 50% 0;
+    --font-size: 14px;
+    --font-family: AirbnbCereal-Medium;
+    --color-passed: #b7b7b7;
+    --color-background: rgb(247, 247, 247);
+    --color-selected: #000;
+    --color-text-selected: #fff;
+}
+
 .calendar-picker {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
 
     table {
@@ -10,7 +22,7 @@
             justify-content: center;
 
             tr:first-child {
-                margin-block-end: 16px;
+                margin-bottom: rem(16px);
             }
         }
 
@@ -18,6 +30,13 @@
             &.month-name {
                 margin-inline: auto;
             }
+
+        }
+
+        th:not(.month-name),
+        td {
+            width: rem(48px);
+            height: rem(48px);
         }
 
         tr {
@@ -25,24 +44,55 @@
             justify-content: space-between;
             width: 100%;
 
+            &.day-names {
+                font-size: rem(12px);
+                color: grey;
+            }
+
             td {
                 position: relative;
                 display: flex;
                 justify-content: center;
                 align-items: center;
 
-                &.in-range {
-                    background-color: #ddd;
+                &:not(.blank-td, .passed) {
+                    cursor: pointer;
                 }
 
-                &.selected-start.hovered-date {
-                    border-radius: 50% 0 0 50%;
-                    background-color: #ddd;
+                &.blank-td,
+                &.passed {
+                    pointer-events: none;
+                    color: var(--color-passed);
                 }
 
-                &.hover-selected-date.hovered-date {
-                    background-color: #ddd;
-                    border-radius: 0 50% 50% 0;
+                &.selected-start {
+
+                    &.hovered-date,
+                    &.in-range {
+                        border-radius: var(--border-radius-left);
+                        background-color: var(--color-background);
+                    }
+                }
+
+                &.selected-end {
+
+                    &.hovered-date,
+                    &.in-range {
+                        border-radius: var(--border-radius-right);
+                        background-color: var(--color-background);
+                    }
+                }
+
+                &.hover-selected-date {
+                    &.hovered-date {
+                        background-color: var(--color-background);
+                        border-radius: var(--border-radius-right);
+                    }
+                }
+
+                &.in-range:not(.selected-start, .selected-end),
+                &.hovered-date:not(.selected-start, .selected-end, .hover-selected-date) {
+                    background-color: var(--color-background);
                 }
 
                 div {
@@ -51,41 +101,29 @@
                     justify-content: center;
                     width: 100%;
                     height: 100%;
+                    font-size: var(--font-size);
+                    font-family: var(--font-family);
 
                     &:hover:not(.passed) {
-                        border: 1px solid #000;
-                        border-radius: 50%;
-                    }
-
-                    &.passed {
-                        color: #b7b7b7;
+                        border: 1px solid var(--color-selected);
+                        border-radius: var(--border-radius-full);
                     }
 
                     &.selected-start,
                     &.selected-end,
                     &.hover-selected-date {
-                        color: #fff;
-                        background-color: #000;
-                        border-radius: 50%;
-                    }
-
-                    &.in-range:not(.selected-start, .selected-end),
-                    &.hovered-date:not(.selected-start, .selected-end, .hover-selected-date) {
-                        background-color: rgb(247, 247, 247);
+                        color: var(--color-text-selected);
+                        background-color: var(--color-selected);
+                        border-radius: var(--border-radius-full);
                     }
                 }
             }
         }
-
-        th:not(.month-name),
-        td {
-            width: 44px;
-            height: 44px;
-        }
     }
 
     svg {
-        width: 20px;
-        height: 20px;
+        width: rem(20px);
+        height: rem(20px);
+        cursor: pointer;
     }
 }

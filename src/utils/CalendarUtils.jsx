@@ -4,7 +4,7 @@ export function getDaysInMonth(year, month) {
 }
 
 export function getStartDayOfMonth(year, month) {
-    new Date(year, month, 1).getDay()
+    return new Date(year, month, 1).getDay()
 }
 
 export function getMonthName(monthNum) {

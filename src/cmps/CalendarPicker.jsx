@@ -81,7 +81,7 @@ export function CalendarPicker() {
                         <tr className="next-month-nav">
                             <th className="month-name">{`${getMonthName(nextMonthDate.getMonth())} ${nextMonthDate.getFullYear()}`}</th>
                             <th onClick={() => setCurrentDate(addMonths(currentDate, 2))}>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" id="arrow-right"><path stroke="#200E32" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.5 5 7 7-7 7"></path></svg>                            </th>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" id="arrow-right"><path stroke="#200E32" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="m8.5 5 7 7-7 7"></path></svg>                            </th>
                         </tr>
                         <tr className="day-names">
                             <th>Su</th>
