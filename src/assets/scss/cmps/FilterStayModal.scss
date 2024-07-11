@@ -1,5 +1,4 @@
 .filter-modal {
-    position: absolute;
     top: rem(80px);
     min-width: rem(340px);
     width: 100%;
@@ -8,4 +7,10 @@
     box-shadow: 0 3px 12px 0 rgb(0 0 0/0.15);
     padding: rem(24px) rem(24px) rem(32px) rem(32px);
     background-color: #fff;
+
+    &.who-adjusted {
+        align-self: end;
+        max-width: rem(400px);
+        padding: rem(16px) rem(32px) rem(16px) rem(32px);
+    }
 }

@@ -18,10 +18,10 @@
 
 .main-app {
     display: grid;
-    grid-template-columns: rem(80px) 1fr rem(80px);
+    grid-template-columns: auto 1fr auto;
     grid-template-rows: rem(80px) 1fr auto;
     justify-content: center;
-    padding: 0 rem(40px);
+    padding: 0 rem(24px);
 
     header {
         grid-column: 1/-1;
@@ -37,7 +37,9 @@
 
     @include for-narrow-layout {}
 
-    @include for-normal-layout {}
+    @include for-normal-layout {
+        grid-template-columns: rem(80px) 1fr rem(80px);
+    }
 
     @include for-wide-layout {
         padding: 0 rem(80px);

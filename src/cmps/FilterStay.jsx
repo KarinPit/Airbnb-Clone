@@ -4,7 +4,6 @@ import FilterContext from "../context/FilterContext"
 
 
 export function FilterStay() {
-    const [clickedElement, setClickedElement] = useState(null)
     const context = useContext(FilterContext)
     const whereRef = useRef(null)
     const checkInRef = useRef(null)
@@ -25,28 +24,28 @@ export function FilterStay() {
                 </div>
             </div>
 
-            <div className="where-input" ref={whereRef} onClick={() => { handleClick(whereRef) }}>
+            <div className={[`where-input ${context.openFilter === 'where-input' ? 'active-input' : ''}`].join(' ').replace(/\s+/g, ' ').trim()} ref={whereRef} onClick={() => { handleClick(whereRef) }}>
                 <p>Where</p>
                 <p>Search destinations</p>
             </div>
 
             <div className="border-div"></div>
 
-            <div className="checkin-input" ref={checkInRef} onClick={() => { handleClick(checkInRef) }}>
+            <div className={[`checkin-input ${context.openFilter === 'checkin-input' ? 'active-input' : ''}`].join(' ').replace(/\s+/g, ' ').trim()} ref={checkInRef} onClick={() => { handleClick(checkInRef) }}>
                 <p>Check In</p>
                 <p>Add dates</p>
             </div>
 
             <div className="border-div"></div>
 
-            <div className="checkout-input" ref={checkOutRef} onClick={() => { handleClick(checkOutRef) }}>
+            <div className={[`checkout-input ${context.openFilter === 'checkout-input' ? 'active-input' : ''}`].join(' ').replace(/\s+/g, ' ').trim()} ref={checkOutRef} onClick={() => { handleClick(checkOutRef) }}>
                 <p>Checkout</p>
                 <p>Add dates</p>
             </div>
 
             <div className="border-div"></div>
 
-            <div className="who-input" ref={whoRef} onClick={() => { handleClick(whoRef) }}>
+            <div className={[`who-input ${context.openFilter === 'who-input' ? 'active-input' : ''}`].join(' ').replace(/\s+/g, ' ').trim()} ref={whoRef} onClick={() => { handleClick(whoRef) }}>
                 <p>Who</p>
                 <p>Add guests</p>
             </div>

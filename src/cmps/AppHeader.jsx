@@ -117,10 +117,12 @@ export default function AppHeader() {
                                 y: { duration: 0.25 }
                             }}
                         >
-                            <FilterStay />
-                            {context.openFilter ?
-                                <FilterStayModal />
-                                : ''}
+                            <div>
+                                <FilterStay />
+                                {context.openFilter ?
+                                    <FilterStayModal />
+                                    : ''}
+                            </div>
 
                         </motion.div>
                     </>

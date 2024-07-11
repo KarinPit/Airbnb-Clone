@@ -1,0 +1,58 @@
+.who-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    >div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border-bottom: 1px solid #dddd;
+        padding: rem(24px) rem(4px) rem(24px) 0;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        .description {
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: rem(16px);
+            }
+
+            p {
+                font-size: rem(12px);
+                color: grey;
+            }
+        }
+
+        .amount-controller {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: rem(12px);
+
+            .decrease,
+            .increase {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid rgb(106, 106, 106);
+                border-radius: 50%;
+                width: rem(32px);
+                height: rem(32px);
+                color: rgb(106, 106, 106);
+                cursor: pointer;
+
+                &.disabled {
+                    color: #dddd;
+                    border: 1px solid #dddd;
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+}

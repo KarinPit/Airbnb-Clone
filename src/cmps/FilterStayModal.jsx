@@ -9,12 +9,12 @@ export function FilterStayModal() {
     const context = useContext(FilterContext)
 
     return (
-        <div className="filter-modal">
-            {context.openFilter === 'where-input' ?
+        <div className={`filter-modal ${context.openFilter.includes('who-input') ? 'who-adjusted' : ''}`}>
+            {context.openFilter.includes('where-input') ?
                 <WhereModal />
-                : context.openFilter === 'checkin-input' || context.openFilter === 'checkout-input' ?
+                : context.openFilter.includes('checkin-input') || context.openFilter.includes('checkout-input') ?
                     <CalendarPicker />
-                    : context.openFilter === 'who-input' ?
+                    : context.openFilter.includes('who-input') ?
                         <WhoModal /> : ''}
         </div>
     )
