@@ -1,5 +1,6 @@
-import { useRef, useContext } from 'react'
+import { useState, useRef, useContext } from 'react'
 
+import { motion } from 'framer-motion'
 import FilterContext from '../context/FilterContext'
 import { FilterInput } from './FilterInput'
 
@@ -10,10 +11,15 @@ export function FilterStay() {
     const checkInRef = useRef(null)
     const checkOutRef = useRef(null)
     const whoRef = useRef(null)
+    const [isHovered, setIsHovered] = useState(null)
 
     function handleClick(element) {
         context.setOpenFilter(element.current.className)
     }
+
+    // function handleHover(element) {
+    //     setIsHovered(element)
+    // }
 
     const isActive = (inputName) => context.openFilter && context.openFilter.includes(inputName)
 
@@ -35,8 +41,15 @@ export function FilterStay() {
                 subLabel="Search destinations"
                 refElement={whereRef}
                 isActive={isActive('where-input')}
+                isHovered={isHovered}
                 onClick={() => handleClick(whereRef)}
-                hideBorder={isActive('where-input') || isActive('checkin-input')}
+                onMouseEnter={() => { setIsHovered(whereRef) }}
+                onMouseLeave={() => { setIsHovered(null) }}
+                hideBorder={isActive('where-input') || isActive('checkin-input')
+                    || isHovered && isHovered.current.className.includes('where-input')
+                    || isHovered && isHovered.current.className.includes('checkin-input')
+                }
+                pseudoElements={isActive('checkin-input') ? 'after' : ''}
             />
 
             <FilterInput
@@ -45,8 +58,15 @@ export function FilterStay() {
                 subLabel="Add dates"
                 refElement={checkInRef}
                 isActive={isActive('checkin-input')}
+                isHovered={isHovered}
                 onClick={() => handleClick(checkInRef)}
-                hideBorder={isActive('checkin-input') || isActive('checkout-input')}
+                onMouseEnter={() => { setIsHovered(checkInRef) }}
+                onMouseLeave={() => { setIsHovered(null) }}
+                hideBorder={isActive('checkin-input') || isActive('checkout-input')
+                    || isHovered && isHovered.current.className.includes('checkin-input')
+                    || isHovered && isHovered.current.className.includes('checkout-input')
+                }
+                pseudoElements={isActive('where-input') ? 'before' : '' || isActive('checkout-input') ? 'after' : ''}
             />
 
             <FilterInput
@@ -55,9 +75,15 @@ export function FilterStay() {
                 subLabel="Add dates"
                 refElement={checkOutRef}
                 isActive={isActive('checkout-input')}
+                isHovered={isHovered}
                 onClick={() => handleClick(checkOutRef)}
-                hideBorder={isActive('checkout-input') || isActive('who-input')}
-            />
+                onMouseEnter={() => { setIsHovered(checkOutRef) }}
+                onMouseLeave={() => { setIsHovered(null) }}
+                hideBorder={isActive('checkout-input') || isActive('who-input')
+                    || isHovered && isHovered.current.className.includes('checkout-input')
+                    || isHovered && isHovered.current.className.includes('who-input')
+                }
+                pseudoElements={isActive('checkin-input') ? 'before' : '' || isActive('who-input') ? 'after' : ''} />
 
             <FilterInput
                 className="who-input"
@@ -65,8 +91,12 @@ export function FilterStay() {
                 subLabel="Add guests"
                 refElement={whoRef}
                 isActive={isActive('who-input')}
+                isHovered={isHovered}
                 onClick={() => handleClick(whoRef)}
+                onMouseEnter={() => { setIsHovered(whoRef) }}
+                onMouseLeave={() => { setIsHovered(null) }}
                 hideBorder={false}
+                pseudoElements={isActive('checkout-input') ? 'before' : ''}
             >
                 <button className="primary-bg">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="search">
