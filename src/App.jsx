@@ -14,11 +14,13 @@ export function App() {
     return (
         <Provider store={store}>
             <Router>
-                <FilterContext.Provider value={{ openFilter, setOpenFilter}}>
+                <FilterContext.Provider value={{ openFilter, setOpenFilter }}>
                     <section className='main-app' onClick={(e) => {
                         if (e.target.className === 'container'
                             || e.target.className === 'main-app'
-                            || e.target.className === 'header') {
+                            || e.target.className === 'header'
+                            || e.target.className === 'filter-search-container'
+                            || e.target.className === 'filter-search-sub-container') {
                             setOpenFilter(false)
                         }
                     }}>

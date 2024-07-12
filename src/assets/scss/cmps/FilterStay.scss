@@ -3,15 +3,19 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: rem(10px);
-    padding: rem(8px) rem(8px) rem(8px) rem(20px);
+    // gap: rem(10px);
+    // padding: rem(8px) rem(8px) rem(8px) rem(20px);
     border: 1px solid #DDDDDD;
-    border-radius: rem(30px);
+    border-radius: rem(32px);
     box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.08);
     font-family: AirbnbCereal-Medium;
     color: rgb(92, 92, 92);
     z-index: 1;
+    height: rem(65px);
 
+    &.active-filter {
+        background-color: #ebebeb;
+    }
 }
 
 .filter-search {
@@ -28,6 +32,10 @@
 
     .border-div {
         display: none;
+
+        &.hide-border {
+            visibility: hidden;
+        }
     }
 
     button {
@@ -66,7 +74,7 @@
 
     .border-div {
         display: block;
-        border-left: 1px solid rgb(169, 168, 168);
+        border-left: 1px solid #DDDDDD;
         height: rem(24px);
     }
 
@@ -78,7 +86,7 @@
         border-radius: 50%;
         padding: rem(8px);
         margin-inline-start: rem(10px);
-        transition: background 300ms;
+        transition: background-color 300ms;
 
         &:hover {
             background: #E00B41;
@@ -96,35 +104,58 @@
 @include for-normal-layout {
     .filter-search {
         min-height: rem(56px);
-        padding: rem(8px) rem(8px) rem(8px) rem(32px);
 
         .where-input {
             flex: 2.5;
+            height: 100%;
+            padding: rem(8px) 0 rem(8px) rem(24px);
+            border-radius: rem(32px);
         }
 
         .checkin-input {
             flex: 1;
+            padding: rem(12px) 0 rem(12px) rem(24px);
+            border-radius: rem(32px);
         }
 
         .checkout-input {
             flex: 1;
+            padding: rem(12px) 0 rem(12px) rem(24px);
+            border-radius: rem(32px);
         }
 
         .who-input {
             flex: 1.8;
-        }
+            padding: rem(12px) rem(8px) rem(12px) rem(24px);
+            border-radius: rem(32px);
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
 
-        .checkin-input,
-        .checkout-input,
-        .who-input {
-            padding-inline: rem(10px);
+            >div {
+                display: flex;
+                flex-direction: column;
+            }
         }
 
         .where-input,
         .checkin-input,
         .checkout-input,
         .who-input {
-            display: block;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            >div:first-of-type {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            &.active-input {
+                background-color: #fff;
+            }
 
             p:nth-child(2) {
                 font-family: AirbnbCereal-Light;
@@ -134,7 +165,7 @@
 
         .border-div {
             display: block;
-            border-left: 1px solid rgb(169, 168, 168);
+            border-left: 1px solid #DDDDDD;
             height: rem(24px);
         }
 

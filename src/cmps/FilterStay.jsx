@@ -1,6 +1,7 @@
-import { motion } from "framer-motion"
-import { useState, useRef, useContext } from "react"
-import FilterContext from "../context/FilterContext"
+import { useRef, useContext } from 'react'
+
+import FilterContext from '../context/FilterContext'
+import { FilterInput } from './FilterInput'
 
 
 export function FilterStay() {
@@ -14,50 +15,75 @@ export function FilterStay() {
         context.setOpenFilter(element.current.className)
     }
 
+    const isActive = (inputName) => context.openFilter && context.openFilter.includes(inputName)
+
     return (
-        <div className="filter-search">
+        <div className={`filter-search ${context.openFilter ? 'active-filter' : ''}`}>
             <div className="mobile-filter">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="search"><path d="M3.624,15a8.03,8.03,0,0,0,10.619.659l5.318,5.318a1,1,0,0,0,1.414-1.414l-5.318-5.318A8.04,8.04,0,0,0,3.624,3.624,8.042,8.042,0,0,0,3.624,15Zm1.414-9.96a6.043,6.043,0,1,1-1.77,4.274A6,6,0,0,1,5.038,5.038Z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="search">
+                    <path d="M3.624,15a8.03,8.03,0,0,0,10.619.659l5.318,5.318a1,1,0,0,0,1.414-1.414l-5.318-5.318A8.04,8.04,0,0,0,3.624,3.624,8.042,8.042,0,0,0,3.624,15Zm1.414-9.96a6.043,6.043,0,1,1-1.77,4.274A6,6,0,0,1,5.038,5.038Z"></path>
+                </svg>
                 <div>
                     <p>Where to?</p>
                     <p>Anywhere * Anyweek * Add guests</p>
                 </div>
             </div>
 
-            <div className={[`where-input ${context.openFilter === 'where-input' ? 'active-input' : ''}`].join(' ').replace(/\s+/g, ' ').trim()} ref={whereRef} onClick={() => { handleClick(whereRef) }}>
-                <p>Where</p>
-                <p>Search destinations</p>
-            </div>
+            <FilterInput
+                className="where-input"
+                label="Where"
+                subLabel="Search destinations"
+                refElement={whereRef}
+                isActive={isActive('where-input')}
+                onClick={() => handleClick(whereRef)}
+                hideBorder={isActive('where-input') || isActive('checkin-input')}
+            />
 
-            <div className="border-div"></div>
+            <FilterInput
+                className="checkin-input"
+                label="Check in"
+                subLabel="Add dates"
+                refElement={checkInRef}
+                isActive={isActive('checkin-input')}
+                onClick={() => handleClick(checkInRef)}
+                hideBorder={isActive('checkin-input') || isActive('checkout-input')}
+            />
 
-            <div className={[`checkin-input ${context.openFilter === 'checkin-input' ? 'active-input' : ''}`].join(' ').replace(/\s+/g, ' ').trim()} ref={checkInRef} onClick={() => { handleClick(checkInRef) }}>
-                <p>Check In</p>
-                <p>Add dates</p>
-            </div>
+            <FilterInput
+                className="checkout-input"
+                label="Check out"
+                subLabel="Add dates"
+                refElement={checkOutRef}
+                isActive={isActive('checkout-input')}
+                onClick={() => handleClick(checkOutRef)}
+                hideBorder={isActive('checkout-input') || isActive('who-input')}
+            />
 
-            <div className="border-div"></div>
-
-            <div className={[`checkout-input ${context.openFilter === 'checkout-input' ? 'active-input' : ''}`].join(' ').replace(/\s+/g, ' ').trim()} ref={checkOutRef} onClick={() => { handleClick(checkOutRef) }}>
-                <p>Checkout</p>
-                <p>Add dates</p>
-            </div>
-
-            <div className="border-div"></div>
-
-            <div className={[`who-input ${context.openFilter === 'who-input' ? 'active-input' : ''}`].join(' ').replace(/\s+/g, ' ').trim()} ref={whoRef} onClick={() => { handleClick(whoRef) }}>
-                <p>Who</p>
-                <p>Add guests</p>
-            </div>
-
-            <button className="primary-bg">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="search"><path d="M3.624,15a8.03,8.03,0,0,0,10.619.659l5.318,5.318a1,1,0,0,0,1.414-1.414l-5.318-5.318A8.04,8.04,0,0,0,3.624,3.624,8.042,8.042,0,0,0,3.624,15Zm1.414-9.96a6.043,6.043,0,1,1-1.77,4.274A6,6,0,0,1,5.038,5.038Z"></path></svg>
-            </button>
+            <FilterInput
+                className="who-input"
+                label="Who"
+                subLabel="Add guests"
+                refElement={whoRef}
+                isActive={isActive('who-input')}
+                onClick={() => handleClick(whoRef)}
+                hideBorder={false}
+            >
+                <button className="primary-bg">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="search">
+                        <path d="M3.624,15a8.03,8.03,0,0,0,10.619.659l5.318,5.318a1,1,0,0,0,1.414-1.414l-5.318-5.318A8.04,8.04,0,0,0,3.624,3.624,8.042,8.042,0,0,0,3.624,15Zm1.414-9.96a6.043,6.043,0,1,1-1.77,4.274A6,6,0,0,1,5.038,5.038Z"></path>
+                    </svg>
+                </button>
+            </FilterInput>
         </div>
     )
 }
 
+
 export function MinimizedFilter() {
+    const context = useContext(FilterContext)
+
+    const isActive = (inputName) => context.openFilter === inputName
+
     return (
         <div className="minimized-filter">
             <div className="where-input">
@@ -66,48 +92,45 @@ export function MinimizedFilter() {
                     initial={{ scaleX: 0.5 }}
                     animate={{ scaleX: 1 }}
                     exit={{ scaleX: 0.5 }}
-                    transition={{
-                        duration: 0.25
-                    }}
+                    transition={{ duration: 0.25 }}
                 >
                     Anywhere
                 </motion.p>
             </div>
 
-            <div className="border-div"></div>
+            <div className={`border-div ${isActive('where-input') || isActive('checkin-input') ? 'hide-border' : ''}`}></div>
 
-            <div className="checkin-input"><motion.p
-                key="where-p"
-                initial={{ scaleX: 0.5 }}
-                animate={{ scaleX: 1 }}
-                exit={{ scaleX: 0.5 }}
-                transition={{
-                    duration: 0.25
-                }}
-            >
-                Any week
-            </motion.p></div>
+            <div className="checkin-input">
+                <motion.p
+                    key="checkin-p"
+                    initial={{ scaleX: 0.5 }}
+                    animate={{ scaleX: 1 }}
+                    exit={{ scaleX: 0.5 }}
+                    transition={{ duration: 0.25 }}
+                >
+                    Any week
+                </motion.p>
+            </div>
 
-            <div className="border-div"></div>
+            <div className={`border-div ${isActive('where-input') || isActive('checkin-input') ? 'hide-border' : ''}`}></div>
 
-            <div className="who-input"><motion.p
-                key="where-p"
-                initial={{ scaleX: 0.5 }}
-                animate={{ scaleX: 1 }}
-                exit={{ scaleX: 0.5 }}
-                transition={{
-                    duration: 0.25
-                }}
-            >
-                Add guests
-            </motion.p></div>
+            <div className="who-input">
+                <motion.p
+                    key="who-p"
+                    initial={{ scaleX: 0.5 }}
+                    animate={{ scaleX: 1 }}
+                    exit={{ scaleX: 0.5 }}
+                    transition={{ duration: 0.25 }}
+                >
+                    Add guests
+                </motion.p>
+            </div>
 
             <button className="primary-bg">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="search"><path d="M3.624,15a8.03,8.03,0,0,0,10.619.659l5.318,5.318a1,1,0,0,0,1.414-1.414l-5.318-5.318A8.04,8.04,0,0,0,3.624,3.624,8.042,8.042,0,0,0,3.624,15Zm1.414-9.96a6.043,6.043,0,1,1-1.77,4.274A6,6,0,0,1,5.038,5.038Z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="search">
+                    <path d="M3.624,15a8.03,8.03,0,0,0,10.619.659l5.318,5.318a1,1,0,0,0,1.414-1.414l-5.318-5.318A8.04,8.04,0,0,0,3.624,3.624,8.042,8.042,0,0,0,3.624,15Zm1.414-9.96a6.043,6.043,0,1,1-1.77,4.274A6,6,0,0,1,5.038,5.038Z"></path>
+                </svg>
             </button>
         </div>
-
-
-
     )
 }

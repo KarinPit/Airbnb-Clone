@@ -117,7 +117,7 @@ export default function AppHeader() {
                                 y: { duration: 0.25 }
                             }}
                         >
-                            <div>
+                            <div className='filter-search-sub-container'>
                                 <FilterStay />
                                 {context.openFilter ?
                                     <FilterStayModal />
