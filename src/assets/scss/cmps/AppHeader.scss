@@ -1,6 +1,6 @@
 header {
     position: sticky;
-    top: 0;
+    top: rem(10px);
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-template-rows: auto;
@@ -22,7 +22,7 @@ header {
         align-items: center;
         grid-column: 1/-1;
 
-        >div {
+        >div:not(.minimized-filter) {
             width: 100%;
         }
     }
@@ -41,6 +41,7 @@ header {
 
 @include for-normal-layout {
     header {
+        top: 0;
         grid-template-rows: rem(80px) auto auto;
         margin-block-start: 0;
 

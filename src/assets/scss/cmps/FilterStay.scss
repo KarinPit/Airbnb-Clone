@@ -1,10 +1,9 @@
 .filter-search,
 .minimized-filter {
+    position: relative ;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    // gap: rem(10px);
-    // padding: rem(8px) rem(8px) rem(8px) rem(20px);
     border: 1px solid #DDDDDD;
     border-radius: rem(32px);
     box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.08);
@@ -21,6 +20,7 @@
 .filter-search {
     width: 100%;
     font-size: rem(12px);
+    padding-inline-start: rem(10px);
     margin-block-end: rem(12px);
 
     .where-input,
@@ -69,8 +69,11 @@
 }
 
 .minimized-filter {
+    gap: rem(10px);
+    width: max-content;
     height: auto;
     font-size: rem(14px);
+    padding: rem(8px) rem(8px) rem(8px) rem(20px);
 
     .border-div {
         display: block;
@@ -104,9 +107,10 @@
 @include for-normal-layout {
     .filter-search {
         min-height: rem(56px);
+        padding-inline-start: 0;
 
         .where-input {
-            flex: 2.5;
+            flex: 2.1;
             height: 100%;
             padding: rem(8px) 0 rem(8px) rem(24px);
             border-radius: rem(32px);
@@ -125,8 +129,8 @@
         }
 
         .who-input {
-            flex: 1.8;
-            padding: rem(12px) rem(8px) rem(12px) rem(24px);
+            flex: 2;
+            padding: rem(8px) rem(8px) rem(7px) rem(24px);
             border-radius: rem(32px);
             flex-direction: row;
             justify-content: space-between;
@@ -158,6 +162,10 @@
             }
 
             .where-input {
+                &.active-input {
+                    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.094);
+                }
+
                 &.after {
                     position: relative;
 
@@ -179,6 +187,10 @@
             }
 
             .checkin-input {
+                &.active-input {
+                    box-shadow: 0 0 8px rgba(0, 0, 0, 0.094);
+                }
+
                 &.before {
                     position: relative;
 
@@ -218,6 +230,10 @@
             }
 
             .checkout-input {
+                &.active-input {
+                    box-shadow: 0 0 8px rgba(0, 0, 0, 0.094);
+                }
+
                 &.before {
                     position: relative;
 
@@ -257,6 +273,10 @@
             }
 
             .who-input {
+                &.active-input {
+                    box-shadow: 0 0 8px rgba(0, 0, 0, 0.094);
+                }
+
                 &.before {
                     position: relative;
 

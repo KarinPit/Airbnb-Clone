@@ -8,7 +8,7 @@ import { WhoModal } from "./WhoModal"
 export function FilterStayModal() {
     const context = useContext(FilterContext)
 
-    return (
+    if (context.openFilter) return (
         <div className={`filter-modal ${context.openFilter.includes('who-input') ? 'who-adjusted' : ''}`}>
             {context.openFilter.includes('where-input') ?
                 <WhereModal />

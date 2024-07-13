@@ -10,11 +10,12 @@ import FilterContext from './context/FilterContext';
 
 export function App() {
     const [openFilter, setOpenFilter] = useState(false)
+    const [filterSize, setFilterSize] = useState(false)
 
     return (
         <Provider store={store}>
             <Router>
-                <FilterContext.Provider value={{ openFilter, setOpenFilter }}>
+                <FilterContext.Provider value={{ openFilter, setOpenFilter, filterSize, setFilterSize }}>
                     <section className='main-app' onClick={(e) => {
                         if (e.target.className === 'container'
                             || e.target.className === 'main-app'
@@ -26,7 +27,12 @@ export function App() {
                     }}>
                         <AppHeader />
 
-                        <main className='container'>
+                        <main className='container' onClick={(e) => {
+                            setOpenFilter(false)
+                            setFilterSize(false)
+                        }}>
+                            <div className={`${filterSize ? 'overlay' : ''}`}></div>
+
                             <Routes>
                                 <Route path="/" element={<Home />} />
                             </Routes>

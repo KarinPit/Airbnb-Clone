@@ -19,7 +19,7 @@ $color-secondary: #b32505;
 $color-tertiary: #428bff;
 $color-orange: #e07912;
 $color-green: #008a05;
-$color-light-red: #FFF8F6 ;
+$color-light-red: #FFF8F6;
 $color-dark-pink: #92174d;
 $color-purple: #460479;
 
@@ -75,22 +75,22 @@ $color-text-light: $color-white;
 
 
 // Padding and Spacing
-$padding-xs: 4px;  
-$padding-sm: 8px;  
-$padding-md: 12px; 
-$padding-lg: 16px; 
-$padding-xl: 20px; 
-$padding-xxl: 24px; 
-$padding-xxxl: 32px; 
+$padding-xs: 4px;
+$padding-sm: 8px;
+$padding-md: 12px;
+$padding-lg: 16px;
+$padding-xl: 20px;
+$padding-xxl: 40px;
+$padding-xxxl: 80px;
 
 // Margins
-$margin-xs: 4px;  
-$margin-sm: 8px;  
-$margin-md: 12px; 
-$margin-lg: 16px; 
-$margin-xl: 20px; 
-$margin-xxl: 24px; 
-$margin-xxxl: 42px; 
+$margin-xs: 4px;
+$margin-sm: 8px;
+$margin-md: 12px;
+$margin-lg: 16px;
+$margin-xl: 20px;
+$margin-xxl: 24px;
+$margin-xxxl: 42px;
 
 // Height and Line Height
 $height-standard: 64px;
@@ -164,4 +164,3 @@ $scale3d-small: scale3d(0.95, 0.95, 0.1);
 $font-family-book: "AirbnbCereal-Book", sans-serif;
 $font-family-light: "AirbnbCereal-Light";
 $font-family-extra-bold: "AirbnbCereal-ExtraBold", sans-serif;
-

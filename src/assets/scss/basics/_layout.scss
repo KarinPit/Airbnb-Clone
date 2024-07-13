@@ -21,27 +21,58 @@
     grid-template-columns: auto 1fr auto;
     grid-template-rows: rem(80px) 1fr auto;
     justify-content: center;
-    padding: 0 rem(24px);
 
     header {
         grid-column: 1/-1;
         grid-row: 1;
+        height: fit-content;
+        // max-height: rem(157px);
+        background-color: #fff;
+        padding-block-end: rem(10px);
+        padding-inline: rem($padding-xl);
+        z-index: 2;
     }
 
     main {
-        grid-column: 2;
+        position: relative;
+        grid-column: 1/-1;
         grid-row: 2;
+        padding-inline: rem($padding-xl);
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.25);
+            z-index: 1;
+        }
     }
 
-    @include for-extra-narrow-layout {}
+    // @include for-extra-narrow-layout {}
 
-    @include for-narrow-layout {}
+    // @include for-narrow-layout {}
 
     @include for-normal-layout {
         grid-template-columns: rem(80px) 1fr rem(80px);
+
+        header {
+            padding-inline: rem($padding-xxl);
+        }
+
+        main {
+            padding-inline: rem($padding-xxl);
+        }
     }
 
     @include for-wide-layout {
-        padding: 0 rem(80px);
+        header {
+            padding-inline: rem($padding-xxxl);
+        }
+
+        main {
+            padding-inline: rem($padding-xxxl);
+        }
     }
 }
