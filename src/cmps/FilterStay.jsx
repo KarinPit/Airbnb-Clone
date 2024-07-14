@@ -3,6 +3,10 @@ import { useState, useRef, useContext } from 'react'
 import { motion } from 'framer-motion'
 import FilterContext from '../context/FilterContext'
 import { FilterInput } from './FilterInput'
+import { WhereModalMobile } from "./WhereModal"
+import { CalendarPicker } from "./CalendarPicker"
+import { WhoModal } from "./WhoModal"
+
 
 
 export function FilterStay() {
@@ -154,5 +158,48 @@ export function MinimizedFilter() {
                 </svg>
             </button>
         </div>
+    )
+}
+
+export function MobileFilter() {
+    const context = useContext(FilterContext)
+    const whereRef = useRef(null)
+    const checkInRef = useRef(null)
+    const checkOutRef = useRef(null)
+    const whoRef = useRef(null)
+    const [isHovered, setIsHovered] = useState(null)
+
+    function handleClick(element) {
+        context.setOpenFilter(element.current.className)
+    }
+
+    return (
+        <>
+            <div className={`filter-search mobile ${context.openFilter ? 'active-filter' : ''}`}>
+                <div className="mobile-filter">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="search">
+                        <path d="M3.624,15a8.03,8.03,0,0,0,10.619.659l5.318,5.318a1,1,0,0,0,1.414-1.414l-5.318-5.318A8.04,8.04,0,0,0,3.624,3.624,8.042,8.042,0,0,0,3.624,15Zm1.414-9.96a6.043,6.043,0,1,1-1.77,4.274A6,6,0,0,1,5.038,5.038Z"></path>
+                    </svg>
+                    <div>
+                        <p>Where to?</p>
+                        <p>Anywhere * Anyweek * Add guests</p>
+                    </div>
+                </div>
+            </div>
+
+            <div className='mobile-inputs'>
+
+                <WhereModalMobile />
+
+
+                {/* <div>
+                    <CalendarPicker />
+                </div>
+
+                <div>
+                    <WhoModal />
+                </div> */}
+            </div>
+        </>
     )
 }

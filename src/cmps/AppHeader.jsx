@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from 'react';
 import { motion, useScroll, AnimatePresence } from "framer-motion"
 
-import { FilterStay, MinimizedFilter } from './FilterStay'
+import { FilterStay, MinimizedFilter, MobileFilter } from './FilterStay'
 import { FilterStayModal } from './FilterStayModal'
 import FilterContext from "../context/FilterContext"
 
@@ -9,10 +9,12 @@ import airbnbLogo from '../../public/svg/airbnb-logo.svg'
 
 
 export default function AppHeader() {
+    const screenWIdth = 783
     const [isScrolled, setIsScrolled] = useState(false)
-    const [isWideScreen, setIsWideScreen] = useState(window.innerWidth > 768)
+    const [isWideScreen, setIsWideScreen] = useState(window.innerWidth > screenWIdth)
     const { scrollY } = useScroll()
     const context = useContext(FilterContext)
+    const filterClassName = isWideScreen ? 'filter-search-container' : 'filter-search-container mobile';
 
     function onChangeFilter(value) {
         context.setFilterSize(value)
@@ -20,7 +22,7 @@ export default function AppHeader() {
 
     useEffect(() => {
         function handleResize() {
-            setIsWideScreen(window.innerWidth > 768)
+            setIsWideScreen(window.innerWidth > screenWIdth)
         }
 
         window.addEventListener('resize', handleResize)
@@ -44,6 +46,7 @@ export default function AppHeader() {
             </a>
 
             <AnimatePresence>
+                {/* Check if user has scrolled, the screen is wide, and the filter is not expanded */}
                 {isScrolled && isWideScreen && !context.filterSize ? (
                     <motion.div
                         key="nav-options-scrolled"
@@ -92,32 +95,33 @@ export default function AppHeader() {
             </div>
 
             <AnimatePresence>
+                {/* Check if user has scrolled and the screen is wide */}
                 {isScrolled && isWideScreen ? (
-                    context.filterSize ?
-                        <>
-                            <motion.div
-                                key="FilterStay"
-                                className="filter-search-container"
-                                initial={{ opacity: 0, y: -50, scale: 0.5 }}
-                                animate={{ opacity: 1, y: 0, scale: 1 }}
-                                exit={{ opacity: 0, y: -20, scale: 0.5 }}
-                                transition={{
-                                    opacity: { duration: 0 },
-                                    scale: { duration: 0.25 },
-                                    y: { duration: 0.25 }
-                                }}
-                            >
-                                <div className='filter-search-sub-container'>
-                                    <FilterStay />
-                                    {context.openFilter ?
-                                        <FilterStayModal />
-                                        : ''}
-                                </div>
-                            </motion.div>
-                        </>
-                        : <motion.div
+                    context.filterSize ? (
+                        <motion.div
+                            key="FilterStay"
+                            className={filterClassName}
+                            initial={{ opacity: 0, y: -50, scale: 0.5 }}
+                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                            exit={{ opacity: 0, y: -20, scale: 0.5 }}
+                            transition={{
+                                opacity: { duration: 0 },
+                                scale: { duration: 0.25 },
+                                y: { duration: 0.25 }
+                            }}
+                        >
+                            <div className='filter-search-sub-container'>
+                                <FilterStay />
+                                {/* Check if filter modal is open */}
+                                {context.openFilter ? (
+                                    <FilterStayModal />
+                                ) : null}
+                            </div>
+                        </motion.div>
+                    ) : (
+                        <motion.div
                             key="MinimizedFilter"
-                            className="filter-search-container"
+                            className={filterClassName}
                             initial={{ opacity: 0, y: 50, scaleX: 2 }}
                             animate={{ opacity: 1, y: 0, scaleX: 1 }}
                             exit={{ opacity: 0, y: 20 }}
@@ -130,30 +134,29 @@ export default function AppHeader() {
                         >
                             <MinimizedFilter isScrolled={isScrolled} />
                         </motion.div>
-
+                    )
                 ) : (
-                    <>
-                        <motion.div
-                            key="FilterStay"
-                            className="filter-search-container"
-                            initial={{ opacity: 0, y: -50, scale: 0.5 }}
-                            animate={{ opacity: 1, y: 0, scale: 1 }}
-                            exit={{ opacity: 0, y: -20, scale: 0.5 }}
-                            transition={{
-                                opacity: { duration: 0 },
-                                scale: { duration: 0.25 },
-                                y: { duration: 0.25 }
-                            }}
-                        >
-                            <div className='filter-search-sub-container'>
-                                <FilterStay />
-                                {context.openFilter ?
-                                    <FilterStayModal />
-                                    : ''}
-                            </div>
-
-                        </motion.div>
-                    </>
+                    <motion.div
+                        key="FilterStay"
+                        className={filterClassName}
+                        initial={{ opacity: 0, y: -50, scale: 0.5 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: -20, scale: 0.5 }}
+                        transition={{
+                            opacity: { duration: 0 },
+                            scale: { duration: 0.25 },
+                            y: { duration: 0.25 }
+                        }}
+                    >
+                        <div className='filter-search-sub-container'>
+                            {isWideScreen ?
+                                <FilterStay /> : <MobileFilter />}
+                            {/* Check if filter modal is open */}
+                            {context.openFilter ? (
+                                <FilterStayModal />
+                            ) : null}
+                        </div>
+                    </motion.div>
                 )}
             </AnimatePresence>
         </header>

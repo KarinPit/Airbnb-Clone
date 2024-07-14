@@ -116,4 +116,63 @@
             }
         }
     }
+
+    &.mobile {
+        padding: rem(24px);
+        margin-block: rem(16px);
+        border: none;
+        border-radius: rem(24px);
+        box-shadow: 0 0 0 1px rgb(0 0 0/4%), 0 6px 20px rgb(0 0 0/20%);
+
+        .search-regions {
+            h2 {
+                font-size: rem(22px);
+                font-family: AirbnbCereal-Bold;
+                margin-block-end: rem(16px);
+            }
+
+            form {
+                width: 100%;
+
+                .input {
+                    display: flex;
+                    align-items: center;
+                    gap: rem(10px);
+                    border: 1px solid grey;
+                    border-radius: rem(12px);
+                    padding: rem(14px) rem(24px);
+                }
+
+                svg {
+                    width: rem(16px);
+                    height: rem(16px);
+                }
+
+                input {
+                    width: 100%;
+                    height: auto;
+                    border: none;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+            .countries {
+                display: flex;
+                width: 100%;
+                overflow-x: auto;
+
+                .country {
+
+                    img {
+                        max-width: rem(120px);
+                        width: rem(120px);
+                        height: rem(120px);
+                    }
+                }
+            }
+        }
+    }
 }

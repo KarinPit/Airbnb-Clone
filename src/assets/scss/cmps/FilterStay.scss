@@ -1,6 +1,22 @@
+.filter-search-container {
+    &.mobile {
+
+        .where-input,
+        .checkin-input,
+        .checkout-input,
+        .who-input {
+            display: block;
+            height: fit-content;
+            border: 1px solid black;
+            padding-block: rem(24px);
+            border-radius: rem(24px);
+        }
+    }
+}
+
 .filter-search,
 .minimized-filter {
-    position: relative ;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -23,12 +39,6 @@
     padding-inline-start: rem(10px);
     margin-block-end: rem(12px);
 
-    .where-input,
-    .checkin-input,
-    .checkout-input,
-    .who-input {
-        display: none;
-    }
 
     .border-div {
         display: none;
