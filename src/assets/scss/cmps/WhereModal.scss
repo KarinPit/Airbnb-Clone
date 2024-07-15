@@ -118,7 +118,7 @@
     }
 
     &.mobile {
-        padding: rem(24px);
+        padding: rem(24px) rem(24px) 0 rem(24px);
         margin-block: rem(16px);
         border: none;
         border-radius: rem(24px);
@@ -150,8 +150,10 @@
 
                 input {
                     width: 100%;
-                    height: auto;
+                    height: rem(30px);
                     border: none;
+                    font-size: rem(14px);
+                    font-family: AirbnbCereal-Medium;
 
                     &:focus {
                         outline: none;
@@ -163,6 +165,7 @@
                 display: flex;
                 width: 100%;
                 overflow-x: auto;
+                margin-block-start: rem(12px);
 
                 .country {
 

@@ -5,17 +5,24 @@ import { Suspense, lazy, useState } from 'react';
 import { store } from './store/store'
 import { Home } from './pages/Home'
 import AppHeader from './cmps/AppHeader';
+import { FilterStayMobile } from './cmps/FilterStayMobile';
 import FilterContext from './context/FilterContext';
 
 
 export function App() {
     const [openFilter, setOpenFilter] = useState(false)
     const [filterSize, setFilterSize] = useState(false)
+    const [isOpenMobile, setIsOpenMobile] = useState(false)
 
     return (
         <Provider store={store}>
             <Router>
-                <FilterContext.Provider value={{ openFilter, setOpenFilter, filterSize, setFilterSize }}>
+                <FilterContext.Provider
+                    value={{
+                        openFilter, setOpenFilter,
+                        filterSize, setFilterSize,
+                        isOpenMobile, setIsOpenMobile
+                    }}>
                     <section className='main-app' onClick={(e) => {
                         if (e.target.className === 'container'
                             || e.target.className === 'main-app'
@@ -26,6 +33,7 @@ export function App() {
                         }
                     }}>
                         <AppHeader />
+                        <FilterStayMobile />
 
                         <main className='container' onClick={(e) => {
                             setOpenFilter(false)
