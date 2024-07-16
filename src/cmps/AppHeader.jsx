@@ -10,9 +10,9 @@ import airbnbLogo from '../../public/svg/airbnb-logo.svg'
 
 
 export default function AppHeader() {
-    const screenWIdth = 783
+    const screenWidth = 744
     const [isScrolled, setIsScrolled] = useState(false)
-    const [isWideScreen, setIsWideScreen] = useState(window.innerWidth > screenWIdth)
+    const [isWideScreen, setIsWideScreen] = useState(window.innerWidth > screenWidth)
     const { scrollY } = useScroll()
     const context = useContext(FilterContext)
     const filterClassName = isWideScreen ? 'filter-search-container' : 'filter-search-container mobile';
@@ -23,8 +23,15 @@ export default function AppHeader() {
 
     useEffect(() => {
         function handleResize() {
-            setIsWideScreen(window.innerWidth > screenWIdth)
+            setIsWideScreen(window.innerWidth > screenWidth)
+            if (isWideScreen) {
+                context.setOpenFilterMobile(false)
+                context.setIsOpenMobile(false)
+            } else {
+                context.setOpenFilter(false)
+            }
         }
+
 
         window.addEventListener('resize', handleResize)
         scrollY.onChange((latest) => {
@@ -36,7 +43,7 @@ export default function AppHeader() {
             window.removeEventListener('resize', handleResize)
         }
 
-    }, [scrollY])
+    }, [isWideScreen, scrollY])
 
 
     return (
@@ -134,7 +141,7 @@ export default function AppHeader() {
                         }}
                     >
 
-                        
+
                         <div className='filter-search-sub-container'>
                             {isWideScreen ?
                                 <FilterStay /> : <MobileFilter />}

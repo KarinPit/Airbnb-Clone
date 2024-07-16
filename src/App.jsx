@@ -13,6 +13,7 @@ export function App() {
     const [openFilter, setOpenFilter] = useState(false)
     const [filterSize, setFilterSize] = useState(false)
     const [isOpenMobile, setIsOpenMobile] = useState(false)
+    const [openFilterMobile, setOpenFilterMobile] = useState(false)
 
     return (
         <Provider store={store}>
@@ -21,7 +22,8 @@ export function App() {
                     value={{
                         openFilter, setOpenFilter,
                         filterSize, setFilterSize,
-                        isOpenMobile, setIsOpenMobile
+                        isOpenMobile, setIsOpenMobile,
+                        openFilterMobile, setOpenFilterMobile
                     }}>
                     <section className='main-app' onClick={(e) => {
                         if (e.target.className === 'container'
