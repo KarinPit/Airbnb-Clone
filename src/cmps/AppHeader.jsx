@@ -10,12 +10,10 @@ import airbnbLogo from '../../public/svg/airbnb-logo.svg'
 
 
 export default function AppHeader() {
-    const screenWidth = 744
     const [isScrolled, setIsScrolled] = useState(false)
-    const [isWideScreen, setIsWideScreen] = useState(window.innerWidth > screenWidth)
     const { scrollY } = useScroll()
     const context = useContext(FilterContext)
-    const filterClassName = isWideScreen ? 'filter-search-container' : 'filter-search-container mobile';
+    const filterClassName = context.isWideScreen ? 'filter-search-container' : 'filter-search-container mobile';
 
     function onChangeFilter(value) {
         context.setFilterSize(value)
@@ -23,8 +21,8 @@ export default function AppHeader() {
 
     useEffect(() => {
         function handleResize() {
-            setIsWideScreen(window.innerWidth > screenWidth)
-            if (isWideScreen) {
+            context.setIsWideScreen(window.innerWidth > context.screenWidth)
+            if (context.isWideScreen) {
                 context.setOpenFilterMobile(false)
                 context.setIsOpenMobile(false)
             } else {
@@ -43,7 +41,7 @@ export default function AppHeader() {
             window.removeEventListener('resize', handleResize)
         }
 
-    }, [isWideScreen, scrollY])
+    }, [context.isWideScreen, scrollY])
 
 
     return (
@@ -55,7 +53,7 @@ export default function AppHeader() {
 
             <AnimatePresence>
                 {/* Check if user has scrolled, the screen is wide, and the filter is not expanded */}
-                {isScrolled && isWideScreen && !context.filterSize ? (
+                {isScrolled && context.isWideScreen && !context.filterSize ? (
                     <motion.div
                         key="nav-options-scrolled"
                         className='nav-options'
@@ -88,7 +86,7 @@ export default function AppHeader() {
 
             <AnimatePresence>
                 {/* Check if user has scrolled and the screen is wide */}
-                {isScrolled && isWideScreen ? (
+                {isScrolled && context.isWideScreen ? (
                     context.filterSize ? (
                         <motion.div
                             key="FilterStay"
@@ -143,7 +141,7 @@ export default function AppHeader() {
 
 
                         <div className='filter-search-sub-container'>
-                            {isWideScreen ?
+                            {context.isWideScreen ?
                                 <FilterStay /> : <MobileFilter />}
                             {/* Check if filter modal is open */}
                             {context.openFilter ? (

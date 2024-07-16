@@ -15,6 +15,46 @@
     justify-content: space-evenly;
     width: 100%;
 
+    &.mobile {
+        flex-direction: column;
+    }
+
+    .current-month {
+        .prev-month-nav {
+            th:nth-of-type(3) {
+                display: none;
+            }
+        }
+    }
+
+    &.minimize-calendar {
+        flex-direction: column;
+        width: fit-content;
+        margin: auto;
+
+        .current-month {
+            .prev-month-nav {
+                th:nth-of-type(3) {
+                    display: block;
+                }
+            }
+
+            .next-month-nav {
+                display: block;
+            }
+        }
+
+        .next-month {
+            display: none;
+        }
+
+        table {
+            tr {
+                justify-content: center;
+            }
+        }
+    }
+
     table {
         thead {
             display: flex;

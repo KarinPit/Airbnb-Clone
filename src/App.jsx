@@ -10,10 +10,12 @@ import FilterContext from './context/FilterContext';
 
 
 export function App() {
+    const screenWidth = 744
     const [openFilter, setOpenFilter] = useState(false)
     const [filterSize, setFilterSize] = useState(false)
     const [isOpenMobile, setIsOpenMobile] = useState(false)
     const [openFilterMobile, setOpenFilterMobile] = useState(false)
+    const [isWideScreen, setIsWideScreen] = useState(window.innerWidth > screenWidth)
 
     return (
         <Provider store={store}>
@@ -23,7 +25,9 @@ export function App() {
                         openFilter, setOpenFilter,
                         filterSize, setFilterSize,
                         isOpenMobile, setIsOpenMobile,
-                        openFilterMobile, setOpenFilterMobile
+                        openFilterMobile, setOpenFilterMobile,
+                        isWideScreen, setIsWideScreen,
+                        screenWidth
                     }}>
                     <section className='main-app' onClick={(e) => {
                         if (e.target.className === 'container'

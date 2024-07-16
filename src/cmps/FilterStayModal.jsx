@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import FilterContext from "../context/FilterContext"
 import { WhereModal } from "./WhereModal"
-import { CalendarPicker } from "./CalendarPicker"
+import { CalendarPicker, CalendarPickerMobile } from "./CalendarPicker"
 import { WhoModal } from "./WhoModal"
 
 
@@ -13,7 +13,9 @@ export function FilterStayModal() {
             {context.openFilter.includes('where-input') ?
                 <WhereModal />
                 : context.openFilter.includes('checkin-input') || context.openFilter.includes('checkout-input') ?
-                    <CalendarPicker />
+                context.isWideScreen ? <CalendarPicker /> : <CalendarPickerMobile />
+                
+                
                     : context.openFilter.includes('who-input') ?
                         <WhoModal /> : ''}
         </div>

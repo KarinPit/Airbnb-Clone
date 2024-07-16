@@ -3,12 +3,13 @@ import { useState, useEffect, useRef, useContext } from 'react'
 import FilterContext from '../context/FilterContext'
 import { GeneralNav } from './TopNav'
 import { WhereModalMobile } from './WhereModal'
+import { CalendarPickerMobile } from './CalendarPicker'
 
 
 export function FilterStayMobile() {
     const context = useContext(FilterContext)
     const whereMobileRef = useRef(null)
-    const checkInRef = useRef(null)
+    const checkInMobileRef = useRef(null)
     const whoRef = useRef(null)
 
     function handleFilterClick(element) {
@@ -47,9 +48,17 @@ export function FilterStayMobile() {
                     </>}
             </div>
 
-            <div className='checkin-input-mobile' ref={checkInRef}>
-                <p>When</p>
-                <p><span>Add dates</span></p>
+            <div className='checkin-input-mobile' ref={checkInMobileRef}
+                onClick={() => handleFilterClick(checkInMobileRef)}>
+                {context.openFilterMobile && context.openFilterMobile.includes('checkin-input-mobile') ?
+                    <div className='mobile-container'>
+                        <CalendarPickerMobile />
+                    </div>
+                    :
+                    <>
+                        <p>When</p>
+                        <p><span>Add dates</span></p>
+                    </>}
             </div>
 
             <div className='who-input-mobile' ref={whoRef}>
