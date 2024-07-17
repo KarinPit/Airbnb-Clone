@@ -71,6 +71,11 @@
                 margin-inline: auto;
             }
 
+            &.disabled {
+                svg {
+                    fill: rgb(221, 221, 221);
+                }
+            }
         }
 
         th:not(.month-name),
@@ -164,6 +169,7 @@
     svg {
         width: rem(20px);
         height: rem(20px);
+        fill: #000;
         cursor: pointer;
     }
 }
