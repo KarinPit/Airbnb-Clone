@@ -165,10 +165,56 @@ export function CalendarPicker() {
 }
 
 export function CalendarPickerMobile() {
+    const screenWidth = 850
+    const [isMinimizedCalendar, setIsMinimizedCalendar] = useState(window.innerWidth < screenWidth)
     const [currentDate, setCurrentDate] = useState(new Date())
     const [range, setRange] = useState({ start: null, end: null })
     const [hoveredDate, setHoveredDate] = useState(null)
     const nextMonthDate = addMonths(currentDate, 1)
+
+
+    function onClickNext() {
+        setCurrentDate(addMonths(currentDate, 2))
+        setIsDisabled(false)
+    }
+
+    function onDateClick(day) {
+        if (!range.start || (range.start && range.end)) {
+            if (isValid(day)) {
+                setRange({ start: day, end: null })
+                onChange({ start: day, end: null })
+            }
+        } else {
+            const newRange = {
+                start: range.start,
+                end: day < range.start ? null : day,
+            }
+
+            if (isValid(newRange.end)) {
+                setRange(newRange)
+                onChange({ start: newRange.start, end: newRange.end })
+            }
+        }
+    }
+
+    function onDateHover(day) {
+        if (range.start && !range.end && isAfter(day, range.start)) {
+            setHoveredDate(day)
+        } else {
+            setHoveredDate(null)
+        }
+    }
+
+    useEffect(() => {
+        function handleResize() {
+            setIsMinimizedCalendar(window.innerWidth < screenWidth)
+        }
+
+        window.addEventListener('resize', handleResize)
+        return () => {
+            window.removeEventListener('resize', handleResize)
+        }
+    }, [isMinimizedCalendar])
 
     function onDateClick(day) {
         if (!range.start || (range.start && range.end)) {
@@ -203,18 +249,10 @@ export function CalendarPickerMobile() {
             <div className="calendar-picker mobile">
                 <table className="current-month">
                     <thead>
-                        <tr className="prev-month-nav">
-                            <th
-                                onClick={() => {
-                                    const newDate = subMonths(currentDate, 1)
-                                    if (!isBefore(newDate, new Date())) {
-                                        setCurrentDate(subMonths(currentDate, 2))
-                                    }
-                                }}
-                            >
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" id="arrow-left"><path fill="#200E32" d="M16.254 4.241c.298.292.325.75.081 1.072l-.08.092L9.526 12l6.727 6.595c.298.292.325.75.081 1.072l-.08.092a.852.852 0 0 1-1.094.08l-.094-.08-7.321-7.177a.811.811 0 0 1-.081-1.072l.08-.092 7.322-7.177a.852.852 0 0 1 1.187 0Z"></path></svg>                            </th>
-                            <th className="month-name">{`${getMonthName(currentDate.getMonth())} ${currentDate.getFullYear()}`}</th>
+                        <tr className='table-title'>
+                            <h2>When's your trip?</h2>
                         </tr>
+
                         <tr className="day-names">
                             <th>Su</th>
                             <th>Mo</th>
@@ -225,6 +263,14 @@ export function CalendarPickerMobile() {
                             <th>Sa</th>
                         </tr>
                     </thead>
+
+
+                    <tr className="prev-month-nav">
+                        <td className="month-name">
+                            {`${getMonthName(currentDate.getMonth())} ${currentDate.getFullYear()}`}
+                        </td>
+                    </tr>
+
                     <CalendarCells
                         monthDate={currentDate}
                         today={startOfDay(new Date())}
@@ -233,7 +279,58 @@ export function CalendarPickerMobile() {
                         onDateClick={onDateClick}
                         onDateHover={onDateHover}
                     />
+
+                    <tr className="next-month-nav">
+                        <td className="month-name">{`${getMonthName(nextMonthDate.getMonth())} ${nextMonthDate.getFullYear()}`}
+                        </td>
+                    </tr>
+
+                    <CalendarCells
+                        monthDate={nextMonthDate}
+                        today={startOfDay(new Date())}
+                        range={range}
+                        hoveredDate={hoveredDate}
+                        onDateClick={onDateClick}
+                        onDateHover={onDateHover}
+                    />
+
+                    <tr className="next-month-nav">
+                        <td className="month-name">{`${getMonthName(addMonths(currentDate, 2).getMonth())} ${addMonths(currentDate, 2).getFullYear()}`}
+                        </td>
+                    </tr>
+
+                    <CalendarCells
+                        monthDate={addMonths(currentDate, 2)}
+                        today={startOfDay(new Date())}
+                        range={range}
+                        hoveredDate={hoveredDate}
+                        onDateClick={onDateClick}
+                        onDateHover={onDateHover}
+                    />
+
+                    <tr className="next-month-nav">
+                        <td className="month-name">{`${getMonthName(addMonths(currentDate, 3).getMonth())} ${addMonths(currentDate, 3).getFullYear()}`}
+                        </td>
+                    </tr>
+
+                    <CalendarCells
+                        monthDate={addMonths(currentDate, 3)}
+                        today={startOfDay(new Date())}
+                        range={range}
+                        hoveredDate={hoveredDate}
+                        onDateClick={onDateClick}
+                        onDateHover={onDateHover}
+                    />
                 </table>
+
+                <div className='load-dates'>
+                    <button>Load more dates</button>
+                </div>
+
+                <div className='control-buttons'>
+                    <button className='skip-button'>Skip</button>
+                    <button className='next-button'>Next</button>
+                </div>
             </div>
         </>
     )

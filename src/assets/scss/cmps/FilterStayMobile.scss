@@ -75,5 +75,17 @@
                 width: 100%;
             }
         }
+
+        >div.checkin-input-mobile {
+            padding: rem(20px) 0;
+
+            p:nth-of-type(1) {
+                padding-inline-start: rem(20px);
+            }
+
+            p:nth-of-type(2) {
+                padding-inline-end: rem(20px);
+            }
+        }
     }
 }

@@ -41,7 +41,7 @@ export function App() {
                         <AppHeader />
                         <FilterStayMobile />
 
-                        <main className='container' onClick={(e) => {
+                        <main onClick={(e) => {
                             setOpenFilter(false)
                             setFilterSize(false)
                         }}>

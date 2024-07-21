@@ -14,15 +14,125 @@
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
     &.mobile {
         flex-direction: column;
-    }
+        height: 60vh;
 
-    .current-month {
-        .prev-month-nav {
-            th:nth-of-type(3) {
-                display: none;
+        .current-month {
+            .prev-month-nav {
+
+                th:nth-of-type(3) {
+                    display: block;
+                }
+
+            }
+        }
+
+        table {
+            position: relative;
+            margin-block-end: rem(32px);
+
+            thead {
+                position: sticky;
+                top: 0;
+                left: 0;
+                z-index: 5;
+                background-color: #ffffff;
+            }
+
+            .month-name {
+                text-align: start;
+                justify-content: start;
+                width: rem(462px);
+                height: auto;
+                font-family: AirbnbCereal-Medium;
+                font-size: rem(16px);
+                color: rgb(34, 34, 34);
+                margin-block-start: rem(32px);
+            }
+
+            tr {
+                justify-content: center;
+
+                &.table-title {
+                    justify-content: start;
+                    padding-inline: rem(20px);
+
+                    h2 {
+                        font-size: rem(22px);
+                        font-family: AirbnbCereal-Bold;
+                        margin-block-end: rem(32px);
+                    }
+
+                }
+
+                &.day-names {
+                    border-bottom: 1px solid grey;
+
+                    th {
+                        height: rem(24px);
+                        padding-block-end: rem(24px);
+                    }
+                }
+
+                &.table-title,
+                &.day-names {
+                    position: relative;
+                }
+            }
+
+            th:not(.month-name),
+            td {
+                width: rem(68px);
+                height: rem(68px);
+            }
+        }
+
+        .load-dates {
+            padding-inline: rem(20px);
+            margin-block: rem(16px);
+
+            button {
+                width: 100%;
+                background-color: transparent;
+                padding: rem(13px) rem(23px);
+                border-radius: rem(8px);
+                font-size: rem(16px);
+            }
+        }
+
+        .control-buttons {
+            display: flex;
+            justify-content: space-between;
+            padding-inline: rem(20px);
+
+            button {
+                font-family: AirbnbCereal-Medium;
+                font-size: rem(16px);
+                border: none;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            .skip-button {
+                background-color: transparent;
+                text-decoration: underline;
+            }
+
+            .next-button {
+                width: rem(128px);
+                color: #fff;
+                background-color: rgb(34, 34, 34);
+                padding: rem(14px) rem(24px);
+                border-radius: rem(8px);
             }
         }
     }
@@ -61,9 +171,9 @@
             flex-direction: column;
             justify-content: center;
 
-            tr:first-child {
-                margin-bottom: rem(16px);
-            }
+            // tr:nth-child(2) {
+            //     margin-bottom: rem(16px);
+            // }
         }
 
         th {
@@ -162,6 +272,15 @@
                         border-radius: var(--border-radius-full);
                     }
                 }
+            }
+        }
+    }
+
+
+    .current-month {
+        .prev-month-nav {
+            th:nth-of-type(3) {
+                display: none;
             }
         }
     }
