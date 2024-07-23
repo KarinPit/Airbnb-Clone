@@ -73,7 +73,7 @@
                 }
 
                 &.day-names {
-                    border-bottom: 1px solid grey;
+                    border-bottom: 1px solid #efefef;
 
                     th {
                         height: rem(24px);
@@ -90,6 +90,7 @@
             th:not(.month-name),
             td {
                 width: rem(68px);
+                // width: clamp(rem(50px), 14vw, rem(68px));
                 height: rem(68px);
             }
         }

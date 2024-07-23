@@ -14,7 +14,7 @@ export function App() {
     const [openFilter, setOpenFilter] = useState(false)
     const [filterSize, setFilterSize] = useState(false)
     const [isOpenMobile, setIsOpenMobile] = useState(false)
-    const [openFilterMobile, setOpenFilterMobile] = useState(false)
+    const [openFilterMobile, setOpenFilterMobile] = useState('where-input-mobile')
     const [isWideScreen, setIsWideScreen] = useState(window.innerWidth > screenWidth)
 
     return (
