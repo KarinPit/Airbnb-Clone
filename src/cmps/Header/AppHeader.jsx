@@ -1,10 +1,10 @@
 import { useState, useEffect, useContext } from 'react';
 import { motion, useScroll, AnimatePresence } from "framer-motion"
 
-import { GeneralNav, UserNav } from './TopNav'
-import { FilterStay, MinimizedFilter, MobileFilter } from './FilterStay'
-import { FilterStayModal } from './FilterStayModal'
-import FilterContext from "../context/FilterContext"
+import { GeneralNav, UserNav } from './FilterStay/TopNav'
+import { FilterStay, MinimizedFilter, MobileFilter } from '../FilterStay'
+import { FilterStayModal } from '../FilterStayModal'
+import FilterContext from "../../context/FilterContext"
 
 import airbnbLogo from '../../public/svg/airbnb-logo.svg'
 

@@ -18,10 +18,10 @@
 
 /* Components */
 
-@import "cmps/AppHeader.scss";
-@import "cmps/FilterStay.scss";
-@import "cmps/FilterStayMobile.scss";
-@import "cmps/FilterStayModal.scss";
-@import "cmps/WhereModal.scss";
-@import "cmps/CalendarPicker.scss";
-@import "cmps/WhoModal.scss";
+@import "cmps/Header/AppHeader.scss";
+@import "cmps/Header/FilterStay/FilterStay.scss";
+@import "cmps/Header/FilterStay/FilterStayMobile.scss";
+@import "cmps/Header/FilterStay/Modal/FilterStayModal.scss";
+@import "cmps/Header/FilterStay/Modal/WhereModal.scss";
+@import "cmps/Header/FilterStay/Modal/CalendarPicker.scss";
+@import "cmps/Header/FilterStay/Modal/WhoModal.scss";
