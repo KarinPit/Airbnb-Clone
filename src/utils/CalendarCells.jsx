@@ -74,5 +74,5 @@ export function CalendarCells({ monthDate, today, range, hoveredDate, onDateClic
         rows.push(<tr key={`week-${rows.length}`}>{days}</tr>)
         days = []
     }
-    return <tbody>{rows}</tbody>
+    return rows
 }

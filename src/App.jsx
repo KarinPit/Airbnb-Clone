@@ -4,13 +4,13 @@ import { Suspense, lazy, useState } from 'react';
 
 import { store } from './store/store'
 import { Home } from './pages/Home'
-import AppHeader from './cmps/AppHeader';
-import { FilterStayMobile } from './cmps/FilterStayMobile';
+import AppHeader from './cmps/Header/AppHeader';
+import { FilterStayMobile } from './cmps/Header/FilterStay/FilterStayMobile';
 import FilterContext from './context/FilterContext';
 
 
 export function App() {
-    const screenWidth = 744
+    const screenWidth = 743
     const [openFilter, setOpenFilter] = useState(false)
     const [filterSize, setFilterSize] = useState(false)
     const [isOpenMobile, setIsOpenMobile] = useState(false)

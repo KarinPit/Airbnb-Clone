@@ -64,6 +64,10 @@
                     justify-content: start;
                     padding-inline: rem(20px);
 
+                    th {
+                        width: fit-content;
+                    }
+
                     h2 {
                         font-size: rem(22px);
                         font-family: AirbnbCereal-Bold;
