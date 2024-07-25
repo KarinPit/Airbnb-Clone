@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from "react"
 
 function Counter({ label, description, count, increment, decrement }) {
     return (
@@ -14,17 +14,17 @@ function Counter({ label, description, count, increment, decrement }) {
                 <p className="increase" onClick={increment}>+</p>
             </div>
         </div>
-    );
+    )
 }
 
 export function WhoModal() {
-    const [adultCount, setAdultCount] = useState(0);
-    const [childrenCount, setChildrenCount] = useState(0);
-    const [infantCount, setInfantCount] = useState(0);
-    const [petCount, setPetCount] = useState(0);
+    const [adultCount, setAdultCount] = useState(0)
+    const [childrenCount, setChildrenCount] = useState(0)
+    const [infantCount, setInfantCount] = useState(0)
+    const [petCount, setPetCount] = useState(0)
 
-    const increment = (setter) => () => setter(prev => prev + 1);
-    const decrement = (setter, count) => () => setter(prev => prev - 1);
+    const increment = (setter) => () => setter(prev => prev + 1)
+    const decrement = (setter, count) => () => setter(prev => prev - 1)
 
     return (
         <div className="who-modal">
@@ -57,5 +57,5 @@ export function WhoModal() {
                 decrement={decrement(setPetCount, petCount)}
             />
         </div>
-    );
+    )
 }

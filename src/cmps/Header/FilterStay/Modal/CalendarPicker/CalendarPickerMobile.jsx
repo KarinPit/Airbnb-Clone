@@ -1,61 +1,61 @@
-import React, { useState, useEffect } from 'react';
-import { addMonths, startOfDay, isValid, isAfter } from 'date-fns';
-import { CalendarCells } from '../../../../../utils/CalendarCells';
-import { getMonthName } from '../../../../../utils/CalendarUtils';
+import React, { useState, useEffect } from 'react'
+import { addMonths, startOfDay, isValid, isAfter } from 'date-fns'
+import { CalendarCells } from '../../../../../utils/CalendarCells'
+import { getMonthName } from '../../../../../utils/CalendarUtils'
 
-const screenWidth = 850;
+const screenWidth = 850
 
 function useResize(callback) {
     useEffect(() => {
-        window.addEventListener('resize', callback);
+        window.addEventListener('resize', callback)
         return () => {
-            window.removeEventListener('resize', callback);
-        };
-    }, [callback]);
+            window.removeEventListener('resize', callback)
+        }
+    }, [callback])
 }
 
 export default function CalendarPickerMobile() {
-    const [isMinimizedCalendar, setIsMinimizedCalendar] = useState(window.innerWidth < screenWidth);
-    const [currentDate, setCurrentDate] = useState(new Date());
-    const [range, setRange] = useState({ start: null, end: null });
-    const [hoveredDate, setHoveredDate] = useState(null);
+    const [isMinimizedCalendar, setIsMinimizedCalendar] = useState(window.innerWidth < screenWidth)
+    const [currentDate, setCurrentDate] = useState(new Date())
+    const [range, setRange] = useState({ start: null, end: null })
+    const [hoveredDate, setHoveredDate] = useState(null)
 
-    const nextMonthDate = addMonths(currentDate, 1);
+    const nextMonthDate = addMonths(currentDate, 1)
 
     useResize(() => {
-        setIsMinimizedCalendar(window.innerWidth < screenWidth);
-    });
+        setIsMinimizedCalendar(window.innerWidth < screenWidth)
+    })
 
     const handleNextClick = () => {
-        setCurrentDate(addMonths(currentDate, 2));
-    };
+        setCurrentDate(addMonths(currentDate, 2))
+    }
 
     const handleDateClick = (day) => {
         if (!range.start || (range.start && range.end)) {
             if (isValid(day)) {
-                setRange({ start: day, end: null });
-                // onChange({ start: day, end: null });
+                setRange({ start: day, end: null })
+                // onChange({ start: day, end: null })
             }
         } else {
             const newRange = {
                 start: range.start,
                 end: day < range.start ? null : day,
-            };
+            }
 
             if (isValid(newRange.end)) {
-                setRange(newRange);
-                // onChange({ start: newRange.start, end: newRange.end });
+                setRange(newRange)
+                // onChange({ start: newRange.start, end: newRange.end })
             }
         }
-    };
+    }
 
     const handleDateHover = (day) => {
         if (range.start && !range.end && isAfter(day, range.start)) {
-            setHoveredDate(day);
+            setHoveredDate(day)
         } else {
-            setHoveredDate(null);
+            setHoveredDate(null)
         }
-    };
+    }
 
     return (
         <div className="calendar-picker mobile">
@@ -117,7 +117,7 @@ export default function CalendarPickerMobile() {
                 <button className='next-button'>Next</button>
             </div>
         </div>
-    );
+    )
 }
 
 const MonthRow = ({ currentDate, range, hoveredDate, onDateClick, onDateHover }) => (
@@ -136,4 +136,4 @@ const MonthRow = ({ currentDate, range, hoveredDate, onDateClick, onDateHover })
             onDateHover={onDateHover}
         />
     </>
-);
+)

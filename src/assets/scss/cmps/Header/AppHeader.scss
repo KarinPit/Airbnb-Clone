@@ -121,6 +121,7 @@ header {
                 padding: rem(8px) rem(8px) rem(8px) rem(14px);
                 border-radius: rem(30px);
                 transition: 200ms box-shadow;
+                margin-inline-start: rem(10px);
 
                 &:hover {
                     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
@@ -172,12 +173,6 @@ header {
 
         .filter-search-container {
             grid-row: 2/-1;
-        }
-
-        .user-nav {
-            a:first-child {
-                padding-inline-start: 0;
-            }
         }
     }
 }

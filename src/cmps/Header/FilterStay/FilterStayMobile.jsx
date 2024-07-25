@@ -1,13 +1,13 @@
-import React, { useRef, useContext, forwardRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useRef, useContext, forwardRef } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 
-import FilterContext from '../../../context/FilterContext';
-import { GeneralNav } from './TopNav';
-import { WhereModalMobile } from '../FilterStay/Modal/WhereModal';
-import CalendarPickerMobile from './Modal/CalendarPicker/CalendarPickerMobile';
-import { WhoModal } from '../FilterStay/Modal/WhoModal';
+import FilterContext from '../../../context/FilterContext'
+import { GeneralNav } from './TopNav'
+import { WhereModalMobile } from '../FilterStay/Modal/WhereModal'
+import CalendarPickerMobile from './Modal/CalendarPicker/CalendarPickerMobile'
+import { WhoModal } from '../FilterStay/Modal/WhoModal'
 
-import { XButton } from '../../SVG/HeaderSvg';
+import { XButton } from '../../SVG/HeaderSvg'
 
 
 const MobileFilterSection = forwardRef(({ className, label, subLabel, isActive, onClick, children, initial, animate, exit, transition }, ref) => (
@@ -31,20 +31,20 @@ const MobileFilterSection = forwardRef(({ className, label, subLabel, isActive, 
             </motion.div>
         )}
     </AnimatePresence>
-));
+))
 
 export function FilterStayMobile() {
-    const { isOpenMobile, setOpenFilterMobile, openFilterMobile, setIsOpenMobile } = useContext(FilterContext);
-    const whereMobileRef = useRef(null);
-    const checkInMobileRef = useRef(null);
-    const whoMobileRef = useRef(null);
+    const { isOpenMobile, setOpenFilterMobile, openFilterMobile, setIsOpenMobile } = useContext(FilterContext)
+    const whereMobileRef = useRef(null)
+    const checkInMobileRef = useRef(null)
+    const whoMobileRef = useRef(null)
 
-    const handleFilterClick = (element) => setOpenFilterMobile(element.current.className);
+    const handleFilterClick = (element) => setOpenFilterMobile(element.current.className)
 
     const handleButtonClick = () => {
-        setOpenFilterMobile('where-input-mobile');
-        setIsOpenMobile(false);
-    };
+        setOpenFilterMobile('where-input-mobile')
+        setIsOpenMobile(false)
+    }
 
     return (
         <div className={`mobile-filters-container ${isOpenMobile ? 'show' : ''}`}>
@@ -125,5 +125,5 @@ export function FilterStayMobile() {
                 )}
             </MobileFilterSection>
         </div>
-    );
+    )
 }

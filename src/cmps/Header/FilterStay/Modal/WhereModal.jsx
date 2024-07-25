@@ -1,13 +1,13 @@
-import { useState } from 'react';
+import { useState } from 'react'
 
-import globalMap from '../../../../../public/images/maps/world-map.jpg';
-import italyMap from '../../../../../public/images/maps/italy-map.webp';
-import spainMap from '../../../../../public/images/maps/spain-map.webp';
-import greeceMap from '../../../../../public/images/maps/greece-map.webp';
-import europeMap from '../../../../../public/images/maps/europe-map.webp';
-import unitedStatesMap from '../../../../../public/images/maps/united-states-map.webp';
+import globalMap from '../../../../../public/images/maps/world-map.jpg'
+import italyMap from '../../../../../public/images/maps/italy-map.webp'
+import spainMap from '../../../../../public/images/maps/spain-map.webp'
+import greeceMap from '../../../../../public/images/maps/greece-map.webp'
+import europeMap from '../../../../../public/images/maps/europe-map.webp'
+import unitedStatesMap from '../../../../../public/images/maps/united-states-map.webp'
 
-import { Clock, SearchIcon } from '../../../SVG/HeaderSvg';
+import { Clock, SearchIcon } from '../../../SVG/HeaderSvg'
 
 const maps = [
     { src: globalMap, label: "I'm flexible" },
@@ -16,7 +16,7 @@ const maps = [
     { src: greeceMap, label: "Greece" },
     { src: unitedStatesMap, label: "United States" },
     { src: spainMap, label: "Spain" },
-];
+]
 
 function RecentSearch() {
     return (
@@ -28,13 +28,13 @@ function RecentSearch() {
                         <Clock />
                     </div>
                     <div className="text-container">
-                        <p>Italy &middot; stay</p>
+                        <p>Italy &middot stay</p>
                         <p>Apr 1 - Jul 1</p>
                     </div>
                 </div>
             </div>
         </div>
-    );
+    )
 }
 
 function SearchRegions({ clickedIndex, handleClick }) {
@@ -55,15 +55,15 @@ function SearchRegions({ clickedIndex, handleClick }) {
                 ))}
             </div>
         </div>
-    );
+    )
 }
 
 export function WhereModal() {
-    const [clickedIndex, setClickedIndex] = useState(null);
+    const [clickedIndex, setClickedIndex] = useState(null)
 
     const handleClick = (index) => {
-        setClickedIndex(index === clickedIndex ? null : index);
-    };
+        setClickedIndex(index === clickedIndex ? null : index)
+    }
 
     return (
         <div className="where-modal">
@@ -71,7 +71,7 @@ export function WhereModal() {
             <div className="border-div"></div>
             <SearchRegions clickedIndex={clickedIndex} handleClick={handleClick} />
         </div>
-    );
+    )
 }
 
 function SearchForm() {
@@ -82,15 +82,15 @@ function SearchForm() {
                 <input placeholder='Search destinations' />
             </div>
         </form>
-    );
+    )
 }
 
 export function WhereModalMobile() {
-    const [clickedIndex, setClickedIndex] = useState(null);
+    const [clickedIndex, setClickedIndex] = useState(null)
 
     const handleClick = (index) => {
-        setClickedIndex(index === clickedIndex ? null : index);
-    };
+        setClickedIndex(index === clickedIndex ? null : index)
+    }
 
     return (
         <div className="where-modal mobile">
@@ -100,5 +100,5 @@ export function WhereModalMobile() {
                 <SearchRegions clickedIndex={clickedIndex} handleClick={handleClick} />
             </div>
         </div>
-    );
+    )
 }

@@ -1,72 +1,72 @@
-import React, { useState, useEffect } from 'react';
-import { addMonths, subMonths, startOfDay, isBefore, isAfter, isValid } from 'date-fns';
+import React, { useState, useEffect } from 'react'
+import { addMonths, subMonths, startOfDay, isBefore, isAfter, isValid } from 'date-fns'
 
-import { CalendarCells } from '../../../../../utils/CalendarCells';
-import { getMonthName } from '../../../../../utils/CalendarUtils';
+import { CalendarCells } from '../../../../../utils/CalendarCells'
+import { getMonthName } from '../../../../../utils/CalendarUtils'
 
-import { LeftArrow, RightArrow } from '../../../../SVG/HeaderSvg';
+import { LeftArrow, RightArrow } from '../../../../SVG/HeaderSvg'
 
 
 export default function CalendarPicker() {
-    const screenWidth = 850;
-    const [isMinimizedCalendar, setIsMinimizedCalendar] = useState(window.innerWidth < screenWidth);
-    const [currentDate, setCurrentDate] = useState(new Date());
-    const [range, setRange] = useState({ start: null, end: null });
-    const [hoveredDate, setHoveredDate] = useState(null);
-    const [isDisabled, setIsDisabled] = useState(true);
+    const screenWidth = 850
+    const [isMinimizedCalendar, setIsMinimizedCalendar] = useState(window.innerWidth < screenWidth)
+    const [currentDate, setCurrentDate] = useState(new Date())
+    const [range, setRange] = useState({ start: null, end: null })
+    const [hoveredDate, setHoveredDate] = useState(null)
+    const [isDisabled, setIsDisabled] = useState(true)
 
-    const nextMonthDate = addMonths(currentDate, 1);
+    const nextMonthDate = addMonths(currentDate, 1)
 
     useResize(() => {
-        setIsMinimizedCalendar(window.innerWidth < screenWidth);
-    });
+        setIsMinimizedCalendar(window.innerWidth < screenWidth)
+    })
 
     function handlePrevClick() {
-        const newDate = subMonths(currentDate, 1);
-        const beforeDate = subMonths(currentDate, 2);
+        const newDate = subMonths(currentDate, 1)
+        const beforeDate = subMonths(currentDate, 2)
 
         if (!isBefore(newDate, new Date())) {
-            setCurrentDate(subMonths(currentDate, 2));
+            setCurrentDate(subMonths(currentDate, 2))
         }
 
-        setIsDisabled(isBefore(beforeDate, new Date()));
+        setIsDisabled(isBefore(beforeDate, new Date()))
     }
 
     function handlePrevMinimizedClick() {
-        const beforeDate = subMonths(currentDate, 1);
+        const beforeDate = subMonths(currentDate, 1)
 
         if (!isBefore(currentDate, new Date())) {
-            setCurrentDate(subMonths(currentDate, 1));
-            setIsDisabled(false);
+            setCurrentDate(subMonths(currentDate, 1))
+            setIsDisabled(false)
         }
 
-        setIsDisabled(isBefore(beforeDate, new Date()));
+        setIsDisabled(isBefore(beforeDate, new Date()))
     }
 
     function handleNextClick() {
-        setCurrentDate(addMonths(currentDate, 2));
-        setIsDisabled(false);
+        setCurrentDate(addMonths(currentDate, 2))
+        setIsDisabled(false)
     }
 
     function handleNextMinimizedClick() {
-        setCurrentDate(addMonths(currentDate, 1));
-        setIsDisabled(false);
+        setCurrentDate(addMonths(currentDate, 1))
+        setIsDisabled(false)
     }
 
     function handleDateClick(day) {
         if (!range.start || (range.start && range.end)) {
             if (isValid(day)) {
-                setRange({ start: day, end: null });
+                setRange({ start: day, end: null })
                 // onChange({ start: day, end: null })
             }
         } else {
             const newRange = {
                 start: range.start,
                 end: day < range.start ? null : day,
-            };
+            }
 
             if (isValid(newRange.end)) {
-                setRange(newRange);
+                setRange(newRange)
                 // onChange({ start: newRange.start, end: newRange.end })
             }
         }
@@ -74,9 +74,9 @@ export default function CalendarPicker() {
 
     function handleDateHover(day) {
         if (range.start && !range.end && isAfter(day, range.start)) {
-            setHoveredDate(day);
+            setHoveredDate(day)
         } else {
-            setHoveredDate(null);
+            setHoveredDate(null)
         }
     }
 
@@ -97,7 +97,7 @@ export default function CalendarPicker() {
                 onDateHover={handleDateHover}
             />
         </div>
-    );
+    )
 }
 
 function MonthTable({
@@ -174,14 +174,14 @@ function MonthTable({
                 </tbody>
             </table>
         </>
-    );
+    )
 }
 
 function useResize(callback) {
     useEffect(() => {
-        window.addEventListener('resize', callback);
+        window.addEventListener('resize', callback)
         return () => {
-            window.removeEventListener('resize', callback);
-        };
-    }, [callback]);
+            window.removeEventListener('resize', callback)
+        }
+    }, [callback])
 }

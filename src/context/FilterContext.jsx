@@ -1,4 +1,4 @@
-import { createContext } from 'react';
+import { createContext } from 'react'
 
-const FilterModalContext = createContext();
-export default FilterModalContext;
+const FilterModalContext = createContext()
+export default FilterModalContext

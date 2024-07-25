@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import { SearchIcon } from '../../SVG/HeaderSvg';
+import { SearchIcon } from '../../SVG/HeaderSvg'
 
 export function FilterInput({
     className,
@@ -15,9 +15,9 @@ export function FilterInput({
     hideBorder,
     pseudoElements,
 }) {
-    const isHoveredClass = isHovered && isHovered.current.className.includes(className) ? 'hovered' : '';
-    const activeClass = isActive ? 'active-input' : '';
-    const borderClass = hideBorder ? 'hide-border' : '';
+    const isHoveredClass = isHovered && isHovered.current.className.includes(className) ? 'hovered' : ''
+    const activeClass = isActive ? 'active-input' : ''
+    const borderClass = hideBorder ? 'hide-border' : ''
 
     return (
         <div
@@ -42,5 +42,5 @@ export function FilterInput({
                 </button>
             )}
         </div>
-    );
+    )
 }

@@ -1,12 +1,12 @@
-import { Route, HashRouter as Router, Routes } from 'react-router-dom';
+import { Route, HashRouter as Router, Routes } from 'react-router-dom'
 import { Provider } from 'react-redux'
-import { Suspense, lazy, useState } from 'react';
+import { Suspense, lazy, useState } from 'react'
 
 import { store } from './store/store'
 import { Home } from './pages/Home'
-import AppHeader from './cmps/Header/AppHeader';
-import { FilterStayMobile } from './cmps/Header/FilterStay/FilterStayMobile';
-import FilterContext from './context/FilterContext';
+import AppHeader from './cmps/Header/AppHeader'
+import { FilterStayMobile } from './cmps/Header/FilterStay/FilterStayMobile'
+import FilterContext from './context/FilterContext'
 
 
 export function App() {

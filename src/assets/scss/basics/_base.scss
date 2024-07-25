@@ -42,7 +42,8 @@ a {
 }
 
 a:not(.logo) {
-    padding: rem(10px) rem(14px) rem(10px) 0;
+    // padding: rem(10px) rem(14px) rem(10px) 0;
+    padding: rem(10px) rem(14px) rem(10px) rem(14px);
 }
 
 a:not(.logo, .active):hover {
@@ -51,7 +52,8 @@ a:not(.logo, .active):hover {
     border-radius: rem(20px);
 }
 
-a, p {
+a,
+p {
     line-height: 1.5;
 }
 

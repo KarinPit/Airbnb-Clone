@@ -1,15 +1,15 @@
-import React, { useContext } from 'react';
-import { motion } from 'framer-motion';
+import React, { useContext } from 'react'
+import { motion } from 'framer-motion'
 
-import FilterContext from '../../../context/FilterContext';
+import FilterContext from '../../../context/FilterContext'
 
-import { SearchIcon } from '../../SVG/HeaderSvg';
+import { SearchIcon } from '../../SVG/HeaderSvg'
 
 
 export function FilterStayMinimized() {
-    const { openFilter } = useContext(FilterContext);
+    const { openFilter } = useContext(FilterContext)
 
-    const isActive = (inputName) => openFilter === inputName;
+    const isActive = (inputName) => openFilter === inputName
 
     return (
         <div className="minimized-filter">
@@ -35,5 +35,5 @@ export function FilterStayMinimized() {
                 <SearchIcon />
             </button>
         </div>
-    );
+    )
 }

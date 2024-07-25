@@ -1,29 +1,29 @@
-import { useState, useRef, useContext } from 'react';
+import { useState, useRef, useContext } from 'react'
 
-import FilterContext from '../../../context/FilterContext';
-import { FilterInput } from './FilterInput';
+import FilterContext from '../../../context/FilterContext'
+import { FilterInput } from './FilterInput'
 
-import { SearchIcon } from '../../SVG/HeaderSvg';
+import { SearchIcon } from '../../SVG/HeaderSvg'
 
 export function FilterStay({ isWideScreen }) {
-    const { openFilter, setOpenFilter, setIsOpenMobile } = useContext(FilterContext);
-    const whereRef = useRef(null);
-    const checkInRef = useRef(null);
-    const checkOutRef = useRef(null);
-    const whoRef = useRef(null);
-    const [isHovered, setIsHovered] = useState(null);
+    const { openFilter, setOpenFilter, setIsOpenMobile } = useContext(FilterContext)
+    const whereRef = useRef(null)
+    const checkInRef = useRef(null)
+    const checkOutRef = useRef(null)
+    const whoRef = useRef(null)
+    const [isHovered, setIsHovered] = useState(null)
 
     const handleClick = (element) => {
-        setOpenFilter(element.current.className);
-    };
+        setOpenFilter(element.current.className)
+    }
 
     const handleMobileFilterClick = () => {
         if (!isWideScreen) {
-            setIsOpenMobile(true);
+            setIsOpenMobile(true)
         }
-    };
+    }
 
-    const isActive = (inputName) => openFilter && openFilter.includes(inputName);
+    const isActive = (inputName) => openFilter && openFilter.includes(inputName)
 
     const filterInputs = [
         {
@@ -58,7 +58,7 @@ export function FilterStay({ isWideScreen }) {
             hideBorderCondition: false,
             pseudoElements: isActive('checkout-input') ? 'before' : ''
         }
-    ];
+    ]
 
     return (
         <div className={`filter-search ${openFilter ? 'active-filter' : ''}`}
@@ -88,5 +88,5 @@ export function FilterStay({ isWideScreen }) {
                 />
             ))}
         </div>
-    );
+    )
 }

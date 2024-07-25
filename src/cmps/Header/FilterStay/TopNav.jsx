@@ -1,4 +1,6 @@
-import { GlobeIcon, ListIcon, UserIcon } from '../../SVG/HeaderSvg';
+import { useState } from 'react'
+
+import { GlobeIcon, ListIcon, UserIcon } from '../../SVG/HeaderSvg'
 
 
 export function UserNav() {
@@ -22,10 +24,28 @@ export function UserNav() {
 }
 
 export function GeneralNav() {
+    const [clickedOption, setClickedOption] = useState('stays')
+
+    function handleClick(option) {
+        setClickedOption(option)
+    }
+
     return (
         <>
-            <a href="#" className='active'>Stays</a>
-            <a href="#">About me</a>
+            <a
+                href="#"
+                className={`stays ${clickedOption === 'stays' ? 'active' : ''}`}
+                onClick={() => handleClick('stays')}
+            >
+                Stays
+            </a>
+            <a
+                href="#"
+                className={`about ${clickedOption === 'about' ? 'active' : ''}`}
+                onClick={() => handleClick('about')}
+            >
+                About me
+            </a>
         </>
     )
 }

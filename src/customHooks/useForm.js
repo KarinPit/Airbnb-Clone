@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useEffectUpdate } from "./useEffectUpdate";
+import { useState } from "react"
+import { useEffectUpdate } from "./useEffectUpdate"
 
 export function useForm(initialState, cb) {
     const [fields, setFields] = useState(initialState)
@@ -14,7 +14,7 @@ export function useForm(initialState, cb) {
             case 'number':
             case 'range':
                 value = +value
-                break;
+                break
             case 'checkbox':
                 value = target.checked
         }
