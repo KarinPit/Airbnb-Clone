@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { addMonths, subMonths, startOfDay, isBefore, isAfter, isValid } from 'date-fns';
+
 import { CalendarCells } from '../../../../../utils/CalendarCells';
 import { getMonthName } from '../../../../../utils/CalendarUtils';
+
+import { LeftArrow, RightArrow } from '../../../../SVG/HeaderSvg';
 
 
 export default function CalendarPicker() {
@@ -109,17 +112,13 @@ function MonthTable({
                             className={`${isDisabled ? 'disabled' : ''}`}
                             onClick={isMinimizedCalendar ? onPrevMinimizedClick : onPrevClick}
                         >
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="left-arrow">
-                                <path d="m8.5 12.8 5.7 5.6c.4.4 1 .4 1.4 0 .4-.4.4-1 0-1.4l-4.9-5 4.9-5c.4-.4.4-1 0-1.4-.2-.2-.4-.3-.7-.3-.3 0-.5.1-.7.3l-5.7 5.6c-.4.5-.4 1.1 0 1.6 0-.1 0-.1 0 0z"></path>
-                            </svg>
+                            <LeftArrow />
                         </th>
                         <th className="month-name">
                             {`${getMonthName(monthDate.getMonth())} ${monthDate.getFullYear()}`}
                         </th>
                         <th onClick={isMinimizedCalendar ? onNextMinimizedClick : onNextClick}>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="right-arrow">
-                                <path d="M15.54,11.29,9.88,5.64a1,1,0,0,0-1.42,0,1,1,0,0,0,0,1.41l4.95,5L8.46,17a1,1,0,0,0,0,1.41,1,1,0,0,0,.71.3,1,1,0,0,0,.71-.3l5.66-5.65A1,1,0,0,0,15.54,11.29Z"></path>
-                            </svg>
+                            <RightArrow />
                         </th>
                     </tr>
                     <tr className="day-names">
@@ -150,9 +149,7 @@ function MonthTable({
                             {`${getMonthName(nextMonthDate.getMonth())} ${nextMonthDate.getFullYear()}`}
                         </th>
                         <th onClick={onNextClick}>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="right-arrow">
-                                <path d="M15.54,11.29,9.88,5.64a1,1,0,0,0-1.42,0,1,1,0,0,0,0,1.41l4.95,5L8.46,17a1,1,0,0,0,0,1.41,1,1,0,0,0,.71.3,1,1,0,0,0,.71-.3l5.66-5.65A1,1,0,0,0,15.54,11.29Z"></path>
-                            </svg>
+                            <RightArrow />
                         </th>
                     </tr>
                     <tr className="day-names">

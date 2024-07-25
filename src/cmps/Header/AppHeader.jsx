@@ -50,27 +50,33 @@ export default function AppHeader() {
 
 
     const renderNavOptions = useCallback(() => (
-        <motion.div
-            key="nav-options"
-            className="nav-options"
-            initial={{ opacity: 0, y: -50, scale: 0 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: -100, scale: 0 }}
-            transition={{ duration: 0.2 }}
-        >
-            <GeneralNav />
-        </motion.div>
-    ), []);
+        <AnimatePresence>
+            {!isScrolled && <motion.div
+                key="nav-options"
+                className="nav-options"
+                initial={{ opacity: 0, y: -50, scale: 0 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -50, scale: 0 }}
+                transition={{ duration: 0.4 }}
+            >
+                <GeneralNav />
+            </motion.div>}
+
+        </AnimatePresence>
+    ), [isScrolled]);
 
     const renderFilter = useCallback(() => (
         <motion.div
             key="FilterStay"
             className={filterClassName}
-            initial={{ opacity: 0, y: -50, scale: 0.5 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: -20, scale: 0.5 }}
-            transition={{ duration: 0.25 }}
-        >
+            initial={{ opacity: 0, y: -100, scaleX: 0.5 }}
+            animate={{ opacity: 1, y: 0, scaleX: 1 }}
+            exit={{ opacity: 0, y: -50, scaleX: 0.5 }}
+            transition={{
+                opacity: { duration: 0},
+                y: { duration: 0.4 },
+                scaleX: { duration: 0.4}
+            }}        >
             <div className="filter-search-sub-container">
                 <FilterStay isWideScreen={isWideScreen} />
                 {openFilter && <FilterStayModal />}
@@ -84,8 +90,12 @@ export default function AppHeader() {
             className={filterClassName}
             initial={{ opacity: 0, y: 50, scaleX: 2 }}
             animate={{ opacity: 1, y: 0, scaleX: 1 }}
-            exit={{ opacity: 0, y: 20 }}
-            transition={{ duration: 0.25 }}
+            exit={{ opacity: 0, y: 50, scaleX: 2 }}
+            transition={{
+                opacity: { duration: 0 },
+                y: { duration: 0.4 },
+                scaleX: { duration: 0.4 }
+            }}
             onClick={() => setFilterSize(true)}
         >
             <FilterStayMinimized isScrolled={isScrolled} />
@@ -100,8 +110,8 @@ export default function AppHeader() {
                     className={filterClassName}
                     initial={{ opacity: 0, y: -50, scale: 0.5 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: -20, scale: 0.5 }}
-                    transition={{ duration: 0.25 }}
+                    exit={{ opacity: 0, y: -50, scale: 0.5 }}
+                    transition={{ duration: 1 }}
                 >
                     <FilterStayMobile />
                 </motion.div>

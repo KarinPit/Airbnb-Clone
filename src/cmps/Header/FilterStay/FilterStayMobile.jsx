@@ -1,10 +1,13 @@
 import React, { useRef, useContext, forwardRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+
 import FilterContext from '../../../context/FilterContext';
 import { GeneralNav } from './TopNav';
 import { WhereModalMobile } from '../FilterStay/Modal/WhereModal';
 import CalendarPickerMobile from './Modal/CalendarPicker/CalendarPickerMobile';
 import { WhoModal } from '../FilterStay/Modal/WhoModal';
+
+import { XButton } from '../../SVG/HeaderSvg';
 
 
 const MobileFilterSection = forwardRef(({ className, label, subLabel, isActive, onClick, children, initial, animate, exit, transition }, ref) => (
@@ -55,11 +58,7 @@ export function FilterStayMobile() {
                         transition={{ ease: 'easeInOut', duration: 0.3 }}
                     >
                         <button onClick={handleButtonClick}>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="x">
-                                <rect width="256" height="256" fill="none"></rect>
-                                <line x1="200" x2="56" y1="56" y2="200" fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="24"></line>
-                                <line x1="200" x2="56" y1="200" y2="56" fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="24"></line>
-                            </svg>
+                            <XButton />
                         </button>
                         <div className='nav'>
                             <GeneralNav />

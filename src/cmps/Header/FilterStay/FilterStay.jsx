@@ -1,10 +1,9 @@
 import { useState, useRef, useContext } from 'react';
-import { motion } from 'framer-motion';
+
 import FilterContext from '../../../context/FilterContext';
 import { FilterInput } from './FilterInput';
-import { WhereModalMobile } from "../FilterStay/Modal/WhereModal";
-import CalendarPicker from './Modal/CalendarPicker/CalendarPicker';
-import { WhoModal } from "../FilterStay/Modal/WhoModal";
+
+import { SearchIcon } from '../../SVG/HeaderSvg';
 
 export function FilterStay({ isWideScreen }) {
     const { openFilter, setOpenFilter, setIsOpenMobile } = useContext(FilterContext);
@@ -66,9 +65,7 @@ export function FilterStay({ isWideScreen }) {
             onClick={handleMobileFilterClick}>
 
             <div className="mobile-filter">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="search">
-                    <path d="M3.624,15a8.03,8.03,0,0,0,10.619.659l5.318,5.318a1,1,0,0,0,1.414-1.414l-5.318-5.318A8.04,8.04,0,0,0,3.624,3.624,8.042,8.042,0,0,0,3.624,15Zm1.414-9.96a6.043,6.043,0,1,1-1.77,4.274A6,6,0,0,1,5.038,5.038Z"></path>
-                </svg>
+                <SearchIcon />
                 <div>
                     <p>Where to?</p>
                     <p>Anywhere * Anyweek * Add guests</p>

@@ -20,17 +20,16 @@
         display: none;
     }
 
+    // Mobile styles
     &.mobile {
         flex-direction: column;
         height: 60vh;
 
         .current-month {
             .prev-month-nav {
-
                 th:nth-of-type(3) {
                     display: block;
                 }
-
             }
         }
 
@@ -73,7 +72,6 @@
                         font-family: AirbnbCereal-Bold;
                         margin-block-end: rem(32px);
                     }
-
                 }
 
                 &.day-names {
@@ -94,7 +92,6 @@
             th:not(.month-name),
             td {
                 width: rem(68px);
-                // width: clamp(rem(50px), 14vw, rem(68px));
                 height: rem(68px);
             }
         }
@@ -142,6 +139,7 @@
         }
     }
 
+    // Minimized calendar styles
     &.minimize-calendar {
         flex-direction: column;
         width: fit-content;
@@ -170,15 +168,12 @@
         }
     }
 
+    // General table styles
     table {
         thead {
             display: flex;
             flex-direction: column;
             justify-content: center;
-
-            // tr:nth-child(2) {
-            //     margin-bottom: rem(16px);
-            // }
         }
 
         th {
@@ -281,7 +276,7 @@
         }
     }
 
-
+    // Current month navigation
     .current-month {
         .prev-month-nav {
             th:nth-of-type(3) {
@@ -290,6 +285,7 @@
         }
     }
 
+    // General SVG styles
     svg {
         width: rem(20px);
         height: rem(20px);
