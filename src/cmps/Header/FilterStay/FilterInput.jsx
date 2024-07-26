@@ -29,7 +29,11 @@ export function FilterInput({
         >
             <div>
                 <p>{label}</p>
-                <p>{subLabel}</p>
+                {className === 'where-input' ?
+                    <form>
+                        <input placeholder={subLabel}></input>
+                    </form>
+                    : <p>{subLabel}</p>}
             </div>
 
             {className !== 'who-input' && (

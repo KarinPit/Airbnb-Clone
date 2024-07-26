@@ -57,7 +57,7 @@ export default function AppHeader() {
                 initial={{ opacity: 0, y: -50, scale: 0 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: -50, scale: 0 }}
-                transition={{ duration: 0.4 }}
+                transition={{ duration: 0.25 }}
             >
                 <GeneralNav />
             </motion.div>}
@@ -74,8 +74,8 @@ export default function AppHeader() {
             exit={{ opacity: 0, y: -50, scaleX: 0.5 }}
             transition={{
                 opacity: { duration: 0 },
-                y: { duration: 0.4 },
-                scaleX: { duration: 0.4 }
+                y: { duration: 0.25 },
+                scaleX: { duration: 0.25}
             }}        >
             <div className="filter-search-sub-container">
                 <FilterStay isWideScreen={isWideScreen} />
@@ -111,7 +111,7 @@ export default function AppHeader() {
                     initial={{ opacity: 0, y: -50, scale: 0.5 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: -50, scale: 0.5 }}
-                    transition={{ duration: 0.4 }}
+                    transition={{ duration: 0.25 }}
                 >
                     <FilterStayMobile />
                 </motion.div>

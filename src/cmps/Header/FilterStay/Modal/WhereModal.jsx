@@ -28,7 +28,7 @@ function RecentSearch() {
                         <Clock />
                     </div>
                     <div className="text-container">
-                        <p>Italy &middot stay</p>
+                        <p>Italy &middot; stay</p>
                         <p>Apr 1 - Jul 1</p>
                     </div>
                 </div>

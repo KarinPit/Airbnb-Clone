@@ -125,6 +125,19 @@
             height: 100%;
             padding: rem(8px) 0 rem(8px) rem(24px);
             border-radius: rem(32px);
+
+            form {
+                input {
+                    font-family: AirbnbCereal-Light;
+                    font-size: rem(14px);
+                    border: none;
+                    background-color: transparent;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
         }
 
         .checkin-input {

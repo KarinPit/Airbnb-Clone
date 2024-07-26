@@ -27,15 +27,7 @@ function appReducer(state = initialState, cmd) {
 export const store = createStore(appReducer)
 
 window.store = store
-// console.log('store', store)
 
 store.subscribe(() => {
-	// console.log('Current state is:', store.getState())
 })
-
-// setInterval(() => {
-// 	store.dispatch({ type: 'INCREMENT' })
-// }, 1000)
-// store.dispatch({ type: 'INCREMENT' })
-// store.dispatch({ type: 'CHANGE_BY', diff: 20 })
 
