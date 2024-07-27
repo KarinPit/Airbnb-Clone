@@ -38,7 +38,7 @@ export default function AppHeader() {
         }
 
         window.addEventListener('resize', handleResize)
-        scrollY.onChange((latest) => {
+        scrollY.on("change", (latest) => {
             setIsScrolled(latest > 0)
             setFilterSize(false)
         })
@@ -51,7 +51,7 @@ export default function AppHeader() {
 
     const renderNavOptions = useCallback(() => (
         <AnimatePresence>
-            {!isScrolled && <motion.div
+            {(!isScrolled || filterSize) && <motion.div
                 key="nav-options"
                 className="nav-options"
                 initial={{ opacity: 0, y: -50, scale: 0 }}
@@ -63,7 +63,7 @@ export default function AppHeader() {
             </motion.div>}
 
         </AnimatePresence>
-    ), [isScrolled])
+    ), [isScrolled, filterSize])
 
     const renderFilter = useCallback(() => (
         <motion.div
@@ -75,7 +75,7 @@ export default function AppHeader() {
             transition={{
                 opacity: { duration: 0 },
                 y: { duration: 0.25 },
-                scaleX: { duration: 0.25}
+                scaleX: { duration: 0.25 }
             }}        >
             <div className="filter-search-sub-container">
                 <FilterStay isWideScreen={isWideScreen} />

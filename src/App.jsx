@@ -34,17 +34,8 @@ export function App() {
                         setOpenFilter(false)
                     }
                 }}>
-                    <AppHeader />
-                    <FilterStayMobile />
 
-                    <main onClick={(e) => {
-                        setOpenFilter(false)
-                        setFilterSize(false)
-                    }}>
-                        <div className={`${filterSize ? 'overlay' : ''}`}></div>
-                        {createRouting()}
-                    </main>
-
+                    {createRouting()}
                 </section>
             </FilterContext.Provider>
         </>

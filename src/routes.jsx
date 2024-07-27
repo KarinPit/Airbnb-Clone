@@ -2,31 +2,22 @@ import React, { Fragment, Suspense } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 
 import { AuthGuard } from "./guards/AuthGuard"
-
-import { Home } from './pages/Home'
-import AppHeader from './cmps/Header/AppHeader'
-import { FilterStayMobile } from './cmps/Header/FilterStay/FilterStayMobile'
-import FilterContext from './context/FilterContext'
-
+import { MainLayout } from "./pages/layouts/MainLayout";
+import { Home } from "./pages/Home"
 
 const routes = [
   {
     path: "/",
-    element: <Home />,
-    // guard: AuthGuard,
-    // children: [
-    //   {
-    //     key: "stay-index",
-    //     index: true,
-    //     element: <StaysIndex />,
-    //   },
-    //   {
-    //     key: "stay-id",
-    //     path: "/stay/:stayId",
-    //     element: <StayIndex />,
-    //   },
-    // ],
-    key: "home",
+    element: <MainLayout />,
+    children: [
+      {
+        key: 'home',
+        index: true,
+        element: <Home />,
+        // path: "/home"
+      }
+    ],
+    key: "main",
   },
   { path: "*", element: <Navigate to="/" replace />, key: "404" },
 ];

@@ -28,6 +28,7 @@
     color: rgb(92, 92, 92);
     z-index: 1;
     height: rem(65px);
+    cursor: pointer;
 
     &.active-filter {
         background-color: #ebebeb;
