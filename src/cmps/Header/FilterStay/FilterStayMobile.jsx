@@ -2,7 +2,7 @@ import React, { useRef, useContext, forwardRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 import FilterContext from '../../../context/FilterContext'
-import { GeneralNav } from './TopNav'
+import { GeneralNav } from '../TopNav'
 import { WhereModalMobile } from '../FilterStay/Modal/WhereModal'
 import CalendarPickerMobile from './Modal/CalendarPicker/CalendarPickerMobile'
 import { WhoModal } from '../FilterStay/Modal/WhoModal'

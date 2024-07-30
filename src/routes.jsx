@@ -5,6 +5,7 @@ import { AuthGuard } from "./guards/AuthGuard"
 import { MainLayout } from "./pages/layouts/MainLayout";
 import { Home } from "./pages/Home"
 
+
 const routes = [
   {
     path: "/",

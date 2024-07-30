@@ -13,6 +13,7 @@ export function App() {
     const [isOpenMobile, setIsOpenMobile] = useState(false)
     const [openFilterMobile, setOpenFilterMobile] = useState('where-input-mobile')
     const [isWideScreen, setIsWideScreen] = useState(window.innerWidth > screenWidth)
+    
     return (
         <>
             <FilterContext.Provider

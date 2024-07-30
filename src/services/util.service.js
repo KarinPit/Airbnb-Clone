@@ -3,7 +3,8 @@ export const utilService = {
     makeId,
     saveToStorage,
     loadFromStorage,
-    animateCSS
+    animateCSS,
+    isArrayEmpty
 }
 
 function makeId(length = 5) {
@@ -38,4 +39,8 @@ function animateCSS(el, animation, isRemoveClass = true) {
 
         el.addEventListener('animationend', handleAnimationEnd, { once: true })
     })
+}
+
+function isArrayEmpty(arr) {
+    return arr.length === 0
 }

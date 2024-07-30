@@ -1,6 +1,8 @@
 import { useState, useEffect, useContext, useCallback } from 'react'
+import { Link, NavLink } from 'react-router-dom'
 import { motion, useScroll, AnimatePresence } from "framer-motion"
-import { GeneralNav, UserNav } from './FilterStay/TopNav'
+
+import { GeneralNav, UserNav } from './TopNav'
 import { FilterStay } from '../Header/FilterStay/FilterStay'
 import { FilterStayMinimized } from "./FilterStay/FilterStayMinimized"
 import { FilterStayMobile } from './FilterStay/FilterStayMobile'
@@ -121,10 +123,11 @@ export default function AppHeader() {
 
     return (
         <header className={`header${isScrolled && !filterSize ? ' scrolled' : ''}`}>
-            <a href="#" className="logo">
+
+            <Link to="/" className="logo">
                 <img src={airbnbLogo} alt="airbnb logo" />
                 <span className="primary-color">airbnb</span>
-            </a>
+            </Link>
 
             <AnimatePresence>
                 {isScrolled && isWideScreen && !filterSize ? renderNavOptions() : renderNavOptions()}
