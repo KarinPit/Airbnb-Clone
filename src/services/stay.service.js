@@ -12,22 +12,26 @@ export const stayService = {
     query,
     getById,
     save,
-    remove
+    remove,
+    getDefaultFilter
 }
 window.cs = stayService
 
+_createStays()
 
-async function query(filterBy = { txt: '', price: 0 }) {
-    var stays = await storageService.query(STORAGE_KEY)
-    if (filterBy.txt) {
-        const regex = new RegExp(filterBy.txt, 'i')
-        stays = stays.filter(stay => regex.test(stay.vendor) || regex.test(stay.description))
-    }
-    if (filterBy.price) {
-        stays = stays.filter(stay => stay.price <= filterBy.price)
+async function query(filterBy) {
+    let stays = await storageService.query(STORAGE_KEY)
+    if (filterBy) {
+        let { location = '', checkIn = '', checkOut = '' } = filterBy
+        const regexLoc = new RegExp(location, 'i')
+        stays = stays.filter(stay => regexLoc.test(stay.address.country))
+        // console.log('returning stays', stays)
     }
 
-    stays = stays.map(({ _id, vendor, price, owner }) => ({ _id, vendor, price, owner }))
+    // if (filterBy.checkIn && filterBy.checkOut) {
+    //     // stays = stays.filter(stay => stay.price <= filterBy.price)
+    // }
+
     return stays
 }
 
@@ -59,13 +63,21 @@ async function save(stay) {
     return savedStay
 }
 
+
+function getDefaultFilter() {
+    return {
+        location: '',
+        checkIn: '',
+        checkOut: '',
+    }
+}
+
 // Private functions
 
-async function _loadData() {
+async function _createStays() {
     const stays = await storageService.query(STORAGE_KEY)
     if (utilService.isArrayEmpty(stays)) {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(DemoData))
     }
 }
 
-_loadData()

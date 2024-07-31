@@ -137,7 +137,9 @@ export const DemoData = [
             "availability_30": 28,
             "availability_60": 47,
             "availability_90": 74,
-            "availability_365": 239
+            "availability_365": 239,
+            "avalable_checkIn": { "$date": "2024-07-03T05:00:00.000Z" },
+            "avalable_checkOut": { "$date": "2024-09-15T05:00:00.000Z" },
         },
         "review_scores": {
             "review_scores_accuracy": 9,
@@ -774,7 +776,9 @@ export const DemoData = [
             "availability_30": 0,
             "availability_60": 0,
             "availability_90": 0,
-            "availability_365": 0
+            "availability_365": 0,
+            "avalable_checkIn": { "$date": "2024-07-03T05:00:00.000Z" },
+            "avalable_checkOut": { "$date": "2024-10-15T05:00:00.000Z" },
         },
         "review_scores": {},
         "reviews": []
@@ -922,7 +926,9 @@ export const DemoData = [
             "availability_30": 16,
             "availability_60": 46,
             "availability_90": 76,
-            "availability_365": 343
+            "availability_365": 343,
+            "avalable_checkIn": { "$date": "2024-07-03T05:00:00.000Z" },
+            "avalable_checkOut": { "$date": "2024-12-08T05:00:00.000Z" },
         },
         "review_scores": {
             "review_scores_accuracy": 9,
@@ -2002,7 +2008,9 @@ export const DemoData = [
             "availability_30": 0,
             "availability_60": 0,
             "availability_90": 0,
-            "availability_365": 0
+            "availability_365": 0,
+            "avalable_checkIn": { "$date": "2024-09-03T05:00:00.000Z" },
+            "avalable_checkOut": { "$date": "2025-02-29T05:00:00.000Z" },
         },
         "review_scores": {
             "review_scores_accuracy": 10,
@@ -2138,7 +2146,9 @@ export const DemoData = [
             "availability_30": 28,
             "availability_60": 58,
             "availability_90": 88,
-            "availability_365": 363
+            "availability_365": 363,
+            "avalable_checkIn": { "$date": "2025-01-03T05:00:00.000Z" },
+            "avalable_checkOut": { "$date": "2025-12-15T05:00:00.000Z" },
         },
         "review_scores": {},
         "reviews": []
@@ -2260,7 +2270,9 @@ export const DemoData = [
             "availability_30": 0,
             "availability_60": 0,
             "availability_90": 0,
-            "availability_365": 93
+            "availability_365": 93,
+            "avalable_checkIn": { "$date": "2024-07-03T05:00:00.000Z" },
+            "avalable_checkOut": { "$date": "2024-08-15T05:00:00.000Z" },
         },
         "review_scores": {
             "review_scores_accuracy": 10,
@@ -3110,7 +3122,9 @@ export const DemoData = [
             "availability_30": 7,
             "availability_60": 19,
             "availability_90": 33,
-            "availability_365": 118
+            "availability_365": 118,
+            "avalable_checkIn": { "$date": "2024-07-03T05:00:00.000Z" },
+            "avalable_checkOut": { "$date": "2024-09-15T05:00:00.000Z" },
         },
         "review_scores": {
             "review_scores_accuracy": 10,
@@ -3944,7 +3958,9 @@ export const DemoData = [
             "availability_30": 27,
             "availability_60": 57,
             "availability_90": 87,
-            "availability_365": 362
+            "availability_365": 362,
+            "avalable_checkIn": { "$date": "2024-07-03T05:00:00.000Z" },
+            "avalable_checkOut": { "$date": "2025-09-15T05:00:00.000Z" },
         },
         "review_scores": {
             "review_scores_accuracy": 10,
@@ -4085,7 +4101,9 @@ export const DemoData = [
             "availability_30": 10,
             "availability_60": 10,
             "availability_90": 21,
-            "availability_365": 296
+            "availability_365": 296,
+            "avalable_checkIn": { "$date": "2024-07-03T05:00:00.000Z" },
+            "avalable_checkOut": { "$date": "2025-09-15T05:00:00.000Z" },
         },
         "review_scores": {
             "review_scores_accuracy": 10,
@@ -4219,7 +4237,9 @@ export const DemoData = [
             "availability_30": 0,
             "availability_60": 0,
             "availability_90": 0,
-            "availability_365": 0
+            "availability_365": 0,
+            "avalable_checkIn": { "$date": "2024-07-03T05:00:00.000Z" },
+            "avalable_checkOut": { "$date": "2024-07-15T05:00:00.000Z" },
         },
         "review_scores": {},
         "reviews": []
@@ -4347,7 +4367,9 @@ export const DemoData = [
             "availability_30": 30,
             "availability_60": 31,
             "availability_90": 31,
-            "availability_365": 243
+            "availability_365": 243,
+            "avalable_checkIn": { "$date": "2024-07-03T05:00:00.000Z" },
+            "avalable_checkOut": { "$date": "2025-08-15T05:00:00.000Z" },
         },
         "review_scores": {
             "review_scores_accuracy": 9,
@@ -4517,7 +4539,9 @@ export const DemoData = [
             "availability_30": 0,
             "availability_60": 0,
             "availability_90": 0,
-            "availability_365": 32
+            "availability_365": 32,
+            "avalable_checkIn": { "$date": "2024-07-03T05:00:00.000Z" },
+            "avalable_checkOut": { "$date": "2025-07-15T05:00:00.000Z" },
         },
         "review_scores": {},
         "reviews": []
@@ -4632,7 +4656,9 @@ export const DemoData = [
             "availability_30": 0,
             "availability_60": 0,
             "availability_90": 0,
-            "availability_365": 0
+            "availability_365": 0,
+            "avalable_checkIn": { "$date": "2024-07-03T05:00:00.000Z" },
+            "avalable_checkOut": { "$date": "2024-09-15T05:00:00.000Z" },
         },
         "review_scores": {
             "review_scores_accuracy": 10,
@@ -4779,7 +4805,9 @@ export const DemoData = [
             "availability_30": 0,
             "availability_60": 0,
             "availability_90": 0,
-            "availability_365": 0
+            "availability_365": 0,
+            "avalable_checkIn": { "$date": "2024-07-03T05:00:00.000Z" },
+            "avalable_checkOut": { "$date": "2024-09-15T05:00:00.000Z" },
         },
         "review_scores": {},
         "reviews": []
@@ -4897,7 +4925,9 @@ export const DemoData = [
             "availability_30": 0,
             "availability_60": 0,
             "availability_90": 0,
-            "availability_365": 0
+            "availability_365": 0,
+            "avalable_checkIn": { "$date": "2024-07-03T05:00:00.000Z" },
+            "avalable_checkOut": { "$date": "2024-08-15T05:00:00.000Z" },
         },
         "review_scores": {},
         "reviews": []
@@ -5006,7 +5036,9 @@ export const DemoData = [
             "availability_30": 30,
             "availability_60": 60,
             "availability_90": 90,
-            "availability_365": 365
+            "availability_365": 365,
+            "avalable_checkIn": { "$date": "2024-07-03T05:00:00.000Z" },
+            "avalable_checkOut": { "$date": "2026-01-15T05:00:00.000Z" },
         },
         "review_scores": {},
         "reviews": []
@@ -5115,7 +5147,9 @@ export const DemoData = [
             "availability_30": 0,
             "availability_60": 0,
             "availability_90": 0,
-            "availability_365": 0
+            "availability_365": 0,
+            "avalable_checkIn": { "$date": "2024-07-03T05:00:00.000Z" },
+            "avalable_checkOut": { "$date": "2024-09-15T05:00:00.000Z" },
         },
         "review_scores": {},
         "reviews": []
@@ -5258,7 +5292,9 @@ export const DemoData = [
             "availability_30": 16,
             "availability_60": 40,
             "availability_90": 67,
-            "availability_365": 335
+            "availability_365": 335,
+            "avalable_checkIn": { "$date": "2024-07-03T05:00:00.000Z" },
+            "avalable_checkOut": { "$date": "2025-04-15T05:00:00.000Z" },
         },
         "review_scores": {
             "review_scores_accuracy": 10,

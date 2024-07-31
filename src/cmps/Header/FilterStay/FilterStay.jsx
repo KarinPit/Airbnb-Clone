@@ -1,10 +1,10 @@
-import { useState, useRef, useContext } from 'react'
+import { useState, useEffect, useRef, useContext } from 'react'
 
 import FilterContext from '../../../context/FilterContext'
 import { FilterInput } from './FilterInput'
-import { stayService } from '../../../services/stay.service'
 
 import { SearchIcon } from '../../SVG/HeaderSvg'
+
 
 export function FilterStay({ isWideScreen }) {
     const { openFilter, setOpenFilter, setIsOpenMobile } = useContext(FilterContext)
@@ -13,6 +13,7 @@ export function FilterStay({ isWideScreen }) {
     const checkOutRef = useRef(null)
     const whoRef = useRef(null)
     const [isHovered, setIsHovered] = useState(null)
+
 
     const isActive = (inputName) => openFilter && openFilter.includes(inputName)
 

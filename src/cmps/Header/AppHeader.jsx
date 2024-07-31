@@ -10,9 +10,9 @@ import { FilterStayModal } from './FilterStay/Modal/FilterStayModal'
 import FilterContext from "../../context/FilterContext"
 import airbnbLogo from '../../../public/svg/airbnb-logo.svg'
 
+
 export default function AppHeader() {
     const [isScrolled, setIsScrolled] = useState(false)
-    const { scrollY } = useScroll()
     const {
         isWideScreen,
         screenWidth,
@@ -29,26 +29,15 @@ export default function AppHeader() {
     const filterClassName = isWideScreen ? 'filter-search-container' : 'filter-search-container mobile'
 
     useEffect(() => {
-        const handleResize = () => {
-            const newIsWideScreen = window.innerWidth > screenWidth
-            setIsWideScreen(newIsWideScreen)
-            if (newIsWideScreen) {
-                setIsOpenMobile(false)
-            } else {
-                setOpenFilter(false)
-            }
-        }
 
         window.addEventListener('resize', handleResize)
-        scrollY.on("change", (latest) => {
-            setIsScrolled(latest > 0)
-            setFilterSize(false)
-        })
+        window.addEventListener('scroll', handleScroll)
 
         return () => {
             window.removeEventListener('resize', handleResize)
+            window.removeEventListener('scroll', handleScroll)
         }
-    }, [isWideScreen, scrollY, screenWidth, setIsWideScreen, setOpenFilterMobile, setIsOpenMobile, setOpenFilter, setFilterSize])
+    }, [isWideScreen, screenWidth])
 
 
     const renderNavOptions = useCallback(() => (
@@ -100,6 +89,7 @@ export default function AppHeader() {
             }}
             onClick={() => setFilterSize(true)}
         >
+            {console.log('rendered minimized filter')}
             <FilterStayMinimized isScrolled={isScrolled} />
         </motion.div>
     ), [filterClassName, isScrolled, setFilterSize])
@@ -120,6 +110,22 @@ export default function AppHeader() {
             )}
         </AnimatePresence>
     ), [filterClassName, isOpenMobile])
+
+    function handleResize() {
+        const newIsWideScreen = window.innerWidth > screenWidth
+        setIsWideScreen(newIsWideScreen)
+        if (newIsWideScreen) {
+            setIsOpenMobile(false)
+        } else {
+            setOpenFilter(false)
+        }
+    }
+
+    function handleScroll() {
+        console.log(window.scrollY);
+        setIsScrolled(window.scrollY > 0)
+        setFilterSize(false)
+    }
 
     return (
         <header className={`header${isScrolled && !filterSize ? ' scrolled' : ''}`}>

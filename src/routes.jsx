@@ -3,7 +3,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 
 import { AuthGuard } from "./guards/AuthGuard"
 import { MainLayout } from "./pages/layouts/MainLayout";
-import { Home } from "./pages/Home"
+import { StayIndex } from "./pages/StayIndex"
 
 
 const routes = [
@@ -14,7 +14,7 @@ const routes = [
       {
         key: 'home',
         index: true,
-        element: <Home />,
+        element: <StayIndex />,
         // path: "/home"
       }
     ],
