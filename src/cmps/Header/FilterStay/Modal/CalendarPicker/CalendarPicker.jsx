@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { addMonths, subMonths, startOfDay, isBefore, isAfter, isValid } from 'date-fns'
 
+import FilterModalContext from '../../../../../context/FilterContext'
 import { CalendarCells } from '../../../../../utils/CalendarCells'
 import { getMonthName } from '../../../../../utils/CalendarUtils'
 
@@ -8,18 +9,24 @@ import { LeftArrow, RightArrow } from '../../../../SVG/HeaderSvg'
 
 
 export default function CalendarPicker() {
+    const { filterBy, setFilterBy } = useContext(FilterModalContext)
     const screenWidth = 850
     const [isMinimizedCalendar, setIsMinimizedCalendar] = useState(window.innerWidth < screenWidth)
     const [currentDate, setCurrentDate] = useState(new Date())
     const [range, setRange] = useState({ start: null, end: null })
     const [hoveredDate, setHoveredDate] = useState(null)
     const [isDisabled, setIsDisabled] = useState(true)
-
     const nextMonthDate = addMonths(currentDate, 1)
+
+
+    useEffect(() => {
+        console.log(filterBy)
+    }, [filterBy])
 
     useResize(() => {
         setIsMinimizedCalendar(window.innerWidth < screenWidth)
     })
+
 
     function handlePrevClick() {
         const newDate = subMonths(currentDate, 1)
@@ -57,7 +64,7 @@ export default function CalendarPicker() {
         if (!range.start || (range.start && range.end)) {
             if (isValid(day)) {
                 setRange({ start: day, end: null })
-                // onChange({ start: day, end: null })
+                setFilterBy(prev => ({ ...prev, 'checkIn': day, 'checkOut': null }))
             }
         } else {
             const newRange = {
@@ -67,7 +74,7 @@ export default function CalendarPicker() {
 
             if (isValid(newRange.end)) {
                 setRange(newRange)
-                // onChange({ start: newRange.start, end: newRange.end })
+                setFilterBy(prev => ({ ...prev, 'checkOut': day }))
             }
         }
     }

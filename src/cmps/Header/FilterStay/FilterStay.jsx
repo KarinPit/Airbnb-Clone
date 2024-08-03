@@ -1,21 +1,33 @@
-import { useState, useEffect, useRef, useContext } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
-import FilterContext from '../../../context/FilterContext'
 import { FilterInput } from './FilterInput'
 
 import { SearchIcon } from '../../SVG/HeaderSvg'
+import { useDispatch, useSelector } from 'react-redux'
 
 
 export function FilterStay({ isWideScreen }) {
-    const { openFilter, setOpenFilter, setIsOpenMobile } = useContext(FilterContext)
+    const isOpenFilter = useSelector((storeState) => storeState.filterModule.isOpenFilter)
+    const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
+    const dispatch = useDispatch()
+
+    const [filterByEdited, setFilterByEdited] = useState(filterBy)
+    const [isHovered, setIsHovered] = useState(null)
+
     const whereRef = useRef(null)
     const checkInRef = useRef(null)
     const checkOutRef = useRef(null)
     const whoRef = useRef(null)
-    const [isHovered, setIsHovered] = useState(null)
+
+    const isActive = (inputName) => isOpenFilter && isOpenFilter.includes(inputName)
 
 
-    const isActive = (inputName) => openFilter && openFilter.includes(inputName)
+    useEffect(() => {
+    }, [])
+
+    useEffect(() => {
+    }, [filterByEdited])
+
 
     const filterInputs = [
         {
@@ -27,7 +39,8 @@ export function FilterStay({ isWideScreen }) {
                 || isActive('checkin-input')
                 || isHovered?.current?.className.includes('where-input')
                 || isHovered?.current?.className.includes('checkin-input'),
-            pseudoElements: isActive('checkin-input') ? 'after' : ''
+            pseudoElements: isActive('checkin-input') ? 'after' : '',
+
         },
         {
             className: "checkin-input",
@@ -64,19 +77,24 @@ export function FilterStay({ isWideScreen }) {
     ]
 
     function handleClick(element) {
-        setOpenFilter(element.current.className)
+        dispatch({ type: 'SET_OPEN_FILTER', isOpenFilter: element.current.className })
     }
 
     function handleMobileFilterClick() {
         if (!isWideScreen) {
-            setIsOpenMobile(true)
+            dispatch({ type: 'SET_OPEN_FILTER_MOBILE', isOpenFilterMobile: true })
         }
+    }
+
+    function handleSubmit(ev) {
+        ev.preventDefault()
+        console.log('Submitted filter', filterBy);
     }
 
 
     return (
-        <div className={`filter-search ${openFilter ? 'active-filter' : ''}`}
-            onClick={handleMobileFilterClick}>
+        <form className={`filter-search ${isOpenFilter ? 'active-filter' : ''}`}
+            onClick={handleMobileFilterClick} onSubmit={(ev) => handleSubmit(ev)}>
 
             <div className="mobile-filter">
                 <SearchIcon />
@@ -99,8 +117,10 @@ export function FilterStay({ isWideScreen }) {
                     onMouseLeave={() => setIsHovered(null)}
                     hideBorder={hideBorderCondition}
                     pseudoElements={pseudoElements}
+                    filterByEdited={filterByEdited}
+                    setFilterByEdited={setFilterByEdited}
                 />
             ))}
-        </div>
+        </form>
     )
 }

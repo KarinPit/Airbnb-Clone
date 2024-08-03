@@ -1,7 +1,8 @@
-import React, { useRef, useContext, forwardRef } from 'react'
+import React, { useState, useRef, forwardRef } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+
 import { motion, AnimatePresence } from 'framer-motion'
 
-import FilterContext from '../../../context/FilterContext'
 import { GeneralNav } from '../TopNav'
 import { WhereModalMobile } from '../FilterStay/Modal/WhereModal'
 import CalendarPickerMobile from './Modal/CalendarPicker/CalendarPickerMobile'
@@ -34,7 +35,12 @@ const MobileFilterSection = forwardRef(({ className, label, subLabel, isActive, 
 ))
 
 export function FilterStayMobile() {
-    const { isOpenMobile, setOpenFilterMobile, openFilterMobile, setIsOpenMobile } = useContext(FilterContext)
+    const isOpenFilterMobile = useSelector((storeState) => storeState.filterModule.isOpenFilterMobile)
+    const defaultFilter = useSelector((storeState) => storeState.filterModule.defaultFilter)
+    const dispatch = useDispatch()
+
+    const [currentOpenedFilter, setCurrentOpenedFilter] = useState(defaultFilter)
+
     const whereMobileRef = useRef(null)
     const checkInMobileRef = useRef(null)
     const whoMobileRef = useRef(null)
@@ -42,14 +48,14 @@ export function FilterStayMobile() {
     const handleFilterClick = (element) => setOpenFilterMobile(element.current.className)
 
     const handleButtonClick = () => {
-        setOpenFilterMobile('where-input-mobile')
-        setIsOpenMobile(false)
+        setCurrentOpenedFilter('where-input-mobile')
+        dispatch({ type: 'SET_OPEN_FILTER_MOBILE', isOpenFilterMobile: false })
     }
 
     return (
-        <div className={`mobile-filters-container ${isOpenMobile ? 'show' : ''}`}>
+        <div className={`mobile-filters-container ${isOpenFilterMobile ? 'show' : ''}`}>
             <AnimatePresence>
-                {isOpenMobile && (
+                {isOpenFilterMobile && (
                     <motion.div
                         className='top-nav'
                         initial={{ y: -50 }}
@@ -71,7 +77,7 @@ export function FilterStayMobile() {
                 className='where-input-mobile'
                 label='Where'
                 subLabel="I'm flexible"
-                isActive={isOpenMobile}
+                isActive={isOpenFilterMobile}
                 onClick={() => handleFilterClick(whereMobileRef)}
                 ref={whereMobileRef}
                 initial={{ y: -100 }}
@@ -79,7 +85,7 @@ export function FilterStayMobile() {
                 exit={{ y: 0 }}
                 transition={{ ease: 'easeInOut', duration: 0.3 }}
             >
-                {openFilterMobile && openFilterMobile.includes('where-input-mobile') && (
+                {currentOpenedFilter && currentOpenedFilter.includes('where-input-mobile') && (
                     <div className='mobile-container'>
                         <WhereModalMobile />
                     </div>
@@ -90,7 +96,7 @@ export function FilterStayMobile() {
                 className='checkin-input-mobile'
                 label='When'
                 subLabel='Add dates'
-                isActive={isOpenMobile}
+                isActive={isOpenFilterMobile}
                 onClick={() => handleFilterClick(checkInMobileRef)}
                 ref={checkInMobileRef}
                 initial={{ y: -200 }}
@@ -98,7 +104,7 @@ export function FilterStayMobile() {
                 exit={{ y: 0 }}
                 transition={{ ease: 'easeInOut', duration: 0.4 }}
             >
-                {openFilterMobile && openFilterMobile.includes('checkin-input-mobile') && (
+                {currentOpenedFilter && currentOpenedFilter.includes('checkin-input-mobile') && (
                     <div className='mobile-container'>
                         <CalendarPickerMobile />
                     </div>
@@ -109,7 +115,7 @@ export function FilterStayMobile() {
                 className='who-input-mobile'
                 label='Who'
                 subLabel='Add guests'
-                isActive={isOpenMobile}
+                isActive={isOpenFilterMobile}
                 onClick={() => handleFilterClick(whoMobileRef)}
                 ref={whoMobileRef}
                 initial={{ y: -200 }}
@@ -117,7 +123,7 @@ export function FilterStayMobile() {
                 exit={{ y: 0 }}
                 transition={{ ease: 'easeInOut', duration: 0.5 }}
             >
-                {openFilterMobile && openFilterMobile.includes('who-input-mobile') && (
+                {currentOpenedFilter && currentOpenedFilter.includes('who-input-mobile') && (
                     <div className='mobile-container'>
                         <h2>Who's coming?</h2>
                         <WhoModal />

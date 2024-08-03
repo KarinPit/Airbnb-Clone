@@ -1,15 +1,15 @@
-import React, { useContext } from 'react'
-import { motion } from 'framer-motion'
+import React from 'react'
+import { useSelector } from 'react-redux'
 
-import FilterContext from '../../../context/FilterContext'
+import { motion } from 'framer-motion'
 
 import { SearchIcon } from '../../SVG/HeaderSvg'
 
 
 export function FilterStayMinimized() {
-    const { openFilter } = useContext(FilterContext)
+    const isOpenFilter = useSelector((storeState) => storeState.filterModule.isOpenFilter)
 
-    const isActive = (inputName) => openFilter === inputName
+    const isActive = (inputName) => isOpenFilter === inputName
 
     return (
         <div className="minimized-filter">

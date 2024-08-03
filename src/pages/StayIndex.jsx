@@ -5,7 +5,7 @@ import { stayService } from '../services/stay.service'
 
 export function StayIndex() {
     const [stays, setStays] = useState(null)
-    const [filterBy, setFilterBy] = useState(stayService.getDefaultFilter())
+    const [filterBy, setFilterBy] = useState(null)
 
     useEffect(() => {
         loadStays()

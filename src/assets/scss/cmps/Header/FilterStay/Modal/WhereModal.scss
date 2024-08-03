@@ -132,22 +132,14 @@
                 display: none;
             }
 
-            form {
-                width: 100%;
 
-                .input {
-                    display: flex;
-                    align-items: center;
-                    gap: rem(10px);
-                    border: 1px solid grey;
-                    border-radius: rem(12px);
-                    padding: rem(14px) rem(24px);
-                }
-
-                svg {
-                    width: rem(16px);
-                    height: rem(16px);
-                }
+            .input {
+                display: flex;
+                align-items: center;
+                gap: rem(10px);
+                border: 1px solid grey;
+                border-radius: rem(12px);
+                padding: rem(14px) rem(24px);
 
                 input {
                     width: 100%;
@@ -162,19 +154,26 @@
                 }
             }
 
-            .countries {
-                display: flex;
-                width: 100%;
-                overflow-x: auto;
-                margin-block-start: rem(12px);
+            svg {
+                width: rem(16px);
+                height: rem(16px);
+            }
 
-                .country {
 
-                    img {
-                        max-width: rem(120px);
-                        width: rem(120px);
-                        height: rem(120px);
-                    }
+        }
+
+        .countries {
+            display: flex;
+            width: 100%;
+            overflow-x: auto;
+            margin-block-start: rem(12px);
+
+            .country {
+
+                img {
+                    max-width: rem(120px);
+                    width: rem(120px);
+                    height: rem(120px);
                 }
             }
         }

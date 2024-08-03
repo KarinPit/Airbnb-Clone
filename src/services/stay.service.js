@@ -22,7 +22,7 @@ _createStays()
 async function query(filterBy) {
     let stays = await storageService.query(STORAGE_KEY)
     if (filterBy) {
-        let { location = '', checkIn = '', checkOut = '' } = filterBy
+        let { location = '', checkIn = '', checkOut = '', who = 0 } = filterBy
         const regexLoc = new RegExp(location, 'i')
         stays = stays.filter(stay => regexLoc.test(stay.address.country))
         // console.log('returning stays', stays)
@@ -69,6 +69,7 @@ function getDefaultFilter() {
         location: '',
         checkIn: '',
         checkOut: '',
+        who: 0,
     }
 }
 

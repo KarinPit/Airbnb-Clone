@@ -1,48 +1,31 @@
-import { useState, useEffect, useContext, useCallback } from 'react'
-import { Link, NavLink } from 'react-router-dom'
-import { motion, useScroll, AnimatePresence } from "framer-motion"
+import { useState, useEffect, useCallback } from 'react'
+import { Link } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+
+import { motion, AnimatePresence } from "framer-motion"
 
 import { GeneralNav, UserNav } from './TopNav'
 import { FilterStay } from '../Header/FilterStay/FilterStay'
 import { FilterStayMinimized } from "./FilterStay/FilterStayMinimized"
 import { FilterStayMobile } from './FilterStay/FilterStayMobile'
 import { FilterStayModal } from './FilterStay/Modal/FilterStayModal'
-import FilterContext from "../../context/FilterContext"
+
 import airbnbLogo from '../../../public/svg/airbnb-logo.svg'
 
 
 export default function AppHeader() {
-    const [isScrolled, setIsScrolled] = useState(false)
-    const {
-        isWideScreen,
-        screenWidth,
-        filterSize,
-        openFilter,
-        isOpenMobile,
-        setIsWideScreen,
-        setOpenFilterMobile,
-        setIsOpenMobile,
-        setFilterSize,
-        setOpenFilter
-    } = useContext(FilterContext)
+    const isExpandedFilter = useSelector((storeState) => storeState.filterModule.isExpandedFilter)
+    const isOpenFilter = useSelector((storeState) => storeState.filterModule.isOpenFilter)
+    const isOpenFilterMobile = useSelector((storeState) => storeState.filterModule.isOpenFilterMobile)
+    const isWideScreen = useSelector((storeState) => storeState.appModule.isWide)
+    const isScrolled = useSelector((storeState) => storeState.appModule.isScrolled)
+    const dispatch = useDispatch()
 
     const filterClassName = isWideScreen ? 'filter-search-container' : 'filter-search-container mobile'
 
-    useEffect(() => {
-
-        window.addEventListener('resize', handleResize)
-        window.addEventListener('scroll', handleScroll)
-
-        return () => {
-            window.removeEventListener('resize', handleResize)
-            window.removeEventListener('scroll', handleScroll)
-        }
-    }, [isWideScreen, screenWidth])
-
-
     const renderNavOptions = useCallback(() => (
         <AnimatePresence>
-            {(!isScrolled || filterSize) && <motion.div
+            {(!isScrolled || isExpandedFilter) && <motion.div
                 key="nav-options"
                 className="nav-options"
                 initial={{ opacity: 0, y: -50, scale: 0 }}
@@ -54,7 +37,8 @@ export default function AppHeader() {
             </motion.div>}
 
         </AnimatePresence>
-    ), [isScrolled, filterSize])
+    ), [isWideScreen, isScrolled])
+
 
     const renderFilter = useCallback(() => (
         <motion.div
@@ -70,10 +54,11 @@ export default function AppHeader() {
             }}        >
             <div className="filter-search-sub-container">
                 <FilterStay isWideScreen={isWideScreen} />
-                {openFilter && <FilterStayModal />}
+                {isOpenFilter && <FilterStayModal />}
             </div>
         </motion.div>
-    ), [filterClassName, openFilter, isWideScreen])
+    ), [filterClassName, isOpenFilter, isWideScreen])
+
 
     const renderMinimizedFilter = useCallback(() => (
         <motion.div
@@ -87,16 +72,16 @@ export default function AppHeader() {
                 y: { duration: 0.25 },
                 scaleX: { duration: 0.25 }
             }}
-            onClick={() => setFilterSize(true)}
+            onClick={() => dispatch({ type: 'SET_OPEN_FILTER', isOpenFilter: true })}
         >
-            {console.log('rendered minimized filter')}
             <FilterStayMinimized isScrolled={isScrolled} />
         </motion.div>
-    ), [filterClassName, isScrolled, setFilterSize])
+    ), [filterClassName, isScrolled])
+
 
     const renderMobileFilter = useCallback(() => (
         <AnimatePresence>
-            {isOpenMobile && (
+            {isOpenFilterMobile && (
                 <motion.div
                     key="FilterStayMobile"
                     className={filterClassName}
@@ -109,26 +94,11 @@ export default function AppHeader() {
                 </motion.div>
             )}
         </AnimatePresence>
-    ), [filterClassName, isOpenMobile])
+    ), [filterClassName, isOpenFilterMobile])
 
-    function handleResize() {
-        const newIsWideScreen = window.innerWidth > screenWidth
-        setIsWideScreen(newIsWideScreen)
-        if (newIsWideScreen) {
-            setIsOpenMobile(false)
-        } else {
-            setOpenFilter(false)
-        }
-    }
-
-    function handleScroll() {
-        console.log(window.scrollY);
-        setIsScrolled(window.scrollY > 0)
-        setFilterSize(false)
-    }
 
     return (
-        <header className={`header${isScrolled && !filterSize ? ' scrolled' : ''}`}>
+        <header className={`header${isScrolled && !isExpandedFilter ? ' scrolled' : ''}`}>
 
             <Link to="/" className="logo">
                 <img src={airbnbLogo} alt="airbnb logo" />
@@ -136,14 +106,14 @@ export default function AppHeader() {
             </Link>
 
             <AnimatePresence>
-                {isScrolled && isWideScreen && !filterSize ? renderNavOptions() : renderNavOptions()}
+                {isScrolled && isWideScreen && !isExpandedFilter ? renderNavOptions() : renderNavOptions()}
             </AnimatePresence>
 
             <UserNav />
 
             <AnimatePresence>
                 {isScrolled && isWideScreen
-                    ? filterSize
+                    ? isExpandedFilter
                         ? renderFilter()
                         : renderMinimizedFilter()
                     : renderFilter()}

@@ -76,12 +76,10 @@ export function WhereModal() {
 
 function SearchForm() {
     return (
-        <form>
-            <div className='input'>
-                <SearchIcon />
-                <input placeholder='Search destinations' />
-            </div>
-        </form>
+        <div className='input'>
+            <SearchIcon />
+            <input placeholder='Search destinations' />
+        </div>
     )
 }
 
