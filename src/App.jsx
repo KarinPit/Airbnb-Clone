@@ -28,7 +28,7 @@ export function App() {
                     || e.target.className === 'filter-search-container'
                     || e.target.className === 'filter-search-sub-container'
                     || e.target.className === 'primary-bg') {
-                    dispatch({ type: SET_OPEN_FILTER, isOpenFilter: false })
+                    dispatch({ type: 'SET_OPEN_FILTER', isOpenFilter: false })
                 }
             }}>
 

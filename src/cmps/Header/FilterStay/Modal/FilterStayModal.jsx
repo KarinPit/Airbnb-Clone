@@ -13,12 +13,6 @@ export function FilterStayModal() {
     const { isWideScreen, setIswideScreen } = useState(window.innerWidth > narrowBreakpoint)
 
     useEffect(() => {
-        // console.log('is wide screen', isWideScreen);
-        window.addEventListener('resize', handleWindowResize)
-        return (
-            window.removeEventListener('resize', handleWindowResize)
-        )
-    // }, [isWideScreen])
     }, [])
 
     const renderModalContent = () => {

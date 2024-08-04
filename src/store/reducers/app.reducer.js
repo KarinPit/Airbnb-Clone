@@ -9,9 +9,9 @@ const initialState = {
 	mobileBreakpoint: 550,
 	narrowBreakpoint: 744,
 	normalBreakpoint: 950,
-	isMobile: false,
-	isWideScreen: false,
-	isScrolled: false,
+	isMobile: window.innerWidth < 550,
+	isWideScreen: window.innerWidth > 744,
+	isScrolled: window.scrollY > 0,
 	isLoading: true,
 	modalData: null,
 }

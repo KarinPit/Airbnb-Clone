@@ -6,7 +6,8 @@ import { SearchIcon } from '../../SVG/HeaderSvg'
 import { useDispatch, useSelector } from 'react-redux'
 
 
-export function FilterStay({ isWideScreen }) {
+export function FilterStay() {
+    const isWideScreen = useSelector((storeState) => storeState.appModule.isWideScreen)
     const isOpenFilter = useSelector((storeState) => storeState.filterModule.isOpenFilter)
     const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
     const dispatch = useDispatch()

@@ -1,20 +1,3 @@
-.filter-search-container {
-
-    &.mobile {
-
-        .where-input,
-        .checkin-input,
-        .checkout-input,
-        .who-input {
-            display: none;
-            height: fit-content;
-            border: 1px solid black;
-            padding-block: rem(24px);
-            border-radius: rem(24px);
-        }
-    }
-}
-
 .filter-search,
 .minimized-filter {
     position: relative;
@@ -33,6 +16,22 @@
     &.active-filter {
         background-color: #ebebeb;
     }
+
+    .where-input,
+    .checkin-input,
+    .checkout-input,
+    .who-input {
+        display: none;
+        height: fit-content;
+        border: 1px solid black;
+        padding-block: rem(24px);
+        border-radius: rem(24px);
+
+        input {
+            width: 100%;
+        }
+    }
+
 }
 
 .filter-search {
@@ -117,6 +116,22 @@
 }
 
 @include for-normal-layout {
+
+    .filter-search,
+    .minimized-filter {
+
+        .where-input,
+        .checkin-input,
+        .checkout-input,
+        .who-input {
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-block: 0;
+        }
+    }
+
     .filter-search {
         min-height: rem(56px);
         padding-inline-start: 0;
@@ -325,7 +340,7 @@
         .checkin-input,
         .checkout-input,
         .who-input {
-
+            border: none;
             display: flex;
             align-items: center;
             justify-content: space-between;

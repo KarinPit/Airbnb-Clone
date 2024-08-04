@@ -19,7 +19,7 @@
 .main-app {
     display: grid;
     grid-template-columns: auto 1fr auto;
-    grid-template-rows: minmax(auto, 200px) 1fr auto;
+    grid-template-rows: minmax(auto, 100px) 1fr auto;
     justify-content: center;
 
     header {
@@ -55,7 +55,12 @@
     // @include for-narrow-layout {}
 
     @include for-normal-layout {
+
         grid-template-columns: rem(80px) 1fr rem(80px);
+
+        .main-app {
+            grid-template-rows: minmax(auto, 200px) 1fr auto;
+        }
 
         header {
             padding-inline: rem($padding-xxl);
