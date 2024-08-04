@@ -1,7 +1,8 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+
 import { addMonths, subMonths, startOfDay, isBefore, isAfter, isValid } from 'date-fns'
 
-import FilterModalContext from '../../../../../context/FilterContext'
 import { CalendarCells } from '../../../../../utils/CalendarCells'
 import { getMonthName } from '../../../../../utils/CalendarUtils'
 
@@ -9,23 +10,26 @@ import { LeftArrow, RightArrow } from '../../../../SVG/HeaderSvg'
 
 
 export default function CalendarPicker() {
-    const { filterBy, setFilterBy } = useContext(FilterModalContext)
-    const screenWidth = 850
-    const [isMinimizedCalendar, setIsMinimizedCalendar] = useState(window.innerWidth < screenWidth)
+    const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
+    const currentWidth = useSelector((storeState) => storeState.appModule.currentWidth)
+    const dispacth = useDispatch()
+
+    const calendarWideBreakpoint = 850
     const [currentDate, setCurrentDate] = useState(new Date())
     const [range, setRange] = useState({ start: null, end: null })
     const [hoveredDate, setHoveredDate] = useState(null)
     const [isDisabled, setIsDisabled] = useState(true)
+    const [isMinimizedCalendar, setIsMinimizedCalendar] = useState(window.innerWidth < calendarWideBreakpoint)
+
     const nextMonthDate = addMonths(currentDate, 1)
 
 
-    useEffect(() => {
-        console.log(filterBy)
-    }, [filterBy])
+    useEffect(()=> {
+    }, [])
 
-    useResize(() => {
-        setIsMinimizedCalendar(window.innerWidth < screenWidth)
-    })
+    useEffect(() => {
+        setIsMinimizedCalendar(currentWidth < calendarWideBreakpoint)
+    }, [filterBy, currentWidth])
 
 
     function handlePrevClick() {
@@ -182,13 +186,4 @@ function MonthTable({
             </table>
         </>
     )
-}
-
-function useResize(callback) {
-    useEffect(() => {
-        window.addEventListener('resize', callback)
-        return () => {
-            window.removeEventListener('resize', callback)
-        }
-    }, [callback])
 }

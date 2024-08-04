@@ -45,7 +45,7 @@ export function FilterStayMobile() {
     const checkInMobileRef = useRef(null)
     const whoMobileRef = useRef(null)
 
-    const handleFilterClick = (element) => setOpenFilterMobile(element.current.className)
+    const handleFilterClick = (element) => setCurrentOpenedFilter(element.current.className)
 
     const handleButtonClick = () => {
         setCurrentOpenedFilter('where-input-mobile')

@@ -8,12 +8,11 @@ import { WhoModal } from "./WhoModal"
 
 
 export function FilterStayModal() {
+    const isWideScreen = useSelector((storeState) => storeState.appModule.isWideScreen)
     const isOpenFilter = useSelector((storeState) => storeState.filterModule.isOpenFilter)
-    const narrowBreakpoint = useSelector((storeState) => storeState.appModule.narrowBreakpoint)
-    const { isWideScreen, setIswideScreen } = useState(window.innerWidth > narrowBreakpoint)
 
     useEffect(() => {
-    }, [])
+    }, [isWideScreen])
 
     const renderModalContent = () => {
         if (isOpenFilter.includes('where-input')) {

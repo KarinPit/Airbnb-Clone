@@ -25,8 +25,8 @@ export function App() {
                 if (e.target.className === 'container'
                     || e.target.className === 'main-app'
                     || e.target.className === 'header'
-                    || e.target.className === 'filter-search-container'
-                    || e.target.className === 'filter-search-sub-container'
+                    || e.target.className === 'filter-search-container '
+                    || e.target.className === 'stay-gallery'
                     || e.target.className === 'primary-bg') {
                     dispatch({ type: 'SET_OPEN_FILTER', isOpenFilter: false })
                 }

@@ -7,7 +7,6 @@ import { FilterStayMobile } from "../../cmps/Header/FilterStay/FilterStayMobile"
 
 export function MainLayout() {
     const { isExpandedFilter } = useSelector((storeState) => storeState.filterModule.isExpandedFilter)
-    // const dispatch = useDispatch()
 
     return (
         <>
@@ -15,8 +14,6 @@ export function MainLayout() {
             <FilterStayMobile />
 
             <main onClick={(e) => {
-                // setOpenFilter(false)
-                // setFilterSize(false)
             }}>
                 <div className={`${isExpandedFilter ? 'overlay' : ''}`}></div>
 

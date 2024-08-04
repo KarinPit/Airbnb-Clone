@@ -1,5 +1,6 @@
 export const SET_MODAL_DATA = 'SET_MODAL_DATA'
 export const SET_IS_LOADING = 'SET_IS_LOADING'
+export const SET_CURRENT_WIDTH = 'SET_CURRENT_WIDTH'
 export const SET_IS_WIDE_SCREEN = 'SET_IS_WIDE_SCREEN'
 export const SET_IS_MOBILE = 'SET_IS_MOBILE'
 export const SET_IS_SCROLLED = 'SET_IS_SCROLLED'
@@ -9,6 +10,7 @@ const initialState = {
 	mobileBreakpoint: 550,
 	narrowBreakpoint: 744,
 	normalBreakpoint: 950,
+	currentWidth: window.innerWidth,
 	isMobile: window.innerWidth < 550,
 	isWideScreen: window.innerWidth > 744,
 	isScrolled: window.scrollY > 0,
@@ -28,6 +30,12 @@ export function appReducer(state = initialState, cmd = {}) {
 			return {
 				...state,
 				isLoading: cmd.isLoading
+			}
+
+		case SET_CURRENT_WIDTH:
+			return {
+				...state,
+				currentWidth: cmd.currentWidth
 			}
 
 		case SET_IS_WIDE_SCREEN:
