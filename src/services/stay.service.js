@@ -13,7 +13,8 @@ export const stayService = {
     getById,
     save,
     remove,
-    getDefaultFilter
+    getDefaultFilter,
+    getFilterFromParams
 }
 window.cs = stayService
 
@@ -21,11 +22,12 @@ _createStays()
 
 async function query(filterBy) {
     let stays = await storageService.query(STORAGE_KEY)
+
     if (filterBy) {
-        let { location = '', checkIn = '', checkOut = '', who = 0 } = filterBy
-        const regexLoc = new RegExp(location, 'i')
+        let { loc = '', checkIn = '', checkOut = '', who = 0 } = filterBy
+        const regexLoc = new RegExp(loc, 'i')
         stays = stays.filter(stay => regexLoc.test(stay.address.country))
-        // console.log('returning stays', stays)
+        return stays
     }
 
     // if (filterBy.checkIn && filterBy.checkOut) {
@@ -66,12 +68,58 @@ async function save(stay) {
 
 function getDefaultFilter() {
     return {
-        location: '',
+        loc: '',
         checkIn: '',
         checkOut: '',
         who: 0,
     }
 }
+
+function getFilterFromParams(searchParams) {
+    const defaultFilter = getDefaultFilter()
+    const filterBy = {}
+
+    for (const field in defaultFilter) {
+        if (field === 'who') {
+            filterBy[field] = +searchParams.get(field) || defaultFilter[field]
+        }
+        else {
+            filterBy[field] = searchParams.get(field) || defaultFilter[field]
+        }
+    }
+    return filterBy
+}
+
+// function updateFilterParams(searchParams) {
+//     const defaultFilter = getDefaultFilter()
+//     const filterBy = {}
+
+//     for (const field in defaultFilter) {
+//         if (!searchParams.get(field)) {
+//             if (field === 'who') {
+//                 filterBy[field] = +searchParams.get(field)
+//             }
+//             else {
+//                 filterBy[field] = searchParams.get(field)
+
+//             }
+//         }
+//         // if (field === 'who') {
+//         //     filterBy[field] = +searchParams.get(field)
+//         // }
+//         // else {
+//         //     if (!searchParams.get(field)) {
+//         //         console.log('inside the if', field);
+//         //     }
+//         //     else {
+//         //         console.log('inside the else', field, searchParams.get(field));
+//         //         filterBy[field] = searchParams.get(field)
+//         //     }
+//         // }
+//     }
+//     return filterBy
+// }
+
 
 // Private functions
 

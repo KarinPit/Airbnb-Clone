@@ -1,6 +1,7 @@
-// import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { SearchIcon } from '../../SVG/HeaderSvg'
+
 
 export function FilterInput({
     className,
@@ -14,17 +15,23 @@ export function FilterInput({
     onMouseLeave,
     hideBorder,
     pseudoElements,
-    filterByEdited,
-    setFilterByEdited
+    filterBy,
+    onChangeFilter
 }) {
+    const [filterByToEdit, setFilterByToEdit] = useState(filterBy)
     const isHoveredClass = isHovered && isHovered.current.className.includes(className) ? 'hovered' : ''
     const activeClass = isActive ? 'active-input' : ''
     const borderClass = hideBorder ? 'hide-border' : ''
 
+
+    useEffect(() => {
+        onChangeFilter(filterByToEdit)
+    }, [filterByToEdit])
+
     function onFilterChange(ev) {
         let { name: field, type, value } = ev.target
         value = type === 'number' ? +value : value
-        setFilterByEdited(prev => ({ ...prev, [field]: value }))
+        setFilterByToEdit(prev => ({ ...prev, [field]: value }))
     }
 
     return (
@@ -38,33 +45,33 @@ export function FilterInput({
             <div>
                 <p>{label}</p>
                 {className === 'where-input' ?
-                    <input placeholder={!filterByEdited.location ? 'Search destinations' : filterByEdited.location}
+                    <input placeholder={!filterBy.loc ? 'Search destinations' : filterBy.loc}
                         type="text"
-                        name="location"
-                        value={filterByEdited.location}
+                        name="loc"
+                        value={filterBy.loc}
                         autoComplete="off"
                         onChange={onFilterChange}>
                     </input>
 
-                    : className === 'checkin-input' ? <input placeholder={!filterByEdited.checkIn ? 'Add dates' : filterByEdited.checkIn}
+                    : className === 'checkin-input' ? <input placeholder={!filterBy.checkIn ? 'Add dates' : filterBy.checkIn}
                         type="text"
                         name="checkIn"
                         readOnly
-                        value={filterByEdited.checkIn}
+                        value={filterBy.checkIn}
                         onChange={onFilterChange}>
                     </input>
-                        : className === 'checkout-input' ? <input placeholder={!filterByEdited.checkOut ? 'Add dates' : filterByEdited.checkOut}
+                        : className === 'checkout-input' ? <input placeholder={!filterBy.checkOut ? 'Add dates' : filterBy.checkOut}
                             type="text"
                             name="checkOut"
                             readOnly
-                            value={filterByEdited.checkOut}
+                            value={filterBy.checkOut}
                             onChange={onFilterChange}>
                         </input>
                             : className === 'who-input' ? <input placeholder='Add guests'
                                 type="number"
                                 name="who"
                                 readOnly
-                                value={!filterByEdited.who <= 0 ? filterByEdited.who : ''}
+                                value={!filterBy.who <= 0 ? filterBy.who : ''}
                                 onChange={onFilterChange}>
                             </input> : ''
                 }

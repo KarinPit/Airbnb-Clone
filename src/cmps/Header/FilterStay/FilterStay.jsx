@@ -1,9 +1,12 @@
 import { useState, useEffect, useRef } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { useSearchParams } from "react-router-dom"
+
+import { setFilterBy } from '../../../store/actions/filter.actions'
+import { stayService } from "../../../services/stay.service"
 
 import { FilterInput } from './FilterInput'
-
 import { SearchIcon } from '../../SVG/HeaderSvg'
-import { useDispatch, useSelector } from 'react-redux'
 
 
 export function FilterStay() {
@@ -12,7 +15,7 @@ export function FilterStay() {
     const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
     const dispatch = useDispatch()
 
-    const [filterByEdited, setFilterByEdited] = useState(filterBy)
+    const [searchParams, setSearchParams] = useSearchParams()
     const [isHovered, setIsHovered] = useState(null)
 
     const whereRef = useRef(null)
@@ -22,13 +25,9 @@ export function FilterStay() {
 
     const isActive = (inputName) => isOpenFilter && isOpenFilter.includes(inputName)
 
-
     useEffect(() => {
+        setFilterBy(stayService.getFilterFromParams(searchParams))
     }, [])
-
-    useEffect(() => {
-    }, [filterByEdited])
-
 
     const filterInputs = [
         {
@@ -90,8 +89,11 @@ export function FilterStay() {
     function handleSubmit(ev) {
         ev.preventDefault()
         console.log('Submitted filter', filterBy);
+        // setFilterBy(filterByEdited)
     }
-
+    function onChangeFilter(fieldsToUpdate) {
+        setFilterBy(fieldsToUpdate)
+    }
 
     return (
         <form className={`filter-search ${isOpenFilter ? 'active-filter' : ''}`}
@@ -118,8 +120,8 @@ export function FilterStay() {
                     onMouseLeave={() => setIsHovered(null)}
                     hideBorder={hideBorderCondition}
                     pseudoElements={pseudoElements}
-                    filterByEdited={filterByEdited}
-                    setFilterByEdited={setFilterByEdited}
+                    filterBy={filterBy}
+                    onChangeFilter = {onChangeFilter}
                 />
             ))}
         </form>

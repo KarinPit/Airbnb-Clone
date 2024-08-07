@@ -1,4 +1,6 @@
-import { useState } from 'react'
+import { useEffect, useState, useRef, useCallback } from 'react'
+
+import { Clock, SearchIcon } from '../../../SVG/HeaderSvg'
 
 import globalMap from '../../../../../public/images/maps/world-map.jpg'
 import italyMap from '../../../../../public/images/maps/italy-map.webp'
@@ -6,8 +8,6 @@ import spainMap from '../../../../../public/images/maps/spain-map.webp'
 import greeceMap from '../../../../../public/images/maps/greece-map.webp'
 import europeMap from '../../../../../public/images/maps/europe-map.webp'
 import unitedStatesMap from '../../../../../public/images/maps/united-states-map.webp'
-
-import { Clock, SearchIcon } from '../../../SVG/HeaderSvg'
 
 const maps = [
     { src: globalMap, label: "I'm flexible" },
@@ -47,29 +47,13 @@ function SearchRegions({ clickedIndex, handleClick }) {
                         key={index}
                         className={`country ${clickedIndex === index ? 'shrink' : ''}`}
                         onMouseDown={() => handleClick(index)}
-                        onMouseOut={() => handleClick(null)}
+                    // onMouseOut={() => handleClick(null)}
                     >
                         <img src={map.src} alt={map.label} />
                         <p>{map.label}</p>
                     </div>
                 ))}
             </div>
-        </div>
-    )
-}
-
-export function WhereModal() {
-    const [clickedIndex, setClickedIndex] = useState(null)
-
-    const handleClick = (index) => {
-        setClickedIndex(index === clickedIndex ? null : index)
-    }
-
-    return (
-        <div className="where-modal">
-            <RecentSearch />
-            <div className="border-div"></div>
-            <SearchRegions clickedIndex={clickedIndex} handleClick={handleClick} />
         </div>
     )
 }
@@ -97,6 +81,32 @@ export function WhereModalMobile() {
                 <SearchForm />
                 <SearchRegions clickedIndex={clickedIndex} handleClick={handleClick} />
             </div>
+        </div>
+    )
+}
+
+export function WhereModal({ filterBy, onChangeFilter }) {
+    const [filterByToEdit, setFilterByToEdit] = useState(filterBy);
+    const clickedIndexRef = useRef(null)
+
+    useEffect(() => {
+        onChangeFilter({ loc: filterByToEdit.loc })
+    }, [filterByToEdit])
+
+    function handleClick(index) {
+        const newClickedIndex = index === clickedIndexRef.current ? null : index
+        clickedIndexRef.current = newClickedIndex
+
+        setFilterByToEdit({
+            loc: newClickedIndex === null ? '' : (maps[newClickedIndex]?.label || '')
+        })
+    }
+
+    return (
+        <div className="where-modal">
+            <RecentSearch />
+            <div className="border-div"></div>
+            <SearchRegions clickedIndex={clickedIndexRef.current} handleClick={handleClick} />
         </div>
     )
 }
