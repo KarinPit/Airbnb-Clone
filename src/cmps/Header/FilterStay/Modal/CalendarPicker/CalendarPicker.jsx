@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSearchParams } from "react-router-dom"
+import { useSelector } from 'react-redux'
 
-import { addMonths, subMonths, startOfDay, isBefore, isAfter, isValid } from 'date-fns'
+import { addMonths, subMonths, startOfDay, isBefore, isAfter, isValid, format } from 'date-fns'
+import { setFilterBy } from '../../../../../store/actions/filter.actions'
+import { stayService } from "../../../../../services/stay.service"
 
 import { CalendarCells } from '../../../../../utils/CalendarCells'
 import { getMonthName } from '../../../../../utils/CalendarUtils'
@@ -10,26 +13,31 @@ import { LeftArrow, RightArrow } from '../../../../SVG/HeaderSvg'
 
 
 export default function CalendarPicker() {
-    const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
     const currentWidth = useSelector((storeState) => storeState.appModule.currentWidth)
-    const dispacth = useDispatch()
+    const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
+    const [filterByToEdit, setFilterByToEdit] = useState({ checkIn: filterBy.checkIn, checkOut: filterBy.checkOut })
+    const [searchParams, setSearchParams] = useSearchParams()
 
     const calendarWideBreakpoint = 850
     const [currentDate, setCurrentDate] = useState(new Date())
-    const [range, setRange] = useState({ start: null, end: null })
+    const [range, setRange] = useState({ start: filterBy.checkIn, end: filterBy.checkOut })
     const [hoveredDate, setHoveredDate] = useState(null)
     const [isDisabled, setIsDisabled] = useState(true)
     const [isMinimizedCalendar, setIsMinimizedCalendar] = useState(window.innerWidth < calendarWideBreakpoint)
 
     const nextMonthDate = addMonths(currentDate, 1)
 
+    useEffect(() => {
+        setSearchParams(stayService.sanitizeFilterParams(filterBy))
+    }, [filterBy.checkIn, filterBy.checkOut])
 
-    useEffect(()=> {
-    }, [])
+    useEffect(() => {
+        setFilterBy(filterByToEdit)
+    }, [filterByToEdit])
 
     useEffect(() => {
         setIsMinimizedCalendar(currentWidth < calendarWideBreakpoint)
-    }, [filterBy, currentWidth])
+    }, [currentWidth])
 
 
     function handlePrevClick() {
@@ -68,7 +76,7 @@ export default function CalendarPicker() {
         if (!range.start || (range.start && range.end)) {
             if (isValid(day)) {
                 setRange({ start: day, end: null })
-                setFilterBy(prev => ({ ...prev, 'checkIn': day, 'checkOut': null }))
+                setFilterByToEdit(prev => ({ ...prev, 'checkIn': day, 'checkOut': '' }))
             }
         } else {
             const newRange = {
@@ -78,7 +86,7 @@ export default function CalendarPicker() {
 
             if (isValid(newRange.end)) {
                 setRange(newRange)
-                setFilterBy(prev => ({ ...prev, 'checkOut': day }))
+                setFilterByToEdit(prev => ({ ...prev, 'checkOut': day }))
             }
         }
     }

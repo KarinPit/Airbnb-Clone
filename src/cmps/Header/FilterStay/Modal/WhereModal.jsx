@@ -1,5 +1,9 @@
 import { useEffect, useState, useRef, useCallback } from 'react'
+import { useSearchParams } from "react-router-dom"
+import { useSelector } from 'react-redux'
 
+import { setFilterBy } from '../../../../store/actions/filter.actions'
+import { stayService } from "../../../../services/stay.service"
 import { Clock, SearchIcon } from '../../../SVG/HeaderSvg'
 
 import globalMap from '../../../../../public/images/maps/world-map.jpg'
@@ -58,39 +62,70 @@ function SearchRegions({ clickedIndex, handleClick }) {
     )
 }
 
-function SearchForm() {
-    return (
-        <div className='input'>
-            <SearchIcon />
-            <input placeholder='Search destinations' />
-        </div>
-    )
-}
-
 export function WhereModalMobile() {
-    const [clickedIndex, setClickedIndex] = useState(null)
+    const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
+    const [filterByToEdit, setFilterByToEdit] = useState({ loc: filterBy.loc })
+    const [searchParams, setSearchParams] = useSearchParams()
+    const clickedIndexRef = useRef(null)
 
-    const handleClick = (index) => {
-        setClickedIndex(index === clickedIndex ? null : index)
+    useEffect(() => {
+        setSearchParams(stayService.sanitizeFilterParams(filterBy))
+    }, [filterBy.loc])
+
+    useEffect(() => {
+        setFilterBy(filterByToEdit)
+    }, [filterByToEdit])
+
+    function handleClick(index) {
+        const newClickedIndex = index === clickedIndexRef.current ? null : index
+        clickedIndexRef.current = newClickedIndex
+
+        setFilterByToEdit({
+            loc: newClickedIndex === null ? '' : (maps[newClickedIndex]?.label || '')
+        })
+    }
+
+    function onFilterChange(ev) {
+        setFilterByToEdit(prev => ({ ...prev, 'loc': ev.target.value }))
     }
 
     return (
         <div className="where-modal mobile">
             <div className="search-regions">
                 <h2>Where to?</h2>
-                <SearchForm />
-                <SearchRegions clickedIndex={clickedIndex} handleClick={handleClick} />
+                <div className='input'>
+                    <SearchIcon />
+                    <input placeholder={!filterBy.loc ? 'Search destinations' : filterBy.loc}
+                        type="text"
+                        name="loc"
+                        value={filterBy.loc}
+                        autoComplete="off"
+                        onChange={onFilterChange} />
+                </div>
+
+                <SearchRegions clickedIndex={clickedIndexRef.current} handleClick={handleClick} />
             </div>
         </div>
     )
 }
 
-export function WhereModal({ filterBy, onChangeFilter }) {
-    const [filterByToEdit, setFilterByToEdit] = useState(filterBy);
+export function WhereModal() {
+    const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
+    const [filterByToEdit, setFilterByToEdit] = useState({ loc: filterBy.loc })
+    const [searchParams, setSearchParams] = useSearchParams()
     const clickedIndexRef = useRef(null)
 
+
     useEffect(() => {
-        onChangeFilter({ loc: filterByToEdit.loc })
+        setFilterBy(stayService.getFilterFromParams(searchParams))
+    }, [])
+
+    useEffect(() => {
+        setSearchParams(stayService.sanitizeFilterParams(filterBy))
+    }, [filterBy.loc])
+
+    useEffect(() => {
+        setFilterBy(filterByToEdit)
     }, [filterByToEdit])
 
     function handleClick(index) {

@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react'
 import { addMonths, startOfDay, isValid, isAfter } from 'date-fns'
 import { CalendarCells } from '../../../../../utils/CalendarCells'
 import { getMonthName } from '../../../../../utils/CalendarUtils'
+import { setFilterBy } from '../../../../../store/actions/filter.actions'
+import { useSearchParams } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { stayService } from '../../../../../services/stay.service'
 
 const screenWidth = 850
 
@@ -15,26 +19,37 @@ function useResize(callback) {
 }
 
 export default function CalendarPickerMobile() {
+    const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
     const [isMinimizedCalendar, setIsMinimizedCalendar] = useState(window.innerWidth < screenWidth)
     const [currentDate, setCurrentDate] = useState(new Date())
-    const [range, setRange] = useState({ start: null, end: null })
+    const [range, setRange] = useState({ start: filterBy.checkIn, end: filterBy.checkOut })
     const [hoveredDate, setHoveredDate] = useState(null)
+    const [filterByToEdit, setFilterByToEdit] = useState({ checkIn: filterBy.checkIn, checkOut: filterBy.checkOut })
+    const [searchParams, setSearchParams] = useSearchParams()
 
-    const nextMonthDate = addMonths(currentDate, 1)
+    useEffect(() => {
+        setSearchParams(stayService.sanitizeFilterParams(filterBy))
+    }, [filterBy.checkIn, filterBy.checkOut])
+
+    useEffect(() => {
+        setFilterBy(filterByToEdit)
+    }, [filterByToEdit])
 
     useResize(() => {
         setIsMinimizedCalendar(window.innerWidth < screenWidth)
     })
 
+    const nextMonthDate = addMonths(currentDate, 1)
+
     const handleNextClick = () => {
         setCurrentDate(addMonths(currentDate, 2))
     }
 
-    const handleDateClick = (day) => {
+    function handleDateClick(day) {
         if (!range.start || (range.start && range.end)) {
             if (isValid(day)) {
                 setRange({ start: day, end: null })
-                // onChange({ start: day, end: null })
+                setFilterByToEdit(prev => ({ ...prev, 'checkIn': day, 'checkOut': '' }))
             }
         } else {
             const newRange = {
@@ -44,7 +59,7 @@ export default function CalendarPickerMobile() {
 
             if (isValid(newRange.end)) {
                 setRange(newRange)
-                // onChange({ start: newRange.start, end: newRange.end })
+                setFilterByToEdit(prev => ({ ...prev, 'checkOut': day }))
             }
         }
     }

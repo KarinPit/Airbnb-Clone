@@ -2,9 +2,6 @@ import { useState, useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useSearchParams } from "react-router-dom"
 
-import { setFilterBy } from '../../../store/actions/filter.actions'
-import { stayService } from "../../../services/stay.service"
-
 import { FilterInput } from './FilterInput'
 import { SearchIcon } from '../../SVG/HeaderSvg'
 
@@ -13,10 +10,8 @@ export function FilterStay() {
     const isWideScreen = useSelector((storeState) => storeState.appModule.isWideScreen)
     const isOpenFilter = useSelector((storeState) => storeState.filterModule.isOpenFilter)
     const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
-    const dispatch = useDispatch()
-
-    const [searchParams, setSearchParams] = useSearchParams()
     const [isHovered, setIsHovered] = useState(null)
+    const dispatch = useDispatch()
 
     const whereRef = useRef(null)
     const checkInRef = useRef(null)
@@ -25,9 +20,6 @@ export function FilterStay() {
 
     const isActive = (inputName) => isOpenFilter && isOpenFilter.includes(inputName)
 
-    useEffect(() => {
-        setFilterBy(stayService.getFilterFromParams(searchParams))
-    }, [])
 
     const filterInputs = [
         {
@@ -40,7 +32,7 @@ export function FilterStay() {
                 || isHovered?.current?.className.includes('where-input')
                 || isHovered?.current?.className.includes('checkin-input'),
             pseudoElements: isActive('checkin-input') ? 'after' : '',
-
+            filterKey: 'loc'
         },
         {
             className: "checkin-input",
@@ -52,7 +44,8 @@ export function FilterStay() {
                 || isHovered?.current?.className.includes('checkin-input')
                 || isHovered?.current?.className.includes('checkout-input'),
             pseudoElements: isActive('where-input') ? 'before' : ''
-                || isActive('checkout-input') ? 'after' : ''
+                || isActive('checkout-input') ? 'after' : '',
+            filterKey: 'checkIn'
         },
         {
             className: "checkout-input",
@@ -64,7 +57,8 @@ export function FilterStay() {
                 || isHovered?.current?.className.includes('checkout-input')
                 || isHovered?.current?.className.includes('who-input'),
             pseudoElements: isActive('checkin-input') ? 'before' : ''
-                || isActive('who-input') ? 'after' : ''
+                || isActive('who-input') ? 'after' : '',
+            filterKey: 'checkOut'
         },
         {
             className: "who-input",
@@ -72,7 +66,8 @@ export function FilterStay() {
             subLabel: "Add guests",
             refElement: whoRef,
             hideBorderCondition: false,
-            pseudoElements: isActive('checkout-input') ? 'before' : ''
+            pseudoElements: isActive('checkout-input') ? 'before' : '',
+            filterKey: 'who'
         }
     ]
 
@@ -88,11 +83,7 @@ export function FilterStay() {
 
     function handleSubmit(ev) {
         ev.preventDefault()
-        console.log('Submitted filter', filterBy);
         // setFilterBy(filterByEdited)
-    }
-    function onChangeFilter(fieldsToUpdate) {
-        setFilterBy(fieldsToUpdate)
     }
 
     return (
@@ -106,7 +97,8 @@ export function FilterStay() {
                     <p>Anywhere * Anyweek * Add guests</p>
                 </div>
             </div>
-            {filterInputs.map(({ className, label, subLabel, refElement, hideBorderCondition, pseudoElements }) => (
+
+            {filterInputs.map(({ className, label, subLabel, refElement, hideBorderCondition, pseudoElements, filterKey }) => (
                 <FilterInput
                     key={className}
                     className={className}
@@ -120,8 +112,8 @@ export function FilterStay() {
                     onMouseLeave={() => setIsHovered(null)}
                     hideBorder={hideBorderCondition}
                     pseudoElements={pseudoElements}
+                    filterKey={filterKey}
                     filterBy={filterBy}
-                    onChangeFilter = {onChangeFilter}
                 />
             ))}
         </form>

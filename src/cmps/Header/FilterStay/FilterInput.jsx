@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react'
 
 import { SearchIcon } from '../../SVG/HeaderSvg'
+import { setFilterBy } from '../../../store/actions/filter.actions'
+import { stayService } from '../../../services/stay.service'
+import { useSearchParams } from 'react-router-dom'
 
 
 export function FilterInput({
     className,
     label,
-    subLabel,
     refElement,
     isActive,
     isHovered,
@@ -16,21 +18,31 @@ export function FilterInput({
     hideBorder,
     pseudoElements,
     filterBy,
-    onChangeFilter
+    filterKey,
 }) {
-    const [filterByToEdit, setFilterByToEdit] = useState(filterBy)
+    const [filterByToEdit, setFilterByToEdit] = useState({ [filterKey]: filterBy[filterKey] })
     const isHoveredClass = isHovered && isHovered.current.className.includes(className) ? 'hovered' : ''
     const activeClass = isActive ? 'active-input' : ''
     const borderClass = hideBorder ? 'hide-border' : ''
+    const [searchParams, setSearchParams] = useSearchParams()
 
 
     useEffect(() => {
-        onChangeFilter(filterByToEdit)
+        const initialFilter = stayService.getFilterFromParams(searchParams);
+        setFilterBy(initialFilter);
+        setFilterByToEdit(initialFilter);
+    }, [])
+
+    useEffect(() => {
+        setSearchParams(stayService.sanitizeFilterParams(filterBy))
+    }, [filterBy])
+
+    useEffect(() => {
+        setFilterBy(filterByToEdit)
     }, [filterByToEdit])
 
     function onFilterChange(ev) {
-        let { name: field, type, value } = ev.target
-        value = type === 'number' ? +value : value
+        let { name: field, value } = ev.target
         setFilterByToEdit(prev => ({ ...prev, [field]: value }))
     }
 
@@ -50,29 +62,31 @@ export function FilterInput({
                         name="loc"
                         value={filterBy.loc}
                         autoComplete="off"
-                        onChange={onFilterChange}>
+                        onChange={onFilterChange}
+                    >
                     </input>
 
-                    : className === 'checkin-input' ? <input placeholder={!filterBy.checkIn ? 'Add dates' : filterBy.checkIn}
+                    : className === 'checkin-input' ? <input placeholder='Add dates'
                         type="text"
                         name="checkIn"
                         readOnly
                         value={filterBy.checkIn}
-                        onChange={onFilterChange}>
+                    >
                     </input>
-                        : className === 'checkout-input' ? <input placeholder={!filterBy.checkOut ? 'Add dates' : filterBy.checkOut}
+                        : className === 'checkout-input' ? <input placeholder='Add dates'
                             type="text"
                             name="checkOut"
                             readOnly
                             value={filterBy.checkOut}
-                            onChange={onFilterChange}>
+                        >
                         </input>
-                            : className === 'who-input' ? <input placeholder='Add guests'
-                                type="number"
+
+                            : className === 'who-input' ? <input placeholder="Add guests"
+                                type="text"
                                 name="who"
                                 readOnly
-                                value={!filterBy.who <= 0 ? filterBy.who : ''}
-                                onChange={onFilterChange}>
+                                value={filterBy.who.totalCount > 0 ? `${filterBy.who.totalCount} guests` : ''}
+                            >
                             </input> : ''
                 }
             </div>

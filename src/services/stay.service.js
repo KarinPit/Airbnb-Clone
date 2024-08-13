@@ -14,7 +14,8 @@ export const stayService = {
     save,
     remove,
     getDefaultFilter,
-    getFilterFromParams
+    getFilterFromParams,
+    sanitizeFilterParams
 }
 window.cs = stayService
 
@@ -71,55 +72,46 @@ function getDefaultFilter() {
         loc: '',
         checkIn: '',
         checkOut: '',
-        who: 0,
-    }
+        who: { totalCount: 0, adults: 0, children: 0, infants: 0, pets: 0 },
+    };
 }
 
 function getFilterFromParams(searchParams) {
-    const defaultFilter = getDefaultFilter()
-    const filterBy = {}
+    const defaultFilter = getDefaultFilter();
+    const filterBy = {};
 
     for (const field in defaultFilter) {
         if (field === 'who') {
-            filterBy[field] = +searchParams.get(field) || defaultFilter[field]
-        }
-        else {
-            filterBy[field] = searchParams.get(field) || defaultFilter[field]
+            const whoFilter = {};
+            for (const key in defaultFilter['who']) {
+                const value = +searchParams.get(key)
+                whoFilter[key] = value || defaultFilter['who'][key]
+            }
+            filterBy[field] = whoFilter;
+        } else {
+            filterBy[field] = searchParams.get(field) || defaultFilter[field];
         }
     }
-    return filterBy
+    return filterBy;
 }
 
-// function updateFilterParams(searchParams) {
-//     const defaultFilter = getDefaultFilter()
-//     const filterBy = {}
+function sanitizeFilterParams(filterBy) {
+    const sanitizedFilter = Object.keys(filterBy)
+        .filter((key) => key !== 'who' && filterBy[key])
+        .reduce((acc, currentVal) => {
+            acc[currentVal] = filterBy[currentVal];
+            return acc;
+        }, {});
 
-//     for (const field in defaultFilter) {
-//         if (!searchParams.get(field)) {
-//             if (field === 'who') {
-//                 filterBy[field] = +searchParams.get(field)
-//             }
-//             else {
-//                 filterBy[field] = searchParams.get(field)
-
-//             }
-//         }
-//         // if (field === 'who') {
-//         //     filterBy[field] = +searchParams.get(field)
-//         // }
-//         // else {
-//         //     if (!searchParams.get(field)) {
-//         //         console.log('inside the if', field);
-//         //     }
-//         //     else {
-//         //         console.log('inside the else', field, searchParams.get(field));
-//         //         filterBy[field] = searchParams.get(field)
-//         //     }
-//         // }
-//     }
-//     return filterBy
-// }
-
+    if (filterBy.who) {
+        Object.keys(filterBy.who).forEach((key) => {
+            if (filterBy.who[key] > 0) {
+                sanitizedFilter[key] = filterBy.who[key];
+            }
+        });
+    }
+    return sanitizedFilter;
+}
 
 // Private functions
 
