@@ -2,6 +2,8 @@ import React, { useState, useRef, forwardRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { motion, AnimatePresence } from 'framer-motion'
+import { format } from 'date-fns'
+import { getMonthName } from '../../../utils/CalendarUtils'
 
 import { GeneralNav } from '../TopNav'
 import { WhereModalMobile } from '../FilterStay/Modal/WhereModal'
@@ -35,6 +37,7 @@ const MobileFilterSection = forwardRef(({ className, label, subLabel, isActive, 
 ))
 
 export function FilterStayMobile() {
+    const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
     const isOpenFilterMobile = useSelector((storeState) => storeState.filterModule.isOpenFilterMobile)
     const defaultFilter = useSelector((storeState) => storeState.filterModule.defaultFilter)
     const dispatch = useDispatch()
@@ -76,7 +79,7 @@ export function FilterStayMobile() {
             <MobileFilterSection
                 className='where-input-mobile'
                 label='Where'
-                subLabel="I'm flexible"
+                subLabel={filterBy.loc}
                 isActive={isOpenFilterMobile}
                 onClick={() => handleFilterClick(whereMobileRef)}
                 ref={whereMobileRef}
@@ -95,7 +98,7 @@ export function FilterStayMobile() {
             <MobileFilterSection
                 className='checkin-input-mobile'
                 label='When'
-                subLabel='Add dates'
+                subLabel={filterBy.checkIn && !filterBy.checkOut ? `${getMonthName(new Date(filterBy.checkIn).getMonth())} ${format(filterBy.checkIn, 'd')}` : filterBy.checkIn && filterBy.checkOut ? `${getMonthName(new Date(filterBy.checkIn).getMonth())} ${format(filterBy.checkIn, 'd')} -${getMonthName(new Date(filterBy.checkOut).getMonth())} ${format(filterBy.checkOut, 'd')}` : 'Add dates'}
                 isActive={isOpenFilterMobile}
                 onClick={() => handleFilterClick(checkInMobileRef)}
                 ref={checkInMobileRef}
@@ -114,7 +117,7 @@ export function FilterStayMobile() {
             <MobileFilterSection
                 className='who-input-mobile'
                 label='Who'
-                subLabel='Add guests'
+                subLabel={+filterBy.who.totalCount > 0 ? `${filterBy.who.totalCount} guests` : 'Add guests'}
                 isActive={isOpenFilterMobile}
                 onClick={() => handleFilterClick(whoMobileRef)}
                 ref={whoMobileRef}
