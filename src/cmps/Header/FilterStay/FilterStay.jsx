@@ -9,7 +9,6 @@ import { SearchIcon } from '../../SVG/HeaderSvg'
 export function FilterStay() {
     const isWideScreen = useSelector((storeState) => storeState.appModule.isWideScreen)
     const isOpenFilter = useSelector((storeState) => storeState.filterModule.isOpenFilter)
-    const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
     const [isHovered, setIsHovered] = useState(null)
     const dispatch = useDispatch()
 
@@ -112,8 +111,6 @@ export function FilterStay() {
                     onMouseLeave={() => setIsHovered(null)}
                     hideBorder={hideBorderCondition}
                     pseudoElements={pseudoElements}
-                    filterKey={filterKey}
-                    filterBy={filterBy}
                 />
             ))}
         </form>

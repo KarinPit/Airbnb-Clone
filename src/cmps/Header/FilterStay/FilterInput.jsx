@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
+
+import { format } from 'date-fns'
+import { getMonthName } from '../../../utils/CalendarUtils'
 
 import { SearchIcon } from '../../SVG/HeaderSvg'
 import { setFilterBy } from '../../../store/actions/filter.actions'
 import { stayService } from '../../../services/stay.service'
-import { useSearchParams } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 
 export function FilterInput({
@@ -17,20 +21,18 @@ export function FilterInput({
     onMouseLeave,
     hideBorder,
     pseudoElements,
-    filterBy,
-    filterKey,
 }) {
-    const [filterByToEdit, setFilterByToEdit] = useState({ [filterKey]: filterBy[filterKey] })
+    const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
+    const [searchParams, setSearchParams] = useSearchParams()
+
+    const [filterByToEdit, setFilterByToEdit] = useState(filterBy.loc)
     const isHoveredClass = isHovered && isHovered.current.className.includes(className) ? 'hovered' : ''
     const activeClass = isActive ? 'active-input' : ''
     const borderClass = hideBorder ? 'hide-border' : ''
-    const [searchParams, setSearchParams] = useSearchParams()
-
 
     useEffect(() => {
         const initialFilter = stayService.getFilterFromParams(searchParams);
         setFilterBy(initialFilter);
-        setFilterByToEdit(initialFilter);
     }, [])
 
     useEffect(() => {
@@ -42,8 +44,8 @@ export function FilterInput({
     }, [filterByToEdit])
 
     function onFilterChange(ev) {
-        let { name: field, value } = ev.target
-        setFilterByToEdit(prev => ({ ...prev, [field]: value }))
+        let { value } = ev.target
+        setFilterByToEdit(prev => ({ ...prev, loc: value }))
     }
 
     return (
@@ -70,14 +72,14 @@ export function FilterInput({
                         type="text"
                         name="checkIn"
                         readOnly
-                        value={filterBy.checkIn}
+                        value={filterBy.checkIn ? `${getMonthName(new Date(filterBy.checkIn).getMonth())} ${format(filterBy.checkIn, 'd')}` : ''}
                     >
                     </input>
                         : className === 'checkout-input' ? <input placeholder='Add dates'
                             type="text"
                             name="checkOut"
                             readOnly
-                            value={filterBy.checkOut}
+                            value={filterBy.checkOut ? `${getMonthName(new Date(filterBy.checkOut).getMonth())} ${format(filterBy.checkOut, 'd')} ` : ''}
                         >
                         </input>
 
