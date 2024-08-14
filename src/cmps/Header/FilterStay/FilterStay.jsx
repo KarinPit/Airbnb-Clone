@@ -17,7 +17,7 @@ export function FilterStay() {
     const checkOutRef = useRef(null)
     const whoRef = useRef(null)
 
-    const isActive = (inputName) => isOpenFilter && isOpenFilter.includes(inputName)
+    const isActive = (inputName) => isOpenFilter?.includes?.(inputName);
 
 
     const filterInputs = [

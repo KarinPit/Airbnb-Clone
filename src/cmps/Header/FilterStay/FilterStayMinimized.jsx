@@ -1,5 +1,5 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 
 import { motion } from 'framer-motion'
 
@@ -8,14 +8,19 @@ import { SearchIcon } from '../../SVG/HeaderSvg'
 
 export function FilterStayMinimized() {
     const isOpenFilter = useSelector((storeState) => storeState.filterModule.isOpenFilter)
-
+    const dispatch = useDispatch()
     const isActive = (inputName) => isOpenFilter === inputName
+
+    function handleClick(element) {
+        dispatch({ type: 'SET_EXPANDED_FILTER', isExpandedFilter: true })
+        dispatch({ type: 'SET_OPEN_FILTER', isOpenFilter: element })
+    }
 
     return (
         <div className="minimized-filter">
             {["where-input", "checkin-input", "who-input"].map((inputName, index) => (
                 <React.Fragment key={inputName}>
-                    <div className={inputName}>
+                    <div className={inputName} onClick={() => handleClick(inputName)}>
                         <motion.p
                             key={`${inputName}-p`}
                             initial={{ scaleX: 0.5 }}
