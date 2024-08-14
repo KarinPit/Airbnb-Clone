@@ -1,8 +1,8 @@
 import { useEffect, useState, useRef, useCallback } from 'react'
 import { useSearchParams } from "react-router-dom"
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
-import { setFilterBy } from '../../../../store/actions/filter.actions'
+import { setFilterBy, changeFilterInput } from '../../../../store/actions/filter.actions'
 import { stayService } from "../../../../services/stay.service"
 import { Clock, SearchIcon } from '../../../SVG/HeaderSvg'
 
@@ -86,7 +86,7 @@ export function WhereModalMobile() {
     }
 
     function onFilterChange(ev) {
-        setFilterByToEdit(prev => ({ ...prev, 'loc': ev.target.value }))
+        setFilterByToEdit(prev => ({ ...prev, loc: ev.target.value }))
     }
 
     return (
@@ -111,6 +111,7 @@ export function WhereModalMobile() {
 
 export function WhereModal() {
     const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
+    const dispatch = useDispatch()
     const [filterByToEdit, setFilterByToEdit] = useState({ loc: filterBy.loc })
     const [searchParams, setSearchParams] = useSearchParams()
     const clickedIndexRef = useRef(null)
@@ -135,6 +136,10 @@ export function WhereModal() {
         setFilterByToEdit({
             loc: newClickedIndex === null ? '' : (maps[newClickedIndex]?.label || '')
         })
+
+        setTimeout(() => {
+            changeFilterInput('checkin-input')
+        }, 0)
     }
 
     return (

@@ -2,6 +2,9 @@
     display: none;
 
     &.show {
+        position: fixed;
+        top: 0;
+        left: 0;
         display: block;
         grid-column: 1/-1;
         grid-row: 1/-1;

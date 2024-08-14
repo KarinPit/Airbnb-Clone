@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
 import { createRouting } from "./routes";
-import { Provider, useDispatch } from "react-redux";
+import { Provider, useDispatch, useSelector } from "react-redux";
 
 import { store } from "./store/store";
 import { handleScroll, handleResize } from "./store/actions/app.actions"
 
 
 export function App() {
+    const isOpenFilterMobile = useSelector((storeState) => storeState.filterModule.isOpenFilterMobile)
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -21,7 +22,7 @@ export function App() {
 
     return (
         <Provider store={store}>
-            <section className='main-app' onClick={(e) => {
+            <section className={`main-app ${isOpenFilterMobile ? 'hide-overflow' : ''}`} onClick={(e) => {
                 if (e.target.className === 'container'
                     || e.target.className === 'main-app'
                     || e.target.className === 'header'

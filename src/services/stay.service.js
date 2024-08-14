@@ -96,8 +96,15 @@ function getFilterFromParams(searchParams) {
 }
 
 function sanitizeFilterParams(filterBy) {
+    const defaultFilter = {
+        loc: '',
+        checkIn: '',
+        checkOut: '',
+        who: { totalCount: 0, adults: 0, children: 0, infants: 0, pets: 0 },
+    };
+
     const sanitizedFilter = Object.keys(filterBy)
-        .filter((key) => key !== 'who' && filterBy[key])
+        .filter((key) => key in defaultFilter && key !== 'who' && filterBy[key])
         .reduce((acc, currentVal) => {
             acc[currentVal] = filterBy[currentVal];
             return acc;

@@ -95,6 +95,11 @@ input {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+
+    &.hide-overflow {
+        max-height: 100vh;
+        overflow-y: hidden;
+    }
 }
 
 .main-app main {

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { useSearchParams } from "react-router-dom"
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
-import { addMonths, subMonths, startOfDay, isBefore, isAfter, isValid, format } from 'date-fns'
-import { setFilterBy } from '../../../../../store/actions/filter.actions'
+import { addMonths, subMonths, startOfDay, isBefore, isAfter, isValid } from 'date-fns'
+import { setFilterBy, changeFilterInput } from '../../../../../store/actions/filter.actions'
 import { stayService } from "../../../../../services/stay.service"
 
 import { CalendarCells } from '../../../../../utils/CalendarCells'
@@ -17,6 +17,7 @@ export default function CalendarPicker() {
     const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
     const [filterByToEdit, setFilterByToEdit] = useState({ checkIn: filterBy.checkIn, checkOut: filterBy.checkOut })
     const [searchParams, setSearchParams] = useSearchParams()
+    const dispatch = useDispatch()
 
     const calendarWideBreakpoint = 850
     const [currentDate, setCurrentDate] = useState(new Date())
@@ -77,6 +78,9 @@ export default function CalendarPicker() {
             if (isValid(day)) {
                 setRange({ start: day, end: null })
                 setFilterByToEdit(prev => ({ ...prev, 'checkIn': day, 'checkOut': '' }))
+                setTimeout(() => {
+                    changeFilterInput('checkout-input')
+                }, 0)
             }
         } else {
             const newRange = {
@@ -87,6 +91,9 @@ export default function CalendarPicker() {
             if (isValid(newRange.end)) {
                 setRange(newRange)
                 setFilterByToEdit(prev => ({ ...prev, 'checkOut': day }))
+                setTimeout(() => {
+                    changeFilterInput('who-input')
+                }, 0)
             }
         }
     }
