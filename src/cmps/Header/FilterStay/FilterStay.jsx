@@ -2,14 +2,19 @@ import { useState, useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useSearchParams } from "react-router-dom"
 
+import { stayService } from '../../../services/stay.service'
+import { setFilterBy } from '../../../store/actions/filter.actions'
 import { FilterInput } from './FilterInput'
+
 import { SearchIcon } from '../../SVG/HeaderSvg'
 
 
 export function FilterStay() {
+    const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
     const isWideScreen = useSelector((storeState) => storeState.appModule.isWideScreen)
     const isOpenFilter = useSelector((storeState) => storeState.filterModule.isOpenFilter)
     const [isHovered, setIsHovered] = useState(null)
+    const [searchParams, setSearchParams] = useSearchParams()
     const dispatch = useDispatch()
 
     const whereRef = useRef(null)
@@ -69,6 +74,16 @@ export function FilterStay() {
             filterKey: 'who'
         }
     ]
+
+    useEffect(() => {
+        const initialFilter = stayService.getFilterFromParams(searchParams);
+        setFilterBy(initialFilter)
+    }, [])
+
+    useEffect(() => {
+        setSearchParams(stayService.sanitizeFilterParams(filterBy))
+    }, [filterBy])
+
 
     function handleClick(element) {
         dispatch({ type: 'SET_OPEN_FILTER', isOpenFilter: element.current.className })

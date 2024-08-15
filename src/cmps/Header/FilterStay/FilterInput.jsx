@@ -6,7 +6,6 @@ import { getMonthName } from '../../../utils/CalendarUtils'
 
 import { SearchIcon } from '../../SVG/HeaderSvg'
 import { setFilterBy } from '../../../store/actions/filter.actions'
-import { stayService } from '../../../services/stay.service'
 import { useSelector } from 'react-redux'
 
 
@@ -22,22 +21,13 @@ export function FilterInput({
     hideBorder,
     pseudoElements,
 }) {
-    const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
-    const [searchParams, setSearchParams] = useSearchParams()
 
-    const [filterByToEdit, setFilterByToEdit] = useState(filterBy.loc)
+    const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
+    const [filterByToEdit, setFilterByToEdit] = useState({ loc: filterBy.loc })
     const isHoveredClass = isHovered && isHovered.current.className.includes(className) ? 'hovered' : ''
     const activeClass = isActive ? 'active-input' : ''
     const borderClass = hideBorder ? 'hide-border' : ''
 
-    useEffect(() => {
-        const initialFilter = stayService.getFilterFromParams(searchParams);
-        setFilterBy(initialFilter);
-    }, [])
-
-    useEffect(() => {
-        setSearchParams(stayService.sanitizeFilterParams(filterBy))
-    }, [filterBy])
 
     useEffect(() => {
         setFilterBy(filterByToEdit)
