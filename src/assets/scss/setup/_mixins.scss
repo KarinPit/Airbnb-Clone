@@ -7,7 +7,7 @@
 }
 
 @mixin for-narrow-layout {
-  @media (min-width: calc($mobile-breakpoint + 40px)) {
+  @media (min-width: calc($mobile-breakpoint)) {
     @content;
   }
 }
@@ -31,6 +31,30 @@
 
   // @media (min-width: calc($normal-breakpoint + 40px)) {
   @media (min-width: $normal-breakpoint) {
+    @content;
+  }
+}
+
+@mixin for-extra-wide-layout {
+
+  // @media (min-width: calc($normal-breakpoint + 40px)) {
+  @media (min-width: $large-breakpoint) {
+    @content;
+  }
+}
+
+@mixin for-dextra-wide-layout {
+
+  // @media (min-width: calc($normal-breakpoint + 40px)) {
+  @media (min-width: $xl-breakpoint) {
+    @content;
+  }
+}
+
+@mixin for-ddextra-wide-layout {
+
+  // @media (min-width: calc($normal-breakpoint + 40px)) {
+  @media (min-width: $xxl-breakpoint) {
     @content;
   }
 }
