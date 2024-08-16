@@ -780,8 +780,527 @@ export const DemoData = [
             "avalable_checkIn": { "$date": "2024-07-03T05:00:00.000Z" },
             "avalable_checkOut": { "$date": "2024-10-15T05:00:00.000Z" },
         },
-        "review_scores": {},
-        "reviews": []
+        "review_scores": {
+            "review_scores_accuracy": 9,
+            "review_scores_cleanliness": 9,
+            "review_scores_checkin": 10,
+            "review_scores_communication": 10,
+            "review_scores_location": 10,
+            "review_scores_value": 9,
+            "review_scores_rating": 89
+        },
+        "reviews": [
+            {
+                "_id": "58663741",
+                "date": {
+                    "$date": "2016-01-03T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "51483096",
+                "reviewer_name": "Cátia",
+                "comments": "A casa da Ana e do Gonçalo foram o local escolhido para a passagem de ano com um grupo de amigos. Fomos super bem recebidos com uma grande simpatia e predisposição a ajudar com qualquer coisa que fosse necessário.\r\nA casa era ainda melhor do que parecia nas fotos, totalmente equipada, com mantas, aquecedor e tudo o que pudessemos precisar.\r\nA localização não podia ser melhor! Não há melhor do que acordar de manhã e ao virar da esquina estar a ribeira do Porto."
+            },
+            {
+                "_id": "62413197",
+                "date": {
+                    "$date": "2016-02-14T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "40031996",
+                "reviewer_name": "Théo",
+                "comments": "We are french's students, we traveled some days in Porto, this space was good and we can cooking easly. It was rainning so we eard every time the water fall to the ground in the street when we sleeping. But It was cool and or was well received by Ana et Gonçalo"
+            },
+            {
+                "_id": "68310569",
+                "date": {
+                    "$date": "2016-04-04T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "53859850",
+                "reviewer_name": "Bart",
+                "comments": "We had a spledid time in the old centre of Porto.\r\nThe appartment is very well situated next to the old Ribeira square. It's perfect to have such an appartment to your disposal, you feel home, and have a place to relax between the exploration of this very nice city.\r\nWe thank Ana & Gonçalo, and we hope the appartment is free when we go back next year. Porto is charming original."
+            },
+            {
+                "_id": "69693942",
+                "date": {
+                    "$date": "2016-04-12T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "3135623",
+                "reviewer_name": "Alex",
+                "comments": "Ana and Goncalo were very helpful and accommodating. When they were not available they put us in touch with their nephew who was equally as helpful. The flat was as described, neat and tidy. The weather was quite cold, but thankfully A&G left us with extra blankets and electric heaters to use. Location was great. Outside the flat there was a slight smell of the river/ sewage, but in all honesty it did not come into the flat, and once you go down the road it doesn't carry on. This may also have been down to the very wet weather we had while there. All in all, very happy and would definitely recommend."
+            },
+            {
+                "_id": "71451096",
+                "date": {
+                    "$date": "2016-04-25T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "13187858",
+                "reviewer_name": "Dan",
+                "comments": "The hosts were very accommodating and agreed to meet with my parents as they were arriving before us. Communicated very well and always responded in a very timely manner. You couldn't have asked for a better location of this apartment and the place was identical to the pictures in the in the listing."
+            },
+            {
+                "_id": "73191268",
+                "date": {
+                    "$date": "2016-05-07T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "61434690",
+                "reviewer_name": "Anne",
+                "comments": "THE PLACE TO BE, l'appartement est situé au milieu de la Ribeira , tout peut se faire à pieds c'est l'ideal,l'appartement est très bien agencé et équipé.\r\nNous avons passé un séjour très agréable dans ce duplex avec beaucoup de charme .\r\nAccueil très chaleureux de Ana et Gonçalo, ils ont pris du temps pour nous indiquer tout ce qu'il y avait à faire sur Porto et répondus  à toutes nos interrogations en terme de commodités.. Merci..\r\n"
+            },
+            {
+                "_id": "77438107",
+                "date": {
+                    "$date": "2016-05-31T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "3673216",
+                "reviewer_name": "Chris",
+                "comments": "We had a great time in Porto. Ana’s & Goncalo’s apartment is located right in the heart of the Old Town and is great value for money. You really are at the centre of things and it’s the perfect place to get swept away in the hustle and bustle of Porto. Ana and Goncalo were great hosts."
+            },
+            {
+                "_id": "89637734",
+                "date": {
+                    "$date": "2016-07-29T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "9172374",
+                "reviewer_name": "Leslie",
+                "comments": "Ana and Gonçalo were very welcoming and made a lot of information about Porto's sights available. It was very clean, very beautiful and the location was superb. It does have a lot of restaurants around it, so it could be a bit noisy for us at night but otherwise  great location. We would stay there again. "
+            },
+            {
+                "_id": "96574146",
+                "date": {
+                    "$date": "2016-08-23T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "71985274",
+                "reviewer_name": "Philippe",
+                "comments": "Super appartement très bien placé, au cœur de l'animation de la Ribeira !\r\nNous avons passé un super séjour à Porto !\r\nToutes les informations données par Ana et les documents laissés nous ont bien aidé à organiser notre séjour.  Nous avons (presque) tout fait à pied ! Le parking Ribeira est proche et bien utile pour garer le véhicule.\r\nMerci !!!\r\nPhilippe\r\n"
+            },
+            {
+                "_id": "108444999",
+                "date": {
+                    "$date": "2016-10-16T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "24960918",
+                "reviewer_name": "Hanneke",
+                "comments": "The appartment was great, it is really nice and cosy, and it is situated at a perfect location. Ana and Goncalo were very friendly, they were very helpfull during our stay. We had a great time during our stay in Porto!"
+            },
+            {
+                "_id": "111065376",
+                "date": {
+                    "$date": "2016-10-30T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "74079092",
+                "reviewer_name": "Kati",
+                "comments": "Kävimme majoittajan kanssa viestinvaihtoa ennen lomaa ja he antoivat mukavan vaikutelman. He olivatkin hyvin mukavia ihmisiä. He tulivat lentokentälle vastaan kahdella autolla mikä oli hyvin ystävällistä. He kertoivat myös kaupungista ja sen nähtävyyksistä. Asunnon sijainti oli täydellinen. Se oli myös erittäin romanttinen ja kaunis. Kokemus oli hyvin onnistunut."
+            },
+            {
+                "_id": "111655209",
+                "date": {
+                    "$date": "2016-11-01T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "40413493",
+                "reviewer_name": "Julia",
+                "comments": "Hemos pasado unos días increíbles en Oporto. Llegamos más tarde de lo que habíamos pensado y Ana & Gonçalo nos esperaron pacientemente y nos facilitaron la llegada, además nos recibieron con un regalo de bienvenida!. Nos dieron todo tipo de indicaciones y consejos más que de sobra para disfrutar de los días que estuvimos allí. La ubicación de la casa es inmejorable!! la única pega fue que el soporte de la ducha estaba roto pero como eran pocos días no quisimos molestar a Ana & Gonçalo y no se lo comentamos. "
+            },
+            {
+                "_id": "132811625",
+                "date": {
+                    "$date": "2017-02-19T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "8986056",
+                "reviewer_name": "Joshua",
+                "comments": "Great location, comfortable place, responsive and friendly host! Highly recommended!"
+            },
+            {
+                "_id": "144627907",
+                "date": {
+                    "$date": "2017-04-16T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "113254568",
+                "reviewer_name": "Tracey",
+                "comments": "This house is in the heart of Porto, set back enough to be away from the hustle and bustle but only a few steps up from the river, bars and restaurants. A great place to stay.\nThe house was clean and functional. Ana and Goncalo are perfect hosts with lots of information on places to visit and   eat."
+            },
+            {
+                "_id": "149009243",
+                "date": {
+                    "$date": "2017-05-02T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "11263097",
+                "reviewer_name": "Willem",
+                "comments": "The location of the house is wonderful! You are in the heart of the old city and the Douro ist just a few meters away. Perfect for a first visit to Porto!\nVery cosy and warm house with everything you need.\nGonçalo gives a lot of good tips that will help you to have a perfect stay. Communication is very easy with him."
+            },
+            {
+                "_id": "150518693",
+                "date": {
+                    "$date": "2017-05-08T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "108507776",
+                "reviewer_name": "Fanny",
+                "comments": "We spend a really good time in Porto, the flat is so well situated. The bridge is just next door, the view on the river is amazing, and plenty of restaurants and pubs, transport are just around.\nGonzalo is very kind to wait for us, also lat, for the check in, thank you.\n"
+            },
+            {
+                "_id": "155913947",
+                "date": {
+                    "$date": "2017-05-29T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "30254816",
+                "reviewer_name": "Bridget",
+                "comments": "Thanks for a great stay! 6 of us were in Porto for a long weekend and we had a blast. The apartment was perfect; location and size to accomodate us. The hosts were great, then even picked us up at the airport (for a fee but it was a great service). Thanks again! Bridget."
+            },
+            {
+                "_id": "159692160",
+                "date": {
+                    "$date": "2017-06-11T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "124514204",
+                "reviewer_name": "Oscar",
+                "comments": "Superb location and very nice, big and overall pleasant apartment!"
+            },
+            {
+                "_id": "164881958",
+                "date": {
+                    "$date": "2017-06-29T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "105188418",
+                "reviewer_name": "Steve",
+                "comments": "The apartment provides basic facilities but is good value for money and very well positioned for easy access to restaurants and bars, the Ribeira district and the Port house in Gaia."
+            },
+            {
+                "_id": "166990342",
+                "date": {
+                    "$date": "2017-07-05T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "52660694",
+                "reviewer_name": "Tina",
+                "comments": "Ana und Gonçalo sind sehr hilfsbereite liebe Leute, die  alles tun, damit man sich wohl fühlt. Wenn es etwas zu beanstanden gab, wird das sofort problemlos erledigt. Das Apartment ist charmant, die Möbel schon etwas mitgenommen, aber das passt insgesamt ins Bild von Porto und macht den Reiz aus. Die Lage ist super, genau am Duoro. Es gibt Strassenmusik bis in den späten Abend und auch morgens geht's früh los mit fröhlichen Lärm von der Flusspromenade. Nichts also für Leute, die es ruhig brauchen! Die Lage ist wirklich exklusiv und tröstet über den recht teuren Mietpreis. Im Umfeld gibt es typische Touri-Fallen, wo alles doppelt kostet, aber gleichzeitig findet man auch sehr nette kleine Bars, in der man chillig und günstig frühstücken oder generell lecker essen kann. Die Stadt ist klein genug, um sich schnell zurechtzufinden und groß genug, um immer wieder neues zu entdecken. Wir waren zu dritt (50, 25, 20 Jahre) und haben die Zeit wirklich genossen. "
+            },
+            {
+                "_id": "180030365",
+                "date": {
+                    "$date": "2017-08-09T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "25469637",
+                "reviewer_name": "Mathieu",
+                "comments": "Very well located appartement ideal for a family of 5 who want to make the most of the city center.\nIt may be a bit noisy at night but this is acceptable.\nGlobally we recommend this place."
+            },
+            {
+                "_id": "198679769",
+                "date": {
+                    "$date": "2017-09-30T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "21837853",
+                "reviewer_name": "Ido",
+                "comments": "Great location! The apartment is somewhat basic. We were family with 3 teenagers and had a good time. Also it’s a bit noisy until very late at night."
+            },
+            {
+                "_id": "199885226",
+                "date": {
+                    "$date": "2017-10-03T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "56528632",
+                "reviewer_name": "Amanda",
+                "comments": "This apartment is in the perfect location for being in the middle of the action. There were tons of restaurants close to the apartment and it was a quick walk across the bridge to tour the Port wineries. Be forewarned; if you are looking for a very quiet location, this area may not be for you. However, if you are looking to step outside of your door and start enjoying what Porto has to offer, I recommend this location."
+            },
+            {
+                "_id": "207942636",
+                "date": {
+                    "$date": "2017-10-30T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "102474818",
+                "reviewer_name": "Geneviève",
+                "comments": "Acceuil très très chaleureux de Gonçalo  et Ana lors de notre arrivée très tardive due à un changement d\"'horaire d'avion....appartement super bien situé dans Porto près du Douro, fidèle aux photos mises sur le site....Nous avons adoré ce quartier bien animé  .....Encore merci à Gonçalo et Ana. ...."
+            },
+            {
+                "_id": "209455775",
+                "date": {
+                    "$date": "2017-11-05T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "10371877",
+                "reviewer_name": "Andrea",
+                "comments": "Localização perfeita, muito aconchegante, Ana e Gonçalo são pessoas muito atenciosas e simpáticas!"
+            },
+            {
+                "_id": "223995518",
+                "date": {
+                    "$date": "2018-01-02T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "10184070",
+                "reviewer_name": "Jennifer",
+                "comments": "Perfect position to see everything that Porto has to offer. Ana and Gonçalo were great hosts quick to respond and welcoming. Couldn't recommend a better place to stay in Porto to be able to see the sights and be within walking distance to so many restaurants."
+            },
+            {
+                "_id": "225725834",
+                "date": {
+                    "$date": "2018-01-07T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "156411765",
+                "reviewer_name": "Nathalie",
+                "comments": "Great location!"
+            },
+            {
+                "_id": "230559180",
+                "date": {
+                    "$date": "2018-01-28T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "2524423",
+                "reviewer_name": "Cayetana",
+                "comments": "Probably Ana&Gonzalo´s place is great for summer but definitely not in winter. The house is NOT WARM and ready for a stay in cold and humit season. There is NO HEATING in any of the rooms and living room, only bed covers (not nordic duvet) and small heaters which you have to switch off during the night. Those were not enough during our stay in January even we had sunny days! Moreover we were 5 people in the house without NO HOT WATER enough for all of us. \nThe pictures did not show the reality. Furniture was much older and WiFi signal is only available in the living room, not the rooms.\nOn the other hand, location is great if you want to stay close to the river. Although think about that all restaurants, bars and main tourist attractions are close to Train Station and Clerigos Tower which means 15-20 min uphill walking distance from the house."
+            },
+            {
+                "_id": "232271631",
+                "date": {
+                    "$date": "2018-02-04T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "167219338",
+                "reviewer_name": "Mérex",
+                "comments": "Appartement très cosy! Nous y avons été pour un court séjour à 7 et avons adoré. L'appartement est idéalement situé dans le quartier magnifique de la Ribeira. L'accueil a ete très chaleureux: Nous étions trompé d'adresse car le GPS avaient confondus les rues mais Ana a su nous retrouver pour nous amener à l'appartement.  L'appartement était très  propre et nous avons eu largement tout ce qu'il fallait en linge.\nEncore un Grand merci à eux!"
+            },
+            {
+                "_id": "234847900",
+                "date": {
+                    "$date": "2018-02-14T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "6735587",
+                "reviewer_name": "Andrea",
+                "comments": "ottima ospitalità, la posizione della casa è ottima, vicina ai mezzi di trasporto e alle principali attrazioni della città, torneremo sicuramente. Consigliato!!"
+            },
+            {
+                "_id": "235293831",
+                "date": {
+                    "$date": "2018-02-16T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "130170949",
+                "reviewer_name": "Bogdan",
+                "comments": "Nice apartment in Porto, we enjoy staying in it for a few days. The apartment is comfortable and has a very nice location. Thanks to Ana and Gonsalo for hospitality."
+            },
+            {
+                "_id": "240252220",
+                "date": {
+                    "$date": "2018-03-04T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "153415353",
+                "reviewer_name": "Alison",
+                "comments": "Great location. Good value thanks for the stay"
+            },
+            {
+                "_id": "244738269",
+                "date": {
+                    "$date": "2018-03-19T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "59706237",
+                "reviewer_name": "Marco",
+                "comments": "Me and my friends (7 ppl tot) have booked Gonçalo and Ana’s apartment for our holidays and i think we cannot do a better choice like that.\nThe apartment is situated near Oporto’s riverside, in Ribeira district, at 2 minutes walking to Sao Bento’s station, 10minutes to Lello’s library and clerics’s tower. In less than 10 minutes u’re in Vila Nova De Gaia where u can find the wineries of porto’s wine.\nThe apartment is really spacious and comfortable, perfect for 7 italian people that want to have fun in Oporto.\nSuggested!!!"
+            },
+            {
+                "_id": "246334180",
+                "date": {
+                    "$date": "2018-03-25T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "12047570",
+                "reviewer_name": "Michel",
+                "comments": "L'emplacement et vraiment au coeur de l'animation du vieux Porto. Au pied de l'appartement se trouvent de charmants café avec vue sur le Douro.\nAna&Gonçalo ont été très attentionnés et à l'écoute de nos demandes\nMichel"
+            },
+            {
+                "_id": "259708770",
+                "date": {
+                    "$date": "2018-05-01T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "174003310",
+                "reviewer_name": "Dariusz",
+                "comments": "Great location right next to the Dom Luiz bridge and Douro river and plenty of restaurants. Enough room for about 6 people. Ana was very responsive to any concerns we had. Would stay again."
+            },
+            {
+                "_id": "263239322",
+                "date": {
+                    "$date": "2018-05-11T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "31033799",
+                "reviewer_name": "Margriet",
+                "comments": "The house was supernice and located in the middle of the center. We really enjoyed our stay here!"
+            },
+            {
+                "_id": "264125733",
+                "date": {
+                    "$date": "2018-05-13T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "15554470",
+                "reviewer_name": "Carlos",
+                "comments": "Great Location. Ana & Gonzalo are very nice, flexible, and fast-responsive. Apartment is ok but only one toilet for 3 rooms + sofa-bed."
+            },
+            {
+                "_id": "267283092",
+                "date": {
+                    "$date": "2018-05-21T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "39358900",
+                "reviewer_name": "Gaspard",
+                "comments": "Ana&Gonçalo's apartment was nice, comfy, clean and most of all really well located in the city center!!!\nWe could easily move everywhere in Porto from there and it was perfect for discovering the city!\nAlso, I'd like to mention that Gonçalo was nice and patient with us on the day of the arrival even if we were a bit late.\nI strongly recommend this place!"
+            },
+            {
+                "_id": "269853203",
+                "date": {
+                    "$date": "2018-05-28T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "42864948",
+                "reviewer_name": "James",
+                "comments": "Incredible location, beautiful house. Everything was very easy and we would highly recommend this accommodation. Excellent. "
+            },
+            {
+                "_id": "272277314",
+                "date": {
+                    "$date": "2018-06-03T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "45990306",
+                "reviewer_name": "紫仪",
+                "comments": "good lication good experience"
+            },
+            {
+                "_id": "275044729",
+                "date": {
+                    "$date": "2018-06-10T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "176337667",
+                "reviewer_name": "Sebastian",
+                "comments": "We loved it"
+            },
+            {
+                "_id": "302971185",
+                "date": {
+                    "$date": "2018-08-06T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "52572680",
+                "reviewer_name": "Robby",
+                "comments": "Great location right on the river. Lots of tourists in the area. Easy to get to public transportation. Besides the hot weather, we had a good time. "
+            },
+            {
+                "_id": "320887590",
+                "date": {
+                    "$date": "2018-09-09T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "20965806",
+                "reviewer_name": "Romain",
+                "comments": "Merci à Ana & Gonçalo pour l’accueil !"
+            },
+            {
+                "_id": "325025167",
+                "date": {
+                    "$date": "2018-09-18T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "15097268",
+                "reviewer_name": "Roula",
+                "comments": "-"
+            },
+            {
+                "_id": "331735682",
+                "date": {
+                    "$date": "2018-10-03T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "35313286",
+                "reviewer_name": "Alexander",
+                "comments": "Our stay in Ana and Gancalo’s apartment was lovely. The location was perfect and Gancalo graciously picked us up from the airport. It does get a little loud in the morning but that’s only because the apartment is perfectly located right on the river front. You do have to hold the shower wand when showering but the pressure is good. Overall I would definitely stay in the apartment again!"
+            },
+            {
+                "_id": "334789252",
+                "date": {
+                    "$date": "2018-10-10T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "206502919",
+                "reviewer_name": "Mark",
+                "comments": "It was a wonderful experience, the location is fantastic and the accommodations were outstanding."
+            },
+            {
+                "_id": "347372623",
+                "date": {
+                    "$date": "2018-11-11T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "17503135",
+                "reviewer_name": "Camille",
+                "comments": "Ana’s place is very well located, at 2 min walking distance to the Douro, so that everything is close by! Ana communicated well regarding check in info, and was even flexible regarding check out timing. The description / pictures are relevant; only the bathroom  is not as recent. We appreciated the extra blanket as heaters have to be switched off once u leave the flat, but once they are switched on we had no problem afterwards regarding the temperature of the flat."
+            },
+            {
+                "_id": "354708379",
+                "date": {
+                    "$date": "2018-12-02T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "34178931",
+                "reviewer_name": "Pawel",
+                "comments": "If you want to stay in the heart of Porto for reasonable price this is a good alternative. However, I’d selected again it for group of more than 6 people."
+            },
+            {
+                "_id": "362865132",
+                "date": {
+                    "$date": "2018-12-27T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "208880077",
+                "reviewer_name": "Thomas",
+                "comments": "Very helpful hosts. Cooked traditional Portuguese Christmas dinner for 6. Location is perfect. Right off square that is on river right by famous bridge engineered by protege of Gustav Eifel. Looks like same type structure."
+            },
+            {
+                "_id": "364728730",
+                "date": {
+                    "$date": "2018-12-31T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "91827533",
+                "reviewer_name": "Mr",
+                "comments": "Ana & Goncalo were great on communication, responding instantly to questions.\n5 of us stayed in their home for 3 nights and found the location to be great and central to all the amazing sights Porto has to offer. \nWe found the home to be difficult to heat on our first night, the rooms have heaters but took time to get the room to a comfortable temperature level. But in warmer months Im sure this isn't an issue.\nThe beds are a little hard with one slightly out of shape,  and the shower is fairly basic (hand held) but does the job. Because of the central location some noise can be expected early in the mornings. \nOverall the apartment suited our needs for our short stay and the price is more than reasonable for what we got."
+            },
+            {
+                "_id": "403055315",
+                "date": {
+                    "$date": "2019-01-20T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "15138940",
+                "reviewer_name": "Milo",
+                "comments": "The house was extremely well located and Ana was able to give us some really great tips on locations to have lunch and eat out. The house was perfectly clean and the easily able to accommodate 6 people despite only having one bathroom. The beds and living room were comfortable. \n\nHowever, we always felt somewhat on edge in the house due to the number of signs posted around the kitchen, bedrooms and bathroom about being charged 15€ for all sorts of extras like not washing up or using extra towels and bed linen. Not that this would be particularly unreasonable but it made us feel like we were walking on egg shells in and around the house. \n\nThe hosts were aware that we were a group of six yet one of the beds was not prepared and we ran out of toilet paper well before we were due to check out despite only being there 2 nights. It really wasn't the end of the world but the shower head does not have a wall fitting meaning you had to hold it yourself if you wanted to stand underneath it."
+            }
+        ]
     },
     {
         "_id": "1001265",
@@ -2150,8 +2669,527 @@ export const DemoData = [
             "avalable_checkIn": { "$date": "2025-01-03T05:00:00.000Z" },
             "avalable_checkOut": { "$date": "2025-12-15T05:00:00.000Z" },
         },
-        "review_scores": {},
-        "reviews": []
+        "review_scores": {
+            "review_scores_accuracy": 9,
+            "review_scores_cleanliness": 9,
+            "review_scores_checkin": 10,
+            "review_scores_communication": 10,
+            "review_scores_location": 10,
+            "review_scores_value": 9,
+            "review_scores_rating": 89
+        },
+        "reviews": [
+            {
+                "_id": "58663741",
+                "date": {
+                    "$date": "2016-01-03T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "51483096",
+                "reviewer_name": "Cátia",
+                "comments": "A casa da Ana e do Gonçalo foram o local escolhido para a passagem de ano com um grupo de amigos. Fomos super bem recebidos com uma grande simpatia e predisposição a ajudar com qualquer coisa que fosse necessário.\r\nA casa era ainda melhor do que parecia nas fotos, totalmente equipada, com mantas, aquecedor e tudo o que pudessemos precisar.\r\nA localização não podia ser melhor! Não há melhor do que acordar de manhã e ao virar da esquina estar a ribeira do Porto."
+            },
+            {
+                "_id": "62413197",
+                "date": {
+                    "$date": "2016-02-14T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "40031996",
+                "reviewer_name": "Théo",
+                "comments": "We are french's students, we traveled some days in Porto, this space was good and we can cooking easly. It was rainning so we eard every time the water fall to the ground in the street when we sleeping. But It was cool and or was well received by Ana et Gonçalo"
+            },
+            {
+                "_id": "68310569",
+                "date": {
+                    "$date": "2016-04-04T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "53859850",
+                "reviewer_name": "Bart",
+                "comments": "We had a spledid time in the old centre of Porto.\r\nThe appartment is very well situated next to the old Ribeira square. It's perfect to have such an appartment to your disposal, you feel home, and have a place to relax between the exploration of this very nice city.\r\nWe thank Ana & Gonçalo, and we hope the appartment is free when we go back next year. Porto is charming original."
+            },
+            {
+                "_id": "69693942",
+                "date": {
+                    "$date": "2016-04-12T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "3135623",
+                "reviewer_name": "Alex",
+                "comments": "Ana and Goncalo were very helpful and accommodating. When they were not available they put us in touch with their nephew who was equally as helpful. The flat was as described, neat and tidy. The weather was quite cold, but thankfully A&G left us with extra blankets and electric heaters to use. Location was great. Outside the flat there was a slight smell of the river/ sewage, but in all honesty it did not come into the flat, and once you go down the road it doesn't carry on. This may also have been down to the very wet weather we had while there. All in all, very happy and would definitely recommend."
+            },
+            {
+                "_id": "71451096",
+                "date": {
+                    "$date": "2016-04-25T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "13187858",
+                "reviewer_name": "Dan",
+                "comments": "The hosts were very accommodating and agreed to meet with my parents as they were arriving before us. Communicated very well and always responded in a very timely manner. You couldn't have asked for a better location of this apartment and the place was identical to the pictures in the in the listing."
+            },
+            {
+                "_id": "73191268",
+                "date": {
+                    "$date": "2016-05-07T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "61434690",
+                "reviewer_name": "Anne",
+                "comments": "THE PLACE TO BE, l'appartement est situé au milieu de la Ribeira , tout peut se faire à pieds c'est l'ideal,l'appartement est très bien agencé et équipé.\r\nNous avons passé un séjour très agréable dans ce duplex avec beaucoup de charme .\r\nAccueil très chaleureux de Ana et Gonçalo, ils ont pris du temps pour nous indiquer tout ce qu'il y avait à faire sur Porto et répondus  à toutes nos interrogations en terme de commodités.. Merci..\r\n"
+            },
+            {
+                "_id": "77438107",
+                "date": {
+                    "$date": "2016-05-31T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "3673216",
+                "reviewer_name": "Chris",
+                "comments": "We had a great time in Porto. Ana’s & Goncalo’s apartment is located right in the heart of the Old Town and is great value for money. You really are at the centre of things and it’s the perfect place to get swept away in the hustle and bustle of Porto. Ana and Goncalo were great hosts."
+            },
+            {
+                "_id": "89637734",
+                "date": {
+                    "$date": "2016-07-29T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "9172374",
+                "reviewer_name": "Leslie",
+                "comments": "Ana and Gonçalo were very welcoming and made a lot of information about Porto's sights available. It was very clean, very beautiful and the location was superb. It does have a lot of restaurants around it, so it could be a bit noisy for us at night but otherwise  great location. We would stay there again. "
+            },
+            {
+                "_id": "96574146",
+                "date": {
+                    "$date": "2016-08-23T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "71985274",
+                "reviewer_name": "Philippe",
+                "comments": "Super appartement très bien placé, au cœur de l'animation de la Ribeira !\r\nNous avons passé un super séjour à Porto !\r\nToutes les informations données par Ana et les documents laissés nous ont bien aidé à organiser notre séjour.  Nous avons (presque) tout fait à pied ! Le parking Ribeira est proche et bien utile pour garer le véhicule.\r\nMerci !!!\r\nPhilippe\r\n"
+            },
+            {
+                "_id": "108444999",
+                "date": {
+                    "$date": "2016-10-16T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "24960918",
+                "reviewer_name": "Hanneke",
+                "comments": "The appartment was great, it is really nice and cosy, and it is situated at a perfect location. Ana and Goncalo were very friendly, they were very helpfull during our stay. We had a great time during our stay in Porto!"
+            },
+            {
+                "_id": "111065376",
+                "date": {
+                    "$date": "2016-10-30T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "74079092",
+                "reviewer_name": "Kati",
+                "comments": "Kävimme majoittajan kanssa viestinvaihtoa ennen lomaa ja he antoivat mukavan vaikutelman. He olivatkin hyvin mukavia ihmisiä. He tulivat lentokentälle vastaan kahdella autolla mikä oli hyvin ystävällistä. He kertoivat myös kaupungista ja sen nähtävyyksistä. Asunnon sijainti oli täydellinen. Se oli myös erittäin romanttinen ja kaunis. Kokemus oli hyvin onnistunut."
+            },
+            {
+                "_id": "111655209",
+                "date": {
+                    "$date": "2016-11-01T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "40413493",
+                "reviewer_name": "Julia",
+                "comments": "Hemos pasado unos días increíbles en Oporto. Llegamos más tarde de lo que habíamos pensado y Ana & Gonçalo nos esperaron pacientemente y nos facilitaron la llegada, además nos recibieron con un regalo de bienvenida!. Nos dieron todo tipo de indicaciones y consejos más que de sobra para disfrutar de los días que estuvimos allí. La ubicación de la casa es inmejorable!! la única pega fue que el soporte de la ducha estaba roto pero como eran pocos días no quisimos molestar a Ana & Gonçalo y no se lo comentamos. "
+            },
+            {
+                "_id": "132811625",
+                "date": {
+                    "$date": "2017-02-19T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "8986056",
+                "reviewer_name": "Joshua",
+                "comments": "Great location, comfortable place, responsive and friendly host! Highly recommended!"
+            },
+            {
+                "_id": "144627907",
+                "date": {
+                    "$date": "2017-04-16T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "113254568",
+                "reviewer_name": "Tracey",
+                "comments": "This house is in the heart of Porto, set back enough to be away from the hustle and bustle but only a few steps up from the river, bars and restaurants. A great place to stay.\nThe house was clean and functional. Ana and Goncalo are perfect hosts with lots of information on places to visit and   eat."
+            },
+            {
+                "_id": "149009243",
+                "date": {
+                    "$date": "2017-05-02T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "11263097",
+                "reviewer_name": "Willem",
+                "comments": "The location of the house is wonderful! You are in the heart of the old city and the Douro ist just a few meters away. Perfect for a first visit to Porto!\nVery cosy and warm house with everything you need.\nGonçalo gives a lot of good tips that will help you to have a perfect stay. Communication is very easy with him."
+            },
+            {
+                "_id": "150518693",
+                "date": {
+                    "$date": "2017-05-08T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "108507776",
+                "reviewer_name": "Fanny",
+                "comments": "We spend a really good time in Porto, the flat is so well situated. The bridge is just next door, the view on the river is amazing, and plenty of restaurants and pubs, transport are just around.\nGonzalo is very kind to wait for us, also lat, for the check in, thank you.\n"
+            },
+            {
+                "_id": "155913947",
+                "date": {
+                    "$date": "2017-05-29T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "30254816",
+                "reviewer_name": "Bridget",
+                "comments": "Thanks for a great stay! 6 of us were in Porto for a long weekend and we had a blast. The apartment was perfect; location and size to accomodate us. The hosts were great, then even picked us up at the airport (for a fee but it was a great service). Thanks again! Bridget."
+            },
+            {
+                "_id": "159692160",
+                "date": {
+                    "$date": "2017-06-11T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "124514204",
+                "reviewer_name": "Oscar",
+                "comments": "Superb location and very nice, big and overall pleasant apartment!"
+            },
+            {
+                "_id": "164881958",
+                "date": {
+                    "$date": "2017-06-29T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "105188418",
+                "reviewer_name": "Steve",
+                "comments": "The apartment provides basic facilities but is good value for money and very well positioned for easy access to restaurants and bars, the Ribeira district and the Port house in Gaia."
+            },
+            {
+                "_id": "166990342",
+                "date": {
+                    "$date": "2017-07-05T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "52660694",
+                "reviewer_name": "Tina",
+                "comments": "Ana und Gonçalo sind sehr hilfsbereite liebe Leute, die  alles tun, damit man sich wohl fühlt. Wenn es etwas zu beanstanden gab, wird das sofort problemlos erledigt. Das Apartment ist charmant, die Möbel schon etwas mitgenommen, aber das passt insgesamt ins Bild von Porto und macht den Reiz aus. Die Lage ist super, genau am Duoro. Es gibt Strassenmusik bis in den späten Abend und auch morgens geht's früh los mit fröhlichen Lärm von der Flusspromenade. Nichts also für Leute, die es ruhig brauchen! Die Lage ist wirklich exklusiv und tröstet über den recht teuren Mietpreis. Im Umfeld gibt es typische Touri-Fallen, wo alles doppelt kostet, aber gleichzeitig findet man auch sehr nette kleine Bars, in der man chillig und günstig frühstücken oder generell lecker essen kann. Die Stadt ist klein genug, um sich schnell zurechtzufinden und groß genug, um immer wieder neues zu entdecken. Wir waren zu dritt (50, 25, 20 Jahre) und haben die Zeit wirklich genossen. "
+            },
+            {
+                "_id": "180030365",
+                "date": {
+                    "$date": "2017-08-09T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "25469637",
+                "reviewer_name": "Mathieu",
+                "comments": "Very well located appartement ideal for a family of 5 who want to make the most of the city center.\nIt may be a bit noisy at night but this is acceptable.\nGlobally we recommend this place."
+            },
+            {
+                "_id": "198679769",
+                "date": {
+                    "$date": "2017-09-30T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "21837853",
+                "reviewer_name": "Ido",
+                "comments": "Great location! The apartment is somewhat basic. We were family with 3 teenagers and had a good time. Also it’s a bit noisy until very late at night."
+            },
+            {
+                "_id": "199885226",
+                "date": {
+                    "$date": "2017-10-03T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "56528632",
+                "reviewer_name": "Amanda",
+                "comments": "This apartment is in the perfect location for being in the middle of the action. There were tons of restaurants close to the apartment and it was a quick walk across the bridge to tour the Port wineries. Be forewarned; if you are looking for a very quiet location, this area may not be for you. However, if you are looking to step outside of your door and start enjoying what Porto has to offer, I recommend this location."
+            },
+            {
+                "_id": "207942636",
+                "date": {
+                    "$date": "2017-10-30T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "102474818",
+                "reviewer_name": "Geneviève",
+                "comments": "Acceuil très très chaleureux de Gonçalo  et Ana lors de notre arrivée très tardive due à un changement d\"'horaire d'avion....appartement super bien situé dans Porto près du Douro, fidèle aux photos mises sur le site....Nous avons adoré ce quartier bien animé  .....Encore merci à Gonçalo et Ana. ...."
+            },
+            {
+                "_id": "209455775",
+                "date": {
+                    "$date": "2017-11-05T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "10371877",
+                "reviewer_name": "Andrea",
+                "comments": "Localização perfeita, muito aconchegante, Ana e Gonçalo são pessoas muito atenciosas e simpáticas!"
+            },
+            {
+                "_id": "223995518",
+                "date": {
+                    "$date": "2018-01-02T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "10184070",
+                "reviewer_name": "Jennifer",
+                "comments": "Perfect position to see everything that Porto has to offer. Ana and Gonçalo were great hosts quick to respond and welcoming. Couldn't recommend a better place to stay in Porto to be able to see the sights and be within walking distance to so many restaurants."
+            },
+            {
+                "_id": "225725834",
+                "date": {
+                    "$date": "2018-01-07T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "156411765",
+                "reviewer_name": "Nathalie",
+                "comments": "Great location!"
+            },
+            {
+                "_id": "230559180",
+                "date": {
+                    "$date": "2018-01-28T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "2524423",
+                "reviewer_name": "Cayetana",
+                "comments": "Probably Ana&Gonzalo´s place is great for summer but definitely not in winter. The house is NOT WARM and ready for a stay in cold and humit season. There is NO HEATING in any of the rooms and living room, only bed covers (not nordic duvet) and small heaters which you have to switch off during the night. Those were not enough during our stay in January even we had sunny days! Moreover we were 5 people in the house without NO HOT WATER enough for all of us. \nThe pictures did not show the reality. Furniture was much older and WiFi signal is only available in the living room, not the rooms.\nOn the other hand, location is great if you want to stay close to the river. Although think about that all restaurants, bars and main tourist attractions are close to Train Station and Clerigos Tower which means 15-20 min uphill walking distance from the house."
+            },
+            {
+                "_id": "232271631",
+                "date": {
+                    "$date": "2018-02-04T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "167219338",
+                "reviewer_name": "Mérex",
+                "comments": "Appartement très cosy! Nous y avons été pour un court séjour à 7 et avons adoré. L'appartement est idéalement situé dans le quartier magnifique de la Ribeira. L'accueil a ete très chaleureux: Nous étions trompé d'adresse car le GPS avaient confondus les rues mais Ana a su nous retrouver pour nous amener à l'appartement.  L'appartement était très  propre et nous avons eu largement tout ce qu'il fallait en linge.\nEncore un Grand merci à eux!"
+            },
+            {
+                "_id": "234847900",
+                "date": {
+                    "$date": "2018-02-14T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "6735587",
+                "reviewer_name": "Andrea",
+                "comments": "ottima ospitalità, la posizione della casa è ottima, vicina ai mezzi di trasporto e alle principali attrazioni della città, torneremo sicuramente. Consigliato!!"
+            },
+            {
+                "_id": "235293831",
+                "date": {
+                    "$date": "2018-02-16T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "130170949",
+                "reviewer_name": "Bogdan",
+                "comments": "Nice apartment in Porto, we enjoy staying in it for a few days. The apartment is comfortable and has a very nice location. Thanks to Ana and Gonsalo for hospitality."
+            },
+            {
+                "_id": "240252220",
+                "date": {
+                    "$date": "2018-03-04T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "153415353",
+                "reviewer_name": "Alison",
+                "comments": "Great location. Good value thanks for the stay"
+            },
+            {
+                "_id": "244738269",
+                "date": {
+                    "$date": "2018-03-19T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "59706237",
+                "reviewer_name": "Marco",
+                "comments": "Me and my friends (7 ppl tot) have booked Gonçalo and Ana’s apartment for our holidays and i think we cannot do a better choice like that.\nThe apartment is situated near Oporto’s riverside, in Ribeira district, at 2 minutes walking to Sao Bento’s station, 10minutes to Lello’s library and clerics’s tower. In less than 10 minutes u’re in Vila Nova De Gaia where u can find the wineries of porto’s wine.\nThe apartment is really spacious and comfortable, perfect for 7 italian people that want to have fun in Oporto.\nSuggested!!!"
+            },
+            {
+                "_id": "246334180",
+                "date": {
+                    "$date": "2018-03-25T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "12047570",
+                "reviewer_name": "Michel",
+                "comments": "L'emplacement et vraiment au coeur de l'animation du vieux Porto. Au pied de l'appartement se trouvent de charmants café avec vue sur le Douro.\nAna&Gonçalo ont été très attentionnés et à l'écoute de nos demandes\nMichel"
+            },
+            {
+                "_id": "259708770",
+                "date": {
+                    "$date": "2018-05-01T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "174003310",
+                "reviewer_name": "Dariusz",
+                "comments": "Great location right next to the Dom Luiz bridge and Douro river and plenty of restaurants. Enough room for about 6 people. Ana was very responsive to any concerns we had. Would stay again."
+            },
+            {
+                "_id": "263239322",
+                "date": {
+                    "$date": "2018-05-11T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "31033799",
+                "reviewer_name": "Margriet",
+                "comments": "The house was supernice and located in the middle of the center. We really enjoyed our stay here!"
+            },
+            {
+                "_id": "264125733",
+                "date": {
+                    "$date": "2018-05-13T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "15554470",
+                "reviewer_name": "Carlos",
+                "comments": "Great Location. Ana & Gonzalo are very nice, flexible, and fast-responsive. Apartment is ok but only one toilet for 3 rooms + sofa-bed."
+            },
+            {
+                "_id": "267283092",
+                "date": {
+                    "$date": "2018-05-21T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "39358900",
+                "reviewer_name": "Gaspard",
+                "comments": "Ana&Gonçalo's apartment was nice, comfy, clean and most of all really well located in the city center!!!\nWe could easily move everywhere in Porto from there and it was perfect for discovering the city!\nAlso, I'd like to mention that Gonçalo was nice and patient with us on the day of the arrival even if we were a bit late.\nI strongly recommend this place!"
+            },
+            {
+                "_id": "269853203",
+                "date": {
+                    "$date": "2018-05-28T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "42864948",
+                "reviewer_name": "James",
+                "comments": "Incredible location, beautiful house. Everything was very easy and we would highly recommend this accommodation. Excellent. "
+            },
+            {
+                "_id": "272277314",
+                "date": {
+                    "$date": "2018-06-03T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "45990306",
+                "reviewer_name": "紫仪",
+                "comments": "good lication good experience"
+            },
+            {
+                "_id": "275044729",
+                "date": {
+                    "$date": "2018-06-10T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "176337667",
+                "reviewer_name": "Sebastian",
+                "comments": "We loved it"
+            },
+            {
+                "_id": "302971185",
+                "date": {
+                    "$date": "2018-08-06T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "52572680",
+                "reviewer_name": "Robby",
+                "comments": "Great location right on the river. Lots of tourists in the area. Easy to get to public transportation. Besides the hot weather, we had a good time. "
+            },
+            {
+                "_id": "320887590",
+                "date": {
+                    "$date": "2018-09-09T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "20965806",
+                "reviewer_name": "Romain",
+                "comments": "Merci à Ana & Gonçalo pour l’accueil !"
+            },
+            {
+                "_id": "325025167",
+                "date": {
+                    "$date": "2018-09-18T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "15097268",
+                "reviewer_name": "Roula",
+                "comments": "-"
+            },
+            {
+                "_id": "331735682",
+                "date": {
+                    "$date": "2018-10-03T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "35313286",
+                "reviewer_name": "Alexander",
+                "comments": "Our stay in Ana and Gancalo’s apartment was lovely. The location was perfect and Gancalo graciously picked us up from the airport. It does get a little loud in the morning but that’s only because the apartment is perfectly located right on the river front. You do have to hold the shower wand when showering but the pressure is good. Overall I would definitely stay in the apartment again!"
+            },
+            {
+                "_id": "334789252",
+                "date": {
+                    "$date": "2018-10-10T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "206502919",
+                "reviewer_name": "Mark",
+                "comments": "It was a wonderful experience, the location is fantastic and the accommodations were outstanding."
+            },
+            {
+                "_id": "347372623",
+                "date": {
+                    "$date": "2018-11-11T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "17503135",
+                "reviewer_name": "Camille",
+                "comments": "Ana’s place is very well located, at 2 min walking distance to the Douro, so that everything is close by! Ana communicated well regarding check in info, and was even flexible regarding check out timing. The description / pictures are relevant; only the bathroom  is not as recent. We appreciated the extra blanket as heaters have to be switched off once u leave the flat, but once they are switched on we had no problem afterwards regarding the temperature of the flat."
+            },
+            {
+                "_id": "354708379",
+                "date": {
+                    "$date": "2018-12-02T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "34178931",
+                "reviewer_name": "Pawel",
+                "comments": "If you want to stay in the heart of Porto for reasonable price this is a good alternative. However, I’d selected again it for group of more than 6 people."
+            },
+            {
+                "_id": "362865132",
+                "date": {
+                    "$date": "2018-12-27T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "208880077",
+                "reviewer_name": "Thomas",
+                "comments": "Very helpful hosts. Cooked traditional Portuguese Christmas dinner for 6. Location is perfect. Right off square that is on river right by famous bridge engineered by protege of Gustav Eifel. Looks like same type structure."
+            },
+            {
+                "_id": "364728730",
+                "date": {
+                    "$date": "2018-12-31T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "91827533",
+                "reviewer_name": "Mr",
+                "comments": "Ana & Goncalo were great on communication, responding instantly to questions.\n5 of us stayed in their home for 3 nights and found the location to be great and central to all the amazing sights Porto has to offer. \nWe found the home to be difficult to heat on our first night, the rooms have heaters but took time to get the room to a comfortable temperature level. But in warmer months Im sure this isn't an issue.\nThe beds are a little hard with one slightly out of shape,  and the shower is fairly basic (hand held) but does the job. Because of the central location some noise can be expected early in the mornings. \nOverall the apartment suited our needs for our short stay and the price is more than reasonable for what we got."
+            },
+            {
+                "_id": "403055315",
+                "date": {
+                    "$date": "2019-01-20T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "15138940",
+                "reviewer_name": "Milo",
+                "comments": "The house was extremely well located and Ana was able to give us some really great tips on locations to have lunch and eat out. The house was perfectly clean and the easily able to accommodate 6 people despite only having one bathroom. The beds and living room were comfortable. \n\nHowever, we always felt somewhat on edge in the house due to the number of signs posted around the kitchen, bedrooms and bathroom about being charged 15€ for all sorts of extras like not washing up or using extra towels and bed linen. Not that this would be particularly unreasonable but it made us feel like we were walking on egg shells in and around the house. \n\nThe hosts were aware that we were a group of six yet one of the beds was not prepared and we ran out of toilet paper well before we were due to check out despite only being there 2 nights. It really wasn't the end of the world but the shower head does not have a wall fitting meaning you had to hold it yourself if you wanted to stand underneath it."
+            }
+        ]
     },
     {
         "_id": "1003530",
@@ -4241,195 +5279,525 @@ export const DemoData = [
             "avalable_checkIn": { "$date": "2024-07-03T05:00:00.000Z" },
             "avalable_checkOut": { "$date": "2024-07-15T05:00:00.000Z" },
         },
-        "review_scores": {},
-        "reviews": []
-    },
-    {
-        "_id": "10057826",
-        "listing_url": "https://www.airbnb.com/rooms/10057826",
-        "name": "Deluxe Loft Suite",
-        "summary": "Loft Suite Deluxe @ Henry Norman Hotel Located in Greenpoint, Brooklyn and housed in a converted 19th-century warehouse, the Henry Norman Hotel features modern lofts and suites with hardwood floors, antiques and contemporary art.",
-        "space": "This loft unit features a kitchenette and is fully equipped with everything you need for your stay. The Loft Suite Deluxe has an alcove bedroom area with a Queen size bed and a comfortable pull-out sofa in the living room area, which in total can easily sleep up to 4 guests. The loft is equipped with 42\" LCD HD TVs in both the living and bedroom areas with premium cable channels (HBO, Showtime & more). There are hardwood floors throughout and a full bathroom with shower/tub combination. Sleeps up to 4 guests.",
-        "description": "Loft Suite Deluxe @ Henry Norman Hotel Located in Greenpoint, Brooklyn and housed in a converted 19th-century warehouse, the Henry Norman Hotel features modern lofts and suites with hardwood floors, antiques and contemporary art. This loft unit features a kitchenette and is fully equipped with everything you need for your stay. The Loft Suite Deluxe has an alcove bedroom area with a Queen size bed and a comfortable pull-out sofa in the living room area, which in total can easily sleep up to 4 guests. The loft is equipped with 42\" LCD HD TVs in both the living and bedroom areas with premium cable channels (HBO, Showtime & more). There are hardwood floors throughout and a full bathroom with shower/tub combination. Sleeps up to 4 guests. Guest will have access to common terraces, lounge area, business center with 2 iMac computers, fitness center with dry sauna and steam shower, and laundry room. Greenpoint is an artsy Brooklyn neighborhood filled with great restaurants, cafes, and shops.",
-        "neighborhood_overview": "Greenpoint is an artsy Brooklyn neighborhood filled with great restaurants, cafes, and shops.",
-        "notes": "",
-        "transit": "",
-        "access": "Guest will have access to common terraces, lounge area, business center with 2 iMac computers, fitness center with dry sauna and steam shower, and laundry room.",
-        "interaction": "",
-        "house_rules": "Guest must leave a copy of credit card with front desk for any incidentals/ damages with a copy of valid ID. There are no additional charges than what has been paid in advance.",
-        "property_type": "Apartment",
-        "room_type": "Entire home/apt",
-        "bed_type": "Real Bed",
-        "minimum_nights": "3",
-        "maximum_nights": "1125",
-        "cancellation_policy": "strict_14_with_grace_period",
-        "last_scraped": {
-            "$date": "2019-03-07T05:00:00.000Z"
-        },
-        "calendar_last_scraped": {
-            "$date": "2019-03-07T05:00:00.000Z"
-        },
-        "first_review": {
-            "$date": "2016-01-03T05:00:00.000Z"
-        },
-        "last_review": {
-            "$date": "2018-02-18T05:00:00.000Z"
-        },
-        "accommodates": 4,
-        "bedrooms": 0,
-        "beds": 2,
-        "number_of_reviews": 5,
-        "bathrooms": {
-            "$numberDecimal": "1.0"
-        },
-        "amenities": [
-            "TV",
-            "Cable TV",
-            "Internet",
-            "Wifi",
-            "Air conditioning",
-            "Kitchen",
-            "Doorman",
-            "Gym",
-            "Elevator",
-            "Heating",
-            "Family/kid friendly",
-            "Washer",
-            "Dryer",
-            "Smoke detector",
-            "Carbon monoxide detector",
-            "First aid kit",
-            "Fire extinguisher",
-            "Essentials",
-            "Shampoo",
-            "24-hour check-in",
-            "Hangers",
-            "Hair dryer",
-            "Iron"
-        ],
-        "price": {
-            "$numberDecimal": "205.00"
-        },
-        "extra_people": {
-            "$numberDecimal": "0.00"
-        },
-        "guests_included": {
-            "$numberDecimal": "1"
-        },
-        "images": {
-            "thumbnail_url": "",
-            "medium_url": "",
-            "picture_url": "https://a0.muscache.com/im/pictures/40ace1e3-4917-46e5-994f-30a5965f5159.jpg?aki_policy=large",
-            "xl_picture_url": ""
-        },
-        "host": {
-            "host_id": "47554473",
-            "host_url": "https://www.airbnb.com/users/show/47554473",
-            "host_name": "Mae",
-            "host_location": "US",
-            "host_about": "",
-            "host_response_time": "within a few hours",
-            "host_thumbnail_url": "https://a0.muscache.com/im/pictures/c680ce22-d6ec-4b00-8ef3-b5b7fc0d76f2.jpg?aki_policy=profile_small",
-            "host_picture_url": "https://a0.muscache.com/im/pictures/c680ce22-d6ec-4b00-8ef3-b5b7fc0d76f2.jpg?aki_policy=profile_x_medium",
-            "host_neighbourhood": "Greenpoint",
-            "host_response_rate": 100,
-            "host_is_superhost": false,
-            "host_has_profile_pic": true,
-            "host_identity_verified": false,
-            "host_listings_count": 13,
-            "host_total_listings_count": 13,
-            "host_verifications": [
-                "email",
-                "phone",
-                "google",
-                "reviews",
-                "jumio",
-                "government_id"
-            ]
-        },
-        "address": {
-            "street": "Brooklyn, NY, United States",
-            "suburb": "Greenpoint",
-            "government_area": "Greenpoint",
-            "market": "New York",
-            "country": "United States",
-            "country_code": "US",
-            "location": {
-                "type": "Point",
-                "coordinates": [
-                    -73.94472,
-                    40.72778
-                ],
-                "is_location_exact": true
-            }
-        },
-        "availability": {
-            "availability_30": 30,
-            "availability_60": 31,
-            "availability_90": 31,
-            "availability_365": 243,
-            "avalable_checkIn": { "$date": "2024-07-03T05:00:00.000Z" },
-            "avalable_checkOut": { "$date": "2025-08-15T05:00:00.000Z" },
-        },
         "review_scores": {
             "review_scores_accuracy": 9,
-            "review_scores_cleanliness": 10,
+            "review_scores_cleanliness": 9,
             "review_scores_checkin": 10,
-            "review_scores_communication": 8,
-            "review_scores_location": 9,
+            "review_scores_communication": 10,
+            "review_scores_location": 10,
             "review_scores_value": 9,
-            "review_scores_rating": 88
+            "review_scores_rating": 89
         },
         "reviews": [
             {
-                "_id": "58665374",
+                "_id": "58663741",
                 "date": {
                     "$date": "2016-01-03T05:00:00.000Z"
                 },
-                "listing_id": "10057826",
-                "reviewer_id": "22162519",
+                "listing_id": "10006546",
+                "reviewer_id": "51483096",
+                "reviewer_name": "Cátia",
+                "comments": "A casa da Ana e do Gonçalo foram o local escolhido para a passagem de ano com um grupo de amigos. Fomos super bem recebidos com uma grande simpatia e predisposição a ajudar com qualquer coisa que fosse necessário.\r\nA casa era ainda melhor do que parecia nas fotos, totalmente equipada, com mantas, aquecedor e tudo o que pudessemos precisar.\r\nA localização não podia ser melhor! Não há melhor do que acordar de manhã e ao virar da esquina estar a ribeira do Porto."
+            },
+            {
+                "_id": "62413197",
+                "date": {
+                    "$date": "2016-02-14T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "40031996",
+                "reviewer_name": "Théo",
+                "comments": "We are french's students, we traveled some days in Porto, this space was good and we can cooking easly. It was rainning so we eard every time the water fall to the ground in the street when we sleeping. But It was cool and or was well received by Ana et Gonçalo"
+            },
+            {
+                "_id": "68310569",
+                "date": {
+                    "$date": "2016-04-04T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "53859850",
+                "reviewer_name": "Bart",
+                "comments": "We had a spledid time in the old centre of Porto.\r\nThe appartment is very well situated next to the old Ribeira square. It's perfect to have such an appartment to your disposal, you feel home, and have a place to relax between the exploration of this very nice city.\r\nWe thank Ana & Gonçalo, and we hope the appartment is free when we go back next year. Porto is charming original."
+            },
+            {
+                "_id": "69693942",
+                "date": {
+                    "$date": "2016-04-12T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "3135623",
                 "reviewer_name": "Alex",
-                "comments": "I could not have found a better place to stay in Brooklyn. I have nothing but positive things to say about this place. Definitely recommend staying here and would stay again."
+                "comments": "Ana and Goncalo were very helpful and accommodating. When they were not available they put us in touch with their nephew who was equally as helpful. The flat was as described, neat and tidy. The weather was quite cold, but thankfully A&G left us with extra blankets and electric heaters to use. Location was great. Outside the flat there was a slight smell of the river/ sewage, but in all honesty it did not come into the flat, and once you go down the road it doesn't carry on. This may also have been down to the very wet weather we had while there. All in all, very happy and would definitely recommend."
             },
             {
-                "_id": "88420503",
+                "_id": "71451096",
                 "date": {
-                    "$date": "2016-07-24T04:00:00.000Z"
+                    "$date": "2016-04-25T04:00:00.000Z"
                 },
-                "listing_id": "10057826",
-                "reviewer_id": "20282871",
-                "reviewer_name": "Dina",
-                "comments": "My husband, son and I were fortunate enough to have discovered the Henry Norman Hotel for our recent stay in Greenpoint Brooklyn. Even though we booked our room through Airbnb, we were welcome to all the amenities the hotel had to offer.  We were pleased from our arrival at the hotel, where the exterior was as pretty as the interior and greeted by Robert whose very pleasant demeanor was refreshing.  Each of the staff at the hotel were very professional and accommodating but Robert stood out from the rest.  I was unfortunate enough to have left my phone at a nearby shop after returning via the hotel shuttle, when notifying the front desk to see if I had left my phone in the back seat, Robert quickly responded with his assistance in searching for the item, then driving us immediately to the last location while he assured us he would be outside waiting so we would not have to walk back. I did in fact find my phone at that location (thanks to a good Samaritan) and Robert refused to take compensation for his kindness.  The only thing I would do differently on our next stay is to spend the extra for the room with the patio, as the view from the hotel is quite nice and the breezes up there were wonderful.  We not only will be back to visit the lovely hotel but will gladly recommend it to all who might be vising the Greenpoint area. "
+                "listing_id": "10006546",
+                "reviewer_id": "13187858",
+                "reviewer_name": "Dan",
+                "comments": "The hosts were very accommodating and agreed to meet with my parents as they were arriving before us. Communicated very well and always responded in a very timely manner. You couldn't have asked for a better location of this apartment and the place was identical to the pictures in the in the listing."
             },
             {
-                "_id": "92234102",
+                "_id": "73191268",
                 "date": {
-                    "$date": "2016-08-08T04:00:00.000Z"
+                    "$date": "2016-05-07T04:00:00.000Z"
                 },
-                "listing_id": "10057826",
-                "reviewer_id": "19466953",
-                "reviewer_name": "Rosana",
-                "comments": "Great place!!"
+                "listing_id": "10006546",
+                "reviewer_id": "61434690",
+                "reviewer_name": "Anne",
+                "comments": "THE PLACE TO BE, l'appartement est situé au milieu de la Ribeira , tout peut se faire à pieds c'est l'ideal,l'appartement est très bien agencé et équipé.\r\nNous avons passé un séjour très agréable dans ce duplex avec beaucoup de charme .\r\nAccueil très chaleureux de Ana et Gonçalo, ils ont pris du temps pour nous indiquer tout ce qu'il y avait à faire sur Porto et répondus  à toutes nos interrogations en terme de commodités.. Merci..\r\n"
             },
             {
-                "_id": "207168650",
+                "_id": "77438107",
                 "date": {
-                    "$date": "2017-10-28T04:00:00.000Z"
+                    "$date": "2016-05-31T04:00:00.000Z"
                 },
-                "listing_id": "10057826",
-                "reviewer_id": "95604783",
-                "reviewer_name": "Marie",
-                "comments": "I am disappointed of my trip in the hotel. The room is well&clean but the staff not helpful. Indeed, because of a flight schedule change, I asked the Airbnb host and the welcome desk of the hotel how I could manage my last night cancellation to be refund. I did exactly what they asked me to do and have been informed two days after that they refused my request of refunding... Despite the policy rules, I found it very dishonest and not correct at all as I have asked them before doing the cancellation on Airbnb and the flight confirmation.\nMoreover, I felt insulted when they made me left the welcome desk to go to the basement in order to let other clients of the hotel believe everything is perfect (I was calm and just trying to solve the issue).\nSo to conclude, the room ok but bad experience in this Airbnb that is an hotel!"
+                "listing_id": "10006546",
+                "reviewer_id": "3673216",
+                "reviewer_name": "Chris",
+                "comments": "We had a great time in Porto. Ana’s & Goncalo’s apartment is located right in the heart of the Old Town and is great value for money. You really are at the centre of things and it’s the perfect place to get swept away in the hustle and bustle of Porto. Ana and Goncalo were great hosts."
             },
             {
-                "_id": "236131644",
+                "_id": "89637734",
                 "date": {
-                    "$date": "2018-02-18T05:00:00.000Z"
+                    "$date": "2016-07-29T04:00:00.000Z"
                 },
-                "listing_id": "10057826",
-                "reviewer_id": "11623469",
-                "reviewer_name": "Adam",
-                "comments": "we rented the suite at the henry norman hotel, and it was lovely"
+                "listing_id": "10006546",
+                "reviewer_id": "9172374",
+                "reviewer_name": "Leslie",
+                "comments": "Ana and Gonçalo were very welcoming and made a lot of information about Porto's sights available. It was very clean, very beautiful and the location was superb. It does have a lot of restaurants around it, so it could be a bit noisy for us at night but otherwise  great location. We would stay there again. "
+            },
+            {
+                "_id": "96574146",
+                "date": {
+                    "$date": "2016-08-23T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "71985274",
+                "reviewer_name": "Philippe",
+                "comments": "Super appartement très bien placé, au cœur de l'animation de la Ribeira !\r\nNous avons passé un super séjour à Porto !\r\nToutes les informations données par Ana et les documents laissés nous ont bien aidé à organiser notre séjour.  Nous avons (presque) tout fait à pied ! Le parking Ribeira est proche et bien utile pour garer le véhicule.\r\nMerci !!!\r\nPhilippe\r\n"
+            },
+            {
+                "_id": "108444999",
+                "date": {
+                    "$date": "2016-10-16T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "24960918",
+                "reviewer_name": "Hanneke",
+                "comments": "The appartment was great, it is really nice and cosy, and it is situated at a perfect location. Ana and Goncalo were very friendly, they were very helpfull during our stay. We had a great time during our stay in Porto!"
+            },
+            {
+                "_id": "111065376",
+                "date": {
+                    "$date": "2016-10-30T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "74079092",
+                "reviewer_name": "Kati",
+                "comments": "Kävimme majoittajan kanssa viestinvaihtoa ennen lomaa ja he antoivat mukavan vaikutelman. He olivatkin hyvin mukavia ihmisiä. He tulivat lentokentälle vastaan kahdella autolla mikä oli hyvin ystävällistä. He kertoivat myös kaupungista ja sen nähtävyyksistä. Asunnon sijainti oli täydellinen. Se oli myös erittäin romanttinen ja kaunis. Kokemus oli hyvin onnistunut."
+            },
+            {
+                "_id": "111655209",
+                "date": {
+                    "$date": "2016-11-01T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "40413493",
+                "reviewer_name": "Julia",
+                "comments": "Hemos pasado unos días increíbles en Oporto. Llegamos más tarde de lo que habíamos pensado y Ana & Gonçalo nos esperaron pacientemente y nos facilitaron la llegada, además nos recibieron con un regalo de bienvenida!. Nos dieron todo tipo de indicaciones y consejos más que de sobra para disfrutar de los días que estuvimos allí. La ubicación de la casa es inmejorable!! la única pega fue que el soporte de la ducha estaba roto pero como eran pocos días no quisimos molestar a Ana & Gonçalo y no se lo comentamos. "
+            },
+            {
+                "_id": "132811625",
+                "date": {
+                    "$date": "2017-02-19T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "8986056",
+                "reviewer_name": "Joshua",
+                "comments": "Great location, comfortable place, responsive and friendly host! Highly recommended!"
+            },
+            {
+                "_id": "144627907",
+                "date": {
+                    "$date": "2017-04-16T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "113254568",
+                "reviewer_name": "Tracey",
+                "comments": "This house is in the heart of Porto, set back enough to be away from the hustle and bustle but only a few steps up from the river, bars and restaurants. A great place to stay.\nThe house was clean and functional. Ana and Goncalo are perfect hosts with lots of information on places to visit and   eat."
+            },
+            {
+                "_id": "149009243",
+                "date": {
+                    "$date": "2017-05-02T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "11263097",
+                "reviewer_name": "Willem",
+                "comments": "The location of the house is wonderful! You are in the heart of the old city and the Douro ist just a few meters away. Perfect for a first visit to Porto!\nVery cosy and warm house with everything you need.\nGonçalo gives a lot of good tips that will help you to have a perfect stay. Communication is very easy with him."
+            },
+            {
+                "_id": "150518693",
+                "date": {
+                    "$date": "2017-05-08T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "108507776",
+                "reviewer_name": "Fanny",
+                "comments": "We spend a really good time in Porto, the flat is so well situated. The bridge is just next door, the view on the river is amazing, and plenty of restaurants and pubs, transport are just around.\nGonzalo is very kind to wait for us, also lat, for the check in, thank you.\n"
+            },
+            {
+                "_id": "155913947",
+                "date": {
+                    "$date": "2017-05-29T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "30254816",
+                "reviewer_name": "Bridget",
+                "comments": "Thanks for a great stay! 6 of us were in Porto for a long weekend and we had a blast. The apartment was perfect; location and size to accomodate us. The hosts were great, then even picked us up at the airport (for a fee but it was a great service). Thanks again! Bridget."
+            },
+            {
+                "_id": "159692160",
+                "date": {
+                    "$date": "2017-06-11T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "124514204",
+                "reviewer_name": "Oscar",
+                "comments": "Superb location and very nice, big and overall pleasant apartment!"
+            },
+            {
+                "_id": "164881958",
+                "date": {
+                    "$date": "2017-06-29T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "105188418",
+                "reviewer_name": "Steve",
+                "comments": "The apartment provides basic facilities but is good value for money and very well positioned for easy access to restaurants and bars, the Ribeira district and the Port house in Gaia."
+            },
+            {
+                "_id": "166990342",
+                "date": {
+                    "$date": "2017-07-05T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "52660694",
+                "reviewer_name": "Tina",
+                "comments": "Ana und Gonçalo sind sehr hilfsbereite liebe Leute, die  alles tun, damit man sich wohl fühlt. Wenn es etwas zu beanstanden gab, wird das sofort problemlos erledigt. Das Apartment ist charmant, die Möbel schon etwas mitgenommen, aber das passt insgesamt ins Bild von Porto und macht den Reiz aus. Die Lage ist super, genau am Duoro. Es gibt Strassenmusik bis in den späten Abend und auch morgens geht's früh los mit fröhlichen Lärm von der Flusspromenade. Nichts also für Leute, die es ruhig brauchen! Die Lage ist wirklich exklusiv und tröstet über den recht teuren Mietpreis. Im Umfeld gibt es typische Touri-Fallen, wo alles doppelt kostet, aber gleichzeitig findet man auch sehr nette kleine Bars, in der man chillig und günstig frühstücken oder generell lecker essen kann. Die Stadt ist klein genug, um sich schnell zurechtzufinden und groß genug, um immer wieder neues zu entdecken. Wir waren zu dritt (50, 25, 20 Jahre) und haben die Zeit wirklich genossen. "
+            },
+            {
+                "_id": "180030365",
+                "date": {
+                    "$date": "2017-08-09T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "25469637",
+                "reviewer_name": "Mathieu",
+                "comments": "Very well located appartement ideal for a family of 5 who want to make the most of the city center.\nIt may be a bit noisy at night but this is acceptable.\nGlobally we recommend this place."
+            },
+            {
+                "_id": "198679769",
+                "date": {
+                    "$date": "2017-09-30T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "21837853",
+                "reviewer_name": "Ido",
+                "comments": "Great location! The apartment is somewhat basic. We were family with 3 teenagers and had a good time. Also it’s a bit noisy until very late at night."
+            },
+            {
+                "_id": "199885226",
+                "date": {
+                    "$date": "2017-10-03T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "56528632",
+                "reviewer_name": "Amanda",
+                "comments": "This apartment is in the perfect location for being in the middle of the action. There were tons of restaurants close to the apartment and it was a quick walk across the bridge to tour the Port wineries. Be forewarned; if you are looking for a very quiet location, this area may not be for you. However, if you are looking to step outside of your door and start enjoying what Porto has to offer, I recommend this location."
+            },
+            {
+                "_id": "207942636",
+                "date": {
+                    "$date": "2017-10-30T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "102474818",
+                "reviewer_name": "Geneviève",
+                "comments": "Acceuil très très chaleureux de Gonçalo  et Ana lors de notre arrivée très tardive due à un changement d\"'horaire d'avion....appartement super bien situé dans Porto près du Douro, fidèle aux photos mises sur le site....Nous avons adoré ce quartier bien animé  .....Encore merci à Gonçalo et Ana. ...."
+            },
+            {
+                "_id": "209455775",
+                "date": {
+                    "$date": "2017-11-05T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "10371877",
+                "reviewer_name": "Andrea",
+                "comments": "Localização perfeita, muito aconchegante, Ana e Gonçalo são pessoas muito atenciosas e simpáticas!"
+            },
+            {
+                "_id": "223995518",
+                "date": {
+                    "$date": "2018-01-02T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "10184070",
+                "reviewer_name": "Jennifer",
+                "comments": "Perfect position to see everything that Porto has to offer. Ana and Gonçalo were great hosts quick to respond and welcoming. Couldn't recommend a better place to stay in Porto to be able to see the sights and be within walking distance to so many restaurants."
+            },
+            {
+                "_id": "225725834",
+                "date": {
+                    "$date": "2018-01-07T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "156411765",
+                "reviewer_name": "Nathalie",
+                "comments": "Great location!"
+            },
+            {
+                "_id": "230559180",
+                "date": {
+                    "$date": "2018-01-28T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "2524423",
+                "reviewer_name": "Cayetana",
+                "comments": "Probably Ana&Gonzalo´s place is great for summer but definitely not in winter. The house is NOT WARM and ready for a stay in cold and humit season. There is NO HEATING in any of the rooms and living room, only bed covers (not nordic duvet) and small heaters which you have to switch off during the night. Those were not enough during our stay in January even we had sunny days! Moreover we were 5 people in the house without NO HOT WATER enough for all of us. \nThe pictures did not show the reality. Furniture was much older and WiFi signal is only available in the living room, not the rooms.\nOn the other hand, location is great if you want to stay close to the river. Although think about that all restaurants, bars and main tourist attractions are close to Train Station and Clerigos Tower which means 15-20 min uphill walking distance from the house."
+            },
+            {
+                "_id": "232271631",
+                "date": {
+                    "$date": "2018-02-04T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "167219338",
+                "reviewer_name": "Mérex",
+                "comments": "Appartement très cosy! Nous y avons été pour un court séjour à 7 et avons adoré. L'appartement est idéalement situé dans le quartier magnifique de la Ribeira. L'accueil a ete très chaleureux: Nous étions trompé d'adresse car le GPS avaient confondus les rues mais Ana a su nous retrouver pour nous amener à l'appartement.  L'appartement était très  propre et nous avons eu largement tout ce qu'il fallait en linge.\nEncore un Grand merci à eux!"
+            },
+            {
+                "_id": "234847900",
+                "date": {
+                    "$date": "2018-02-14T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "6735587",
+                "reviewer_name": "Andrea",
+                "comments": "ottima ospitalità, la posizione della casa è ottima, vicina ai mezzi di trasporto e alle principali attrazioni della città, torneremo sicuramente. Consigliato!!"
+            },
+            {
+                "_id": "235293831",
+                "date": {
+                    "$date": "2018-02-16T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "130170949",
+                "reviewer_name": "Bogdan",
+                "comments": "Nice apartment in Porto, we enjoy staying in it for a few days. The apartment is comfortable and has a very nice location. Thanks to Ana and Gonsalo for hospitality."
+            },
+            {
+                "_id": "240252220",
+                "date": {
+                    "$date": "2018-03-04T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "153415353",
+                "reviewer_name": "Alison",
+                "comments": "Great location. Good value thanks for the stay"
+            },
+            {
+                "_id": "244738269",
+                "date": {
+                    "$date": "2018-03-19T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "59706237",
+                "reviewer_name": "Marco",
+                "comments": "Me and my friends (7 ppl tot) have booked Gonçalo and Ana’s apartment for our holidays and i think we cannot do a better choice like that.\nThe apartment is situated near Oporto’s riverside, in Ribeira district, at 2 minutes walking to Sao Bento’s station, 10minutes to Lello’s library and clerics’s tower. In less than 10 minutes u’re in Vila Nova De Gaia where u can find the wineries of porto’s wine.\nThe apartment is really spacious and comfortable, perfect for 7 italian people that want to have fun in Oporto.\nSuggested!!!"
+            },
+            {
+                "_id": "246334180",
+                "date": {
+                    "$date": "2018-03-25T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "12047570",
+                "reviewer_name": "Michel",
+                "comments": "L'emplacement et vraiment au coeur de l'animation du vieux Porto. Au pied de l'appartement se trouvent de charmants café avec vue sur le Douro.\nAna&Gonçalo ont été très attentionnés et à l'écoute de nos demandes\nMichel"
+            },
+            {
+                "_id": "259708770",
+                "date": {
+                    "$date": "2018-05-01T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "174003310",
+                "reviewer_name": "Dariusz",
+                "comments": "Great location right next to the Dom Luiz bridge and Douro river and plenty of restaurants. Enough room for about 6 people. Ana was very responsive to any concerns we had. Would stay again."
+            },
+            {
+                "_id": "263239322",
+                "date": {
+                    "$date": "2018-05-11T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "31033799",
+                "reviewer_name": "Margriet",
+                "comments": "The house was supernice and located in the middle of the center. We really enjoyed our stay here!"
+            },
+            {
+                "_id": "264125733",
+                "date": {
+                    "$date": "2018-05-13T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "15554470",
+                "reviewer_name": "Carlos",
+                "comments": "Great Location. Ana & Gonzalo are very nice, flexible, and fast-responsive. Apartment is ok but only one toilet for 3 rooms + sofa-bed."
+            },
+            {
+                "_id": "267283092",
+                "date": {
+                    "$date": "2018-05-21T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "39358900",
+                "reviewer_name": "Gaspard",
+                "comments": "Ana&Gonçalo's apartment was nice, comfy, clean and most of all really well located in the city center!!!\nWe could easily move everywhere in Porto from there and it was perfect for discovering the city!\nAlso, I'd like to mention that Gonçalo was nice and patient with us on the day of the arrival even if we were a bit late.\nI strongly recommend this place!"
+            },
+            {
+                "_id": "269853203",
+                "date": {
+                    "$date": "2018-05-28T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "42864948",
+                "reviewer_name": "James",
+                "comments": "Incredible location, beautiful house. Everything was very easy and we would highly recommend this accommodation. Excellent. "
+            },
+            {
+                "_id": "272277314",
+                "date": {
+                    "$date": "2018-06-03T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "45990306",
+                "reviewer_name": "紫仪",
+                "comments": "good lication good experience"
+            },
+            {
+                "_id": "275044729",
+                "date": {
+                    "$date": "2018-06-10T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "176337667",
+                "reviewer_name": "Sebastian",
+                "comments": "We loved it"
+            },
+            {
+                "_id": "302971185",
+                "date": {
+                    "$date": "2018-08-06T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "52572680",
+                "reviewer_name": "Robby",
+                "comments": "Great location right on the river. Lots of tourists in the area. Easy to get to public transportation. Besides the hot weather, we had a good time. "
+            },
+            {
+                "_id": "320887590",
+                "date": {
+                    "$date": "2018-09-09T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "20965806",
+                "reviewer_name": "Romain",
+                "comments": "Merci à Ana & Gonçalo pour l’accueil !"
+            },
+            {
+                "_id": "325025167",
+                "date": {
+                    "$date": "2018-09-18T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "15097268",
+                "reviewer_name": "Roula",
+                "comments": "-"
+            },
+            {
+                "_id": "331735682",
+                "date": {
+                    "$date": "2018-10-03T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "35313286",
+                "reviewer_name": "Alexander",
+                "comments": "Our stay in Ana and Gancalo’s apartment was lovely. The location was perfect and Gancalo graciously picked us up from the airport. It does get a little loud in the morning but that’s only because the apartment is perfectly located right on the river front. You do have to hold the shower wand when showering but the pressure is good. Overall I would definitely stay in the apartment again!"
+            },
+            {
+                "_id": "334789252",
+                "date": {
+                    "$date": "2018-10-10T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "206502919",
+                "reviewer_name": "Mark",
+                "comments": "It was a wonderful experience, the location is fantastic and the accommodations were outstanding."
+            },
+            {
+                "_id": "347372623",
+                "date": {
+                    "$date": "2018-11-11T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "17503135",
+                "reviewer_name": "Camille",
+                "comments": "Ana’s place is very well located, at 2 min walking distance to the Douro, so that everything is close by! Ana communicated well regarding check in info, and was even flexible regarding check out timing. The description / pictures are relevant; only the bathroom  is not as recent. We appreciated the extra blanket as heaters have to be switched off once u leave the flat, but once they are switched on we had no problem afterwards regarding the temperature of the flat."
+            },
+            {
+                "_id": "354708379",
+                "date": {
+                    "$date": "2018-12-02T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "34178931",
+                "reviewer_name": "Pawel",
+                "comments": "If you want to stay in the heart of Porto for reasonable price this is a good alternative. However, I’d selected again it for group of more than 6 people."
+            },
+            {
+                "_id": "362865132",
+                "date": {
+                    "$date": "2018-12-27T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "208880077",
+                "reviewer_name": "Thomas",
+                "comments": "Very helpful hosts. Cooked traditional Portuguese Christmas dinner for 6. Location is perfect. Right off square that is on river right by famous bridge engineered by protege of Gustav Eifel. Looks like same type structure."
+            },
+            {
+                "_id": "364728730",
+                "date": {
+                    "$date": "2018-12-31T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "91827533",
+                "reviewer_name": "Mr",
+                "comments": "Ana & Goncalo were great on communication, responding instantly to questions.\n5 of us stayed in their home for 3 nights and found the location to be great and central to all the amazing sights Porto has to offer. \nWe found the home to be difficult to heat on our first night, the rooms have heaters but took time to get the room to a comfortable temperature level. But in warmer months Im sure this isn't an issue.\nThe beds are a little hard with one slightly out of shape,  and the shower is fairly basic (hand held) but does the job. Because of the central location some noise can be expected early in the mornings. \nOverall the apartment suited our needs for our short stay and the price is more than reasonable for what we got."
+            },
+            {
+                "_id": "403055315",
+                "date": {
+                    "$date": "2019-01-20T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "15138940",
+                "reviewer_name": "Milo",
+                "comments": "The house was extremely well located and Ana was able to give us some really great tips on locations to have lunch and eat out. The house was perfectly clean and the easily able to accommodate 6 people despite only having one bathroom. The beds and living room were comfortable. \n\nHowever, we always felt somewhat on edge in the house due to the number of signs posted around the kitchen, bedrooms and bathroom about being charged 15€ for all sorts of extras like not washing up or using extra towels and bed linen. Not that this would be particularly unreasonable but it made us feel like we were walking on egg shells in and around the house. \n\nThe hosts were aware that we were a group of six yet one of the beds was not prepared and we ran out of toilet paper well before we were due to check out despite only being there 2 nights. It really wasn't the end of the world but the shower head does not have a wall fitting meaning you had to hold it yourself if you wanted to stand underneath it."
             }
         ]
     },
@@ -4543,8 +5911,527 @@ export const DemoData = [
             "avalable_checkIn": { "$date": "2024-07-03T05:00:00.000Z" },
             "avalable_checkOut": { "$date": "2025-07-15T05:00:00.000Z" },
         },
-        "review_scores": {},
-        "reviews": []
+        "review_scores": {
+            "review_scores_accuracy": 9,
+            "review_scores_cleanliness": 9,
+            "review_scores_checkin": 10,
+            "review_scores_communication": 10,
+            "review_scores_location": 10,
+            "review_scores_value": 9,
+            "review_scores_rating": 89
+        },
+        "reviews": [
+            {
+                "_id": "58663741",
+                "date": {
+                    "$date": "2016-01-03T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "51483096",
+                "reviewer_name": "Cátia",
+                "comments": "A casa da Ana e do Gonçalo foram o local escolhido para a passagem de ano com um grupo de amigos. Fomos super bem recebidos com uma grande simpatia e predisposição a ajudar com qualquer coisa que fosse necessário.\r\nA casa era ainda melhor do que parecia nas fotos, totalmente equipada, com mantas, aquecedor e tudo o que pudessemos precisar.\r\nA localização não podia ser melhor! Não há melhor do que acordar de manhã e ao virar da esquina estar a ribeira do Porto."
+            },
+            {
+                "_id": "62413197",
+                "date": {
+                    "$date": "2016-02-14T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "40031996",
+                "reviewer_name": "Théo",
+                "comments": "We are french's students, we traveled some days in Porto, this space was good and we can cooking easly. It was rainning so we eard every time the water fall to the ground in the street when we sleeping. But It was cool and or was well received by Ana et Gonçalo"
+            },
+            {
+                "_id": "68310569",
+                "date": {
+                    "$date": "2016-04-04T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "53859850",
+                "reviewer_name": "Bart",
+                "comments": "We had a spledid time in the old centre of Porto.\r\nThe appartment is very well situated next to the old Ribeira square. It's perfect to have such an appartment to your disposal, you feel home, and have a place to relax between the exploration of this very nice city.\r\nWe thank Ana & Gonçalo, and we hope the appartment is free when we go back next year. Porto is charming original."
+            },
+            {
+                "_id": "69693942",
+                "date": {
+                    "$date": "2016-04-12T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "3135623",
+                "reviewer_name": "Alex",
+                "comments": "Ana and Goncalo were very helpful and accommodating. When they were not available they put us in touch with their nephew who was equally as helpful. The flat was as described, neat and tidy. The weather was quite cold, but thankfully A&G left us with extra blankets and electric heaters to use. Location was great. Outside the flat there was a slight smell of the river/ sewage, but in all honesty it did not come into the flat, and once you go down the road it doesn't carry on. This may also have been down to the very wet weather we had while there. All in all, very happy and would definitely recommend."
+            },
+            {
+                "_id": "71451096",
+                "date": {
+                    "$date": "2016-04-25T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "13187858",
+                "reviewer_name": "Dan",
+                "comments": "The hosts were very accommodating and agreed to meet with my parents as they were arriving before us. Communicated very well and always responded in a very timely manner. You couldn't have asked for a better location of this apartment and the place was identical to the pictures in the in the listing."
+            },
+            {
+                "_id": "73191268",
+                "date": {
+                    "$date": "2016-05-07T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "61434690",
+                "reviewer_name": "Anne",
+                "comments": "THE PLACE TO BE, l'appartement est situé au milieu de la Ribeira , tout peut se faire à pieds c'est l'ideal,l'appartement est très bien agencé et équipé.\r\nNous avons passé un séjour très agréable dans ce duplex avec beaucoup de charme .\r\nAccueil très chaleureux de Ana et Gonçalo, ils ont pris du temps pour nous indiquer tout ce qu'il y avait à faire sur Porto et répondus  à toutes nos interrogations en terme de commodités.. Merci..\r\n"
+            },
+            {
+                "_id": "77438107",
+                "date": {
+                    "$date": "2016-05-31T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "3673216",
+                "reviewer_name": "Chris",
+                "comments": "We had a great time in Porto. Ana’s & Goncalo’s apartment is located right in the heart of the Old Town and is great value for money. You really are at the centre of things and it’s the perfect place to get swept away in the hustle and bustle of Porto. Ana and Goncalo were great hosts."
+            },
+            {
+                "_id": "89637734",
+                "date": {
+                    "$date": "2016-07-29T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "9172374",
+                "reviewer_name": "Leslie",
+                "comments": "Ana and Gonçalo were very welcoming and made a lot of information about Porto's sights available. It was very clean, very beautiful and the location was superb. It does have a lot of restaurants around it, so it could be a bit noisy for us at night but otherwise  great location. We would stay there again. "
+            },
+            {
+                "_id": "96574146",
+                "date": {
+                    "$date": "2016-08-23T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "71985274",
+                "reviewer_name": "Philippe",
+                "comments": "Super appartement très bien placé, au cœur de l'animation de la Ribeira !\r\nNous avons passé un super séjour à Porto !\r\nToutes les informations données par Ana et les documents laissés nous ont bien aidé à organiser notre séjour.  Nous avons (presque) tout fait à pied ! Le parking Ribeira est proche et bien utile pour garer le véhicule.\r\nMerci !!!\r\nPhilippe\r\n"
+            },
+            {
+                "_id": "108444999",
+                "date": {
+                    "$date": "2016-10-16T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "24960918",
+                "reviewer_name": "Hanneke",
+                "comments": "The appartment was great, it is really nice and cosy, and it is situated at a perfect location. Ana and Goncalo were very friendly, they were very helpfull during our stay. We had a great time during our stay in Porto!"
+            },
+            {
+                "_id": "111065376",
+                "date": {
+                    "$date": "2016-10-30T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "74079092",
+                "reviewer_name": "Kati",
+                "comments": "Kävimme majoittajan kanssa viestinvaihtoa ennen lomaa ja he antoivat mukavan vaikutelman. He olivatkin hyvin mukavia ihmisiä. He tulivat lentokentälle vastaan kahdella autolla mikä oli hyvin ystävällistä. He kertoivat myös kaupungista ja sen nähtävyyksistä. Asunnon sijainti oli täydellinen. Se oli myös erittäin romanttinen ja kaunis. Kokemus oli hyvin onnistunut."
+            },
+            {
+                "_id": "111655209",
+                "date": {
+                    "$date": "2016-11-01T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "40413493",
+                "reviewer_name": "Julia",
+                "comments": "Hemos pasado unos días increíbles en Oporto. Llegamos más tarde de lo que habíamos pensado y Ana & Gonçalo nos esperaron pacientemente y nos facilitaron la llegada, además nos recibieron con un regalo de bienvenida!. Nos dieron todo tipo de indicaciones y consejos más que de sobra para disfrutar de los días que estuvimos allí. La ubicación de la casa es inmejorable!! la única pega fue que el soporte de la ducha estaba roto pero como eran pocos días no quisimos molestar a Ana & Gonçalo y no se lo comentamos. "
+            },
+            {
+                "_id": "132811625",
+                "date": {
+                    "$date": "2017-02-19T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "8986056",
+                "reviewer_name": "Joshua",
+                "comments": "Great location, comfortable place, responsive and friendly host! Highly recommended!"
+            },
+            {
+                "_id": "144627907",
+                "date": {
+                    "$date": "2017-04-16T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "113254568",
+                "reviewer_name": "Tracey",
+                "comments": "This house is in the heart of Porto, set back enough to be away from the hustle and bustle but only a few steps up from the river, bars and restaurants. A great place to stay.\nThe house was clean and functional. Ana and Goncalo are perfect hosts with lots of information on places to visit and   eat."
+            },
+            {
+                "_id": "149009243",
+                "date": {
+                    "$date": "2017-05-02T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "11263097",
+                "reviewer_name": "Willem",
+                "comments": "The location of the house is wonderful! You are in the heart of the old city and the Douro ist just a few meters away. Perfect for a first visit to Porto!\nVery cosy and warm house with everything you need.\nGonçalo gives a lot of good tips that will help you to have a perfect stay. Communication is very easy with him."
+            },
+            {
+                "_id": "150518693",
+                "date": {
+                    "$date": "2017-05-08T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "108507776",
+                "reviewer_name": "Fanny",
+                "comments": "We spend a really good time in Porto, the flat is so well situated. The bridge is just next door, the view on the river is amazing, and plenty of restaurants and pubs, transport are just around.\nGonzalo is very kind to wait for us, also lat, for the check in, thank you.\n"
+            },
+            {
+                "_id": "155913947",
+                "date": {
+                    "$date": "2017-05-29T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "30254816",
+                "reviewer_name": "Bridget",
+                "comments": "Thanks for a great stay! 6 of us were in Porto for a long weekend and we had a blast. The apartment was perfect; location and size to accomodate us. The hosts were great, then even picked us up at the airport (for a fee but it was a great service). Thanks again! Bridget."
+            },
+            {
+                "_id": "159692160",
+                "date": {
+                    "$date": "2017-06-11T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "124514204",
+                "reviewer_name": "Oscar",
+                "comments": "Superb location and very nice, big and overall pleasant apartment!"
+            },
+            {
+                "_id": "164881958",
+                "date": {
+                    "$date": "2017-06-29T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "105188418",
+                "reviewer_name": "Steve",
+                "comments": "The apartment provides basic facilities but is good value for money and very well positioned for easy access to restaurants and bars, the Ribeira district and the Port house in Gaia."
+            },
+            {
+                "_id": "166990342",
+                "date": {
+                    "$date": "2017-07-05T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "52660694",
+                "reviewer_name": "Tina",
+                "comments": "Ana und Gonçalo sind sehr hilfsbereite liebe Leute, die  alles tun, damit man sich wohl fühlt. Wenn es etwas zu beanstanden gab, wird das sofort problemlos erledigt. Das Apartment ist charmant, die Möbel schon etwas mitgenommen, aber das passt insgesamt ins Bild von Porto und macht den Reiz aus. Die Lage ist super, genau am Duoro. Es gibt Strassenmusik bis in den späten Abend und auch morgens geht's früh los mit fröhlichen Lärm von der Flusspromenade. Nichts also für Leute, die es ruhig brauchen! Die Lage ist wirklich exklusiv und tröstet über den recht teuren Mietpreis. Im Umfeld gibt es typische Touri-Fallen, wo alles doppelt kostet, aber gleichzeitig findet man auch sehr nette kleine Bars, in der man chillig und günstig frühstücken oder generell lecker essen kann. Die Stadt ist klein genug, um sich schnell zurechtzufinden und groß genug, um immer wieder neues zu entdecken. Wir waren zu dritt (50, 25, 20 Jahre) und haben die Zeit wirklich genossen. "
+            },
+            {
+                "_id": "180030365",
+                "date": {
+                    "$date": "2017-08-09T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "25469637",
+                "reviewer_name": "Mathieu",
+                "comments": "Very well located appartement ideal for a family of 5 who want to make the most of the city center.\nIt may be a bit noisy at night but this is acceptable.\nGlobally we recommend this place."
+            },
+            {
+                "_id": "198679769",
+                "date": {
+                    "$date": "2017-09-30T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "21837853",
+                "reviewer_name": "Ido",
+                "comments": "Great location! The apartment is somewhat basic. We were family with 3 teenagers and had a good time. Also it’s a bit noisy until very late at night."
+            },
+            {
+                "_id": "199885226",
+                "date": {
+                    "$date": "2017-10-03T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "56528632",
+                "reviewer_name": "Amanda",
+                "comments": "This apartment is in the perfect location for being in the middle of the action. There were tons of restaurants close to the apartment and it was a quick walk across the bridge to tour the Port wineries. Be forewarned; if you are looking for a very quiet location, this area may not be for you. However, if you are looking to step outside of your door and start enjoying what Porto has to offer, I recommend this location."
+            },
+            {
+                "_id": "207942636",
+                "date": {
+                    "$date": "2017-10-30T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "102474818",
+                "reviewer_name": "Geneviève",
+                "comments": "Acceuil très très chaleureux de Gonçalo  et Ana lors de notre arrivée très tardive due à un changement d\"'horaire d'avion....appartement super bien situé dans Porto près du Douro, fidèle aux photos mises sur le site....Nous avons adoré ce quartier bien animé  .....Encore merci à Gonçalo et Ana. ...."
+            },
+            {
+                "_id": "209455775",
+                "date": {
+                    "$date": "2017-11-05T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "10371877",
+                "reviewer_name": "Andrea",
+                "comments": "Localização perfeita, muito aconchegante, Ana e Gonçalo são pessoas muito atenciosas e simpáticas!"
+            },
+            {
+                "_id": "223995518",
+                "date": {
+                    "$date": "2018-01-02T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "10184070",
+                "reviewer_name": "Jennifer",
+                "comments": "Perfect position to see everything that Porto has to offer. Ana and Gonçalo were great hosts quick to respond and welcoming. Couldn't recommend a better place to stay in Porto to be able to see the sights and be within walking distance to so many restaurants."
+            },
+            {
+                "_id": "225725834",
+                "date": {
+                    "$date": "2018-01-07T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "156411765",
+                "reviewer_name": "Nathalie",
+                "comments": "Great location!"
+            },
+            {
+                "_id": "230559180",
+                "date": {
+                    "$date": "2018-01-28T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "2524423",
+                "reviewer_name": "Cayetana",
+                "comments": "Probably Ana&Gonzalo´s place is great for summer but definitely not in winter. The house is NOT WARM and ready for a stay in cold and humit season. There is NO HEATING in any of the rooms and living room, only bed covers (not nordic duvet) and small heaters which you have to switch off during the night. Those were not enough during our stay in January even we had sunny days! Moreover we were 5 people in the house without NO HOT WATER enough for all of us. \nThe pictures did not show the reality. Furniture was much older and WiFi signal is only available in the living room, not the rooms.\nOn the other hand, location is great if you want to stay close to the river. Although think about that all restaurants, bars and main tourist attractions are close to Train Station and Clerigos Tower which means 15-20 min uphill walking distance from the house."
+            },
+            {
+                "_id": "232271631",
+                "date": {
+                    "$date": "2018-02-04T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "167219338",
+                "reviewer_name": "Mérex",
+                "comments": "Appartement très cosy! Nous y avons été pour un court séjour à 7 et avons adoré. L'appartement est idéalement situé dans le quartier magnifique de la Ribeira. L'accueil a ete très chaleureux: Nous étions trompé d'adresse car le GPS avaient confondus les rues mais Ana a su nous retrouver pour nous amener à l'appartement.  L'appartement était très  propre et nous avons eu largement tout ce qu'il fallait en linge.\nEncore un Grand merci à eux!"
+            },
+            {
+                "_id": "234847900",
+                "date": {
+                    "$date": "2018-02-14T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "6735587",
+                "reviewer_name": "Andrea",
+                "comments": "ottima ospitalità, la posizione della casa è ottima, vicina ai mezzi di trasporto e alle principali attrazioni della città, torneremo sicuramente. Consigliato!!"
+            },
+            {
+                "_id": "235293831",
+                "date": {
+                    "$date": "2018-02-16T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "130170949",
+                "reviewer_name": "Bogdan",
+                "comments": "Nice apartment in Porto, we enjoy staying in it for a few days. The apartment is comfortable and has a very nice location. Thanks to Ana and Gonsalo for hospitality."
+            },
+            {
+                "_id": "240252220",
+                "date": {
+                    "$date": "2018-03-04T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "153415353",
+                "reviewer_name": "Alison",
+                "comments": "Great location. Good value thanks for the stay"
+            },
+            {
+                "_id": "244738269",
+                "date": {
+                    "$date": "2018-03-19T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "59706237",
+                "reviewer_name": "Marco",
+                "comments": "Me and my friends (7 ppl tot) have booked Gonçalo and Ana’s apartment for our holidays and i think we cannot do a better choice like that.\nThe apartment is situated near Oporto’s riverside, in Ribeira district, at 2 minutes walking to Sao Bento’s station, 10minutes to Lello’s library and clerics’s tower. In less than 10 minutes u’re in Vila Nova De Gaia where u can find the wineries of porto’s wine.\nThe apartment is really spacious and comfortable, perfect for 7 italian people that want to have fun in Oporto.\nSuggested!!!"
+            },
+            {
+                "_id": "246334180",
+                "date": {
+                    "$date": "2018-03-25T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "12047570",
+                "reviewer_name": "Michel",
+                "comments": "L'emplacement et vraiment au coeur de l'animation du vieux Porto. Au pied de l'appartement se trouvent de charmants café avec vue sur le Douro.\nAna&Gonçalo ont été très attentionnés et à l'écoute de nos demandes\nMichel"
+            },
+            {
+                "_id": "259708770",
+                "date": {
+                    "$date": "2018-05-01T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "174003310",
+                "reviewer_name": "Dariusz",
+                "comments": "Great location right next to the Dom Luiz bridge and Douro river and plenty of restaurants. Enough room for about 6 people. Ana was very responsive to any concerns we had. Would stay again."
+            },
+            {
+                "_id": "263239322",
+                "date": {
+                    "$date": "2018-05-11T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "31033799",
+                "reviewer_name": "Margriet",
+                "comments": "The house was supernice and located in the middle of the center. We really enjoyed our stay here!"
+            },
+            {
+                "_id": "264125733",
+                "date": {
+                    "$date": "2018-05-13T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "15554470",
+                "reviewer_name": "Carlos",
+                "comments": "Great Location. Ana & Gonzalo are very nice, flexible, and fast-responsive. Apartment is ok but only one toilet for 3 rooms + sofa-bed."
+            },
+            {
+                "_id": "267283092",
+                "date": {
+                    "$date": "2018-05-21T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "39358900",
+                "reviewer_name": "Gaspard",
+                "comments": "Ana&Gonçalo's apartment was nice, comfy, clean and most of all really well located in the city center!!!\nWe could easily move everywhere in Porto from there and it was perfect for discovering the city!\nAlso, I'd like to mention that Gonçalo was nice and patient with us on the day of the arrival even if we were a bit late.\nI strongly recommend this place!"
+            },
+            {
+                "_id": "269853203",
+                "date": {
+                    "$date": "2018-05-28T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "42864948",
+                "reviewer_name": "James",
+                "comments": "Incredible location, beautiful house. Everything was very easy and we would highly recommend this accommodation. Excellent. "
+            },
+            {
+                "_id": "272277314",
+                "date": {
+                    "$date": "2018-06-03T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "45990306",
+                "reviewer_name": "紫仪",
+                "comments": "good lication good experience"
+            },
+            {
+                "_id": "275044729",
+                "date": {
+                    "$date": "2018-06-10T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "176337667",
+                "reviewer_name": "Sebastian",
+                "comments": "We loved it"
+            },
+            {
+                "_id": "302971185",
+                "date": {
+                    "$date": "2018-08-06T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "52572680",
+                "reviewer_name": "Robby",
+                "comments": "Great location right on the river. Lots of tourists in the area. Easy to get to public transportation. Besides the hot weather, we had a good time. "
+            },
+            {
+                "_id": "320887590",
+                "date": {
+                    "$date": "2018-09-09T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "20965806",
+                "reviewer_name": "Romain",
+                "comments": "Merci à Ana & Gonçalo pour l’accueil !"
+            },
+            {
+                "_id": "325025167",
+                "date": {
+                    "$date": "2018-09-18T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "15097268",
+                "reviewer_name": "Roula",
+                "comments": "-"
+            },
+            {
+                "_id": "331735682",
+                "date": {
+                    "$date": "2018-10-03T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "35313286",
+                "reviewer_name": "Alexander",
+                "comments": "Our stay in Ana and Gancalo’s apartment was lovely. The location was perfect and Gancalo graciously picked us up from the airport. It does get a little loud in the morning but that’s only because the apartment is perfectly located right on the river front. You do have to hold the shower wand when showering but the pressure is good. Overall I would definitely stay in the apartment again!"
+            },
+            {
+                "_id": "334789252",
+                "date": {
+                    "$date": "2018-10-10T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "206502919",
+                "reviewer_name": "Mark",
+                "comments": "It was a wonderful experience, the location is fantastic and the accommodations were outstanding."
+            },
+            {
+                "_id": "347372623",
+                "date": {
+                    "$date": "2018-11-11T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "17503135",
+                "reviewer_name": "Camille",
+                "comments": "Ana’s place is very well located, at 2 min walking distance to the Douro, so that everything is close by! Ana communicated well regarding check in info, and was even flexible regarding check out timing. The description / pictures are relevant; only the bathroom  is not as recent. We appreciated the extra blanket as heaters have to be switched off once u leave the flat, but once they are switched on we had no problem afterwards regarding the temperature of the flat."
+            },
+            {
+                "_id": "354708379",
+                "date": {
+                    "$date": "2018-12-02T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "34178931",
+                "reviewer_name": "Pawel",
+                "comments": "If you want to stay in the heart of Porto for reasonable price this is a good alternative. However, I’d selected again it for group of more than 6 people."
+            },
+            {
+                "_id": "362865132",
+                "date": {
+                    "$date": "2018-12-27T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "208880077",
+                "reviewer_name": "Thomas",
+                "comments": "Very helpful hosts. Cooked traditional Portuguese Christmas dinner for 6. Location is perfect. Right off square that is on river right by famous bridge engineered by protege of Gustav Eifel. Looks like same type structure."
+            },
+            {
+                "_id": "364728730",
+                "date": {
+                    "$date": "2018-12-31T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "91827533",
+                "reviewer_name": "Mr",
+                "comments": "Ana & Goncalo were great on communication, responding instantly to questions.\n5 of us stayed in their home for 3 nights and found the location to be great and central to all the amazing sights Porto has to offer. \nWe found the home to be difficult to heat on our first night, the rooms have heaters but took time to get the room to a comfortable temperature level. But in warmer months Im sure this isn't an issue.\nThe beds are a little hard with one slightly out of shape,  and the shower is fairly basic (hand held) but does the job. Because of the central location some noise can be expected early in the mornings. \nOverall the apartment suited our needs for our short stay and the price is more than reasonable for what we got."
+            },
+            {
+                "_id": "403055315",
+                "date": {
+                    "$date": "2019-01-20T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "15138940",
+                "reviewer_name": "Milo",
+                "comments": "The house was extremely well located and Ana was able to give us some really great tips on locations to have lunch and eat out. The house was perfectly clean and the easily able to accommodate 6 people despite only having one bathroom. The beds and living room were comfortable. \n\nHowever, we always felt somewhat on edge in the house due to the number of signs posted around the kitchen, bedrooms and bathroom about being charged 15€ for all sorts of extras like not washing up or using extra towels and bed linen. Not that this would be particularly unreasonable but it made us feel like we were walking on egg shells in and around the house. \n\nThe hosts were aware that we were a group of six yet one of the beds was not prepared and we ran out of toilet paper well before we were due to check out despite only being there 2 nights. It really wasn't the end of the world but the shower head does not have a wall fitting meaning you had to hold it yourself if you wanted to stand underneath it."
+            }
+        ]
     },
     {
         "_id": "10059872",
@@ -4809,8 +6696,527 @@ export const DemoData = [
             "avalable_checkIn": { "$date": "2024-07-03T05:00:00.000Z" },
             "avalable_checkOut": { "$date": "2024-09-15T05:00:00.000Z" },
         },
-        "review_scores": {},
-        "reviews": []
+        "review_scores": {
+            "review_scores_accuracy": 9,
+            "review_scores_cleanliness": 9,
+            "review_scores_checkin": 10,
+            "review_scores_communication": 10,
+            "review_scores_location": 10,
+            "review_scores_value": 9,
+            "review_scores_rating": 89
+        },
+        "reviews": [
+            {
+                "_id": "58663741",
+                "date": {
+                    "$date": "2016-01-03T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "51483096",
+                "reviewer_name": "Cátia",
+                "comments": "A casa da Ana e do Gonçalo foram o local escolhido para a passagem de ano com um grupo de amigos. Fomos super bem recebidos com uma grande simpatia e predisposição a ajudar com qualquer coisa que fosse necessário.\r\nA casa era ainda melhor do que parecia nas fotos, totalmente equipada, com mantas, aquecedor e tudo o que pudessemos precisar.\r\nA localização não podia ser melhor! Não há melhor do que acordar de manhã e ao virar da esquina estar a ribeira do Porto."
+            },
+            {
+                "_id": "62413197",
+                "date": {
+                    "$date": "2016-02-14T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "40031996",
+                "reviewer_name": "Théo",
+                "comments": "We are french's students, we traveled some days in Porto, this space was good and we can cooking easly. It was rainning so we eard every time the water fall to the ground in the street when we sleeping. But It was cool and or was well received by Ana et Gonçalo"
+            },
+            {
+                "_id": "68310569",
+                "date": {
+                    "$date": "2016-04-04T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "53859850",
+                "reviewer_name": "Bart",
+                "comments": "We had a spledid time in the old centre of Porto.\r\nThe appartment is very well situated next to the old Ribeira square. It's perfect to have such an appartment to your disposal, you feel home, and have a place to relax between the exploration of this very nice city.\r\nWe thank Ana & Gonçalo, and we hope the appartment is free when we go back next year. Porto is charming original."
+            },
+            {
+                "_id": "69693942",
+                "date": {
+                    "$date": "2016-04-12T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "3135623",
+                "reviewer_name": "Alex",
+                "comments": "Ana and Goncalo were very helpful and accommodating. When they were not available they put us in touch with their nephew who was equally as helpful. The flat was as described, neat and tidy. The weather was quite cold, but thankfully A&G left us with extra blankets and electric heaters to use. Location was great. Outside the flat there was a slight smell of the river/ sewage, but in all honesty it did not come into the flat, and once you go down the road it doesn't carry on. This may also have been down to the very wet weather we had while there. All in all, very happy and would definitely recommend."
+            },
+            {
+                "_id": "71451096",
+                "date": {
+                    "$date": "2016-04-25T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "13187858",
+                "reviewer_name": "Dan",
+                "comments": "The hosts were very accommodating and agreed to meet with my parents as they were arriving before us. Communicated very well and always responded in a very timely manner. You couldn't have asked for a better location of this apartment and the place was identical to the pictures in the in the listing."
+            },
+            {
+                "_id": "73191268",
+                "date": {
+                    "$date": "2016-05-07T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "61434690",
+                "reviewer_name": "Anne",
+                "comments": "THE PLACE TO BE, l'appartement est situé au milieu de la Ribeira , tout peut se faire à pieds c'est l'ideal,l'appartement est très bien agencé et équipé.\r\nNous avons passé un séjour très agréable dans ce duplex avec beaucoup de charme .\r\nAccueil très chaleureux de Ana et Gonçalo, ils ont pris du temps pour nous indiquer tout ce qu'il y avait à faire sur Porto et répondus  à toutes nos interrogations en terme de commodités.. Merci..\r\n"
+            },
+            {
+                "_id": "77438107",
+                "date": {
+                    "$date": "2016-05-31T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "3673216",
+                "reviewer_name": "Chris",
+                "comments": "We had a great time in Porto. Ana’s & Goncalo’s apartment is located right in the heart of the Old Town and is great value for money. You really are at the centre of things and it’s the perfect place to get swept away in the hustle and bustle of Porto. Ana and Goncalo were great hosts."
+            },
+            {
+                "_id": "89637734",
+                "date": {
+                    "$date": "2016-07-29T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "9172374",
+                "reviewer_name": "Leslie",
+                "comments": "Ana and Gonçalo were very welcoming and made a lot of information about Porto's sights available. It was very clean, very beautiful and the location was superb. It does have a lot of restaurants around it, so it could be a bit noisy for us at night but otherwise  great location. We would stay there again. "
+            },
+            {
+                "_id": "96574146",
+                "date": {
+                    "$date": "2016-08-23T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "71985274",
+                "reviewer_name": "Philippe",
+                "comments": "Super appartement très bien placé, au cœur de l'animation de la Ribeira !\r\nNous avons passé un super séjour à Porto !\r\nToutes les informations données par Ana et les documents laissés nous ont bien aidé à organiser notre séjour.  Nous avons (presque) tout fait à pied ! Le parking Ribeira est proche et bien utile pour garer le véhicule.\r\nMerci !!!\r\nPhilippe\r\n"
+            },
+            {
+                "_id": "108444999",
+                "date": {
+                    "$date": "2016-10-16T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "24960918",
+                "reviewer_name": "Hanneke",
+                "comments": "The appartment was great, it is really nice and cosy, and it is situated at a perfect location. Ana and Goncalo were very friendly, they were very helpfull during our stay. We had a great time during our stay in Porto!"
+            },
+            {
+                "_id": "111065376",
+                "date": {
+                    "$date": "2016-10-30T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "74079092",
+                "reviewer_name": "Kati",
+                "comments": "Kävimme majoittajan kanssa viestinvaihtoa ennen lomaa ja he antoivat mukavan vaikutelman. He olivatkin hyvin mukavia ihmisiä. He tulivat lentokentälle vastaan kahdella autolla mikä oli hyvin ystävällistä. He kertoivat myös kaupungista ja sen nähtävyyksistä. Asunnon sijainti oli täydellinen. Se oli myös erittäin romanttinen ja kaunis. Kokemus oli hyvin onnistunut."
+            },
+            {
+                "_id": "111655209",
+                "date": {
+                    "$date": "2016-11-01T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "40413493",
+                "reviewer_name": "Julia",
+                "comments": "Hemos pasado unos días increíbles en Oporto. Llegamos más tarde de lo que habíamos pensado y Ana & Gonçalo nos esperaron pacientemente y nos facilitaron la llegada, además nos recibieron con un regalo de bienvenida!. Nos dieron todo tipo de indicaciones y consejos más que de sobra para disfrutar de los días que estuvimos allí. La ubicación de la casa es inmejorable!! la única pega fue que el soporte de la ducha estaba roto pero como eran pocos días no quisimos molestar a Ana & Gonçalo y no se lo comentamos. "
+            },
+            {
+                "_id": "132811625",
+                "date": {
+                    "$date": "2017-02-19T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "8986056",
+                "reviewer_name": "Joshua",
+                "comments": "Great location, comfortable place, responsive and friendly host! Highly recommended!"
+            },
+            {
+                "_id": "144627907",
+                "date": {
+                    "$date": "2017-04-16T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "113254568",
+                "reviewer_name": "Tracey",
+                "comments": "This house is in the heart of Porto, set back enough to be away from the hustle and bustle but only a few steps up from the river, bars and restaurants. A great place to stay.\nThe house was clean and functional. Ana and Goncalo are perfect hosts with lots of information on places to visit and   eat."
+            },
+            {
+                "_id": "149009243",
+                "date": {
+                    "$date": "2017-05-02T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "11263097",
+                "reviewer_name": "Willem",
+                "comments": "The location of the house is wonderful! You are in the heart of the old city and the Douro ist just a few meters away. Perfect for a first visit to Porto!\nVery cosy and warm house with everything you need.\nGonçalo gives a lot of good tips that will help you to have a perfect stay. Communication is very easy with him."
+            },
+            {
+                "_id": "150518693",
+                "date": {
+                    "$date": "2017-05-08T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "108507776",
+                "reviewer_name": "Fanny",
+                "comments": "We spend a really good time in Porto, the flat is so well situated. The bridge is just next door, the view on the river is amazing, and plenty of restaurants and pubs, transport are just around.\nGonzalo is very kind to wait for us, also lat, for the check in, thank you.\n"
+            },
+            {
+                "_id": "155913947",
+                "date": {
+                    "$date": "2017-05-29T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "30254816",
+                "reviewer_name": "Bridget",
+                "comments": "Thanks for a great stay! 6 of us were in Porto for a long weekend and we had a blast. The apartment was perfect; location and size to accomodate us. The hosts were great, then even picked us up at the airport (for a fee but it was a great service). Thanks again! Bridget."
+            },
+            {
+                "_id": "159692160",
+                "date": {
+                    "$date": "2017-06-11T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "124514204",
+                "reviewer_name": "Oscar",
+                "comments": "Superb location and very nice, big and overall pleasant apartment!"
+            },
+            {
+                "_id": "164881958",
+                "date": {
+                    "$date": "2017-06-29T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "105188418",
+                "reviewer_name": "Steve",
+                "comments": "The apartment provides basic facilities but is good value for money and very well positioned for easy access to restaurants and bars, the Ribeira district and the Port house in Gaia."
+            },
+            {
+                "_id": "166990342",
+                "date": {
+                    "$date": "2017-07-05T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "52660694",
+                "reviewer_name": "Tina",
+                "comments": "Ana und Gonçalo sind sehr hilfsbereite liebe Leute, die  alles tun, damit man sich wohl fühlt. Wenn es etwas zu beanstanden gab, wird das sofort problemlos erledigt. Das Apartment ist charmant, die Möbel schon etwas mitgenommen, aber das passt insgesamt ins Bild von Porto und macht den Reiz aus. Die Lage ist super, genau am Duoro. Es gibt Strassenmusik bis in den späten Abend und auch morgens geht's früh los mit fröhlichen Lärm von der Flusspromenade. Nichts also für Leute, die es ruhig brauchen! Die Lage ist wirklich exklusiv und tröstet über den recht teuren Mietpreis. Im Umfeld gibt es typische Touri-Fallen, wo alles doppelt kostet, aber gleichzeitig findet man auch sehr nette kleine Bars, in der man chillig und günstig frühstücken oder generell lecker essen kann. Die Stadt ist klein genug, um sich schnell zurechtzufinden und groß genug, um immer wieder neues zu entdecken. Wir waren zu dritt (50, 25, 20 Jahre) und haben die Zeit wirklich genossen. "
+            },
+            {
+                "_id": "180030365",
+                "date": {
+                    "$date": "2017-08-09T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "25469637",
+                "reviewer_name": "Mathieu",
+                "comments": "Very well located appartement ideal for a family of 5 who want to make the most of the city center.\nIt may be a bit noisy at night but this is acceptable.\nGlobally we recommend this place."
+            },
+            {
+                "_id": "198679769",
+                "date": {
+                    "$date": "2017-09-30T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "21837853",
+                "reviewer_name": "Ido",
+                "comments": "Great location! The apartment is somewhat basic. We were family with 3 teenagers and had a good time. Also it’s a bit noisy until very late at night."
+            },
+            {
+                "_id": "199885226",
+                "date": {
+                    "$date": "2017-10-03T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "56528632",
+                "reviewer_name": "Amanda",
+                "comments": "This apartment is in the perfect location for being in the middle of the action. There were tons of restaurants close to the apartment and it was a quick walk across the bridge to tour the Port wineries. Be forewarned; if you are looking for a very quiet location, this area may not be for you. However, if you are looking to step outside of your door and start enjoying what Porto has to offer, I recommend this location."
+            },
+            {
+                "_id": "207942636",
+                "date": {
+                    "$date": "2017-10-30T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "102474818",
+                "reviewer_name": "Geneviève",
+                "comments": "Acceuil très très chaleureux de Gonçalo  et Ana lors de notre arrivée très tardive due à un changement d\"'horaire d'avion....appartement super bien situé dans Porto près du Douro, fidèle aux photos mises sur le site....Nous avons adoré ce quartier bien animé  .....Encore merci à Gonçalo et Ana. ...."
+            },
+            {
+                "_id": "209455775",
+                "date": {
+                    "$date": "2017-11-05T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "10371877",
+                "reviewer_name": "Andrea",
+                "comments": "Localização perfeita, muito aconchegante, Ana e Gonçalo são pessoas muito atenciosas e simpáticas!"
+            },
+            {
+                "_id": "223995518",
+                "date": {
+                    "$date": "2018-01-02T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "10184070",
+                "reviewer_name": "Jennifer",
+                "comments": "Perfect position to see everything that Porto has to offer. Ana and Gonçalo were great hosts quick to respond and welcoming. Couldn't recommend a better place to stay in Porto to be able to see the sights and be within walking distance to so many restaurants."
+            },
+            {
+                "_id": "225725834",
+                "date": {
+                    "$date": "2018-01-07T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "156411765",
+                "reviewer_name": "Nathalie",
+                "comments": "Great location!"
+            },
+            {
+                "_id": "230559180",
+                "date": {
+                    "$date": "2018-01-28T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "2524423",
+                "reviewer_name": "Cayetana",
+                "comments": "Probably Ana&Gonzalo´s place is great for summer but definitely not in winter. The house is NOT WARM and ready for a stay in cold and humit season. There is NO HEATING in any of the rooms and living room, only bed covers (not nordic duvet) and small heaters which you have to switch off during the night. Those were not enough during our stay in January even we had sunny days! Moreover we were 5 people in the house without NO HOT WATER enough for all of us. \nThe pictures did not show the reality. Furniture was much older and WiFi signal is only available in the living room, not the rooms.\nOn the other hand, location is great if you want to stay close to the river. Although think about that all restaurants, bars and main tourist attractions are close to Train Station and Clerigos Tower which means 15-20 min uphill walking distance from the house."
+            },
+            {
+                "_id": "232271631",
+                "date": {
+                    "$date": "2018-02-04T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "167219338",
+                "reviewer_name": "Mérex",
+                "comments": "Appartement très cosy! Nous y avons été pour un court séjour à 7 et avons adoré. L'appartement est idéalement situé dans le quartier magnifique de la Ribeira. L'accueil a ete très chaleureux: Nous étions trompé d'adresse car le GPS avaient confondus les rues mais Ana a su nous retrouver pour nous amener à l'appartement.  L'appartement était très  propre et nous avons eu largement tout ce qu'il fallait en linge.\nEncore un Grand merci à eux!"
+            },
+            {
+                "_id": "234847900",
+                "date": {
+                    "$date": "2018-02-14T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "6735587",
+                "reviewer_name": "Andrea",
+                "comments": "ottima ospitalità, la posizione della casa è ottima, vicina ai mezzi di trasporto e alle principali attrazioni della città, torneremo sicuramente. Consigliato!!"
+            },
+            {
+                "_id": "235293831",
+                "date": {
+                    "$date": "2018-02-16T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "130170949",
+                "reviewer_name": "Bogdan",
+                "comments": "Nice apartment in Porto, we enjoy staying in it for a few days. The apartment is comfortable and has a very nice location. Thanks to Ana and Gonsalo for hospitality."
+            },
+            {
+                "_id": "240252220",
+                "date": {
+                    "$date": "2018-03-04T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "153415353",
+                "reviewer_name": "Alison",
+                "comments": "Great location. Good value thanks for the stay"
+            },
+            {
+                "_id": "244738269",
+                "date": {
+                    "$date": "2018-03-19T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "59706237",
+                "reviewer_name": "Marco",
+                "comments": "Me and my friends (7 ppl tot) have booked Gonçalo and Ana’s apartment for our holidays and i think we cannot do a better choice like that.\nThe apartment is situated near Oporto’s riverside, in Ribeira district, at 2 minutes walking to Sao Bento’s station, 10minutes to Lello’s library and clerics’s tower. In less than 10 minutes u’re in Vila Nova De Gaia where u can find the wineries of porto’s wine.\nThe apartment is really spacious and comfortable, perfect for 7 italian people that want to have fun in Oporto.\nSuggested!!!"
+            },
+            {
+                "_id": "246334180",
+                "date": {
+                    "$date": "2018-03-25T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "12047570",
+                "reviewer_name": "Michel",
+                "comments": "L'emplacement et vraiment au coeur de l'animation du vieux Porto. Au pied de l'appartement se trouvent de charmants café avec vue sur le Douro.\nAna&Gonçalo ont été très attentionnés et à l'écoute de nos demandes\nMichel"
+            },
+            {
+                "_id": "259708770",
+                "date": {
+                    "$date": "2018-05-01T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "174003310",
+                "reviewer_name": "Dariusz",
+                "comments": "Great location right next to the Dom Luiz bridge and Douro river and plenty of restaurants. Enough room for about 6 people. Ana was very responsive to any concerns we had. Would stay again."
+            },
+            {
+                "_id": "263239322",
+                "date": {
+                    "$date": "2018-05-11T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "31033799",
+                "reviewer_name": "Margriet",
+                "comments": "The house was supernice and located in the middle of the center. We really enjoyed our stay here!"
+            },
+            {
+                "_id": "264125733",
+                "date": {
+                    "$date": "2018-05-13T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "15554470",
+                "reviewer_name": "Carlos",
+                "comments": "Great Location. Ana & Gonzalo are very nice, flexible, and fast-responsive. Apartment is ok but only one toilet for 3 rooms + sofa-bed."
+            },
+            {
+                "_id": "267283092",
+                "date": {
+                    "$date": "2018-05-21T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "39358900",
+                "reviewer_name": "Gaspard",
+                "comments": "Ana&Gonçalo's apartment was nice, comfy, clean and most of all really well located in the city center!!!\nWe could easily move everywhere in Porto from there and it was perfect for discovering the city!\nAlso, I'd like to mention that Gonçalo was nice and patient with us on the day of the arrival even if we were a bit late.\nI strongly recommend this place!"
+            },
+            {
+                "_id": "269853203",
+                "date": {
+                    "$date": "2018-05-28T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "42864948",
+                "reviewer_name": "James",
+                "comments": "Incredible location, beautiful house. Everything was very easy and we would highly recommend this accommodation. Excellent. "
+            },
+            {
+                "_id": "272277314",
+                "date": {
+                    "$date": "2018-06-03T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "45990306",
+                "reviewer_name": "紫仪",
+                "comments": "good lication good experience"
+            },
+            {
+                "_id": "275044729",
+                "date": {
+                    "$date": "2018-06-10T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "176337667",
+                "reviewer_name": "Sebastian",
+                "comments": "We loved it"
+            },
+            {
+                "_id": "302971185",
+                "date": {
+                    "$date": "2018-08-06T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "52572680",
+                "reviewer_name": "Robby",
+                "comments": "Great location right on the river. Lots of tourists in the area. Easy to get to public transportation. Besides the hot weather, we had a good time. "
+            },
+            {
+                "_id": "320887590",
+                "date": {
+                    "$date": "2018-09-09T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "20965806",
+                "reviewer_name": "Romain",
+                "comments": "Merci à Ana & Gonçalo pour l’accueil !"
+            },
+            {
+                "_id": "325025167",
+                "date": {
+                    "$date": "2018-09-18T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "15097268",
+                "reviewer_name": "Roula",
+                "comments": "-"
+            },
+            {
+                "_id": "331735682",
+                "date": {
+                    "$date": "2018-10-03T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "35313286",
+                "reviewer_name": "Alexander",
+                "comments": "Our stay in Ana and Gancalo’s apartment was lovely. The location was perfect and Gancalo graciously picked us up from the airport. It does get a little loud in the morning but that’s only because the apartment is perfectly located right on the river front. You do have to hold the shower wand when showering but the pressure is good. Overall I would definitely stay in the apartment again!"
+            },
+            {
+                "_id": "334789252",
+                "date": {
+                    "$date": "2018-10-10T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "206502919",
+                "reviewer_name": "Mark",
+                "comments": "It was a wonderful experience, the location is fantastic and the accommodations were outstanding."
+            },
+            {
+                "_id": "347372623",
+                "date": {
+                    "$date": "2018-11-11T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "17503135",
+                "reviewer_name": "Camille",
+                "comments": "Ana’s place is very well located, at 2 min walking distance to the Douro, so that everything is close by! Ana communicated well regarding check in info, and was even flexible regarding check out timing. The description / pictures are relevant; only the bathroom  is not as recent. We appreciated the extra blanket as heaters have to be switched off once u leave the flat, but once they are switched on we had no problem afterwards regarding the temperature of the flat."
+            },
+            {
+                "_id": "354708379",
+                "date": {
+                    "$date": "2018-12-02T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "34178931",
+                "reviewer_name": "Pawel",
+                "comments": "If you want to stay in the heart of Porto for reasonable price this is a good alternative. However, I’d selected again it for group of more than 6 people."
+            },
+            {
+                "_id": "362865132",
+                "date": {
+                    "$date": "2018-12-27T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "208880077",
+                "reviewer_name": "Thomas",
+                "comments": "Very helpful hosts. Cooked traditional Portuguese Christmas dinner for 6. Location is perfect. Right off square that is on river right by famous bridge engineered by protege of Gustav Eifel. Looks like same type structure."
+            },
+            {
+                "_id": "364728730",
+                "date": {
+                    "$date": "2018-12-31T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "91827533",
+                "reviewer_name": "Mr",
+                "comments": "Ana & Goncalo were great on communication, responding instantly to questions.\n5 of us stayed in their home for 3 nights and found the location to be great and central to all the amazing sights Porto has to offer. \nWe found the home to be difficult to heat on our first night, the rooms have heaters but took time to get the room to a comfortable temperature level. But in warmer months Im sure this isn't an issue.\nThe beds are a little hard with one slightly out of shape,  and the shower is fairly basic (hand held) but does the job. Because of the central location some noise can be expected early in the mornings. \nOverall the apartment suited our needs for our short stay and the price is more than reasonable for what we got."
+            },
+            {
+                "_id": "403055315",
+                "date": {
+                    "$date": "2019-01-20T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "15138940",
+                "reviewer_name": "Milo",
+                "comments": "The house was extremely well located and Ana was able to give us some really great tips on locations to have lunch and eat out. The house was perfectly clean and the easily able to accommodate 6 people despite only having one bathroom. The beds and living room were comfortable. \n\nHowever, we always felt somewhat on edge in the house due to the number of signs posted around the kitchen, bedrooms and bathroom about being charged 15€ for all sorts of extras like not washing up or using extra towels and bed linen. Not that this would be particularly unreasonable but it made us feel like we were walking on egg shells in and around the house. \n\nThe hosts were aware that we were a group of six yet one of the beds was not prepared and we ran out of toilet paper well before we were due to check out despite only being there 2 nights. It really wasn't the end of the world but the shower head does not have a wall fitting meaning you had to hold it yourself if you wanted to stand underneath it."
+            }
+        ]
     },
     {
         "_id": "10069642",
@@ -4929,119 +7335,527 @@ export const DemoData = [
             "avalable_checkIn": { "$date": "2024-07-03T05:00:00.000Z" },
             "avalable_checkOut": { "$date": "2024-08-15T05:00:00.000Z" },
         },
-        "review_scores": {},
-        "reviews": []
-    },
-    {
-        "_id": "10082307",
-        "listing_url": "https://www.airbnb.com/rooms/10082307",
-        "name": "Double Room en-suite (307)",
-        "summary": "A standard double room with a queen size double bed and with private bathroom. There is a working table, chair and a shelf. A clean and comfortable room.",
-        "space": "",
-        "description": "A standard double room with a queen size double bed and with private bathroom. There is a working table, chair and a shelf. A clean and comfortable room.",
-        "neighborhood_overview": "",
-        "notes": "",
-        "transit": "",
-        "access": "",
-        "interaction": "",
-        "house_rules": "",
-        "property_type": "Apartment",
-        "room_type": "Private room",
-        "bed_type": "Real Bed",
-        "minimum_nights": "1",
-        "maximum_nights": "1125",
-        "cancellation_policy": "strict_14_with_grace_period",
-        "last_scraped": {
-            "$date": "2019-03-11T04:00:00.000Z"
+        "review_scores": {
+            "review_scores_accuracy": 9,
+            "review_scores_cleanliness": 9,
+            "review_scores_checkin": 10,
+            "review_scores_communication": 10,
+            "review_scores_location": 10,
+            "review_scores_value": 9,
+            "review_scores_rating": 89
         },
-        "calendar_last_scraped": {
-            "$date": "2019-03-11T04:00:00.000Z"
-        },
-        "accommodates": 2,
-        "bedrooms": 1,
-        "beds": 1,
-        "number_of_reviews": 0,
-        "bathrooms": {
-            "$numberDecimal": "1.0"
-        },
-        "amenities": [
-            "TV",
-            "Internet",
-            "Wifi",
-            "Air conditioning",
-            "Wheelchair accessible",
-            "Doorman",
-            "Elevator",
-            "Family/kid friendly",
-            "Shampoo",
-            "Hangers",
-            "Hair dryer",
-            "Iron"
-        ],
-        "price": {
-            "$numberDecimal": "361.00"
-        },
-        "extra_people": {
-            "$numberDecimal": "130.00"
-        },
-        "guests_included": {
-            "$numberDecimal": "2"
-        },
-        "images": {
-            "thumbnail_url": "",
-            "medium_url": "",
-            "picture_url": "https://a0.muscache.com/im/pictures/8ee32fb6-2094-42ee-ae6c-ff40b479f9a7.jpg?aki_policy=large",
-            "xl_picture_url": ""
-        },
-        "host": {
-            "host_id": "51289938",
-            "host_url": "https://www.airbnb.com/users/show/51289938",
-            "host_name": "Ken",
-            "host_location": "Hong Kong",
-            "host_about": "Out-going and positive. Happy to talk to guests and exchange our difference in culture.",
-            "host_response_time": "within an hour",
-            "host_thumbnail_url": "https://a0.muscache.com/im/pictures/48ba1de1-bfea-446c-83ab-c21cb4272696.jpg?aki_policy=profile_small",
-            "host_picture_url": "https://a0.muscache.com/im/pictures/48ba1de1-bfea-446c-83ab-c21cb4272696.jpg?aki_policy=profile_x_medium",
-            "host_neighbourhood": "Jordan",
-            "host_response_rate": 90,
-            "host_is_superhost": false,
-            "host_has_profile_pic": true,
-            "host_identity_verified": false,
-            "host_listings_count": 6,
-            "host_total_listings_count": 6,
-            "host_verifications": [
-                "email",
-                "phone",
-                "google",
-                "reviews"
-            ]
-        },
-        "address": {
-            "street": "Hong Kong, Kowloon, Hong Kong",
-            "suburb": "Yau Tsim Mong",
-            "government_area": "Yau Tsim Mong",
-            "market": "Hong Kong",
-            "country": "Hong Kong",
-            "country_code": "HK",
-            "location": {
-                "type": "Point",
-                "coordinates": [
-                    114.17158,
-                    22.30469
-                ],
-                "is_location_exact": true
+        "reviews": [
+            {
+                "_id": "58663741",
+                "date": {
+                    "$date": "2016-01-03T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "51483096",
+                "reviewer_name": "Cátia",
+                "comments": "A casa da Ana e do Gonçalo foram o local escolhido para a passagem de ano com um grupo de amigos. Fomos super bem recebidos com uma grande simpatia e predisposição a ajudar com qualquer coisa que fosse necessário.\r\nA casa era ainda melhor do que parecia nas fotos, totalmente equipada, com mantas, aquecedor e tudo o que pudessemos precisar.\r\nA localização não podia ser melhor! Não há melhor do que acordar de manhã e ao virar da esquina estar a ribeira do Porto."
+            },
+            {
+                "_id": "62413197",
+                "date": {
+                    "$date": "2016-02-14T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "40031996",
+                "reviewer_name": "Théo",
+                "comments": "We are french's students, we traveled some days in Porto, this space was good and we can cooking easly. It was rainning so we eard every time the water fall to the ground in the street when we sleeping. But It was cool and or was well received by Ana et Gonçalo"
+            },
+            {
+                "_id": "68310569",
+                "date": {
+                    "$date": "2016-04-04T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "53859850",
+                "reviewer_name": "Bart",
+                "comments": "We had a spledid time in the old centre of Porto.\r\nThe appartment is very well situated next to the old Ribeira square. It's perfect to have such an appartment to your disposal, you feel home, and have a place to relax between the exploration of this very nice city.\r\nWe thank Ana & Gonçalo, and we hope the appartment is free when we go back next year. Porto is charming original."
+            },
+            {
+                "_id": "69693942",
+                "date": {
+                    "$date": "2016-04-12T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "3135623",
+                "reviewer_name": "Alex",
+                "comments": "Ana and Goncalo were very helpful and accommodating. When they were not available they put us in touch with their nephew who was equally as helpful. The flat was as described, neat and tidy. The weather was quite cold, but thankfully A&G left us with extra blankets and electric heaters to use. Location was great. Outside the flat there was a slight smell of the river/ sewage, but in all honesty it did not come into the flat, and once you go down the road it doesn't carry on. This may also have been down to the very wet weather we had while there. All in all, very happy and would definitely recommend."
+            },
+            {
+                "_id": "71451096",
+                "date": {
+                    "$date": "2016-04-25T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "13187858",
+                "reviewer_name": "Dan",
+                "comments": "The hosts were very accommodating and agreed to meet with my parents as they were arriving before us. Communicated very well and always responded in a very timely manner. You couldn't have asked for a better location of this apartment and the place was identical to the pictures in the in the listing."
+            },
+            {
+                "_id": "73191268",
+                "date": {
+                    "$date": "2016-05-07T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "61434690",
+                "reviewer_name": "Anne",
+                "comments": "THE PLACE TO BE, l'appartement est situé au milieu de la Ribeira , tout peut se faire à pieds c'est l'ideal,l'appartement est très bien agencé et équipé.\r\nNous avons passé un séjour très agréable dans ce duplex avec beaucoup de charme .\r\nAccueil très chaleureux de Ana et Gonçalo, ils ont pris du temps pour nous indiquer tout ce qu'il y avait à faire sur Porto et répondus  à toutes nos interrogations en terme de commodités.. Merci..\r\n"
+            },
+            {
+                "_id": "77438107",
+                "date": {
+                    "$date": "2016-05-31T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "3673216",
+                "reviewer_name": "Chris",
+                "comments": "We had a great time in Porto. Ana’s & Goncalo’s apartment is located right in the heart of the Old Town and is great value for money. You really are at the centre of things and it’s the perfect place to get swept away in the hustle and bustle of Porto. Ana and Goncalo were great hosts."
+            },
+            {
+                "_id": "89637734",
+                "date": {
+                    "$date": "2016-07-29T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "9172374",
+                "reviewer_name": "Leslie",
+                "comments": "Ana and Gonçalo were very welcoming and made a lot of information about Porto's sights available. It was very clean, very beautiful and the location was superb. It does have a lot of restaurants around it, so it could be a bit noisy for us at night but otherwise  great location. We would stay there again. "
+            },
+            {
+                "_id": "96574146",
+                "date": {
+                    "$date": "2016-08-23T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "71985274",
+                "reviewer_name": "Philippe",
+                "comments": "Super appartement très bien placé, au cœur de l'animation de la Ribeira !\r\nNous avons passé un super séjour à Porto !\r\nToutes les informations données par Ana et les documents laissés nous ont bien aidé à organiser notre séjour.  Nous avons (presque) tout fait à pied ! Le parking Ribeira est proche et bien utile pour garer le véhicule.\r\nMerci !!!\r\nPhilippe\r\n"
+            },
+            {
+                "_id": "108444999",
+                "date": {
+                    "$date": "2016-10-16T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "24960918",
+                "reviewer_name": "Hanneke",
+                "comments": "The appartment was great, it is really nice and cosy, and it is situated at a perfect location. Ana and Goncalo were very friendly, they were very helpfull during our stay. We had a great time during our stay in Porto!"
+            },
+            {
+                "_id": "111065376",
+                "date": {
+                    "$date": "2016-10-30T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "74079092",
+                "reviewer_name": "Kati",
+                "comments": "Kävimme majoittajan kanssa viestinvaihtoa ennen lomaa ja he antoivat mukavan vaikutelman. He olivatkin hyvin mukavia ihmisiä. He tulivat lentokentälle vastaan kahdella autolla mikä oli hyvin ystävällistä. He kertoivat myös kaupungista ja sen nähtävyyksistä. Asunnon sijainti oli täydellinen. Se oli myös erittäin romanttinen ja kaunis. Kokemus oli hyvin onnistunut."
+            },
+            {
+                "_id": "111655209",
+                "date": {
+                    "$date": "2016-11-01T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "40413493",
+                "reviewer_name": "Julia",
+                "comments": "Hemos pasado unos días increíbles en Oporto. Llegamos más tarde de lo que habíamos pensado y Ana & Gonçalo nos esperaron pacientemente y nos facilitaron la llegada, además nos recibieron con un regalo de bienvenida!. Nos dieron todo tipo de indicaciones y consejos más que de sobra para disfrutar de los días que estuvimos allí. La ubicación de la casa es inmejorable!! la única pega fue que el soporte de la ducha estaba roto pero como eran pocos días no quisimos molestar a Ana & Gonçalo y no se lo comentamos. "
+            },
+            {
+                "_id": "132811625",
+                "date": {
+                    "$date": "2017-02-19T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "8986056",
+                "reviewer_name": "Joshua",
+                "comments": "Great location, comfortable place, responsive and friendly host! Highly recommended!"
+            },
+            {
+                "_id": "144627907",
+                "date": {
+                    "$date": "2017-04-16T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "113254568",
+                "reviewer_name": "Tracey",
+                "comments": "This house is in the heart of Porto, set back enough to be away from the hustle and bustle but only a few steps up from the river, bars and restaurants. A great place to stay.\nThe house was clean and functional. Ana and Goncalo are perfect hosts with lots of information on places to visit and   eat."
+            },
+            {
+                "_id": "149009243",
+                "date": {
+                    "$date": "2017-05-02T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "11263097",
+                "reviewer_name": "Willem",
+                "comments": "The location of the house is wonderful! You are in the heart of the old city and the Douro ist just a few meters away. Perfect for a first visit to Porto!\nVery cosy and warm house with everything you need.\nGonçalo gives a lot of good tips that will help you to have a perfect stay. Communication is very easy with him."
+            },
+            {
+                "_id": "150518693",
+                "date": {
+                    "$date": "2017-05-08T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "108507776",
+                "reviewer_name": "Fanny",
+                "comments": "We spend a really good time in Porto, the flat is so well situated. The bridge is just next door, the view on the river is amazing, and plenty of restaurants and pubs, transport are just around.\nGonzalo is very kind to wait for us, also lat, for the check in, thank you.\n"
+            },
+            {
+                "_id": "155913947",
+                "date": {
+                    "$date": "2017-05-29T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "30254816",
+                "reviewer_name": "Bridget",
+                "comments": "Thanks for a great stay! 6 of us were in Porto for a long weekend and we had a blast. The apartment was perfect; location and size to accomodate us. The hosts were great, then even picked us up at the airport (for a fee but it was a great service). Thanks again! Bridget."
+            },
+            {
+                "_id": "159692160",
+                "date": {
+                    "$date": "2017-06-11T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "124514204",
+                "reviewer_name": "Oscar",
+                "comments": "Superb location and very nice, big and overall pleasant apartment!"
+            },
+            {
+                "_id": "164881958",
+                "date": {
+                    "$date": "2017-06-29T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "105188418",
+                "reviewer_name": "Steve",
+                "comments": "The apartment provides basic facilities but is good value for money and very well positioned for easy access to restaurants and bars, the Ribeira district and the Port house in Gaia."
+            },
+            {
+                "_id": "166990342",
+                "date": {
+                    "$date": "2017-07-05T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "52660694",
+                "reviewer_name": "Tina",
+                "comments": "Ana und Gonçalo sind sehr hilfsbereite liebe Leute, die  alles tun, damit man sich wohl fühlt. Wenn es etwas zu beanstanden gab, wird das sofort problemlos erledigt. Das Apartment ist charmant, die Möbel schon etwas mitgenommen, aber das passt insgesamt ins Bild von Porto und macht den Reiz aus. Die Lage ist super, genau am Duoro. Es gibt Strassenmusik bis in den späten Abend und auch morgens geht's früh los mit fröhlichen Lärm von der Flusspromenade. Nichts also für Leute, die es ruhig brauchen! Die Lage ist wirklich exklusiv und tröstet über den recht teuren Mietpreis. Im Umfeld gibt es typische Touri-Fallen, wo alles doppelt kostet, aber gleichzeitig findet man auch sehr nette kleine Bars, in der man chillig und günstig frühstücken oder generell lecker essen kann. Die Stadt ist klein genug, um sich schnell zurechtzufinden und groß genug, um immer wieder neues zu entdecken. Wir waren zu dritt (50, 25, 20 Jahre) und haben die Zeit wirklich genossen. "
+            },
+            {
+                "_id": "180030365",
+                "date": {
+                    "$date": "2017-08-09T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "25469637",
+                "reviewer_name": "Mathieu",
+                "comments": "Very well located appartement ideal for a family of 5 who want to make the most of the city center.\nIt may be a bit noisy at night but this is acceptable.\nGlobally we recommend this place."
+            },
+            {
+                "_id": "198679769",
+                "date": {
+                    "$date": "2017-09-30T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "21837853",
+                "reviewer_name": "Ido",
+                "comments": "Great location! The apartment is somewhat basic. We were family with 3 teenagers and had a good time. Also it’s a bit noisy until very late at night."
+            },
+            {
+                "_id": "199885226",
+                "date": {
+                    "$date": "2017-10-03T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "56528632",
+                "reviewer_name": "Amanda",
+                "comments": "This apartment is in the perfect location for being in the middle of the action. There were tons of restaurants close to the apartment and it was a quick walk across the bridge to tour the Port wineries. Be forewarned; if you are looking for a very quiet location, this area may not be for you. However, if you are looking to step outside of your door and start enjoying what Porto has to offer, I recommend this location."
+            },
+            {
+                "_id": "207942636",
+                "date": {
+                    "$date": "2017-10-30T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "102474818",
+                "reviewer_name": "Geneviève",
+                "comments": "Acceuil très très chaleureux de Gonçalo  et Ana lors de notre arrivée très tardive due à un changement d\"'horaire d'avion....appartement super bien situé dans Porto près du Douro, fidèle aux photos mises sur le site....Nous avons adoré ce quartier bien animé  .....Encore merci à Gonçalo et Ana. ...."
+            },
+            {
+                "_id": "209455775",
+                "date": {
+                    "$date": "2017-11-05T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "10371877",
+                "reviewer_name": "Andrea",
+                "comments": "Localização perfeita, muito aconchegante, Ana e Gonçalo são pessoas muito atenciosas e simpáticas!"
+            },
+            {
+                "_id": "223995518",
+                "date": {
+                    "$date": "2018-01-02T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "10184070",
+                "reviewer_name": "Jennifer",
+                "comments": "Perfect position to see everything that Porto has to offer. Ana and Gonçalo were great hosts quick to respond and welcoming. Couldn't recommend a better place to stay in Porto to be able to see the sights and be within walking distance to so many restaurants."
+            },
+            {
+                "_id": "225725834",
+                "date": {
+                    "$date": "2018-01-07T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "156411765",
+                "reviewer_name": "Nathalie",
+                "comments": "Great location!"
+            },
+            {
+                "_id": "230559180",
+                "date": {
+                    "$date": "2018-01-28T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "2524423",
+                "reviewer_name": "Cayetana",
+                "comments": "Probably Ana&Gonzalo´s place is great for summer but definitely not in winter. The house is NOT WARM and ready for a stay in cold and humit season. There is NO HEATING in any of the rooms and living room, only bed covers (not nordic duvet) and small heaters which you have to switch off during the night. Those were not enough during our stay in January even we had sunny days! Moreover we were 5 people in the house without NO HOT WATER enough for all of us. \nThe pictures did not show the reality. Furniture was much older and WiFi signal is only available in the living room, not the rooms.\nOn the other hand, location is great if you want to stay close to the river. Although think about that all restaurants, bars and main tourist attractions are close to Train Station and Clerigos Tower which means 15-20 min uphill walking distance from the house."
+            },
+            {
+                "_id": "232271631",
+                "date": {
+                    "$date": "2018-02-04T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "167219338",
+                "reviewer_name": "Mérex",
+                "comments": "Appartement très cosy! Nous y avons été pour un court séjour à 7 et avons adoré. L'appartement est idéalement situé dans le quartier magnifique de la Ribeira. L'accueil a ete très chaleureux: Nous étions trompé d'adresse car le GPS avaient confondus les rues mais Ana a su nous retrouver pour nous amener à l'appartement.  L'appartement était très  propre et nous avons eu largement tout ce qu'il fallait en linge.\nEncore un Grand merci à eux!"
+            },
+            {
+                "_id": "234847900",
+                "date": {
+                    "$date": "2018-02-14T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "6735587",
+                "reviewer_name": "Andrea",
+                "comments": "ottima ospitalità, la posizione della casa è ottima, vicina ai mezzi di trasporto e alle principali attrazioni della città, torneremo sicuramente. Consigliato!!"
+            },
+            {
+                "_id": "235293831",
+                "date": {
+                    "$date": "2018-02-16T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "130170949",
+                "reviewer_name": "Bogdan",
+                "comments": "Nice apartment in Porto, we enjoy staying in it for a few days. The apartment is comfortable and has a very nice location. Thanks to Ana and Gonsalo for hospitality."
+            },
+            {
+                "_id": "240252220",
+                "date": {
+                    "$date": "2018-03-04T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "153415353",
+                "reviewer_name": "Alison",
+                "comments": "Great location. Good value thanks for the stay"
+            },
+            {
+                "_id": "244738269",
+                "date": {
+                    "$date": "2018-03-19T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "59706237",
+                "reviewer_name": "Marco",
+                "comments": "Me and my friends (7 ppl tot) have booked Gonçalo and Ana’s apartment for our holidays and i think we cannot do a better choice like that.\nThe apartment is situated near Oporto’s riverside, in Ribeira district, at 2 minutes walking to Sao Bento’s station, 10minutes to Lello’s library and clerics’s tower. In less than 10 minutes u’re in Vila Nova De Gaia where u can find the wineries of porto’s wine.\nThe apartment is really spacious and comfortable, perfect for 7 italian people that want to have fun in Oporto.\nSuggested!!!"
+            },
+            {
+                "_id": "246334180",
+                "date": {
+                    "$date": "2018-03-25T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "12047570",
+                "reviewer_name": "Michel",
+                "comments": "L'emplacement et vraiment au coeur de l'animation du vieux Porto. Au pied de l'appartement se trouvent de charmants café avec vue sur le Douro.\nAna&Gonçalo ont été très attentionnés et à l'écoute de nos demandes\nMichel"
+            },
+            {
+                "_id": "259708770",
+                "date": {
+                    "$date": "2018-05-01T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "174003310",
+                "reviewer_name": "Dariusz",
+                "comments": "Great location right next to the Dom Luiz bridge and Douro river and plenty of restaurants. Enough room for about 6 people. Ana was very responsive to any concerns we had. Would stay again."
+            },
+            {
+                "_id": "263239322",
+                "date": {
+                    "$date": "2018-05-11T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "31033799",
+                "reviewer_name": "Margriet",
+                "comments": "The house was supernice and located in the middle of the center. We really enjoyed our stay here!"
+            },
+            {
+                "_id": "264125733",
+                "date": {
+                    "$date": "2018-05-13T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "15554470",
+                "reviewer_name": "Carlos",
+                "comments": "Great Location. Ana & Gonzalo are very nice, flexible, and fast-responsive. Apartment is ok but only one toilet for 3 rooms + sofa-bed."
+            },
+            {
+                "_id": "267283092",
+                "date": {
+                    "$date": "2018-05-21T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "39358900",
+                "reviewer_name": "Gaspard",
+                "comments": "Ana&Gonçalo's apartment was nice, comfy, clean and most of all really well located in the city center!!!\nWe could easily move everywhere in Porto from there and it was perfect for discovering the city!\nAlso, I'd like to mention that Gonçalo was nice and patient with us on the day of the arrival even if we were a bit late.\nI strongly recommend this place!"
+            },
+            {
+                "_id": "269853203",
+                "date": {
+                    "$date": "2018-05-28T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "42864948",
+                "reviewer_name": "James",
+                "comments": "Incredible location, beautiful house. Everything was very easy and we would highly recommend this accommodation. Excellent. "
+            },
+            {
+                "_id": "272277314",
+                "date": {
+                    "$date": "2018-06-03T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "45990306",
+                "reviewer_name": "紫仪",
+                "comments": "good lication good experience"
+            },
+            {
+                "_id": "275044729",
+                "date": {
+                    "$date": "2018-06-10T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "176337667",
+                "reviewer_name": "Sebastian",
+                "comments": "We loved it"
+            },
+            {
+                "_id": "302971185",
+                "date": {
+                    "$date": "2018-08-06T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "52572680",
+                "reviewer_name": "Robby",
+                "comments": "Great location right on the river. Lots of tourists in the area. Easy to get to public transportation. Besides the hot weather, we had a good time. "
+            },
+            {
+                "_id": "320887590",
+                "date": {
+                    "$date": "2018-09-09T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "20965806",
+                "reviewer_name": "Romain",
+                "comments": "Merci à Ana & Gonçalo pour l’accueil !"
+            },
+            {
+                "_id": "325025167",
+                "date": {
+                    "$date": "2018-09-18T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "15097268",
+                "reviewer_name": "Roula",
+                "comments": "-"
+            },
+            {
+                "_id": "331735682",
+                "date": {
+                    "$date": "2018-10-03T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "35313286",
+                "reviewer_name": "Alexander",
+                "comments": "Our stay in Ana and Gancalo’s apartment was lovely. The location was perfect and Gancalo graciously picked us up from the airport. It does get a little loud in the morning but that’s only because the apartment is perfectly located right on the river front. You do have to hold the shower wand when showering but the pressure is good. Overall I would definitely stay in the apartment again!"
+            },
+            {
+                "_id": "334789252",
+                "date": {
+                    "$date": "2018-10-10T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "206502919",
+                "reviewer_name": "Mark",
+                "comments": "It was a wonderful experience, the location is fantastic and the accommodations were outstanding."
+            },
+            {
+                "_id": "347372623",
+                "date": {
+                    "$date": "2018-11-11T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "17503135",
+                "reviewer_name": "Camille",
+                "comments": "Ana’s place is very well located, at 2 min walking distance to the Douro, so that everything is close by! Ana communicated well regarding check in info, and was even flexible regarding check out timing. The description / pictures are relevant; only the bathroom  is not as recent. We appreciated the extra blanket as heaters have to be switched off once u leave the flat, but once they are switched on we had no problem afterwards regarding the temperature of the flat."
+            },
+            {
+                "_id": "354708379",
+                "date": {
+                    "$date": "2018-12-02T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "34178931",
+                "reviewer_name": "Pawel",
+                "comments": "If you want to stay in the heart of Porto for reasonable price this is a good alternative. However, I’d selected again it for group of more than 6 people."
+            },
+            {
+                "_id": "362865132",
+                "date": {
+                    "$date": "2018-12-27T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "208880077",
+                "reviewer_name": "Thomas",
+                "comments": "Very helpful hosts. Cooked traditional Portuguese Christmas dinner for 6. Location is perfect. Right off square that is on river right by famous bridge engineered by protege of Gustav Eifel. Looks like same type structure."
+            },
+            {
+                "_id": "364728730",
+                "date": {
+                    "$date": "2018-12-31T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "91827533",
+                "reviewer_name": "Mr",
+                "comments": "Ana & Goncalo were great on communication, responding instantly to questions.\n5 of us stayed in their home for 3 nights and found the location to be great and central to all the amazing sights Porto has to offer. \nWe found the home to be difficult to heat on our first night, the rooms have heaters but took time to get the room to a comfortable temperature level. But in warmer months Im sure this isn't an issue.\nThe beds are a little hard with one slightly out of shape,  and the shower is fairly basic (hand held) but does the job. Because of the central location some noise can be expected early in the mornings. \nOverall the apartment suited our needs for our short stay and the price is more than reasonable for what we got."
+            },
+            {
+                "_id": "403055315",
+                "date": {
+                    "$date": "2019-01-20T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "15138940",
+                "reviewer_name": "Milo",
+                "comments": "The house was extremely well located and Ana was able to give us some really great tips on locations to have lunch and eat out. The house was perfectly clean and the easily able to accommodate 6 people despite only having one bathroom. The beds and living room were comfortable. \n\nHowever, we always felt somewhat on edge in the house due to the number of signs posted around the kitchen, bedrooms and bathroom about being charged 15€ for all sorts of extras like not washing up or using extra towels and bed linen. Not that this would be particularly unreasonable but it made us feel like we were walking on egg shells in and around the house. \n\nThe hosts were aware that we were a group of six yet one of the beds was not prepared and we ran out of toilet paper well before we were due to check out despite only being there 2 nights. It really wasn't the end of the world but the shower head does not have a wall fitting meaning you had to hold it yourself if you wanted to stand underneath it."
             }
-        },
-        "availability": {
-            "availability_30": 30,
-            "availability_60": 60,
-            "availability_90": 90,
-            "availability_365": 365,
-            "avalable_checkIn": { "$date": "2024-07-03T05:00:00.000Z" },
-            "avalable_checkOut": { "$date": "2026-01-15T05:00:00.000Z" },
-        },
-        "review_scores": {},
-        "reviews": []
+        ]
     },
     {
         "_id": "10082422",
@@ -5151,89 +7965,579 @@ export const DemoData = [
             "avalable_checkIn": { "$date": "2024-07-03T05:00:00.000Z" },
             "avalable_checkOut": { "$date": "2024-09-15T05:00:00.000Z" },
         },
-        "review_scores": {},
-        "reviews": []
+        "review_scores": {
+            "review_scores_accuracy": 9,
+            "review_scores_cleanliness": 9,
+            "review_scores_checkin": 10,
+            "review_scores_communication": 10,
+            "review_scores_location": 10,
+            "review_scores_value": 9,
+            "review_scores_rating": 89
+        },
+        "reviews": [
+            {
+                "_id": "58663741",
+                "date": {
+                    "$date": "2016-01-03T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "51483096",
+                "reviewer_name": "Cátia",
+                "comments": "A casa da Ana e do Gonçalo foram o local escolhido para a passagem de ano com um grupo de amigos. Fomos super bem recebidos com uma grande simpatia e predisposição a ajudar com qualquer coisa que fosse necessário.\r\nA casa era ainda melhor do que parecia nas fotos, totalmente equipada, com mantas, aquecedor e tudo o que pudessemos precisar.\r\nA localização não podia ser melhor! Não há melhor do que acordar de manhã e ao virar da esquina estar a ribeira do Porto."
+            },
+            {
+                "_id": "62413197",
+                "date": {
+                    "$date": "2016-02-14T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "40031996",
+                "reviewer_name": "Théo",
+                "comments": "We are french's students, we traveled some days in Porto, this space was good and we can cooking easly. It was rainning so we eard every time the water fall to the ground in the street when we sleeping. But It was cool and or was well received by Ana et Gonçalo"
+            },
+            {
+                "_id": "68310569",
+                "date": {
+                    "$date": "2016-04-04T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "53859850",
+                "reviewer_name": "Bart",
+                "comments": "We had a spledid time in the old centre of Porto.\r\nThe appartment is very well situated next to the old Ribeira square. It's perfect to have such an appartment to your disposal, you feel home, and have a place to relax between the exploration of this very nice city.\r\nWe thank Ana & Gonçalo, and we hope the appartment is free when we go back next year. Porto is charming original."
+            },
+            {
+                "_id": "69693942",
+                "date": {
+                    "$date": "2016-04-12T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "3135623",
+                "reviewer_name": "Alex",
+                "comments": "Ana and Goncalo were very helpful and accommodating. When they were not available they put us in touch with their nephew who was equally as helpful. The flat was as described, neat and tidy. The weather was quite cold, but thankfully A&G left us with extra blankets and electric heaters to use. Location was great. Outside the flat there was a slight smell of the river/ sewage, but in all honesty it did not come into the flat, and once you go down the road it doesn't carry on. This may also have been down to the very wet weather we had while there. All in all, very happy and would definitely recommend."
+            },
+            {
+                "_id": "71451096",
+                "date": {
+                    "$date": "2016-04-25T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "13187858",
+                "reviewer_name": "Dan",
+                "comments": "The hosts were very accommodating and agreed to meet with my parents as they were arriving before us. Communicated very well and always responded in a very timely manner. You couldn't have asked for a better location of this apartment and the place was identical to the pictures in the in the listing."
+            },
+            {
+                "_id": "73191268",
+                "date": {
+                    "$date": "2016-05-07T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "61434690",
+                "reviewer_name": "Anne",
+                "comments": "THE PLACE TO BE, l'appartement est situé au milieu de la Ribeira , tout peut se faire à pieds c'est l'ideal,l'appartement est très bien agencé et équipé.\r\nNous avons passé un séjour très agréable dans ce duplex avec beaucoup de charme .\r\nAccueil très chaleureux de Ana et Gonçalo, ils ont pris du temps pour nous indiquer tout ce qu'il y avait à faire sur Porto et répondus  à toutes nos interrogations en terme de commodités.. Merci..\r\n"
+            },
+            {
+                "_id": "77438107",
+                "date": {
+                    "$date": "2016-05-31T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "3673216",
+                "reviewer_name": "Chris",
+                "comments": "We had a great time in Porto. Ana’s & Goncalo’s apartment is located right in the heart of the Old Town and is great value for money. You really are at the centre of things and it’s the perfect place to get swept away in the hustle and bustle of Porto. Ana and Goncalo were great hosts."
+            },
+            {
+                "_id": "89637734",
+                "date": {
+                    "$date": "2016-07-29T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "9172374",
+                "reviewer_name": "Leslie",
+                "comments": "Ana and Gonçalo were very welcoming and made a lot of information about Porto's sights available. It was very clean, very beautiful and the location was superb. It does have a lot of restaurants around it, so it could be a bit noisy for us at night but otherwise  great location. We would stay there again. "
+            },
+            {
+                "_id": "96574146",
+                "date": {
+                    "$date": "2016-08-23T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "71985274",
+                "reviewer_name": "Philippe",
+                "comments": "Super appartement très bien placé, au cœur de l'animation de la Ribeira !\r\nNous avons passé un super séjour à Porto !\r\nToutes les informations données par Ana et les documents laissés nous ont bien aidé à organiser notre séjour.  Nous avons (presque) tout fait à pied ! Le parking Ribeira est proche et bien utile pour garer le véhicule.\r\nMerci !!!\r\nPhilippe\r\n"
+            },
+            {
+                "_id": "108444999",
+                "date": {
+                    "$date": "2016-10-16T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "24960918",
+                "reviewer_name": "Hanneke",
+                "comments": "The appartment was great, it is really nice and cosy, and it is situated at a perfect location. Ana and Goncalo were very friendly, they were very helpfull during our stay. We had a great time during our stay in Porto!"
+            },
+            {
+                "_id": "111065376",
+                "date": {
+                    "$date": "2016-10-30T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "74079092",
+                "reviewer_name": "Kati",
+                "comments": "Kävimme majoittajan kanssa viestinvaihtoa ennen lomaa ja he antoivat mukavan vaikutelman. He olivatkin hyvin mukavia ihmisiä. He tulivat lentokentälle vastaan kahdella autolla mikä oli hyvin ystävällistä. He kertoivat myös kaupungista ja sen nähtävyyksistä. Asunnon sijainti oli täydellinen. Se oli myös erittäin romanttinen ja kaunis. Kokemus oli hyvin onnistunut."
+            },
+            {
+                "_id": "111655209",
+                "date": {
+                    "$date": "2016-11-01T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "40413493",
+                "reviewer_name": "Julia",
+                "comments": "Hemos pasado unos días increíbles en Oporto. Llegamos más tarde de lo que habíamos pensado y Ana & Gonçalo nos esperaron pacientemente y nos facilitaron la llegada, además nos recibieron con un regalo de bienvenida!. Nos dieron todo tipo de indicaciones y consejos más que de sobra para disfrutar de los días que estuvimos allí. La ubicación de la casa es inmejorable!! la única pega fue que el soporte de la ducha estaba roto pero como eran pocos días no quisimos molestar a Ana & Gonçalo y no se lo comentamos. "
+            },
+            {
+                "_id": "132811625",
+                "date": {
+                    "$date": "2017-02-19T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "8986056",
+                "reviewer_name": "Joshua",
+                "comments": "Great location, comfortable place, responsive and friendly host! Highly recommended!"
+            },
+            {
+                "_id": "144627907",
+                "date": {
+                    "$date": "2017-04-16T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "113254568",
+                "reviewer_name": "Tracey",
+                "comments": "This house is in the heart of Porto, set back enough to be away from the hustle and bustle but only a few steps up from the river, bars and restaurants. A great place to stay.\nThe house was clean and functional. Ana and Goncalo are perfect hosts with lots of information on places to visit and   eat."
+            },
+            {
+                "_id": "149009243",
+                "date": {
+                    "$date": "2017-05-02T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "11263097",
+                "reviewer_name": "Willem",
+                "comments": "The location of the house is wonderful! You are in the heart of the old city and the Douro ist just a few meters away. Perfect for a first visit to Porto!\nVery cosy and warm house with everything you need.\nGonçalo gives a lot of good tips that will help you to have a perfect stay. Communication is very easy with him."
+            },
+            {
+                "_id": "150518693",
+                "date": {
+                    "$date": "2017-05-08T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "108507776",
+                "reviewer_name": "Fanny",
+                "comments": "We spend a really good time in Porto, the flat is so well situated. The bridge is just next door, the view on the river is amazing, and plenty of restaurants and pubs, transport are just around.\nGonzalo is very kind to wait for us, also lat, for the check in, thank you.\n"
+            },
+            {
+                "_id": "155913947",
+                "date": {
+                    "$date": "2017-05-29T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "30254816",
+                "reviewer_name": "Bridget",
+                "comments": "Thanks for a great stay! 6 of us were in Porto for a long weekend and we had a blast. The apartment was perfect; location and size to accomodate us. The hosts were great, then even picked us up at the airport (for a fee but it was a great service). Thanks again! Bridget."
+            },
+            {
+                "_id": "159692160",
+                "date": {
+                    "$date": "2017-06-11T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "124514204",
+                "reviewer_name": "Oscar",
+                "comments": "Superb location and very nice, big and overall pleasant apartment!"
+            },
+            {
+                "_id": "164881958",
+                "date": {
+                    "$date": "2017-06-29T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "105188418",
+                "reviewer_name": "Steve",
+                "comments": "The apartment provides basic facilities but is good value for money and very well positioned for easy access to restaurants and bars, the Ribeira district and the Port house in Gaia."
+            },
+            {
+                "_id": "166990342",
+                "date": {
+                    "$date": "2017-07-05T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "52660694",
+                "reviewer_name": "Tina",
+                "comments": "Ana und Gonçalo sind sehr hilfsbereite liebe Leute, die  alles tun, damit man sich wohl fühlt. Wenn es etwas zu beanstanden gab, wird das sofort problemlos erledigt. Das Apartment ist charmant, die Möbel schon etwas mitgenommen, aber das passt insgesamt ins Bild von Porto und macht den Reiz aus. Die Lage ist super, genau am Duoro. Es gibt Strassenmusik bis in den späten Abend und auch morgens geht's früh los mit fröhlichen Lärm von der Flusspromenade. Nichts also für Leute, die es ruhig brauchen! Die Lage ist wirklich exklusiv und tröstet über den recht teuren Mietpreis. Im Umfeld gibt es typische Touri-Fallen, wo alles doppelt kostet, aber gleichzeitig findet man auch sehr nette kleine Bars, in der man chillig und günstig frühstücken oder generell lecker essen kann. Die Stadt ist klein genug, um sich schnell zurechtzufinden und groß genug, um immer wieder neues zu entdecken. Wir waren zu dritt (50, 25, 20 Jahre) und haben die Zeit wirklich genossen. "
+            },
+            {
+                "_id": "180030365",
+                "date": {
+                    "$date": "2017-08-09T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "25469637",
+                "reviewer_name": "Mathieu",
+                "comments": "Very well located appartement ideal for a family of 5 who want to make the most of the city center.\nIt may be a bit noisy at night but this is acceptable.\nGlobally we recommend this place."
+            },
+            {
+                "_id": "198679769",
+                "date": {
+                    "$date": "2017-09-30T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "21837853",
+                "reviewer_name": "Ido",
+                "comments": "Great location! The apartment is somewhat basic. We were family with 3 teenagers and had a good time. Also it’s a bit noisy until very late at night."
+            },
+            {
+                "_id": "199885226",
+                "date": {
+                    "$date": "2017-10-03T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "56528632",
+                "reviewer_name": "Amanda",
+                "comments": "This apartment is in the perfect location for being in the middle of the action. There were tons of restaurants close to the apartment and it was a quick walk across the bridge to tour the Port wineries. Be forewarned; if you are looking for a very quiet location, this area may not be for you. However, if you are looking to step outside of your door and start enjoying what Porto has to offer, I recommend this location."
+            },
+            {
+                "_id": "207942636",
+                "date": {
+                    "$date": "2017-10-30T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "102474818",
+                "reviewer_name": "Geneviève",
+                "comments": "Acceuil très très chaleureux de Gonçalo  et Ana lors de notre arrivée très tardive due à un changement d\"'horaire d'avion....appartement super bien situé dans Porto près du Douro, fidèle aux photos mises sur le site....Nous avons adoré ce quartier bien animé  .....Encore merci à Gonçalo et Ana. ...."
+            },
+            {
+                "_id": "209455775",
+                "date": {
+                    "$date": "2017-11-05T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "10371877",
+                "reviewer_name": "Andrea",
+                "comments": "Localização perfeita, muito aconchegante, Ana e Gonçalo são pessoas muito atenciosas e simpáticas!"
+            },
+            {
+                "_id": "223995518",
+                "date": {
+                    "$date": "2018-01-02T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "10184070",
+                "reviewer_name": "Jennifer",
+                "comments": "Perfect position to see everything that Porto has to offer. Ana and Gonçalo were great hosts quick to respond and welcoming. Couldn't recommend a better place to stay in Porto to be able to see the sights and be within walking distance to so many restaurants."
+            },
+            {
+                "_id": "225725834",
+                "date": {
+                    "$date": "2018-01-07T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "156411765",
+                "reviewer_name": "Nathalie",
+                "comments": "Great location!"
+            },
+            {
+                "_id": "230559180",
+                "date": {
+                    "$date": "2018-01-28T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "2524423",
+                "reviewer_name": "Cayetana",
+                "comments": "Probably Ana&Gonzalo´s place is great for summer but definitely not in winter. The house is NOT WARM and ready for a stay in cold and humit season. There is NO HEATING in any of the rooms and living room, only bed covers (not nordic duvet) and small heaters which you have to switch off during the night. Those were not enough during our stay in January even we had sunny days! Moreover we were 5 people in the house without NO HOT WATER enough for all of us. \nThe pictures did not show the reality. Furniture was much older and WiFi signal is only available in the living room, not the rooms.\nOn the other hand, location is great if you want to stay close to the river. Although think about that all restaurants, bars and main tourist attractions are close to Train Station and Clerigos Tower which means 15-20 min uphill walking distance from the house."
+            },
+            {
+                "_id": "232271631",
+                "date": {
+                    "$date": "2018-02-04T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "167219338",
+                "reviewer_name": "Mérex",
+                "comments": "Appartement très cosy! Nous y avons été pour un court séjour à 7 et avons adoré. L'appartement est idéalement situé dans le quartier magnifique de la Ribeira. L'accueil a ete très chaleureux: Nous étions trompé d'adresse car le GPS avaient confondus les rues mais Ana a su nous retrouver pour nous amener à l'appartement.  L'appartement était très  propre et nous avons eu largement tout ce qu'il fallait en linge.\nEncore un Grand merci à eux!"
+            },
+            {
+                "_id": "234847900",
+                "date": {
+                    "$date": "2018-02-14T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "6735587",
+                "reviewer_name": "Andrea",
+                "comments": "ottima ospitalità, la posizione della casa è ottima, vicina ai mezzi di trasporto e alle principali attrazioni della città, torneremo sicuramente. Consigliato!!"
+            },
+            {
+                "_id": "235293831",
+                "date": {
+                    "$date": "2018-02-16T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "130170949",
+                "reviewer_name": "Bogdan",
+                "comments": "Nice apartment in Porto, we enjoy staying in it for a few days. The apartment is comfortable and has a very nice location. Thanks to Ana and Gonsalo for hospitality."
+            },
+            {
+                "_id": "240252220",
+                "date": {
+                    "$date": "2018-03-04T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "153415353",
+                "reviewer_name": "Alison",
+                "comments": "Great location. Good value thanks for the stay"
+            },
+            {
+                "_id": "244738269",
+                "date": {
+                    "$date": "2018-03-19T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "59706237",
+                "reviewer_name": "Marco",
+                "comments": "Me and my friends (7 ppl tot) have booked Gonçalo and Ana’s apartment for our holidays and i think we cannot do a better choice like that.\nThe apartment is situated near Oporto’s riverside, in Ribeira district, at 2 minutes walking to Sao Bento’s station, 10minutes to Lello’s library and clerics’s tower. In less than 10 minutes u’re in Vila Nova De Gaia where u can find the wineries of porto’s wine.\nThe apartment is really spacious and comfortable, perfect for 7 italian people that want to have fun in Oporto.\nSuggested!!!"
+            },
+            {
+                "_id": "246334180",
+                "date": {
+                    "$date": "2018-03-25T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "12047570",
+                "reviewer_name": "Michel",
+                "comments": "L'emplacement et vraiment au coeur de l'animation du vieux Porto. Au pied de l'appartement se trouvent de charmants café avec vue sur le Douro.\nAna&Gonçalo ont été très attentionnés et à l'écoute de nos demandes\nMichel"
+            },
+            {
+                "_id": "259708770",
+                "date": {
+                    "$date": "2018-05-01T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "174003310",
+                "reviewer_name": "Dariusz",
+                "comments": "Great location right next to the Dom Luiz bridge and Douro river and plenty of restaurants. Enough room for about 6 people. Ana was very responsive to any concerns we had. Would stay again."
+            },
+            {
+                "_id": "263239322",
+                "date": {
+                    "$date": "2018-05-11T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "31033799",
+                "reviewer_name": "Margriet",
+                "comments": "The house was supernice and located in the middle of the center. We really enjoyed our stay here!"
+            },
+            {
+                "_id": "264125733",
+                "date": {
+                    "$date": "2018-05-13T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "15554470",
+                "reviewer_name": "Carlos",
+                "comments": "Great Location. Ana & Gonzalo are very nice, flexible, and fast-responsive. Apartment is ok but only one toilet for 3 rooms + sofa-bed."
+            },
+            {
+                "_id": "267283092",
+                "date": {
+                    "$date": "2018-05-21T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "39358900",
+                "reviewer_name": "Gaspard",
+                "comments": "Ana&Gonçalo's apartment was nice, comfy, clean and most of all really well located in the city center!!!\nWe could easily move everywhere in Porto from there and it was perfect for discovering the city!\nAlso, I'd like to mention that Gonçalo was nice and patient with us on the day of the arrival even if we were a bit late.\nI strongly recommend this place!"
+            },
+            {
+                "_id": "269853203",
+                "date": {
+                    "$date": "2018-05-28T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "42864948",
+                "reviewer_name": "James",
+                "comments": "Incredible location, beautiful house. Everything was very easy and we would highly recommend this accommodation. Excellent. "
+            },
+            {
+                "_id": "272277314",
+                "date": {
+                    "$date": "2018-06-03T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "45990306",
+                "reviewer_name": "紫仪",
+                "comments": "good lication good experience"
+            },
+            {
+                "_id": "275044729",
+                "date": {
+                    "$date": "2018-06-10T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "176337667",
+                "reviewer_name": "Sebastian",
+                "comments": "We loved it"
+            },
+            {
+                "_id": "302971185",
+                "date": {
+                    "$date": "2018-08-06T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "52572680",
+                "reviewer_name": "Robby",
+                "comments": "Great location right on the river. Lots of tourists in the area. Easy to get to public transportation. Besides the hot weather, we had a good time. "
+            },
+            {
+                "_id": "320887590",
+                "date": {
+                    "$date": "2018-09-09T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "20965806",
+                "reviewer_name": "Romain",
+                "comments": "Merci à Ana & Gonçalo pour l’accueil !"
+            },
+            {
+                "_id": "325025167",
+                "date": {
+                    "$date": "2018-09-18T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "15097268",
+                "reviewer_name": "Roula",
+                "comments": "-"
+            },
+            {
+                "_id": "331735682",
+                "date": {
+                    "$date": "2018-10-03T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "35313286",
+                "reviewer_name": "Alexander",
+                "comments": "Our stay in Ana and Gancalo’s apartment was lovely. The location was perfect and Gancalo graciously picked us up from the airport. It does get a little loud in the morning but that’s only because the apartment is perfectly located right on the river front. You do have to hold the shower wand when showering but the pressure is good. Overall I would definitely stay in the apartment again!"
+            },
+            {
+                "_id": "334789252",
+                "date": {
+                    "$date": "2018-10-10T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "206502919",
+                "reviewer_name": "Mark",
+                "comments": "It was a wonderful experience, the location is fantastic and the accommodations were outstanding."
+            },
+            {
+                "_id": "347372623",
+                "date": {
+                    "$date": "2018-11-11T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "17503135",
+                "reviewer_name": "Camille",
+                "comments": "Ana’s place is very well located, at 2 min walking distance to the Douro, so that everything is close by! Ana communicated well regarding check in info, and was even flexible regarding check out timing. The description / pictures are relevant; only the bathroom  is not as recent. We appreciated the extra blanket as heaters have to be switched off once u leave the flat, but once they are switched on we had no problem afterwards regarding the temperature of the flat."
+            },
+            {
+                "_id": "354708379",
+                "date": {
+                    "$date": "2018-12-02T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "34178931",
+                "reviewer_name": "Pawel",
+                "comments": "If you want to stay in the heart of Porto for reasonable price this is a good alternative. However, I’d selected again it for group of more than 6 people."
+            },
+            {
+                "_id": "362865132",
+                "date": {
+                    "$date": "2018-12-27T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "208880077",
+                "reviewer_name": "Thomas",
+                "comments": "Very helpful hosts. Cooked traditional Portuguese Christmas dinner for 6. Location is perfect. Right off square that is on river right by famous bridge engineered by protege of Gustav Eifel. Looks like same type structure."
+            },
+            {
+                "_id": "364728730",
+                "date": {
+                    "$date": "2018-12-31T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "91827533",
+                "reviewer_name": "Mr",
+                "comments": "Ana & Goncalo were great on communication, responding instantly to questions.\n5 of us stayed in their home for 3 nights and found the location to be great and central to all the amazing sights Porto has to offer. \nWe found the home to be difficult to heat on our first night, the rooms have heaters but took time to get the room to a comfortable temperature level. But in warmer months Im sure this isn't an issue.\nThe beds are a little hard with one slightly out of shape,  and the shower is fairly basic (hand held) but does the job. Because of the central location some noise can be expected early in the mornings. \nOverall the apartment suited our needs for our short stay and the price is more than reasonable for what we got."
+            },
+            {
+                "_id": "403055315",
+                "date": {
+                    "$date": "2019-01-20T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "15138940",
+                "reviewer_name": "Milo",
+                "comments": "The house was extremely well located and Ana was able to give us some really great tips on locations to have lunch and eat out. The house was perfectly clean and the easily able to accommodate 6 people despite only having one bathroom. The beds and living room were comfortable. \n\nHowever, we always felt somewhat on edge in the house due to the number of signs posted around the kitchen, bedrooms and bathroom about being charged 15€ for all sorts of extras like not washing up or using extra towels and bed linen. Not that this would be particularly unreasonable but it made us feel like we were walking on egg shells in and around the house. \n\nThe hosts were aware that we were a group of six yet one of the beds was not prepared and we ran out of toilet paper well before we were due to check out despite only being there 2 nights. It really wasn't the end of the world but the shower head does not have a wall fitting meaning you had to hold it yourself if you wanted to stand underneath it."
+            }
+        ]
     },
     {
-        "_id": "10083468",
-        "listing_url": "https://www.airbnb.com/rooms/10083468",
-        "name": "Be Happy in Porto",
-        "summary": "Be Happy Apartment is an amazing space. Renovated and comfortable apartment, located in a building dating from the nineteenth century in one of the most emblematic streets of the Porto city \"Rua do Almada\".  Be Happy Apartment is located in the city center, able you to visit the historic center only by foot, being very close of majority points of interesting of the Porto City. Be Happy Apartment is located close of central Station MetroTrindade.",
-        "space": "Be Happy Apartment is housed in a typical Porto building, where the apartment was completely remodeled, with a beautiful decoration,with great style and extremelly confortable. Fully equipped kitchen, microwave, ceramic hob and fridge. The bathroom is excelent for a relax time. In surroundings of Be Happy Apartment  there is supermarket, coffee shops, bakeries, restaurants, bars and clubs.",
-        "description": "Be Happy Apartment is an amazing space. Renovated and comfortable apartment, located in a building dating from the nineteenth century in one of the most emblematic streets of the Porto city \"Rua do Almada\".  Be Happy Apartment is located in the city center, able you to visit the historic center only by foot, being very close of majority points of interesting of the Porto City. Be Happy Apartment is located close of central Station MetroTrindade. Be Happy Apartment is housed in a typical Porto building, where the apartment was completely remodeled, with a beautiful decoration,with great style and extremelly confortable. Fully equipped kitchen, microwave, ceramic hob and fridge. The bathroom is excelent for a relax time. In surroundings of Be Happy Apartment  there is supermarket, coffee shops, bakeries, restaurants, bars and clubs. My guests have acess to all apartment. I`am always avaiable with for my guests. \"Be happy in Porto\"  offers a quality accommodation to spend a few pleasant d",
-        "neighborhood_overview": "\"Be happy in Porto\"  offers a quality accommodation to spend a few pleasant days in Porto.",
+        "_id": "10186755",
+        "listing_url": "https://www.airbnb.com/rooms/10186755",
+        "name": "Roof double bed private room",
+        "summary": "Near to underground metro station. Walking distance to seaside. 2 floors 1 entry. Husband, wife, girl and boy is living.",
+        "space": "",
+        "description": "Near to underground metro station. Walking distance to seaside. 2 floors 1 entry. Husband, wife, girl and boy is living.",
+        "neighborhood_overview": "",
         "notes": "",
-        "transit": "When you arrive at Airport Francisco Sá Carneiro my advice to take the way to the apartment it is: - You must pick up the metro in Airport and get out in metro station Trindade! -The apartment is near of this station.",
-        "access": "My guests have acess to all apartment.",
-        "interaction": "I`am always avaiable with for my guests.",
-        "house_rules": ". No smoking inside the apartment. . Is forbidden receive or lead strange people to the apartment. . Only people that are part of the reservation should have access to the apartment. . Do not eat on the bedroom. . Do not drink things like wine or sugary drinks on the bedroom.",
+        "transit": "",
+        "access": "",
+        "interaction": "",
+        "house_rules": "",
         "property_type": "Loft",
-        "room_type": "Entire home/apt",
+        "room_type": "Private room",
         "bed_type": "Real Bed",
-        "minimum_nights": "2",
+        "minimum_nights": "1",
         "maximum_nights": "1125",
-        "cancellation_policy": "moderate",
+        "cancellation_policy": "flexible",
         "last_scraped": {
-            "$date": "2019-02-16T05:00:00.000Z"
+            "$date": "2019-02-18T05:00:00.000Z"
         },
         "calendar_last_scraped": {
-            "$date": "2019-02-16T05:00:00.000Z"
-        },
-        "first_review": {
-            "$date": "2016-01-02T05:00:00.000Z"
-        },
-        "last_review": {
-            "$date": "2019-02-09T05:00:00.000Z"
+            "$date": "2019-02-18T05:00:00.000Z"
         },
         "accommodates": 2,
         "bedrooms": 1,
-        "beds": 1,
-        "number_of_reviews": 178,
+        "beds": 2,
+        "number_of_reviews": 0,
         "bathrooms": {
             "$numberDecimal": "1.0"
         },
         "amenities": [
             "TV",
-            "Cable TV",
+            "Internet",
             "Wifi",
+            "Air conditioning",
             "Kitchen",
-            "Smoking allowed",
-            "First aid kit",
-            "Fire extinguisher",
+            "Doorman",
+            "Elevator",
+            "Heating",
+            "Family/kid friendly",
+            "Washer",
             "Essentials",
-            "Hangers",
+            "24-hour check-in",
             "Hair dryer",
             "Iron",
-            "Laptop friendly workspace",
-            "translation missing: en.hosting_amenity_49",
-            "translation missing: en.hosting_amenity_50",
-            "Hot water",
-            "Bed linens",
-            "Extra pillows and blankets",
-            "Microwave",
-            "Coffee maker",
-            "Refrigerator",
-            "Dishes and silverware",
-            "Cooking basics",
-            "Stove",
-            "Long term stays allowed",
-            "Well-lit path to entrance",
-            "Step-free access",
-            "Wide clearance to bed",
-            "Accessible-height bed",
-            "Step-free access",
-            "Step-free access",
-            "Handheld shower head",
-            "Paid parking on premises"
+            "Laptop friendly workspace"
         ],
         "price": {
-            "$numberDecimal": "30.00"
-        },
-        "security_deposit": {
-            "$numberDecimal": "0.00"
-        },
-        "cleaning_fee": {
-            "$numberDecimal": "10.00"
+            "$numberDecimal": "185.00"
         },
         "extra_people": {
             "$numberDecimal": "0.00"
@@ -5244,57 +8548,1318 @@ export const DemoData = [
         "images": {
             "thumbnail_url": "",
             "medium_url": "",
-            "picture_url": "https://a0.muscache.com/im/pictures/9420dabf-661e-4e86-b69c-84d90ceeedb5.jpg?aki_policy=large",
+            "picture_url": "https://a0.muscache.com/im/pictures/7280244f-cd51-4ac1-a9fd-9acef8a7f0bc.jpg?aki_policy=large",
             "xl_picture_url": ""
         },
         "host": {
-            "host_id": "27518920",
-            "host_url": "https://www.airbnb.com/users/show/27518920",
-            "host_name": "Fábio",
-            "host_location": "São Félix da Marinha, Porto, Portugal",
-            "host_about": "Olá o meu nome é Fábio Ramos tenho 32 anos.\r\nSou uma pessoa animada, divertida e altruísta, tenho inúmeros prazeres nesta vida um dos quais é viajar e conhecer pessoas de outras nacionalidades culturas. \r\nEnquanto anfitrião prometo ser o mais prestativo possível, tanto nos primeiros contactos como quando forem meus hóspedes, estarei sempre disponível para ajudar e dar todo o suporte necessário para que passa uma estadia super agradável e interessante na cidade do Porto. ",
-            "host_response_time": "within an hour",
-            "host_thumbnail_url": "https://a0.muscache.com/im/pictures/user/30283df3-5b0b-47bb-8f81-990bdf925fb6.jpg?aki_policy=profile_small",
-            "host_picture_url": "https://a0.muscache.com/im/pictures/user/30283df3-5b0b-47bb-8f81-990bdf925fb6.jpg?aki_policy=profile_x_medium",
+            "host_id": "52316085",
+            "host_url": "https://www.airbnb.com/users/show/52316085",
+            "host_name": "Mustafa",
+            "host_location": "Istanbul, İstanbul, Turkey",
+            "host_about": "",
+            "host_thumbnail_url": "https://a0.muscache.com/im/pictures/cc4d0af8-37df-4eb6-940a-d5c80d8b8bc1.jpg?aki_policy=profile_small",
+            "host_picture_url": "https://a0.muscache.com/im/pictures/cc4d0af8-37df-4eb6-940a-d5c80d8b8bc1.jpg?aki_policy=profile_x_medium",
             "host_neighbourhood": "",
-            "host_response_rate": 90,
-            "host_is_superhost": true,
+            "host_is_superhost": false,
             "host_has_profile_pic": true,
-            "host_identity_verified": true,
-            "host_listings_count": 3,
-            "host_total_listings_count": 3,
+            "host_identity_verified": false,
+            "host_listings_count": 1,
+            "host_total_listings_count": 1,
             "host_verifications": [
                 "email",
                 "phone",
-                "reviews",
-                "manual_offline",
-                "jumio",
-                "government_id"
+                "facebook"
             ]
         },
         "address": {
-            "street": "Porto, Porto, Portugal",
+            "street": "Istanbul, İstanbul, Turkey",
             "suburb": "",
-            "government_area": "Cedofeita, Ildefonso, Sé, Miragaia, Nicolau, Vitória",
-            "market": "Porto",
-            "country": "Portugal",
-            "country_code": "PT",
+            "government_area": "Sariyer",
+            "market": "Istanbul",
+            "country": "Turkey",
+            "country_code": "TR",
             "location": {
                 "type": "Point",
                 "coordinates": [
-                    -8.61123,
-                    41.15225
+                    29.03693,
+                    41.12452
                 ],
                 "is_location_exact": false
             }
         },
         "availability": {
-            "availability_30": 16,
-            "availability_60": 40,
-            "availability_90": 67,
-            "availability_365": 335,
+            "availability_30": 30,
+            "availability_60": 60,
+            "availability_90": 90,
+            "availability_365": 365,
             "avalable_checkIn": { "$date": "2024-07-03T05:00:00.000Z" },
-            "avalable_checkOut": { "$date": "2025-04-15T05:00:00.000Z" },
+            "avalable_checkOut": { "$date": "2024-09-15T05:00:00.000Z" },
+        },
+        "review_scores": {
+            "review_scores_accuracy": 9,
+            "review_scores_cleanliness": 9,
+            "review_scores_checkin": 10,
+            "review_scores_communication": 10,
+            "review_scores_location": 10,
+            "review_scores_value": 9,
+            "review_scores_rating": 89
+        },
+        "reviews": [
+            {
+                "_id": "58663741",
+                "date": {
+                    "$date": "2016-01-03T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "51483096",
+                "reviewer_name": "Cátia",
+                "comments": "A casa da Ana e do Gonçalo foram o local escolhido para a passagem de ano com um grupo de amigos. Fomos super bem recebidos com uma grande simpatia e predisposição a ajudar com qualquer coisa que fosse necessário.\r\nA casa era ainda melhor do que parecia nas fotos, totalmente equipada, com mantas, aquecedor e tudo o que pudessemos precisar.\r\nA localização não podia ser melhor! Não há melhor do que acordar de manhã e ao virar da esquina estar a ribeira do Porto."
+            },
+            {
+                "_id": "62413197",
+                "date": {
+                    "$date": "2016-02-14T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "40031996",
+                "reviewer_name": "Théo",
+                "comments": "We are french's students, we traveled some days in Porto, this space was good and we can cooking easly. It was rainning so we eard every time the water fall to the ground in the street when we sleeping. But It was cool and or was well received by Ana et Gonçalo"
+            },
+            {
+                "_id": "68310569",
+                "date": {
+                    "$date": "2016-04-04T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "53859850",
+                "reviewer_name": "Bart",
+                "comments": "We had a spledid time in the old centre of Porto.\r\nThe appartment is very well situated next to the old Ribeira square. It's perfect to have such an appartment to your disposal, you feel home, and have a place to relax between the exploration of this very nice city.\r\nWe thank Ana & Gonçalo, and we hope the appartment is free when we go back next year. Porto is charming original."
+            },
+            {
+                "_id": "69693942",
+                "date": {
+                    "$date": "2016-04-12T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "3135623",
+                "reviewer_name": "Alex",
+                "comments": "Ana and Goncalo were very helpful and accommodating. When they were not available they put us in touch with their nephew who was equally as helpful. The flat was as described, neat and tidy. The weather was quite cold, but thankfully A&G left us with extra blankets and electric heaters to use. Location was great. Outside the flat there was a slight smell of the river/ sewage, but in all honesty it did not come into the flat, and once you go down the road it doesn't carry on. This may also have been down to the very wet weather we had while there. All in all, very happy and would definitely recommend."
+            },
+            {
+                "_id": "71451096",
+                "date": {
+                    "$date": "2016-04-25T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "13187858",
+                "reviewer_name": "Dan",
+                "comments": "The hosts were very accommodating and agreed to meet with my parents as they were arriving before us. Communicated very well and always responded in a very timely manner. You couldn't have asked for a better location of this apartment and the place was identical to the pictures in the in the listing."
+            },
+            {
+                "_id": "73191268",
+                "date": {
+                    "$date": "2016-05-07T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "61434690",
+                "reviewer_name": "Anne",
+                "comments": "THE PLACE TO BE, l'appartement est situé au milieu de la Ribeira , tout peut se faire à pieds c'est l'ideal,l'appartement est très bien agencé et équipé.\r\nNous avons passé un séjour très agréable dans ce duplex avec beaucoup de charme .\r\nAccueil très chaleureux de Ana et Gonçalo, ils ont pris du temps pour nous indiquer tout ce qu'il y avait à faire sur Porto et répondus  à toutes nos interrogations en terme de commodités.. Merci..\r\n"
+            },
+            {
+                "_id": "77438107",
+                "date": {
+                    "$date": "2016-05-31T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "3673216",
+                "reviewer_name": "Chris",
+                "comments": "We had a great time in Porto. Ana’s & Goncalo’s apartment is located right in the heart of the Old Town and is great value for money. You really are at the centre of things and it’s the perfect place to get swept away in the hustle and bustle of Porto. Ana and Goncalo were great hosts."
+            },
+            {
+                "_id": "89637734",
+                "date": {
+                    "$date": "2016-07-29T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "9172374",
+                "reviewer_name": "Leslie",
+                "comments": "Ana and Gonçalo were very welcoming and made a lot of information about Porto's sights available. It was very clean, very beautiful and the location was superb. It does have a lot of restaurants around it, so it could be a bit noisy for us at night but otherwise  great location. We would stay there again. "
+            },
+            {
+                "_id": "96574146",
+                "date": {
+                    "$date": "2016-08-23T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "71985274",
+                "reviewer_name": "Philippe",
+                "comments": "Super appartement très bien placé, au cœur de l'animation de la Ribeira !\r\nNous avons passé un super séjour à Porto !\r\nToutes les informations données par Ana et les documents laissés nous ont bien aidé à organiser notre séjour.  Nous avons (presque) tout fait à pied ! Le parking Ribeira est proche et bien utile pour garer le véhicule.\r\nMerci !!!\r\nPhilippe\r\n"
+            },
+            {
+                "_id": "108444999",
+                "date": {
+                    "$date": "2016-10-16T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "24960918",
+                "reviewer_name": "Hanneke",
+                "comments": "The appartment was great, it is really nice and cosy, and it is situated at a perfect location. Ana and Goncalo were very friendly, they were very helpfull during our stay. We had a great time during our stay in Porto!"
+            },
+            {
+                "_id": "111065376",
+                "date": {
+                    "$date": "2016-10-30T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "74079092",
+                "reviewer_name": "Kati",
+                "comments": "Kävimme majoittajan kanssa viestinvaihtoa ennen lomaa ja he antoivat mukavan vaikutelman. He olivatkin hyvin mukavia ihmisiä. He tulivat lentokentälle vastaan kahdella autolla mikä oli hyvin ystävällistä. He kertoivat myös kaupungista ja sen nähtävyyksistä. Asunnon sijainti oli täydellinen. Se oli myös erittäin romanttinen ja kaunis. Kokemus oli hyvin onnistunut."
+            },
+            {
+                "_id": "111655209",
+                "date": {
+                    "$date": "2016-11-01T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "40413493",
+                "reviewer_name": "Julia",
+                "comments": "Hemos pasado unos días increíbles en Oporto. Llegamos más tarde de lo que habíamos pensado y Ana & Gonçalo nos esperaron pacientemente y nos facilitaron la llegada, además nos recibieron con un regalo de bienvenida!. Nos dieron todo tipo de indicaciones y consejos más que de sobra para disfrutar de los días que estuvimos allí. La ubicación de la casa es inmejorable!! la única pega fue que el soporte de la ducha estaba roto pero como eran pocos días no quisimos molestar a Ana & Gonçalo y no se lo comentamos. "
+            },
+            {
+                "_id": "132811625",
+                "date": {
+                    "$date": "2017-02-19T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "8986056",
+                "reviewer_name": "Joshua",
+                "comments": "Great location, comfortable place, responsive and friendly host! Highly recommended!"
+            },
+            {
+                "_id": "144627907",
+                "date": {
+                    "$date": "2017-04-16T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "113254568",
+                "reviewer_name": "Tracey",
+                "comments": "This house is in the heart of Porto, set back enough to be away from the hustle and bustle but only a few steps up from the river, bars and restaurants. A great place to stay.\nThe house was clean and functional. Ana and Goncalo are perfect hosts with lots of information on places to visit and   eat."
+            },
+            {
+                "_id": "149009243",
+                "date": {
+                    "$date": "2017-05-02T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "11263097",
+                "reviewer_name": "Willem",
+                "comments": "The location of the house is wonderful! You are in the heart of the old city and the Douro ist just a few meters away. Perfect for a first visit to Porto!\nVery cosy and warm house with everything you need.\nGonçalo gives a lot of good tips that will help you to have a perfect stay. Communication is very easy with him."
+            },
+            {
+                "_id": "150518693",
+                "date": {
+                    "$date": "2017-05-08T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "108507776",
+                "reviewer_name": "Fanny",
+                "comments": "We spend a really good time in Porto, the flat is so well situated. The bridge is just next door, the view on the river is amazing, and plenty of restaurants and pubs, transport are just around.\nGonzalo is very kind to wait for us, also lat, for the check in, thank you.\n"
+            },
+            {
+                "_id": "155913947",
+                "date": {
+                    "$date": "2017-05-29T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "30254816",
+                "reviewer_name": "Bridget",
+                "comments": "Thanks for a great stay! 6 of us were in Porto for a long weekend and we had a blast. The apartment was perfect; location and size to accomodate us. The hosts were great, then even picked us up at the airport (for a fee but it was a great service). Thanks again! Bridget."
+            },
+            {
+                "_id": "159692160",
+                "date": {
+                    "$date": "2017-06-11T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "124514204",
+                "reviewer_name": "Oscar",
+                "comments": "Superb location and very nice, big and overall pleasant apartment!"
+            },
+            {
+                "_id": "164881958",
+                "date": {
+                    "$date": "2017-06-29T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "105188418",
+                "reviewer_name": "Steve",
+                "comments": "The apartment provides basic facilities but is good value for money and very well positioned for easy access to restaurants and bars, the Ribeira district and the Port house in Gaia."
+            },
+            {
+                "_id": "166990342",
+                "date": {
+                    "$date": "2017-07-05T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "52660694",
+                "reviewer_name": "Tina",
+                "comments": "Ana und Gonçalo sind sehr hilfsbereite liebe Leute, die  alles tun, damit man sich wohl fühlt. Wenn es etwas zu beanstanden gab, wird das sofort problemlos erledigt. Das Apartment ist charmant, die Möbel schon etwas mitgenommen, aber das passt insgesamt ins Bild von Porto und macht den Reiz aus. Die Lage ist super, genau am Duoro. Es gibt Strassenmusik bis in den späten Abend und auch morgens geht's früh los mit fröhlichen Lärm von der Flusspromenade. Nichts also für Leute, die es ruhig brauchen! Die Lage ist wirklich exklusiv und tröstet über den recht teuren Mietpreis. Im Umfeld gibt es typische Touri-Fallen, wo alles doppelt kostet, aber gleichzeitig findet man auch sehr nette kleine Bars, in der man chillig und günstig frühstücken oder generell lecker essen kann. Die Stadt ist klein genug, um sich schnell zurechtzufinden und groß genug, um immer wieder neues zu entdecken. Wir waren zu dritt (50, 25, 20 Jahre) und haben die Zeit wirklich genossen. "
+            },
+            {
+                "_id": "180030365",
+                "date": {
+                    "$date": "2017-08-09T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "25469637",
+                "reviewer_name": "Mathieu",
+                "comments": "Very well located appartement ideal for a family of 5 who want to make the most of the city center.\nIt may be a bit noisy at night but this is acceptable.\nGlobally we recommend this place."
+            },
+            {
+                "_id": "198679769",
+                "date": {
+                    "$date": "2017-09-30T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "21837853",
+                "reviewer_name": "Ido",
+                "comments": "Great location! The apartment is somewhat basic. We were family with 3 teenagers and had a good time. Also it’s a bit noisy until very late at night."
+            },
+            {
+                "_id": "199885226",
+                "date": {
+                    "$date": "2017-10-03T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "56528632",
+                "reviewer_name": "Amanda",
+                "comments": "This apartment is in the perfect location for being in the middle of the action. There were tons of restaurants close to the apartment and it was a quick walk across the bridge to tour the Port wineries. Be forewarned; if you are looking for a very quiet location, this area may not be for you. However, if you are looking to step outside of your door and start enjoying what Porto has to offer, I recommend this location."
+            },
+            {
+                "_id": "207942636",
+                "date": {
+                    "$date": "2017-10-30T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "102474818",
+                "reviewer_name": "Geneviève",
+                "comments": "Acceuil très très chaleureux de Gonçalo  et Ana lors de notre arrivée très tardive due à un changement d\"'horaire d'avion....appartement super bien situé dans Porto près du Douro, fidèle aux photos mises sur le site....Nous avons adoré ce quartier bien animé  .....Encore merci à Gonçalo et Ana. ...."
+            },
+            {
+                "_id": "209455775",
+                "date": {
+                    "$date": "2017-11-05T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "10371877",
+                "reviewer_name": "Andrea",
+                "comments": "Localização perfeita, muito aconchegante, Ana e Gonçalo são pessoas muito atenciosas e simpáticas!"
+            },
+            {
+                "_id": "223995518",
+                "date": {
+                    "$date": "2018-01-02T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "10184070",
+                "reviewer_name": "Jennifer",
+                "comments": "Perfect position to see everything that Porto has to offer. Ana and Gonçalo were great hosts quick to respond and welcoming. Couldn't recommend a better place to stay in Porto to be able to see the sights and be within walking distance to so many restaurants."
+            },
+            {
+                "_id": "225725834",
+                "date": {
+                    "$date": "2018-01-07T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "156411765",
+                "reviewer_name": "Nathalie",
+                "comments": "Great location!"
+            },
+            {
+                "_id": "230559180",
+                "date": {
+                    "$date": "2018-01-28T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "2524423",
+                "reviewer_name": "Cayetana",
+                "comments": "Probably Ana&Gonzalo´s place is great for summer but definitely not in winter. The house is NOT WARM and ready for a stay in cold and humit season. There is NO HEATING in any of the rooms and living room, only bed covers (not nordic duvet) and small heaters which you have to switch off during the night. Those were not enough during our stay in January even we had sunny days! Moreover we were 5 people in the house without NO HOT WATER enough for all of us. \nThe pictures did not show the reality. Furniture was much older and WiFi signal is only available in the living room, not the rooms.\nOn the other hand, location is great if you want to stay close to the river. Although think about that all restaurants, bars and main tourist attractions are close to Train Station and Clerigos Tower which means 15-20 min uphill walking distance from the house."
+            },
+            {
+                "_id": "232271631",
+                "date": {
+                    "$date": "2018-02-04T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "167219338",
+                "reviewer_name": "Mérex",
+                "comments": "Appartement très cosy! Nous y avons été pour un court séjour à 7 et avons adoré. L'appartement est idéalement situé dans le quartier magnifique de la Ribeira. L'accueil a ete très chaleureux: Nous étions trompé d'adresse car le GPS avaient confondus les rues mais Ana a su nous retrouver pour nous amener à l'appartement.  L'appartement était très  propre et nous avons eu largement tout ce qu'il fallait en linge.\nEncore un Grand merci à eux!"
+            },
+            {
+                "_id": "234847900",
+                "date": {
+                    "$date": "2018-02-14T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "6735587",
+                "reviewer_name": "Andrea",
+                "comments": "ottima ospitalità, la posizione della casa è ottima, vicina ai mezzi di trasporto e alle principali attrazioni della città, torneremo sicuramente. Consigliato!!"
+            },
+            {
+                "_id": "235293831",
+                "date": {
+                    "$date": "2018-02-16T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "130170949",
+                "reviewer_name": "Bogdan",
+                "comments": "Nice apartment in Porto, we enjoy staying in it for a few days. The apartment is comfortable and has a very nice location. Thanks to Ana and Gonsalo for hospitality."
+            },
+            {
+                "_id": "240252220",
+                "date": {
+                    "$date": "2018-03-04T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "153415353",
+                "reviewer_name": "Alison",
+                "comments": "Great location. Good value thanks for the stay"
+            },
+            {
+                "_id": "244738269",
+                "date": {
+                    "$date": "2018-03-19T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "59706237",
+                "reviewer_name": "Marco",
+                "comments": "Me and my friends (7 ppl tot) have booked Gonçalo and Ana’s apartment for our holidays and i think we cannot do a better choice like that.\nThe apartment is situated near Oporto’s riverside, in Ribeira district, at 2 minutes walking to Sao Bento’s station, 10minutes to Lello’s library and clerics’s tower. In less than 10 minutes u’re in Vila Nova De Gaia where u can find the wineries of porto’s wine.\nThe apartment is really spacious and comfortable, perfect for 7 italian people that want to have fun in Oporto.\nSuggested!!!"
+            },
+            {
+                "_id": "246334180",
+                "date": {
+                    "$date": "2018-03-25T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "12047570",
+                "reviewer_name": "Michel",
+                "comments": "L'emplacement et vraiment au coeur de l'animation du vieux Porto. Au pied de l'appartement se trouvent de charmants café avec vue sur le Douro.\nAna&Gonçalo ont été très attentionnés et à l'écoute de nos demandes\nMichel"
+            },
+            {
+                "_id": "259708770",
+                "date": {
+                    "$date": "2018-05-01T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "174003310",
+                "reviewer_name": "Dariusz",
+                "comments": "Great location right next to the Dom Luiz bridge and Douro river and plenty of restaurants. Enough room for about 6 people. Ana was very responsive to any concerns we had. Would stay again."
+            },
+            {
+                "_id": "263239322",
+                "date": {
+                    "$date": "2018-05-11T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "31033799",
+                "reviewer_name": "Margriet",
+                "comments": "The house was supernice and located in the middle of the center. We really enjoyed our stay here!"
+            },
+            {
+                "_id": "264125733",
+                "date": {
+                    "$date": "2018-05-13T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "15554470",
+                "reviewer_name": "Carlos",
+                "comments": "Great Location. Ana & Gonzalo are very nice, flexible, and fast-responsive. Apartment is ok but only one toilet for 3 rooms + sofa-bed."
+            },
+            {
+                "_id": "267283092",
+                "date": {
+                    "$date": "2018-05-21T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "39358900",
+                "reviewer_name": "Gaspard",
+                "comments": "Ana&Gonçalo's apartment was nice, comfy, clean and most of all really well located in the city center!!!\nWe could easily move everywhere in Porto from there and it was perfect for discovering the city!\nAlso, I'd like to mention that Gonçalo was nice and patient with us on the day of the arrival even if we were a bit late.\nI strongly recommend this place!"
+            },
+            {
+                "_id": "269853203",
+                "date": {
+                    "$date": "2018-05-28T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "42864948",
+                "reviewer_name": "James",
+                "comments": "Incredible location, beautiful house. Everything was very easy and we would highly recommend this accommodation. Excellent. "
+            },
+            {
+                "_id": "272277314",
+                "date": {
+                    "$date": "2018-06-03T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "45990306",
+                "reviewer_name": "紫仪",
+                "comments": "good lication good experience"
+            },
+            {
+                "_id": "275044729",
+                "date": {
+                    "$date": "2018-06-10T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "176337667",
+                "reviewer_name": "Sebastian",
+                "comments": "We loved it"
+            },
+            {
+                "_id": "302971185",
+                "date": {
+                    "$date": "2018-08-06T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "52572680",
+                "reviewer_name": "Robby",
+                "comments": "Great location right on the river. Lots of tourists in the area. Easy to get to public transportation. Besides the hot weather, we had a good time. "
+            },
+            {
+                "_id": "320887590",
+                "date": {
+                    "$date": "2018-09-09T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "20965806",
+                "reviewer_name": "Romain",
+                "comments": "Merci à Ana & Gonçalo pour l’accueil !"
+            },
+            {
+                "_id": "325025167",
+                "date": {
+                    "$date": "2018-09-18T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "15097268",
+                "reviewer_name": "Roula",
+                "comments": "-"
+            },
+            {
+                "_id": "331735682",
+                "date": {
+                    "$date": "2018-10-03T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "35313286",
+                "reviewer_name": "Alexander",
+                "comments": "Our stay in Ana and Gancalo’s apartment was lovely. The location was perfect and Gancalo graciously picked us up from the airport. It does get a little loud in the morning but that’s only because the apartment is perfectly located right on the river front. You do have to hold the shower wand when showering but the pressure is good. Overall I would definitely stay in the apartment again!"
+            },
+            {
+                "_id": "334789252",
+                "date": {
+                    "$date": "2018-10-10T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "206502919",
+                "reviewer_name": "Mark",
+                "comments": "It was a wonderful experience, the location is fantastic and the accommodations were outstanding."
+            },
+            {
+                "_id": "347372623",
+                "date": {
+                    "$date": "2018-11-11T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "17503135",
+                "reviewer_name": "Camille",
+                "comments": "Ana’s place is very well located, at 2 min walking distance to the Douro, so that everything is close by! Ana communicated well regarding check in info, and was even flexible regarding check out timing. The description / pictures are relevant; only the bathroom  is not as recent. We appreciated the extra blanket as heaters have to be switched off once u leave the flat, but once they are switched on we had no problem afterwards regarding the temperature of the flat."
+            },
+            {
+                "_id": "354708379",
+                "date": {
+                    "$date": "2018-12-02T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "34178931",
+                "reviewer_name": "Pawel",
+                "comments": "If you want to stay in the heart of Porto for reasonable price this is a good alternative. However, I’d selected again it for group of more than 6 people."
+            },
+            {
+                "_id": "362865132",
+                "date": {
+                    "$date": "2018-12-27T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "208880077",
+                "reviewer_name": "Thomas",
+                "comments": "Very helpful hosts. Cooked traditional Portuguese Christmas dinner for 6. Location is perfect. Right off square that is on river right by famous bridge engineered by protege of Gustav Eifel. Looks like same type structure."
+            },
+            {
+                "_id": "364728730",
+                "date": {
+                    "$date": "2018-12-31T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "91827533",
+                "reviewer_name": "Mr",
+                "comments": "Ana & Goncalo were great on communication, responding instantly to questions.\n5 of us stayed in their home for 3 nights and found the location to be great and central to all the amazing sights Porto has to offer. \nWe found the home to be difficult to heat on our first night, the rooms have heaters but took time to get the room to a comfortable temperature level. But in warmer months Im sure this isn't an issue.\nThe beds are a little hard with one slightly out of shape,  and the shower is fairly basic (hand held) but does the job. Because of the central location some noise can be expected early in the mornings. \nOverall the apartment suited our needs for our short stay and the price is more than reasonable for what we got."
+            },
+            {
+                "_id": "403055315",
+                "date": {
+                    "$date": "2019-01-20T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "15138940",
+                "reviewer_name": "Milo",
+                "comments": "The house was extremely well located and Ana was able to give us some really great tips on locations to have lunch and eat out. The house was perfectly clean and the easily able to accommodate 6 people despite only having one bathroom. The beds and living room were comfortable. \n\nHowever, we always felt somewhat on edge in the house due to the number of signs posted around the kitchen, bedrooms and bathroom about being charged 15€ for all sorts of extras like not washing up or using extra towels and bed linen. Not that this would be particularly unreasonable but it made us feel like we were walking on egg shells in and around the house. \n\nThe hosts were aware that we were a group of six yet one of the beds was not prepared and we ran out of toilet paper well before we were due to check out despite only being there 2 nights. It really wasn't the end of the world but the shower head does not have a wall fitting meaning you had to hold it yourself if you wanted to stand underneath it."
+            }
+        ]
+    },
+    {
+        "_id": "10184012",
+        "listing_url": "https://www.airbnb.com/rooms/10184012",
+        "name": "Apto semi mobiliado",
+        "summary": "Proximidade de comércio, serviços e transporte. Distante da poeira, bagunça e barulheira. Ambiente familiar e tranquilo.",
+        "space": "Lugar de passagem, sem internet, sem telefone, sem TV. Turismo se faz na rua e não dentro de casa. Casa é apenas o lugar de descanso para se repor as energias para o dia seguinte.",
+        "description": "Proximidade de comércio, serviços e transporte. Distante da poeira, bagunça e barulheira. Ambiente familiar e tranquilo. Lugar de passagem, sem internet, sem telefone, sem TV. Turismo se faz na rua e não dentro de casa. Casa é apenas o lugar de descanso para se repor as energias para o dia seguinte. A garagem só se alugar um carro. Apenas por celular, email ou (Hidden by Airbnb) . Fica a doze minutos da UERJ e quinze do Maracanã, andando a pé e devagar.",
+        "neighborhood_overview": "Fica a doze minutos da UERJ e quinze do Maracanã, andando a pé e devagar.",
+        "notes": "",
+        "transit": "",
+        "access": "A garagem só se alugar um carro.",
+        "interaction": "Apenas por celular, email ou (Hidden by Airbnb) .",
+        "house_rules": "Levar roupa de cama e banho.",
+        "property_type": "Apartment",
+        "room_type": "Entire home/apt",
+        "bed_type": "Real Bed",
+        "minimum_nights": "1",
+        "maximum_nights": "1125",
+        "cancellation_policy": "flexible",
+        "last_scraped": {
+            "$date": "2019-02-11T05:00:00.000Z"
+        },
+        "calendar_last_scraped": {
+            "$date": "2019-02-11T05:00:00.000Z"
+        },
+        "accommodates": 2,
+        "bedrooms": 2,
+        "beds": 2,
+        "number_of_reviews": 0,
+        "bathrooms": {
+            "$numberDecimal": "1.0"
+        },
+        "amenities": [
+            "Air conditioning",
+            "Kitchen",
+            "Free parking on premises",
+            "Doorman",
+            "Elevator",
+            "Buzzer/wireless intercom",
+            "Family/kid friendly",
+            "Washer",
+            "Essentials",
+            "Hangers",
+            "Iron"
+        ],
+        "price": {
+            "$numberDecimal": "380.00"
+        },
+        "extra_people": {
+            "$numberDecimal": "0.00"
+        },
+        "guests_included": {
+            "$numberDecimal": "1"
+        },
+        "images": {
+            "thumbnail_url": "",
+            "medium_url": "",
+            "picture_url": "https://a0.muscache.com/im/pictures/7636a27c-6f18-41d4-b2ce-ecfa1e561451.jpg?aki_policy=large",
+            "xl_picture_url": ""
+        },
+        "host": {
+            "host_id": "52299431",
+            "host_url": "https://www.airbnb.com/users/show/52299431",
+            "host_name": "Ricardo",
+            "host_location": "BR",
+            "host_about": "",
+            "host_thumbnail_url": "https://a0.muscache.com/im/pictures/675c6438-a5fe-4874-abbb-544270401e45.jpg?aki_policy=profile_small",
+            "host_picture_url": "https://a0.muscache.com/im/pictures/675c6438-a5fe-4874-abbb-544270401e45.jpg?aki_policy=profile_x_medium",
+            "host_neighbourhood": "",
+            "host_is_superhost": false,
+            "host_has_profile_pic": true,
+            "host_identity_verified": false,
+            "host_listings_count": 1,
+            "host_total_listings_count": 1,
+            "host_verifications": [
+                "email",
+                "phone"
+            ]
+        },
+        "address": {
+            "street": "Rio de Janeiro, Rio de Janeiro, Brazil",
+            "suburb": "Vila Isabel",
+            "government_area": "Vila Isabel",
+            "market": "Rio De Janeiro",
+            "country": "Brazil",
+            "country_code": "BR",
+            "location": {
+                "type": "Point",
+                "coordinates": [
+                    -43.24277868091869,
+                    -22.915009354482486
+                ],
+                "is_location_exact": false
+            }
+        },
+        "availability": {
+            "availability_30": 30,
+            "availability_60": 60,
+            "availability_90": 90,
+            "availability_365": 365,
+            "avalable_checkIn": { "$date": "2024-07-03T05:00:00.000Z" },
+            "avalable_checkOut": { "$date": "2024-09-15T05:00:00.000Z" },
+        },
+        "review_scores": {
+            "review_scores_accuracy": 9,
+            "review_scores_cleanliness": 9,
+            "review_scores_checkin": 10,
+            "review_scores_communication": 10,
+            "review_scores_location": 10,
+            "review_scores_value": 9,
+            "review_scores_rating": 89
+        },
+        "reviews": [
+            {
+                "_id": "58663741",
+                "date": {
+                    "$date": "2016-01-03T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "51483096",
+                "reviewer_name": "Cátia",
+                "comments": "A casa da Ana e do Gonçalo foram o local escolhido para a passagem de ano com um grupo de amigos. Fomos super bem recebidos com uma grande simpatia e predisposição a ajudar com qualquer coisa que fosse necessário.\r\nA casa era ainda melhor do que parecia nas fotos, totalmente equipada, com mantas, aquecedor e tudo o que pudessemos precisar.\r\nA localização não podia ser melhor! Não há melhor do que acordar de manhã e ao virar da esquina estar a ribeira do Porto."
+            },
+            {
+                "_id": "62413197",
+                "date": {
+                    "$date": "2016-02-14T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "40031996",
+                "reviewer_name": "Théo",
+                "comments": "We are french's students, we traveled some days in Porto, this space was good and we can cooking easly. It was rainning so we eard every time the water fall to the ground in the street when we sleeping. But It was cool and or was well received by Ana et Gonçalo"
+            },
+            {
+                "_id": "68310569",
+                "date": {
+                    "$date": "2016-04-04T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "53859850",
+                "reviewer_name": "Bart",
+                "comments": "We had a spledid time in the old centre of Porto.\r\nThe appartment is very well situated next to the old Ribeira square. It's perfect to have such an appartment to your disposal, you feel home, and have a place to relax between the exploration of this very nice city.\r\nWe thank Ana & Gonçalo, and we hope the appartment is free when we go back next year. Porto is charming original."
+            },
+            {
+                "_id": "69693942",
+                "date": {
+                    "$date": "2016-04-12T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "3135623",
+                "reviewer_name": "Alex",
+                "comments": "Ana and Goncalo were very helpful and accommodating. When they were not available they put us in touch with their nephew who was equally as helpful. The flat was as described, neat and tidy. The weather was quite cold, but thankfully A&G left us with extra blankets and electric heaters to use. Location was great. Outside the flat there was a slight smell of the river/ sewage, but in all honesty it did not come into the flat, and once you go down the road it doesn't carry on. This may also have been down to the very wet weather we had while there. All in all, very happy and would definitely recommend."
+            },
+            {
+                "_id": "71451096",
+                "date": {
+                    "$date": "2016-04-25T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "13187858",
+                "reviewer_name": "Dan",
+                "comments": "The hosts were very accommodating and agreed to meet with my parents as they were arriving before us. Communicated very well and always responded in a very timely manner. You couldn't have asked for a better location of this apartment and the place was identical to the pictures in the in the listing."
+            },
+            {
+                "_id": "73191268",
+                "date": {
+                    "$date": "2016-05-07T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "61434690",
+                "reviewer_name": "Anne",
+                "comments": "THE PLACE TO BE, l'appartement est situé au milieu de la Ribeira , tout peut se faire à pieds c'est l'ideal,l'appartement est très bien agencé et équipé.\r\nNous avons passé un séjour très agréable dans ce duplex avec beaucoup de charme .\r\nAccueil très chaleureux de Ana et Gonçalo, ils ont pris du temps pour nous indiquer tout ce qu'il y avait à faire sur Porto et répondus  à toutes nos interrogations en terme de commodités.. Merci..\r\n"
+            },
+            {
+                "_id": "77438107",
+                "date": {
+                    "$date": "2016-05-31T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "3673216",
+                "reviewer_name": "Chris",
+                "comments": "We had a great time in Porto. Ana’s & Goncalo’s apartment is located right in the heart of the Old Town and is great value for money. You really are at the centre of things and it’s the perfect place to get swept away in the hustle and bustle of Porto. Ana and Goncalo were great hosts."
+            },
+            {
+                "_id": "89637734",
+                "date": {
+                    "$date": "2016-07-29T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "9172374",
+                "reviewer_name": "Leslie",
+                "comments": "Ana and Gonçalo were very welcoming and made a lot of information about Porto's sights available. It was very clean, very beautiful and the location was superb. It does have a lot of restaurants around it, so it could be a bit noisy for us at night but otherwise  great location. We would stay there again. "
+            },
+            {
+                "_id": "96574146",
+                "date": {
+                    "$date": "2016-08-23T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "71985274",
+                "reviewer_name": "Philippe",
+                "comments": "Super appartement très bien placé, au cœur de l'animation de la Ribeira !\r\nNous avons passé un super séjour à Porto !\r\nToutes les informations données par Ana et les documents laissés nous ont bien aidé à organiser notre séjour.  Nous avons (presque) tout fait à pied ! Le parking Ribeira est proche et bien utile pour garer le véhicule.\r\nMerci !!!\r\nPhilippe\r\n"
+            },
+            {
+                "_id": "108444999",
+                "date": {
+                    "$date": "2016-10-16T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "24960918",
+                "reviewer_name": "Hanneke",
+                "comments": "The appartment was great, it is really nice and cosy, and it is situated at a perfect location. Ana and Goncalo were very friendly, they were very helpfull during our stay. We had a great time during our stay in Porto!"
+            },
+            {
+                "_id": "111065376",
+                "date": {
+                    "$date": "2016-10-30T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "74079092",
+                "reviewer_name": "Kati",
+                "comments": "Kävimme majoittajan kanssa viestinvaihtoa ennen lomaa ja he antoivat mukavan vaikutelman. He olivatkin hyvin mukavia ihmisiä. He tulivat lentokentälle vastaan kahdella autolla mikä oli hyvin ystävällistä. He kertoivat myös kaupungista ja sen nähtävyyksistä. Asunnon sijainti oli täydellinen. Se oli myös erittäin romanttinen ja kaunis. Kokemus oli hyvin onnistunut."
+            },
+            {
+                "_id": "111655209",
+                "date": {
+                    "$date": "2016-11-01T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "40413493",
+                "reviewer_name": "Julia",
+                "comments": "Hemos pasado unos días increíbles en Oporto. Llegamos más tarde de lo que habíamos pensado y Ana & Gonçalo nos esperaron pacientemente y nos facilitaron la llegada, además nos recibieron con un regalo de bienvenida!. Nos dieron todo tipo de indicaciones y consejos más que de sobra para disfrutar de los días que estuvimos allí. La ubicación de la casa es inmejorable!! la única pega fue que el soporte de la ducha estaba roto pero como eran pocos días no quisimos molestar a Ana & Gonçalo y no se lo comentamos. "
+            },
+            {
+                "_id": "132811625",
+                "date": {
+                    "$date": "2017-02-19T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "8986056",
+                "reviewer_name": "Joshua",
+                "comments": "Great location, comfortable place, responsive and friendly host! Highly recommended!"
+            },
+            {
+                "_id": "144627907",
+                "date": {
+                    "$date": "2017-04-16T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "113254568",
+                "reviewer_name": "Tracey",
+                "comments": "This house is in the heart of Porto, set back enough to be away from the hustle and bustle but only a few steps up from the river, bars and restaurants. A great place to stay.\nThe house was clean and functional. Ana and Goncalo are perfect hosts with lots of information on places to visit and   eat."
+            },
+            {
+                "_id": "149009243",
+                "date": {
+                    "$date": "2017-05-02T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "11263097",
+                "reviewer_name": "Willem",
+                "comments": "The location of the house is wonderful! You are in the heart of the old city and the Douro ist just a few meters away. Perfect for a first visit to Porto!\nVery cosy and warm house with everything you need.\nGonçalo gives a lot of good tips that will help you to have a perfect stay. Communication is very easy with him."
+            },
+            {
+                "_id": "150518693",
+                "date": {
+                    "$date": "2017-05-08T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "108507776",
+                "reviewer_name": "Fanny",
+                "comments": "We spend a really good time in Porto, the flat is so well situated. The bridge is just next door, the view on the river is amazing, and plenty of restaurants and pubs, transport are just around.\nGonzalo is very kind to wait for us, also lat, for the check in, thank you.\n"
+            },
+            {
+                "_id": "155913947",
+                "date": {
+                    "$date": "2017-05-29T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "30254816",
+                "reviewer_name": "Bridget",
+                "comments": "Thanks for a great stay! 6 of us were in Porto for a long weekend and we had a blast. The apartment was perfect; location and size to accomodate us. The hosts were great, then even picked us up at the airport (for a fee but it was a great service). Thanks again! Bridget."
+            },
+            {
+                "_id": "159692160",
+                "date": {
+                    "$date": "2017-06-11T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "124514204",
+                "reviewer_name": "Oscar",
+                "comments": "Superb location and very nice, big and overall pleasant apartment!"
+            },
+            {
+                "_id": "164881958",
+                "date": {
+                    "$date": "2017-06-29T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "105188418",
+                "reviewer_name": "Steve",
+                "comments": "The apartment provides basic facilities but is good value for money and very well positioned for easy access to restaurants and bars, the Ribeira district and the Port house in Gaia."
+            },
+            {
+                "_id": "166990342",
+                "date": {
+                    "$date": "2017-07-05T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "52660694",
+                "reviewer_name": "Tina",
+                "comments": "Ana und Gonçalo sind sehr hilfsbereite liebe Leute, die  alles tun, damit man sich wohl fühlt. Wenn es etwas zu beanstanden gab, wird das sofort problemlos erledigt. Das Apartment ist charmant, die Möbel schon etwas mitgenommen, aber das passt insgesamt ins Bild von Porto und macht den Reiz aus. Die Lage ist super, genau am Duoro. Es gibt Strassenmusik bis in den späten Abend und auch morgens geht's früh los mit fröhlichen Lärm von der Flusspromenade. Nichts also für Leute, die es ruhig brauchen! Die Lage ist wirklich exklusiv und tröstet über den recht teuren Mietpreis. Im Umfeld gibt es typische Touri-Fallen, wo alles doppelt kostet, aber gleichzeitig findet man auch sehr nette kleine Bars, in der man chillig und günstig frühstücken oder generell lecker essen kann. Die Stadt ist klein genug, um sich schnell zurechtzufinden und groß genug, um immer wieder neues zu entdecken. Wir waren zu dritt (50, 25, 20 Jahre) und haben die Zeit wirklich genossen. "
+            },
+            {
+                "_id": "180030365",
+                "date": {
+                    "$date": "2017-08-09T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "25469637",
+                "reviewer_name": "Mathieu",
+                "comments": "Very well located appartement ideal for a family of 5 who want to make the most of the city center.\nIt may be a bit noisy at night but this is acceptable.\nGlobally we recommend this place."
+            },
+            {
+                "_id": "198679769",
+                "date": {
+                    "$date": "2017-09-30T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "21837853",
+                "reviewer_name": "Ido",
+                "comments": "Great location! The apartment is somewhat basic. We were family with 3 teenagers and had a good time. Also it’s a bit noisy until very late at night."
+            },
+            {
+                "_id": "199885226",
+                "date": {
+                    "$date": "2017-10-03T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "56528632",
+                "reviewer_name": "Amanda",
+                "comments": "This apartment is in the perfect location for being in the middle of the action. There were tons of restaurants close to the apartment and it was a quick walk across the bridge to tour the Port wineries. Be forewarned; if you are looking for a very quiet location, this area may not be for you. However, if you are looking to step outside of your door and start enjoying what Porto has to offer, I recommend this location."
+            },
+            {
+                "_id": "207942636",
+                "date": {
+                    "$date": "2017-10-30T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "102474818",
+                "reviewer_name": "Geneviève",
+                "comments": "Acceuil très très chaleureux de Gonçalo  et Ana lors de notre arrivée très tardive due à un changement d\"'horaire d'avion....appartement super bien situé dans Porto près du Douro, fidèle aux photos mises sur le site....Nous avons adoré ce quartier bien animé  .....Encore merci à Gonçalo et Ana. ...."
+            },
+            {
+                "_id": "209455775",
+                "date": {
+                    "$date": "2017-11-05T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "10371877",
+                "reviewer_name": "Andrea",
+                "comments": "Localização perfeita, muito aconchegante, Ana e Gonçalo são pessoas muito atenciosas e simpáticas!"
+            },
+            {
+                "_id": "223995518",
+                "date": {
+                    "$date": "2018-01-02T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "10184070",
+                "reviewer_name": "Jennifer",
+                "comments": "Perfect position to see everything that Porto has to offer. Ana and Gonçalo were great hosts quick to respond and welcoming. Couldn't recommend a better place to stay in Porto to be able to see the sights and be within walking distance to so many restaurants."
+            },
+            {
+                "_id": "225725834",
+                "date": {
+                    "$date": "2018-01-07T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "156411765",
+                "reviewer_name": "Nathalie",
+                "comments": "Great location!"
+            },
+            {
+                "_id": "230559180",
+                "date": {
+                    "$date": "2018-01-28T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "2524423",
+                "reviewer_name": "Cayetana",
+                "comments": "Probably Ana&Gonzalo´s place is great for summer but definitely not in winter. The house is NOT WARM and ready for a stay in cold and humit season. There is NO HEATING in any of the rooms and living room, only bed covers (not nordic duvet) and small heaters which you have to switch off during the night. Those were not enough during our stay in January even we had sunny days! Moreover we were 5 people in the house without NO HOT WATER enough for all of us. \nThe pictures did not show the reality. Furniture was much older and WiFi signal is only available in the living room, not the rooms.\nOn the other hand, location is great if you want to stay close to the river. Although think about that all restaurants, bars and main tourist attractions are close to Train Station and Clerigos Tower which means 15-20 min uphill walking distance from the house."
+            },
+            {
+                "_id": "232271631",
+                "date": {
+                    "$date": "2018-02-04T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "167219338",
+                "reviewer_name": "Mérex",
+                "comments": "Appartement très cosy! Nous y avons été pour un court séjour à 7 et avons adoré. L'appartement est idéalement situé dans le quartier magnifique de la Ribeira. L'accueil a ete très chaleureux: Nous étions trompé d'adresse car le GPS avaient confondus les rues mais Ana a su nous retrouver pour nous amener à l'appartement.  L'appartement était très  propre et nous avons eu largement tout ce qu'il fallait en linge.\nEncore un Grand merci à eux!"
+            },
+            {
+                "_id": "234847900",
+                "date": {
+                    "$date": "2018-02-14T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "6735587",
+                "reviewer_name": "Andrea",
+                "comments": "ottima ospitalità, la posizione della casa è ottima, vicina ai mezzi di trasporto e alle principali attrazioni della città, torneremo sicuramente. Consigliato!!"
+            },
+            {
+                "_id": "235293831",
+                "date": {
+                    "$date": "2018-02-16T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "130170949",
+                "reviewer_name": "Bogdan",
+                "comments": "Nice apartment in Porto, we enjoy staying in it for a few days. The apartment is comfortable and has a very nice location. Thanks to Ana and Gonsalo for hospitality."
+            },
+            {
+                "_id": "240252220",
+                "date": {
+                    "$date": "2018-03-04T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "153415353",
+                "reviewer_name": "Alison",
+                "comments": "Great location. Good value thanks for the stay"
+            },
+            {
+                "_id": "244738269",
+                "date": {
+                    "$date": "2018-03-19T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "59706237",
+                "reviewer_name": "Marco",
+                "comments": "Me and my friends (7 ppl tot) have booked Gonçalo and Ana’s apartment for our holidays and i think we cannot do a better choice like that.\nThe apartment is situated near Oporto’s riverside, in Ribeira district, at 2 minutes walking to Sao Bento’s station, 10minutes to Lello’s library and clerics’s tower. In less than 10 minutes u’re in Vila Nova De Gaia where u can find the wineries of porto’s wine.\nThe apartment is really spacious and comfortable, perfect for 7 italian people that want to have fun in Oporto.\nSuggested!!!"
+            },
+            {
+                "_id": "246334180",
+                "date": {
+                    "$date": "2018-03-25T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "12047570",
+                "reviewer_name": "Michel",
+                "comments": "L'emplacement et vraiment au coeur de l'animation du vieux Porto. Au pied de l'appartement se trouvent de charmants café avec vue sur le Douro.\nAna&Gonçalo ont été très attentionnés et à l'écoute de nos demandes\nMichel"
+            },
+            {
+                "_id": "259708770",
+                "date": {
+                    "$date": "2018-05-01T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "174003310",
+                "reviewer_name": "Dariusz",
+                "comments": "Great location right next to the Dom Luiz bridge and Douro river and plenty of restaurants. Enough room for about 6 people. Ana was very responsive to any concerns we had. Would stay again."
+            },
+            {
+                "_id": "263239322",
+                "date": {
+                    "$date": "2018-05-11T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "31033799",
+                "reviewer_name": "Margriet",
+                "comments": "The house was supernice and located in the middle of the center. We really enjoyed our stay here!"
+            },
+            {
+                "_id": "264125733",
+                "date": {
+                    "$date": "2018-05-13T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "15554470",
+                "reviewer_name": "Carlos",
+                "comments": "Great Location. Ana & Gonzalo are very nice, flexible, and fast-responsive. Apartment is ok but only one toilet for 3 rooms + sofa-bed."
+            },
+            {
+                "_id": "267283092",
+                "date": {
+                    "$date": "2018-05-21T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "39358900",
+                "reviewer_name": "Gaspard",
+                "comments": "Ana&Gonçalo's apartment was nice, comfy, clean and most of all really well located in the city center!!!\nWe could easily move everywhere in Porto from there and it was perfect for discovering the city!\nAlso, I'd like to mention that Gonçalo was nice and patient with us on the day of the arrival even if we were a bit late.\nI strongly recommend this place!"
+            },
+            {
+                "_id": "269853203",
+                "date": {
+                    "$date": "2018-05-28T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "42864948",
+                "reviewer_name": "James",
+                "comments": "Incredible location, beautiful house. Everything was very easy and we would highly recommend this accommodation. Excellent. "
+            },
+            {
+                "_id": "272277314",
+                "date": {
+                    "$date": "2018-06-03T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "45990306",
+                "reviewer_name": "紫仪",
+                "comments": "good lication good experience"
+            },
+            {
+                "_id": "275044729",
+                "date": {
+                    "$date": "2018-06-10T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "176337667",
+                "reviewer_name": "Sebastian",
+                "comments": "We loved it"
+            },
+            {
+                "_id": "302971185",
+                "date": {
+                    "$date": "2018-08-06T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "52572680",
+                "reviewer_name": "Robby",
+                "comments": "Great location right on the river. Lots of tourists in the area. Easy to get to public transportation. Besides the hot weather, we had a good time. "
+            },
+            {
+                "_id": "320887590",
+                "date": {
+                    "$date": "2018-09-09T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "20965806",
+                "reviewer_name": "Romain",
+                "comments": "Merci à Ana & Gonçalo pour l’accueil !"
+            },
+            {
+                "_id": "325025167",
+                "date": {
+                    "$date": "2018-09-18T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "15097268",
+                "reviewer_name": "Roula",
+                "comments": "-"
+            },
+            {
+                "_id": "331735682",
+                "date": {
+                    "$date": "2018-10-03T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "35313286",
+                "reviewer_name": "Alexander",
+                "comments": "Our stay in Ana and Gancalo’s apartment was lovely. The location was perfect and Gancalo graciously picked us up from the airport. It does get a little loud in the morning but that’s only because the apartment is perfectly located right on the river front. You do have to hold the shower wand when showering but the pressure is good. Overall I would definitely stay in the apartment again!"
+            },
+            {
+                "_id": "334789252",
+                "date": {
+                    "$date": "2018-10-10T04:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "206502919",
+                "reviewer_name": "Mark",
+                "comments": "It was a wonderful experience, the location is fantastic and the accommodations were outstanding."
+            },
+            {
+                "_id": "347372623",
+                "date": {
+                    "$date": "2018-11-11T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "17503135",
+                "reviewer_name": "Camille",
+                "comments": "Ana’s place is very well located, at 2 min walking distance to the Douro, so that everything is close by! Ana communicated well regarding check in info, and was even flexible regarding check out timing. The description / pictures are relevant; only the bathroom  is not as recent. We appreciated the extra blanket as heaters have to be switched off once u leave the flat, but once they are switched on we had no problem afterwards regarding the temperature of the flat."
+            },
+            {
+                "_id": "354708379",
+                "date": {
+                    "$date": "2018-12-02T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "34178931",
+                "reviewer_name": "Pawel",
+                "comments": "If you want to stay in the heart of Porto for reasonable price this is a good alternative. However, I’d selected again it for group of more than 6 people."
+            },
+            {
+                "_id": "362865132",
+                "date": {
+                    "$date": "2018-12-27T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "208880077",
+                "reviewer_name": "Thomas",
+                "comments": "Very helpful hosts. Cooked traditional Portuguese Christmas dinner for 6. Location is perfect. Right off square that is on river right by famous bridge engineered by protege of Gustav Eifel. Looks like same type structure."
+            },
+            {
+                "_id": "364728730",
+                "date": {
+                    "$date": "2018-12-31T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "91827533",
+                "reviewer_name": "Mr",
+                "comments": "Ana & Goncalo were great on communication, responding instantly to questions.\n5 of us stayed in their home for 3 nights and found the location to be great and central to all the amazing sights Porto has to offer. \nWe found the home to be difficult to heat on our first night, the rooms have heaters but took time to get the room to a comfortable temperature level. But in warmer months Im sure this isn't an issue.\nThe beds are a little hard with one slightly out of shape,  and the shower is fairly basic (hand held) but does the job. Because of the central location some noise can be expected early in the mornings. \nOverall the apartment suited our needs for our short stay and the price is more than reasonable for what we got."
+            },
+            {
+                "_id": "403055315",
+                "date": {
+                    "$date": "2019-01-20T05:00:00.000Z"
+                },
+                "listing_id": "10006546",
+                "reviewer_id": "15138940",
+                "reviewer_name": "Milo",
+                "comments": "The house was extremely well located and Ana was able to give us some really great tips on locations to have lunch and eat out. The house was perfectly clean and the easily able to accommodate 6 people despite only having one bathroom. The beds and living room were comfortable. \n\nHowever, we always felt somewhat on edge in the house due to the number of signs posted around the kitchen, bedrooms and bathroom about being charged 15€ for all sorts of extras like not washing up or using extra towels and bed linen. Not that this would be particularly unreasonable but it made us feel like we were walking on egg shells in and around the house. \n\nThe hosts were aware that we were a group of six yet one of the beds was not prepared and we ran out of toilet paper well before we were due to check out despite only being there 2 nights. It really wasn't the end of the world but the shower head does not have a wall fitting meaning you had to hold it yourself if you wanted to stand underneath it."
+            }
+        ]
+    },
+    {
+        "_id": "10141950",
+        "listing_url": "https://www.airbnb.com/rooms/10141950",
+        "name": "Big, Bright & Convenient Sheung Wan",
+        "summary": "Hollywood Rd Studio Only 1 apartment per floor 650sqft! Fast Wifi and Kitchen! Daily Housekeeping! NEAR 3min walk from MTR 3min walk from Escalators 5min walk from LKF (Please note I live here so some belongings kept in wardrobe)",
+        "space": "Huge Luxury Studio Serviced Apartment 650sqm! That means daily house keeping and all Amendities!",
+        "description": "Hollywood Rd Studio Only 1 apartment per floor 650sqft! Fast Wifi and Kitchen! Daily Housekeeping! NEAR 3min walk from MTR 3min walk from Escalators 5min walk from LKF (Please note I live here so some belongings kept in wardrobe) Huge Luxury Studio Serviced Apartment 650sqm! That means daily house keeping and all Amendities! I will be on a holiday trip, but you can access me through email and I can call you if you have any issues LKF Escalators IFC Mall SOHO food Wellington St Food! 3 minutes walk from MTR station I actually live in the studio, so my belongings will be in a wardrobe space",
+        "neighborhood_overview": "LKF Escalators IFC Mall SOHO food Wellington St Food!",
+        "notes": "I actually live in the studio, so my belongings will be in a wardrobe space",
+        "transit": "3 minutes walk from MTR station",
+        "access": "",
+        "interaction": "I will be on a holiday trip, but you can access me through email and I can call you if you have any issues",
+        "house_rules": "Please treat it as you would your own home!",
+        "property_type": "Apartment",
+        "room_type": "Entire home/apt",
+        "bed_type": "Real Bed",
+        "minimum_nights": "2",
+        "maximum_nights": "1125",
+        "cancellation_policy": "moderate",
+        "last_scraped": {
+            "$date": "2019-03-11T04:00:00.000Z"
+        },
+        "calendar_last_scraped": {
+            "$date": "2019-03-11T04:00:00.000Z"
+        },
+        "first_review": {
+            "$date": "2016-01-06T05:00:00.000Z"
+        },
+        "last_review": {
+            "$date": "2016-01-06T05:00:00.000Z"
+        },
+        "accommodates": 2,
+        "bedrooms": 0,
+        "beds": 1,
+        "number_of_reviews": 1,
+        "bathrooms": {
+            "$numberDecimal": "1.0"
+        },
+        "amenities": [
+            "TV",
+            "Wifi",
+            "Air conditioning",
+            "Kitchen",
+            "Elevator",
+            "Buzzer/wireless intercom",
+            "Heating",
+            "Washer",
+            "Dryer",
+            "Essentials",
+            "Hair dryer",
+            "Iron",
+            "Laptop friendly workspace"
+        ],
+        "price": {
+            "$numberDecimal": "966.00"
+        },
+        "cleaning_fee": {
+            "$numberDecimal": "118.00"
+        },
+        "extra_people": {
+            "$numberDecimal": "0.00"
+        },
+        "guests_included": {
+            "$numberDecimal": "1"
+        },
+        "images": {
+            "thumbnail_url": "",
+            "medium_url": "",
+            "picture_url": "https://a0.muscache.com/im/pictures/aee73a00-c7dd-43bd-93eb-8d96de467a89.jpg?aki_policy=large",
+            "xl_picture_url": ""
+        },
+        "host": {
+            "host_id": "11435086",
+            "host_url": "https://www.airbnb.com/users/show/11435086",
+            "host_name": "Regg",
+            "host_location": "Hong Kong",
+            "host_about": "I am a consultant and travel very often. I usually host my apartment when I leave and search for Airbnb rentals for accomodation.",
+            "host_thumbnail_url": "https://a0.muscache.com/im/pictures/user/736908a8-0792-4428-a630-d47a3df44bb9.jpg?aki_policy=profile_small",
+            "host_picture_url": "https://a0.muscache.com/im/pictures/user/736908a8-0792-4428-a630-d47a3df44bb9.jpg?aki_policy=profile_x_medium",
+            "host_neighbourhood": "Sheung Wan",
+            "host_is_superhost": false,
+            "host_has_profile_pic": true,
+            "host_identity_verified": true,
+            "host_listings_count": 1,
+            "host_total_listings_count": 1,
+            "host_verifications": [
+                "email",
+                "phone",
+                "reviews",
+                "jumio",
+                "offline_government_id",
+                "government_id",
+                "work_email"
+            ]
+        },
+        "address": {
+            "street": "Hong Kong, Hong Kong Island, Hong Kong",
+            "suburb": "Central & Western District",
+            "government_area": "Central & Western",
+            "market": "Hong Kong",
+            "country": "Hong Kong",
+            "country_code": "HK",
+            "location": {
+                "type": "Point",
+                "coordinates": [
+                    114.15007,
+                    22.28422
+                ],
+                "is_location_exact": true
+            }
+        },
+        "availability": {
+            "availability_30": 0,
+            "availability_60": 0,
+            "availability_90": 0,
+            "availability_365": 0,
+            "avalable_checkIn": { "$date": "2024-07-03T05:00:00.000Z" },
+            "avalable_checkOut": { "$date": "2024-09-15T05:00:00.000Z" },
         },
         "review_scores": {
             "review_scores_accuracy": 10,
@@ -5303,1788 +9868,18 @@ export const DemoData = [
             "review_scores_communication": 10,
             "review_scores_location": 10,
             "review_scores_value": 10,
-            "review_scores_rating": 97
+            "review_scores_rating": 100
         },
         "reviews": [
             {
-                "_id": "58433009",
+                "_id": "59088971",
                 "date": {
-                    "$date": "2016-01-02T05:00:00.000Z"
+                    "$date": "2016-01-06T05:00:00.000Z"
                 },
-                "listing_id": "10083468",
-                "reviewer_id": "19765799",
-                "reviewer_name": "Vivian",
-                "comments": "Fábio has everything you can look after for a host!\nThe apartment is very nice and its location is perfect, we strongly recommend for your stay in Porto!"
-            },
-            {
-                "_id": "62778307",
-                "date": {
-                    "$date": "2016-02-16T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "57792101",
-                "reviewer_name": "Valentina",
-                "comments": "The apartment is perfect for two people. It is clean, well equipped and has a super comfortable bed. The interior is new and tasteful.  We didn't miss anything and felt like home. The location is in the center and perfect tfor sightseeing.\r\nFabio is a very nice and helpful person and a great host. I totally would recommend this apartment for an unforgettable visit in Porto."
-            },
-            {
-                "_id": "64100825",
-                "date": {
-                    "$date": "2016-02-29T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "39433583",
-                "reviewer_name": "Helder",
-                "comments": "Listing as described. Well location. Fabio was always in touch. Just small issues with tv, but had lots of options to make this up.   Definitely a listing I would stay again and recommend Fabio as a host! "
-            },
-            {
-                "_id": "64391402",
-                "date": {
-                    "$date": "2016-03-03T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "38648698",
-                "reviewer_name": "Nowell",
-                "comments": "Fabio was the epitome of how warm and friendly Poruguese people are. He made me feel not as a tourist but as a friend. Fabio wanted to make sure that i will visit the most interesting places in Porto that's why his recommendations were truly useful! His place is also spotlessly clean ad very cozy!"
-            },
-            {
-                "_id": "64910083",
-                "date": {
-                    "$date": "2016-03-09T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "56525293",
-                "reviewer_name": "Luciano",
-                "comments": "Fábio given us all the attention, since the reservation until the delivery of the keys on arrival. The announcement corresponds to reality, the photos do not cheat. The apartment is very cozy. I strongly recommend to stay in this accommodation."
-            },
-            {
-                "_id": "65278192",
-                "date": {
-                    "$date": "2016-03-12T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "42583582",
-                "reviewer_name": "António",
-                "comments": "Foi uma viagem de trabalho que trouxe-me até ao Porto.\r\nNo entanto, o espaço deu-me a possibilidade de mesmo depois de chegar tarde ao apartamento, ainda encontrar muitos cafés e restaurantes à volta!\r\nNão poderia ter melhores coisas a apontar ao apartamento e ao anfitrião.\r\nÉ um apartamento muito espaçoso e muito bem equipado e com um aspecto muito moderno.\r\nObrigado pela atenção, e espero ficar aí muitas mais vezes! :)\r\n"
-            },
-            {
-                "_id": "66717411",
-                "date": {
-                    "$date": "2016-03-24T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "37168261",
-                "reviewer_name": "Sylvie",
-                "comments": "Nous avons été parfaitement accueillis par notre hôte. Celui-ci était présent à notre arrivée. Il nous a présenté la disposition de l'appartement ainsi que les fonctionnalités. L'appartement correspondait tout à fait à la description. L'intérieur a été totalement refait et surtout bien fait (totalement refait à neuf avec porte bien sécurisée, même si le quartier pourtant ne craint pas du tout). La cuisine est bien aménagée et bien équipée. La salle de bain est pratique. \r\nLa localisation est idéal à vrai dire : à deux pas de la place de la liberté et très proche de la station Trindad (liaison direct aéroport). Enfin, proche de toute commodité et des animations. Le double vitrage et le volet intérieur protège bien de la rue, qui est somme toute très calme. On y reviendra!\r\n"
-            },
-            {
-                "_id": "67909795",
-                "date": {
-                    "$date": "2016-04-01T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "58560112",
-                "reviewer_name": "Inês",
-                "comments": "Estive no Porto com o meu namorado durante 4 dias e o apartamento, que é tal e qual como aparece no anúncio, foi muito adequado. Está situado numa zona histórica e central e por isso foi possível passear sempre a pé pela cidade. É uma zona calma e a menos de 5 minutos é possível chegar ao supermercado, ao metro e a diversos centros turísticos e lojas. Tem as condições básicas e estava tudo limpo e organizado. O Fábio foi sempre atencioso e prestável desde o momento em que chegámos. Ideal para duas pessoas e para uns dias de descanso! É, sem dúvida, uma experiência a repetir."
-            },
-            {
-                "_id": "69282304",
-                "date": {
-                    "$date": "2016-04-10T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "23447737",
-                "reviewer_name": "Anne Laure",
-                "comments": "Appartement très bien situé, avons tout fait à  pied.15mn de la ribiera, 7mn de la'bouche de metro trindade.\r\nQuelques restaurants peu excessifs, atypiques par leur decor et tres bons à  proximité.\r\nFablio, tres accueillant, nous attendait à  L appartement.\r\n il a pris son temps pour nous expliquer ce qu' il y avait à 'visiter. Très disponible pour répondre à  nos questions durant le séjour.\r\nAppartement est similaire aux photos. Dans la cuisine, il y a tout pour cuisiner.\r\nA recommander.\r\n\r\n"
-            },
-            {
-                "_id": "69908779",
-                "date": {
-                    "$date": "2016-04-14T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "59756690",
-                "reviewer_name": "Marine",
-                "comments": "Fabio, nous a très bien accueillis. L'appartement est très bien situé, il est exactement comme sur les photos. Fabio est un hôte disponible, qui donne pleins de bon conseils. Encore merci. On y reviendra. "
-            },
-            {
-                "_id": "70576047",
-                "date": {
-                    "$date": "2016-04-18T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "63752424",
-                "reviewer_name": "Joanna",
-                "comments": "We had a lovely stay in this flat and it made a huge difference to my holiday in Porto. Beautiful and fully equipped apartment in the city center. Fabio was a great host. I would definitely recommend staying here!"
-            },
-            {
-                "_id": "71221373",
-                "date": {
-                    "$date": "2016-04-24T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "63862156",
-                "reviewer_name": "Romain",
-                "comments": "Nous avons été très bien accueillis par Fabio qui a pris le temps de donner des idées de choses à faire à Porto à notre arrivée. L'appartement est neuf, charmant et très bien entretenu. Nous vous le conseillons."
-            },
-            {
-                "_id": "72114640",
-                "date": {
-                    "$date": "2016-05-01T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "24667997",
-                "reviewer_name": "Antonio",
-                "comments": "Apartamento com excelente localização, próximo ao metro, supermercado e o centro turístico de porto. O apartamento é exatamente como ilustrado nas fotos e a limpeza também muito boa! Se tem algum ônus, é na hora de tomar banho, a aguá quente dura cerca de 7 minutos e existe a necessidade de esperar 1 hora de intervalo para ter água quente de novo.\nFábio é um excelente anfitrião!"
-            },
-            {
-                "_id": "72753554",
-                "date": {
-                    "$date": "2016-05-04T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "61392036",
-                "reviewer_name": "Darko",
-                "comments": "Fabio is a great host, I had a really nice time in Porto thanks to him. His flat is nicely positioned between the train station and city centre. I would come again."
-            },
-            {
-                "_id": "73638494",
-                "date": {
-                    "$date": "2016-05-09T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "25851994",
-                "reviewer_name": "Francine",
-                "comments": "Fabio nous a bien accueilli  et nous  a conseillé .\r\nL'apparat était tel que décrit.\r\nLa situation parfaite et sur une rue pleine de fêtes."
-            },
-            {
-                "_id": "74925531",
-                "date": {
-                    "$date": "2016-05-17T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "60351262",
-                "reviewer_name": "Gianluca",
-                "comments": "L'appartamento è molto bello e confortevole, di recentissima ristrutturazione, con arredamenti, sanitari ed elettrodomestici nuovi; la cucina è delle giuste dimensioni, funzionale e completa di tutti gli utensili necessari; il bagno è un po' piccolo, ma non scomodo, completo e funzionale; due grandi finestre assicurano un'ottima illuminazione e queste si affacciano su una via del centro che comunque non è molto trafficata ne rumorosa nelle ore serali e notturne. Posizione perfetta, praticamente in centro, a pochi minuti a piedi da molti siti di interesse. L'accoglienza è stata ottima, Fábio è molto simpatico e disponibile, ci ha fornito valide informazioni sui luoghi da frequentare, oltre a lasciarci un contatto telefonico per contattarlo in caso di necessità.\r\n"
-            },
-            {
-                "_id": "75589761",
-                "date": {
-                    "$date": "2016-05-22T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "46448583",
-                "reviewer_name": "Luciana",
-                "comments": "Foi um fim-de-semana magnifico. O Fábio e toda a sua equipa foram fabulosos connosco desde o início ao fim da estadia. O espaço é tal e qual as fotos relatam. Muito confortável, espaçoso, ideal para duas pessoas. A localização não poderia ser melhor. Quase sempre optámos por comer na rua. As referências são as melhores. As únicas questões a apontar são o facto da casa de banho ter estado com alguns problemas aquando da nossa chegada e só fomos alertados então. Gostaríamos de ter sido alertados antes de ter lá chegado. No entanto foi tudo resolvido e ficamos contentes por isso. Obrigada e até à próxima."
-            },
-            {
-                "_id": "76756967",
-                "date": {
-                    "$date": "2016-05-29T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "4688794",
-                "reviewer_name": "Sarah",
-                "comments": "Appartement conforme aux photos et extrêmement bien situé dans Porto  : emplacement calme et près de toutes commodités. Les prestations sont TOP : équipement, qualité de la literie, taille de la chambre,etc..\r\nFabio a été un hôte attentif, toujours disponible pour répondre à nos questions et très sympathique :) \r\n"
-            },
-            {
-                "_id": "78730593",
-                "date": {
-                    "$date": "2016-06-08T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "2841653",
-                "reviewer_name": "Igor",
-                "comments": "Fabio is great host with kind attitude and was very kind to meet us at the flat even earlier than agreed check-in time. He gave us all the tips for our stay. Place itself is perfectly located to all the central attractions of the city, everything was very clean and smells nice, linens are fresh and the bed is very comfortable for a good rest after the long walks in lovely Porto city. I definitely recommend Fabio and his place to everyone."
-            },
-            {
-                "_id": "80870360",
-                "date": {
-                    "$date": "2016-06-20T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "35697239",
-                "reviewer_name": "Marie-Pia",
-                "comments": "Fabio is very welcoming and helpful and The appartment is great !"
-            },
-            {
-                "_id": "82008360",
-                "date": {
-                    "$date": "2016-06-26T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "72549836",
-                "reviewer_name": "Claire",
-                "comments": "We were very happy of our stay in Porto. The appartement was very clean, very alike the pictures and very well situated (5 min from the city center and 15 min from the Douro). Fabio was here to welcome us when we arrive with some city documentation in French (ah ah we have such a reputation of bad English speaker!!).\r\nWe do recommand this appartement !"
-            },
-            {
-                "_id": "82753579",
-                "date": {
-                    "$date": "2016-06-29T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "34058309",
-                "reviewer_name": "Jérémy",
-                "comments": "Un séjour au top chez fabio. Un superbe appartement extrêmement bien situé en plein centre ville, l'ensemble de la ville est accessible à pied, le métro à seulement 5 minutes de marche permet de relier l'appartement à l'aéroport. Logement très propre, tout équipé et très calme. Fabio était là à notre arrivée pour nous expliquer avec plans et guide ses meilleurs conseils pour passer un séjour des plus agréables. A conseiller très fortement merci fabio pour ce week-end"
-            },
-            {
-                "_id": "83938810",
-                "date": {
-                    "$date": "2016-07-04T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "1313094",
-                "reviewer_name": "Jack",
-                "comments": "Pros: The room was very clean, very organized, and was located in a central, vibrant area of Porto. Fabio was very accommodating during check-in, even though we had arrived late in the evening, and took the time to explain the apartment and the city itself. The unit is an easy 5-minute walk from the Trindade Metro Station. There were plenty of bars and restaurants nearby, and two supermarkets within 5-minutes of walking (one was open on Sundays, which saved our lives). Though the apartment is located in a lively area, an extra set of shutters provides an additional layer of sound insulation which was a big plus! \r\nCons: The apartment did not have shampoo/conditioner during our stay. Neighbors could be loud at times. Very little sound insulation on the apartment unit door.\r\nOverall: My wife and I thoroughly enjoyed our stay at Fabio's apartment building. If we are able to visit Porto again, we would definitely stay in this charming apartment again! Thank you, Fabio!"
-            },
-            {
-                "_id": "84415487",
-                "date": {
-                    "$date": "2016-07-07T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "7763566",
-                "reviewer_name": "Nathalie",
-                "comments": "Fabio was there to let us in as soon as we arrived from the train station. It was very nice of him to tell us how to get from Lisbon to his place in Porto and to respond so quickly considering we had booked just the night before! Fabio really likes his hometown and took the time to show us on the map what to do and where to go. The little guidebook in French was very helpful when walking around! The apartment is just as described and just like it is on the photos:clean, functional, pretty and very well-located. It faces the street but it's not loud at night. You can walk anywhere from Fabio's flat. We had a lovely time and we were very happy in Porto :)"
-            },
-            {
-                "_id": "85088412",
-                "date": {
-                    "$date": "2016-07-10T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "76404085",
-                "reviewer_name": "Alma",
-                "comments": "Fabio is a really nice person. He was waiting for us when we arrived, and then he told us everything important about the city, gave us information about the sights, how to reach them and so on. So he told us for example that we didn´t have to use public transportation, and that is absolutely true, because the apartment is so good located, that you can reach every important point by walk. But if you have to use the underground it is close to the flat, so get to the airport or the beach isn´t a problem. The flat is extremely clean, and furnished very modern, so it was a great feeling to stay here. Especially for those of you who like to party with the domestic, there are a lot of bars in the neighbourhood, which are full at night, so you can enjoy a walk at night there. I would always choose this apartment again and would recommend it to everyone. Thank you Fabio."
-            },
-            {
-                "_id": "85668130",
-                "date": {
-                    "$date": "2016-07-12T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "12381977",
-                "reviewer_name": "Aurelio",
-                "comments": "The house is exactly as pictured. It ' very spacious and bright. The district is centrally located and is an excellent starting point to visit the city. Fabio was very helpful in giving us all the information that we requested on arrival and during the stay. HIGHLY RECOMMENDED!!!"
-            },
-            {
-                "_id": "86572762",
-                "date": {
-                    "$date": "2016-07-17T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "29804248",
-                "reviewer_name": "Sabine",
-                "comments": "Fábio is a great host! He was waiting for us when we arrived and told us the places where we can go and see something interesting nearby.  He took his time to show us his flat and explained us the most interesting places in Porto.\r\nThe apartment is perfectly located to the central attractions of the city and everything is easily reached on foot. It is very clean and cozy. We didn't miss anything and had a great time there! We can absolutly recommend to stay at Fábios apartment!"
-            },
-            {
-                "_id": "87446376",
-                "date": {
-                    "$date": "2016-07-20T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "47974249",
-                "reviewer_name": "Vincenza",
-                "comments": "Fabio ha sempre risposto alle email e alle telefonate in modo puntuale e professionale. Ci ha dato imprtante informazioni per vivere al meglio Porto."
-            },
-            {
-                "_id": "89133867",
-                "date": {
-                    "$date": "2016-07-27T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "3018587",
-                "reviewer_name": "Benoit",
-                "comments": "Nous avons passé 3 jours très agréables, très bien reçus par Fabio. L'appartement  est idéalement situé, très proche d'un quartier très sympa et vivant (bars, restos, commerces), dans une calme. Proche du métro, accès facile depuis aéroport et gare de train, l'appartement correspond à la description. Excellent rapport qualité prix,à recommander!"
-            },
-            {
-                "_id": "89870220",
-                "date": {
-                    "$date": "2016-07-30T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "34562195",
-                "reviewer_name": "Vittorio",
-                "comments": "Fabio is cool and his apartment too!The street is a little big noisy, but the windows are strong enough!Perfect position for visiting and also for the taxi station close to...ENJOY!"
-            },
-            {
-                "_id": "90804312",
-                "date": {
-                    "$date": "2016-08-02T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "70508706",
-                "reviewer_name": "Lorea",
-                "comments": "El estudio esta genial, exactamente igual que en las fotos, tiene todo lo necesario y esta muy bien situado para patear Oporto, cerca de todo, además Fábio fue muy atento."
-            },
-            {
-                "_id": "91345001",
-                "date": {
-                    "$date": "2016-08-05T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "3829029",
-                "reviewer_name": "Emily",
-                "comments": "Fabio's apartment was excellent -- very clean, comfortable and well-located. He also gave us lots of helpful tips on Porto. Would recommend!"
-            },
-            {
-                "_id": "92816985",
-                "date": {
-                    "$date": "2016-08-10T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "20212744",
-                "reviewer_name": "Anne-Sophie",
-                "comments": "Fabio a été très arrangeant pour notre arrivée. Son appartement est très agréable, moderne. La literie est confortable. Tout était parfait! Je recommande vivement cet appartement "
-            },
-            {
-                "_id": "92933924",
-                "date": {
-                    "$date": "2016-08-10T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "18866970",
-                "reviewer_name": "Marie-Pierre",
-                "comments": "L'appartement est vraiment sympathique très pratique pour un séjour de quelques jours pour un couple. Il est très bien placé dans Porto et c'est donc très pratique pour visiter la ville."
-            },
-            {
-                "_id": "95074140",
-                "date": {
-                    "$date": "2016-08-18T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "38154315",
-                "reviewer_name": "Marion",
-                "comments": "Nous avons passé un excellent séjour dans l'appartement de Fabio ! Très bien emménagé et très fonctionnel ! Nous étions très proche du centre ville, il y a donc un peu de bruit la nuit mais c'est le seul point négatif que nous avons trouvé a l'appartement !\nL'accueil de Fabio était exemplaire, il nous a donné toutes les informations pour notre voyage et sur Porto, et nous a aussi réservé une croisière sur le Douro !\nUn grand merci à Fabio !"
-            },
-            {
-                "_id": "96726086",
-                "date": {
-                    "$date": "2016-08-24T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "5666333",
-                "reviewer_name": "Pia Koefoed",
-                "comments": "god modtagelse! centralt beliggende lejlighed, hvilket vi satte stor pris på. larm fra gaden både dag og nat. ørepropper var en god investering!"
-            },
-            {
-                "_id": "97393566",
-                "date": {
-                    "$date": "2016-08-27T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "34986201",
-                "reviewer_name": "Ruth",
-                "comments": "El apartamento tiene una localización perfecta para visitar Oporto sin depender del transporte, esta cerca del centro, la ribera, restaurantes y cafeterias. Además cuenta con todo lo necesario para pasar una agradable estancia; Fabio deja disponible mucha información sobre la ciudad y esta dispuesto a resolver las dudas que tengas."
-            },
-            {
-                "_id": "98436663",
-                "date": {
-                    "$date": "2016-08-31T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "84313138",
-                "reviewer_name": "Lucille",
-                "comments": "Appartement idéal pour un court séjour à Porto.\r\nSitué dans l'hyper centre tout la ville est accessible à pied.\r\nFabio a était super avec nous, c'est un bon hôte.\r\n\r\n"
-            },
-            {
-                "_id": "99274088",
-                "date": {
-                    "$date": "2016-09-04T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "44531105",
-                "reviewer_name": "Rosa",
-                "comments": "El apartamento es súper funcional. Está todo muy nuevo, excepto el inmueble que es antiguo, lo cual no es ningún problema salvo que tengas dificultades para subir a un primer piso sin ascensor. La localización es perfecta para visitar lo más turístico de Oporto. Está en el centro pero no sufre agobio de transeúntes y tampoco me ha parecido muy ruidosa. Yo repetiría sin dudar. "
-            },
-            {
-                "_id": "100441286",
-                "date": {
-                    "$date": "2016-09-09T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "34628905",
-                "reviewer_name": "Ainhoa",
-                "comments": "El alojamiento es perfecto, la ubicacion perfecta para patear todo oporto, sin duda si estais pensando en alojaros en el centro de oporto en un apartamento que este de lujo este es vuestra opcion "
-            },
-            {
-                "_id": "101644826",
-                "date": {
-                    "$date": "2016-09-14T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "87476450",
-                "reviewer_name": "Christine",
-                "comments": "We had a very good time in Porto. Fabio was the perfect host and told us everything about Porto we wanted to know. The apartment was beautiful and very clean!"
-            },
-            {
-                "_id": "102833505",
-                "date": {
-                    "$date": "2016-09-19T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "87054087",
-                "reviewer_name": "Dacil",
-                "comments": "Porto ha sido una experiencia maravillosa en todos los sentidos, la casa es ideal, tal cual sale en las fotos, la ubicación inmejorable, está en una calle perfecta para hacer turismo, comer , tomar unas copas( frente hay un local muy majo con unos dueños encantadores (Almada)\r\nFabio muy atento nos explicó todo muy bien, que visitar, donde comer....muy bien.\r\nEn general , Porto es maravilloso como lugar, un lugar para perderse por sus calles, la comida es deliciosa, sus gentes encantadoras y muy serviciales a la hora de explicar todo, con lo que recomiendo ir a Porto, y por supuesto ir a la casa de Fabio (nosotros volveremos seguro)."
-            },
-            {
-                "_id": "103372463",
-                "date": {
-                    "$date": "2016-09-22T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "62369474",
-                "reviewer_name": "Porin",
-                "comments": "Fabio is a great host , he welcomed us in his super luxury apartment and tell us tips&tricks where to go , where to eat , etc...\r\n\r\n "
-            },
-            {
-                "_id": "104390704",
-                "date": {
-                    "$date": "2016-09-26T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "3029444",
-                "reviewer_name": "Emilie Cornelius",
-                "comments": "Very nice and very clean apartment with good location. Fabio greeted us at the agreed time and was very helpful. Would stay here again if I go back to Porto."
-            },
-            {
-                "_id": "104913781",
-                "date": {
-                    "$date": "2016-09-29T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "4696436",
-                "reviewer_name": "Laura",
-                "comments": "el apartamento es muy lindo y cómodo, tiene todo lo que uno puede necesitar y más, es limpio y con detalles elegantes. el  barrio es hermoso, con muy buena ubicación para comer afuera o comprar para cocinar en casa. Las estaciones de metro y tren están cerca también.  todo perfecto"
-            },
-            {
-                "_id": "105526609",
-                "date": {
-                    "$date": "2016-10-02T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "16327081",
-                "reviewer_name": "Pamela",
-                "comments": "Le séjour s'est tres bien passé dans l'appartement de Fabio, tres fonctionnel et tres propre. Conforme à l'annonce. Fabio est charmant et nous a donné de tres bons conseils sur Porto. Je recommande ! "
-            },
-            {
-                "_id": "108045455",
-                "date": {
-                    "$date": "2016-10-14T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "41441303",
-                "reviewer_name": "Tim",
-                "comments": "Beautiful place right in the heart of porto!!very clean and neat! fabio is very helpful, knows alot about the good spots, perfect host! would come back"
-            },
-            {
-                "_id": "109529158",
-                "date": {
-                    "$date": "2016-10-22T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "30916725",
-                "reviewer_name": "Félix",
-                "comments": "Très agréable studio au coeur de Porto. Il n'y manque rien.\r\nFabio est très sympathique et nous a bien renseigné à notre arrivée.\r\nA recommander vivement."
-            },
-            {
-                "_id": "110466397",
-                "date": {
-                    "$date": "2016-10-26T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "95885213",
-                "reviewer_name": "Paki",
-                "comments": "Fabio fue muy agradable,nos enseño todo el apartamento,como funcionaba la caldera la vitro y nos explico lo que podiamos ver en oporto .El apartamento muy limpio hemos estado 4 noche teniamos 1 juego d toallas de recambio y productos d (Website hidden by Airbnb) ubicacion perfecta se puede ir andando si necesidad d coger ningun transporte publico,esta cerca el metro y la estacion de trenes.\r\nLo recomiendo."
-            },
-            {
-                "_id": "111693883",
-                "date": {
-                    "$date": "2016-11-01T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "52843648",
-                "reviewer_name": "Aimée",
-                "comments": "Fabio a été très sympathique lors de notre arrivée. Le logement était très propre et agréable à vivre."
-            },
-            {
-                "_id": "112518867",
-                "date": {
-                    "$date": "2016-11-06T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "8668845",
-                "reviewer_name": "Vir",
-                "comments": "Très bel accueil par fabio, sympa généreux et à l écoute. superbe appartement très propre, très mignon, à la déco soignée proche de tout à pieds un vrai bonheur je recommande vivement !! "
-            },
-            {
-                "_id": "112981013",
-                "date": {
-                    "$date": "2016-11-09T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "62024187",
-                "reviewer_name": "Taynara",
-                "comments": "O Fábio foi muito simpático e mostrou-se disponível para responder a todas as nossas questões. A casa é perfeita, tem tudo o que é necessário e é bastante confortável, já para não falar da sua localização que é o ideal para quem quer conhecer os pontos mais turísticos a pé. "
-            },
-            {
-                "_id": "113354134",
-                "date": {
-                    "$date": "2016-11-12T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "47301488",
-                "reviewer_name": "Kim",
-                "comments": "Prima appartement in een super centrale omgeving.\r\nHet bed was wel aan de harde kant, veren waren na 2 dagen goed te voelen wat het minder comfortable maakt.\r\n\r\nVerder alles goed!"
-            },
-            {
-                "_id": "114432095",
-                "date": {
-                    "$date": "2016-11-18T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "101193530",
-                "reviewer_name": "Boris",
-                "comments": "Arrivée tardive (vers minuit), Fabio nous a tout de même accueilli avec une extrême gentillesse et de grands sourires en prenant le temps de tout nous expliquer. SUPER FABIO !\r\nL'appartement est juste magnifique, extrêmement propre, parfaitement agencé. Rien ne manque ! Photos tout à fait conforme à la réalité.\r\nNiveau emplacement, c'est IDEAL ! A 5 minutes à pied (avec bagages) de la station de Trindade, dans une rue pas trop passante au niveau des voitures (donc pas de bruit la nuit) et super pittoresque. \r\nAprès 3/4 jours de visite de la ville à pied, en vélo et en scooter, je retournerai loger dans le même quartier et surtout chez Fabio la prochaine fois :)"
-            },
-            {
-                "_id": "114819165",
-                "date": {
-                    "$date": "2016-11-20T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "97774184",
-                "reviewer_name": "Javier",
-                "comments": "Un apartamento muy bien adaptado, donde con la estructura de una típica casa antigua portuguesa, se han integrado dormitorio/salón, baño y cocina. Destaca por la limpieza, impoluto, y por la ubicación, en pleno casco viejo de Oporto. Y a un precio muy económico. Muy recomendable.\r\nPor poner algún defecto, carece de ascensor y climatizador."
-            },
-            {
-                "_id": "115934232",
-                "date": {
-                    "$date": "2016-11-27T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "9929516",
-                "reviewer_name": "Manuel",
-                "comments": "O apartamento é exatamente igual às fotografias, localização ideal, e o Fábio mostrou-se sempre disponível para ajudar e dar dicas da cidade. A repetir!"
-            },
-            {
-                "_id": "117006081",
-                "date": {
-                    "$date": "2016-12-04T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "65887390",
-                "reviewer_name": "Marta",
-                "comments": "Fabio was really kind and polite with us and the apartment is as he shows in the pics. Also, it's very well located. We'd go back for sure!"
-            },
-            {
-                "_id": "120161632",
-                "date": {
-                    "$date": "2016-12-08T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "6363845",
-                "reviewer_name": "Hannah",
-                "comments": "Great place to stay, highly recommend to others. Location and communication were both spot on, apartment is spacious! Thanks Fabio"
-            },
-            {
-                "_id": "121022937",
-                "date": {
-                    "$date": "2016-12-13T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "14497599",
-                "reviewer_name": "Remi",
-                "comments": "Appartement plein centre à côté du métro et de l'artère principale de la ville . Très fonctionnel il ne manquait rien , propre , juste le petit chauffage d'appoint qui ne chauffe pas beaucoup nous avons eu un peu froid . \nFábio est sympathique et disponible , il nous a laissé un guide de  porto en français ."
-            },
-            {
-                "_id": "121611314",
-                "date": {
-                    "$date": "2016-12-18T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "24845932",
-                "reviewer_name": "Cherie",
-                "comments": "Fabio's studio is very nice, located in the centre of the city, you can explore the city by foot, restaurants and nightlife area just 5 mins away by walk.\n\nThe studio is new, clean, spaces, and modern decorated, well equipped.\n\nFabio is a very nice guy, he is very helpful during my stay. You can get lots of information about the city from Fabio.\n\nHighly recommend and for sure will stay at Fabio's next time when I go to Porto."
-            },
-            {
-                "_id": "122555018",
-                "date": {
-                    "$date": "2016-12-24T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "26176383",
-                "reviewer_name": "Benoit",
-                "comments": "The room felt bigger than in picture and was modern and perfectly clean. The bed was good and the bathroom and kitchen all we needed and more. Location is as central as can be. Fabio was very friendly and gave us a 10-mn tour of the facilities but also documentation on Porto and answered all our questions.\r\nOnly small downside was the small side heater - not enough to warm up the whole room on a cold December night (although should not matter the rest of the year) and the thin windows letting in the noise  from the outside (but only on the Friday night when cheerful people were being loud in the street).\r\nOverall great experience and the price for two was reasonable, very recommended."
-            },
-            {
-                "_id": "123876899",
-                "date": {
-                    "$date": "2016-12-31T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "101581543",
-                "reviewer_name": "Gilles",
-                "comments": "Accueil très sympathique de Fabio, et appartement idéalement situé et très confortable, à proximité de rues avec des restaurants accessibles et très bons. Porto est à découvrir et il ne faut pas hésiter à se rendre sur le port goûter au poisson frais."
-            },
-            {
-                "_id": "124988337",
-                "date": {
-                    "$date": "2017-01-03T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "48720210",
-                "reviewer_name": "Danielle",
-                "comments": "Este local realmente foi perfeito para nossa estadia no reveillon no Porto. A localização dele é a melhor: a rua é uma das mais legais, com lojas vintage, locais para refeições, bares e pubs. Fica à uma distância agradável da Ribeira para se deslocar a pé, e muito próximo das principais ruas. Fizemos tudo caminhando: Sé, Cais, Livraria Lello, Galeria de Paris (noite), Rua de Santa Catarina, e estávamos cercados de opções de bares, hamburguerias, restaurantes, locais para o pequeno almoço. É próximo as estações de metro também. O espaço está muito bem decorado e utilizado, é espaçoso, e bem iluminado. Possui uma cozinha equipada para quem desejar, ótimas roupas de cama, duas sacadinhas muito agradáveis. Foi uma ótima experiência e quando voltarmos ao Porto, este espaço será nossa primeira opção. "
-            },
-            {
-                "_id": "126969081",
-                "date": {
-                    "$date": "2017-01-15T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "27897864",
-                "reviewer_name": "Geoffrey",
-                "comments": "Fabio nous a très bien accueillis et a tout fait pour faciliter notre séjour. Il nous a personnellement fait faire le tour du quartier en nous indiquant tous les endroits importants et essentiels à notre séjour. \n\nHôte incroyable par sa gentillesse, logement très confortable et bien situé, voyage des plus agréable ! je recommande fortement  !!  "
-            },
-            {
-                "_id": "127664546",
-                "date": {
-                    "$date": "2017-01-20T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "34268089",
-                "reviewer_name": "Lydia",
-                "comments": "Awesome! The apartment is beautiful and in a fantastic location. Fabio was super helpful and we really like that there were space heaters because it can get cold at nighttime."
-            },
-            {
-                "_id": "129142036",
-                "date": {
-                    "$date": "2017-01-29T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "38319774",
-                "reviewer_name": "Nicolás",
-                "comments": "Perfect place to stay at, perfect host. Obrigado!"
-            },
-            {
-                "_id": "131057929",
-                "date": {
-                    "$date": "2017-02-10T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "23692318",
-                "reviewer_name": "Mylen",
-                "comments": "A recommander. L'appartement est un joli cocon, très chic et cosy. Quartier central.Restaurant Braseo delicieux à côté ou aussi buffet vegetarien Cultura dos Sabores (10 euros à volonté). Fabio est sympathique et facile à joindre en cas de question."
-            },
-            {
-                "_id": "131696873",
-                "date": {
-                    "$date": "2017-02-13T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "3732179",
-                "reviewer_name": "Adrian",
-                "comments": "Amazing place! We will be back!"
-            },
-            {
-                "_id": "133274012",
-                "date": {
-                    "$date": "2017-02-21T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "47008405",
-                "reviewer_name": "Hugo",
-                "comments": "Apartamento tipo T0 muito simpático e central.\nFábio muito atencioso e disponível."
-            },
-            {
-                "_id": "134441569",
-                "date": {
-                    "$date": "2017-02-27T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "43665632",
-                "reviewer_name": "Ilona",
-                "comments": "The place to be!!! Amazing stay :)"
-            },
-            {
-                "_id": "138761391",
-                "date": {
-                    "$date": "2017-03-21T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "51061378",
-                "reviewer_name": "Esther",
-                "comments": "Logement comme sur la description.\nTrès bon séjour de 5 nuits chez Fabio.\nNous reviendrons "
-            },
-            {
-                "_id": "140178099",
-                "date": {
-                    "$date": "2017-03-28T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "4418538",
-                "reviewer_name": "Laetitia",
-                "comments": "The apartment is very well located. Right in the city center of Porto, near to every touristic spot. Perfect to visit the city by foot.\nThe apartment is actually a  studio well furnished with everything you need to spend a nice short stay. \nOther comments mentionned the fact the apartment is located in a small street pretty quiet. That's true but be aware that the isolation inside the building isn't really good. So if you're not lucky (just like us) we'll have some trouble to sleep at night."
-            },
-            {
-                "_id": "140889720",
-                "date": {
-                    "$date": "2017-04-01T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "26427189",
-                "reviewer_name": "Monika",
-                "comments": "AWESOME !\n\nThe appartement is very central and near to every touristic spots. Fabio is a very good host-He gaves us a lot of tips for places to be. \n\nThank you !! "
-            },
-            {
-                "_id": "141467009",
-                "date": {
-                    "$date": "2017-04-03T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "123087277",
-                "reviewer_name": "Julie",
-                "comments": "Excellent séjour à Porto. merci Fábio! L'appartement était parfait."
-            },
-            {
-                "_id": "142720841",
-                "date": {
-                    "$date": "2017-04-09T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "10942039",
-                "reviewer_name": "Anton",
-                "comments": "The apartment is very new and has everything you need. The location is also very good, it takes about 10 minutes to walk to Ribeira, and there are lots of bars and cafes around it."
-            },
-            {
-                "_id": "143504275",
-                "date": {
-                    "$date": "2017-04-12T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "42262905",
-                "reviewer_name": "Susan",
-                "comments": "Excellent location to city centre, port, and main metro stations.  Easy to walk to anywhere from the apartment."
-            },
-            {
-                "_id": "144586881",
-                "date": {
-                    "$date": "2017-04-16T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "62261707",
-                "reviewer_name": "Marco",
-                "comments": "Fabio is an amazing host. The room is bigger than the photo. Very clean, perfect position. Highly recommend"
-            },
-            {
-                "_id": "147887786",
-                "date": {
-                    "$date": "2017-04-29T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "12342250",
-                "reviewer_name": "Alessandra",
-                "comments": "Fabio's apartment is very well located, at walking distance from the most important points of interest of the city. The apartment is very clean and confortable with kitchen. And Fabio is a very nice and helpful guy. Book here for a wonderful holiday in Porto!"
-            },
-            {
-                "_id": "148685233",
-                "date": {
-                    "$date": "2017-05-01T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "122037544",
-                "reviewer_name": "Tamara",
-                "comments": "Apartamento muy bonito en El Centro de la ciudad. Está todo cerca para ir andando. Fabio nos recibió muy bien y nos hizo una explicación de la ciudad. Recomendable 100%."
-            },
-            {
-                "_id": "150778263",
-                "date": {
-                    "$date": "2017-05-09T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "119302121",
-                "reviewer_name": "Gabriela",
-                "comments": "O apartamento é muito bem localizado, perto dos principais pontos turísticos, bares/restaurantes e metrô. O Fábio foi um excelente anfitrião, dando dicas e tirando dúvidas! 5 estrelas!"
-            },
-            {
-                "_id": "151549628",
-                "date": {
-                    "$date": "2017-05-13T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "48001240",
-                "reviewer_name": "Sandrine",
-                "comments": "L'appartement de Fabio est très agréable et très bien placé. Idéal pour 2 personnes voulant visiter la ville.\nTres  bien décoré, propre.\nFabio est très accueillant.\n"
-            },
-            {
-                "_id": "152380466",
-                "date": {
-                    "$date": "2017-05-16T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "117840390",
-                "reviewer_name": "Ana",
-                "comments": "O apartamento é ótimo e com excelente localização.\nO Fábio é muito receptível e atencioso.\nEsperamos retornar em breve!\nAna e Cesar "
-            },
-            {
-                "_id": "154645901",
-                "date": {
-                    "$date": "2017-05-25T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "123005494",
-                "reviewer_name": "Yannick",
-                "comments": "The flat is fabulous and the city is just awsome.\nThe building is near to the transports, the old town, we just took the train to go to the beach, we did all others visits on foot, nothing much to say than thank you Fabio !"
-            },
-            {
-                "_id": "156354953",
-                "date": {
-                    "$date": "2017-05-30T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "11332103",
-                "reviewer_name": "Bertrand",
-                "comments": "Fabio is a very nice guy, but the appartment is too much noisy.  Saturday night was a nightmare for us beacause neighbors were crazy."
-            },
-            {
-                "_id": "158055212",
-                "date": {
-                    "$date": "2017-06-05T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "5444526",
-                "reviewer_name": "Silvia",
-                "comments": "Very nice small Apartment with a perfect location in Porto! Fabio was very helpful and available at any Time. Highly recommended :)"
-            },
-            {
-                "_id": "158811788",
-                "date": {
-                    "$date": "2017-06-08T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "73519289",
-                "reviewer_name": "Stefanie",
-                "comments": "The apartment is a great place to stay exploring Porto. Restaurants, bars and supermarkets are nearby and we found all major touristic sites, shops etc in walkable distance . The street is busy during the day and evening, but becomes very quiet at night so you can sleep well.\nOverall, the apartment was clean and well equipped with everything we needed during the stay.\nFabio was very friendly and gave good tips about things to do in Porto and restaurant/bar suggestions. The communication was very good and prompt. "
-            },
-            {
-                "_id": "159285022",
-                "date": {
-                    "$date": "2017-06-10T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "129307552",
-                "reviewer_name": "Frédéric",
-                "comments": "The apartment is really modern and beautiful. Everything is very harmonious and done with great taste. The kitchen, the room and the bathroom are fully equiped too. There were even tea, sugar, coffe etc. \nThe flat was also perfectly clean, it was situated right in the city centre and there were supermarkets nearby. Fabio is really nice and  we could even check-in a bit earlier. He took time to answer to all of our questions with a huge smile.\nWe absolutely reccommend this accomodation. We really did feel happy there."
-            },
-            {
-                "_id": "161304467",
-                "date": {
-                    "$date": "2017-06-17T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "124579675",
-                "reviewer_name": "Thomas",
-                "comments": "Cet appartement est idéalement situé dans le coeur historique de Porto. A moins de 10 minutes on trouve tout : très bons restaurants, bar et café très agréable.\nL'appartement est très joli, très fonctionnel, parfait pour le séjour. \nFábio est plein de bons conseils quand aux endroits à visiter."
-            },
-            {
-                "_id": "162364078",
-                "date": {
-                    "$date": "2017-06-20T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "26289540",
-                "reviewer_name": "Adeline",
-                "comments": "Great place, great location  and great Host ! Thanks a lot Fãbio for your apartment. \n\nAppartement identique aux photos, placé en hyper centre et proche de Trindade la station de métro qui vient de l'aéroport.  \nFabio a été très sympathique et prévenant avec nous. \nNous sommes ravis de notre séjour à Porto et notre logement y a contribué !\n\nAdeline & Aurélien "
-            },
-            {
-                "_id": "163781006",
-                "date": {
-                    "$date": "2017-06-25T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "117175377",
-                "reviewer_name": "筱倫",
-                "comments": "Nice location!"
-            },
-            {
-                "_id": "164373872",
-                "date": {
-                    "$date": "2017-06-27T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "44944365",
-                "reviewer_name": "Vladimir",
-                "comments": "Tout est parfait.  Appartement est dans le centre de Porto.  On peut tout faire à pieds. Vraiment super ;-)"
-            },
-            {
-                "_id": "165990023",
-                "date": {
-                    "$date": "2017-07-02T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "48720210",
-                "reviewer_name": "Danielle",
-                "comments": "Essa foi nossa segunda experiência hospedados no apartamento de Fábio no Porto. Mais uma vez, tudo ocorreu de forma muito tranquila e impecável. Fábio é um anfitrião atencioso e a comunicação com ele acontece de forma rápida e eficiente. Foi muito gentil em receber-nos antecipadamente para o check-in. O apartamento tem realmente uma ótima localização (mesmo!) e espaço suficiente e agradável para um casal. Tudo estava muito limpo e cheiroso, a cozinha bem equipada, cama confortável e a sacada é um adicional agradável. Há opções de café, pubs e bares na própria rua do apartamento. Mais uma vez, tivemos a certeza que esse é um sítio para quem pretende desfrutar a cidade em um local próximo de todos os pontos turísticos a uma distância tranquila a pé, próximo a comércio, opções para refeições, perto de estações de metro e transportes públicos. Agradecemos a estadia, Fábio. \n"
-            },
-            {
-                "_id": "167901733",
-                "date": {
-                    "$date": "2017-07-08T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "131325854",
-                "reviewer_name": "Nuria",
-                "comments": "El apartamento es exactament igua que en las fotos. Está muy bien situado, con muchos restaurantes cerca y muy ´próximo al centro."
-            },
-            {
-                "_id": "169165119",
-                "date": {
-                    "$date": "2017-07-11T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "44112021",
-                "reviewer_name": "Sara",
-                "comments": "Siamo stati a Porto solo pochi giorni, ma appoggiarci qui ci ha permesso di godere a pieno la città. L'appartamento è esattamente come presentato, pulitissimo, ben equipaggiato e soprattutto localizzato in una posizione strategica proprio dietro la Ribera. A pochi passi ci sono bar, ristoranti,  minimarket, e la stazione metro di Trindade. Fabio è stato estremamente preciso nelle comunicazioni sia prima che durante il nostro soggiorno e diaponibile per qualsiasi tipo di necessità. Mi sento di consigliarlo vivamente!!"
-            },
-            {
-                "_id": "170424744",
-                "date": {
-                    "$date": "2017-07-15T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "14223550",
-                "reviewer_name": "Martin",
-                "comments": "Great appartment in one of the best spots of Porto. Bars/ Clubs are 5min away, though a rather quiet street. Perfect when you come/ go by train, the train station Sao Bento is a 10min walk away. \nFabio welcomed us very warm-hearted, send us messages during our stay to check if everything is ok and gave us very good restaurant recommendations.\nI will go there, if I'm in Porto again, thumbs up for this very positive example of hospitality !! "
-            },
-            {
-                "_id": "171385086",
-                "date": {
-                    "$date": "2017-07-17T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "32285652",
-                "reviewer_name": "Ramon",
-                "comments": "Todo estuvo muy bien. \nFábio es encantador. \nEl piso es genial, super limpio, hay todo lo que hace falta. \nMuy buena ubicación. \nUn éxito total. \n100 % recomendable."
-            },
-            {
-                "_id": "172652947",
-                "date": {
-                    "$date": "2017-07-21T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "67765155",
-                "reviewer_name": "Anaëlle",
-                "comments": "L'appartement est très bien placé (station métro, shopping, restos, bars...). Fabio est très sympathique et accueillant. L'appartement est d'une propreté irréprochable."
-            },
-            {
-                "_id": "173453221",
-                "date": {
-                    "$date": "2017-07-23T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "139488589",
-                "reviewer_name": "Hugo",
-                "comments": "El anfitrión es una persona muy amable, nos ayudo muchisimo y estuvo siempre pendiente de nuestra comodidad.\nEl apartamento es una autentica maravilla, con una ubicación privilegiada.\nNos hemos ido con ganas de volver, y volveriamos a coger este apartamento."
-            },
-            {
-                "_id": "174832519",
-                "date": {
-                    "$date": "2017-07-27T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "8797901",
-                "reviewer_name": "Daniel",
-                "comments": "La casa de Fabio es totalmente recomendable, muy limpio cómodo y agradable. Volveríamos sin ninguna duda. Ojalá todas las casas fueran así."
-            },
-            {
-                "_id": "177000678",
-                "date": {
-                    "$date": "2017-08-01T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "72521951",
-                "reviewer_name": "Céline",
-                "comments": "Accueil très sympa, logement parfait"
-            },
-            {
-                "_id": "179776625",
-                "date": {
-                    "$date": "2017-08-08T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "64393230",
-                "reviewer_name": "Laura",
-                "comments": "Fábio is a really nice and helpful guy. We were very happy with the apartment too. Everything you need is just around the corner. And Porto is an amazing city you just fall in love with!"
-            },
-            {
-                "_id": "181842045",
-                "date": {
-                    "$date": "2017-08-13T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "136569168",
-                "reviewer_name": "Fran",
-                "comments": "La casa es tal como se describe. Está todo muy limpio. La decoración perfecta. Parece que está a estrenar. Las ventanas son de Climalit y te aísla totalmente del ruido. En la cama se descansa muy bien y la ducha va perfecta. En La Cocina todo lo necesario para hacer comidas en casa. Fábio está pendiente de todo, sin ser intrusivo. El apartamento está muy bien situado. Calle céntrica para visitar todo el casco antiguo de Oporto. Calle con muchos restaurantes para comer y muy cerca de la zona de copas nocturna. En la calle hay aparcamiento de pago y muy cerca garajes. Recomendamos mucho este apartamento. Gracias a  Fábio y a su madre por la atención que nos prestaron."
-            },
-            {
-                "_id": "182786953",
-                "date": {
-                    "$date": "2017-08-15T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "89511567",
-                "reviewer_name": "Aurora",
-                "comments": "Nos ha gustado mucho, está impecable, se nota que es nuevo y muy bonito decorado. La zona es perfecta para ir caminando, estás prácticamente en El Centro, pese a ser una zona muy transitada hemos encontrado en la misma calle para aparcar sin problema. Muy recomendable! Para repetir"
-            },
-            {
-                "_id": "183853287",
-                "date": {
-                    "$date": "2017-08-18T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "137355478",
-                "reviewer_name": "Chantal",
-                "comments": "Appartement très propre et cosy très très bien situé \nFabio donne des adresses afin de nous informer est très sympathique .\nNous espérons y retourner dès que possible car Porto est de surcroît une très belle ville chaleureuse"
-            },
-            {
-                "_id": "185237932",
-                "date": {
-                    "$date": "2017-08-21T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "35450947",
-                "reviewer_name": "Jaime",
-                "comments": "El piso es pequeño pero ideal para dos. Tiene todo lo necesario, no falta de nada. La zona de aliados es de las mejor situadas para visitar Oporto y el piso está en una calle paralela a la plaza por lo que está cerca de todo sin estar en medio del ruido. Las únicas dos pegas que ponemos son; primera que habían muchas obras en la calle pero es algo circunstancial, durante el fin de semana no escuchamos nada, y segunda que el colchón era un poco malo, se te clavan los muelles."
-            },
-            {
-                "_id": "185973818",
-                "date": {
-                    "$date": "2017-08-23T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "54722515",
-                "reviewer_name": "Beatriz",
-                "comments": "O espaço é extremamente bem localizado, muito limpo e confortável. O Fábio foi impecável com tudo. Cheguei atrasada ao check-in e este foi ter à estação de comboio para indicar o caminho da casa. Aconselho vivamente a estadia neste pequeno cantinho no Porto!"
-            },
-            {
-                "_id": "188100658",
-                "date": {
-                    "$date": "2017-08-28T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "7012188",
-                "reviewer_name": "Elena",
-                "comments": "Fábio es muy amable y estuvo siempre dispuesto a echarnos una mano, nos aconsejó que ver, donde comer...\nEl apartamento es tal y como se ve en las fotos, no le falta detalle y muy acogedor. Situado muy bien en la zona centro desde donde pudimos movernos a prácticamente todos los sitios andando."
-            },
-            {
-                "_id": "188704760",
-                "date": {
-                    "$date": "2017-08-30T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "30969097",
-                "reviewer_name": "Sara",
-                "comments": "Very nice, clean and confortable appartement, well located and fully equipped with a little nice terasse.\nFabio was a nice host that took the time to explain us where to go for food and where we should go to find what we were looking for. Thanks again!!"
-            },
-            {
-                "_id": "189958990",
-                "date": {
-                    "$date": "2017-09-03T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "64007712",
-                "reviewer_name": "Anika",
-                "comments": "My friend and I really enjoyed our stay in Porto. The apartment was gorgeous, spacious and super clean. Would definitely stay there again next time I'm in Porto."
-            },
-            {
-                "_id": "191343452",
-                "date": {
-                    "$date": "2017-09-07T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "44992664",
-                "reviewer_name": "Martin",
-                "comments": "Appartement très bien localisé, au coeur des activités.\nTrès propre, tout est neuf.\nPrès du Metro et de la gare de train"
-            },
-            {
-                "_id": "194571432",
-                "date": {
-                    "$date": "2017-09-17T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "129298998",
-                "reviewer_name": "Carlota",
-                "comments": "Mi experiencia con la casa de Fabio ha sido excelente. \nUna ubicación perfecta, una apartamento amplio, limpio, agradable y muy bien equipado.\nSin duda, cuando volvamos iremos a casa de Fabio, muy recomendable."
-            },
-            {
-                "_id": "198729513",
-                "date": {
-                    "$date": "2017-09-30T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "46078705",
-                "reviewer_name": "Mallory",
-                "comments": "Fabio's place was absolutely perfect for our stay in Porto! The location was really great. It was very central to everything we wanted to see, but also far enough away from the more busy touristy areas, which we appreciated. We found the apartment to be extremely clean, quiet and spacious. Fabio was a great host, and offered us some excellent local suggestions on where to eat. I would highly recommend this place for a short stay in Porto, it was our favourite Airbnb experience on our trip!"
-            },
-            {
-                "_id": "199895007",
-                "date": {
-                    "$date": "2017-10-03T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "23692839",
-                "reviewer_name": "Michel",
-                "comments": "Appartement très bien situé. Il est proche des lieux à visiter. Tous commerces à proximité. L'appartement est rénové à neuf et sans aucun problème."
-            },
-            {
-                "_id": "200712242",
-                "date": {
-                    "$date": "2017-10-06T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "109446555",
-                "reviewer_name": "Jeff",
-                "comments": "This is a very nice studio apartment in the center of Porto.    The photos accurately reflect what the apartment looks like.   There is a nice queen sized bed, closets for storage, and a nice little kitchen with stove and refrigerator.   The room has good natural light and clearly has been recently renovated.   So, while the exterior of the building and hallways look a bit old and worn, the apart,ent itself is quite nice and comfortable.   There are numerous restaurants and bars to visit nearby.  There is also parking available just right up the street.  We liked this apartment and would definitely consider staying there again."
-            },
-            {
-                "_id": "203189222",
-                "date": {
-                    "$date": "2017-10-14T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "35020025",
-                "reviewer_name": "Oonagh",
-                "comments": "Fabio’s place was wonderfully located, close to both Trindade metro and Sao Bento train station. It was well equipped and lovely and clean. Some wonderful eating places nearby, particularly Droop, Grigio and Tabua Rasa. We loved our stay, although it’s not the quietest location but it is within walking distance of all of Porto’s main sights. Would recommend!!"
-            },
-            {
-                "_id": "204016240",
-                "date": {
-                    "$date": "2017-10-16T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "21645338",
-                "reviewer_name": "Rita",
-                "comments": "一切都很棒,走路市區地鐵,房間乾淨明亮舒適"
-            },
-            {
-                "_id": "204872682",
-                "date": {
-                    "$date": "2017-10-20T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "19475925",
-                "reviewer_name": "Eric & Akala",
-                "comments": "Fábio's place was extremely convenient, very well situated in Porto. Everywhere we wanted to go to was at most a 30 minute walk away. His place is also quite clean, and Fábio was very easy to talk to. Definitely would consider staying here again."
-            },
-            {
-                "_id": "207537160",
-                "date": {
-                    "$date": "2017-10-29T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "53455055",
-                "reviewer_name": "Guillaume",
-                "comments": "séjour dépaysant dans cette belle ville de Porto.\nl'appartement est idéalement situé (proche centre ville et proche métro / bus, station trindade  à 3 mn à pied).\nl'appartement décoré avec goût est propre. il dispose de toutes les commodités pour un séjour sans soucis....\nn'hésitez pas à séjourner dans ce logement...merci Fabio et à bientôt avec les enfants cette fois ci."
-            },
-            {
-                "_id": "208663239",
-                "date": {
-                    "$date": "2017-11-02T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "51581451",
-                "reviewer_name": "Anahita",
-                "comments": "If you wanna discover Porto in a convenience way, you wanna see the historical part and still party,  than that is the perfect place to stay. \nIt looks like the pics, is clean and Fabio is really helpful with everything"
-            },
-            {
-                "_id": "209838903",
-                "date": {
-                    "$date": "2017-11-06T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "39878704",
-                "reviewer_name": "Caroline",
-                "comments": "Studio idéalement situé au centre ville, tout est accessible à pieds. Notre hôte nous a donné plein de conseils pour visiter la ville et de bonnes adresses où se rendre. Le studio est très bien décoré, très propre, rien à redire. Nous avons passé un excellent séjour."
-            },
-            {
-                "_id": "211763914",
-                "date": {
-                    "$date": "2017-11-14T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "26988952",
-                "reviewer_name": "Tony",
-                "comments": "L’appartement est très bien situé pour découvrir Porto. Il est très propre et très agréable. \nFabio nous a très bien accueilli et nous donné plein de conseil. \nLe seul bémol que nous avons à donner et qu’il est situé sur la route des quartiers animés donc il peut y avoir un peu de bruit le soir et la nuit mais c’est léger. \nNous recommandons clairement cet appartement !"
-            },
-            {
-                "_id": "212921959",
-                "date": {
-                    "$date": "2017-11-19T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "5571180",
-                "reviewer_name": "Gabriela",
-                "comments": "O apartamente é bastante moderno, limpo e bem equipado. A localização é maravilhosa (minutos a pé de distância dos principais pontos turísticos). O Fábio foi bastante prestativo, super pontual e com prontidão nas respostas. Foi uma estadia curta mas bastante agradavel."
-            },
-            {
-                "_id": "214707507",
-                "date": {
-                    "$date": "2017-11-26T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "60045979",
-                "reviewer_name": "Víctor",
-                "comments": "Great Airbnb in perfect location. Fabio was very useful !"
-            },
-            {
-                "_id": "217014373",
-                "date": {
-                    "$date": "2017-12-07T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "66249229",
-                "reviewer_name": "Christina",
-                "comments": "The flat is lovely, a traditional building with contemporary interior, very clean... just like the photos. It’s extremely centrally located for city centre sightseeing ( you can walk everywhere) as well as for. transport around Porto and to the airport. Recommended"
-            },
-            {
-                "_id": "217758437",
-                "date": {
-                    "$date": "2017-12-10T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "158562564",
-                "reviewer_name": "Inês",
-                "comments": "Casa super bem localizada e limpa. As fotos são tal e qual a casa. Ideal para quem quer passar uns dias agradáveis. Recomendo!!! Obrigada Fábio"
-            },
-            {
-                "_id": "219325651",
-                "date": {
-                    "$date": "2017-12-17T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "98615414",
-                "reviewer_name": "Camille",
-                "comments": "Beautiful apartment, ideally located in the heart of Porto, you can do everything by foot ! I think it is really the best place to stay in Porto. Fabio is very nice and helpful. The mattress was a bit hard for me, but it is really personal. "
-            },
-            {
-                "_id": "221928637",
-                "date": {
-                    "$date": "2017-12-28T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "15554949",
-                "reviewer_name": "M Trinidad",
-                "comments": "Todo estupendo."
-            },
-            {
-                "_id": "224843220",
-                "date": {
-                    "$date": "2018-01-04T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "161881178",
-                "reviewer_name": "Nina",
-                "comments": "Appartement très propre et très soigné ! Localisation parfaite. Fabio est très serviable et disponible. Il vous donnera des conseils très utiles pour passer un excellent séjour !"
-            },
-            {
-                "_id": "226939909",
-                "date": {
-                    "$date": "2018-01-13T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "31051133",
-                "reviewer_name": "Dominic",
-                "comments": "Fabio's apartment is in a great location and check in was easy. Fabio welcomed us and showed us the apartment, he provided a map and told us the local places to eat and different things to do. The apartment is clean and spacious for two, there are plenty of restaurants and supermarkets in a walkable vicinity. Would stay again."
-            },
-            {
-                "_id": "228555785",
-                "date": {
-                    "$date": "2018-01-20T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "27090109",
-                "reviewer_name": "Michèle",
-                "comments": "Très bon accueil de Fabio, charmant appartement très clean et parfaitement situé pour visiter Porto et proche de tout Nous recommandons sans problème"
-            },
-            {
-                "_id": "229417668",
-                "date": {
-                    "$date": "2018-01-23T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "102231829",
-                "reviewer_name": "Clémentine",
-                "comments": "Fabio et très accueillant, avec de super conseils. L'appartement est très propre et bien rénové et situé en pleins centre tout est accessible à pied."
-            },
-            {
-                "_id": "230450617",
-                "date": {
-                    "$date": "2018-01-28T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "167744204",
-                "reviewer_name": "Miguel",
-                "comments": "Apartamento en perfecto estado y muy acogedor. Perfectamente ubicado para conocer todo Porto a pie y cercano al metro. Fabio nos ha aconsejado sobre puntos de interés y sitios típicos. Atención sobresaliente. Volveremos"
-            },
-            {
-                "_id": "249575957",
-                "date": {
-                    "$date": "2018-04-02T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "171072996",
-                "reviewer_name": "Fina",
-                "comments": "Muy bien comunicado con todos los lugares de interes.Cerca de parada taxi autobuses y metro."
-            },
-            {
-                "_id": "256241961",
-                "date": {
-                    "$date": "2018-04-22T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "28501076",
-                "reviewer_name": "Ann-Christin",
-                "comments": "Die Unterkunft war einfach unglaublich schick und geschmackvoll eingerichtet. Der persönliche Empfang total nett, alles wurde erklärt und gezeigt. Super sauber, toll gelegen, einfach top! Auf jeden Fall würde ich die Unterkunft wieder buchen und zu 100% weiterempfehlen!"
-            },
-            {
-                "_id": "259030570",
-                "date": {
-                    "$date": "2018-04-30T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "170973990",
-                "reviewer_name": "Melanie",
-                "comments": "Grande chambre avec salle de bains et kitchenette. Lumineux, ultra propre, très bien décoré. Emplacement excellent pour toutes visites à pied cependant un peu bruyant les nuits du week-end...Fabio a été très accueillant et nous a bien conseillé concernant les visites et s'est rendu disponible si on avait le moindre souci. A recommander!"
-            },
-            {
-                "_id": "262291718",
-                "date": {
-                    "$date": "2018-05-08T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "178609500",
-                "reviewer_name": "Maria",
-                "comments": "Die Lage ist wirklich perfekt um Porto zu erkunden, wir waren sehr glücklich mit dem Apartment und vorallem die Gastfreundschaft von Fabio ear super  er hat am Anreisetag bis 0:30 uhr auf und gewartet, da der Flieger verspätet war und dennoch noch alles fein säuberlich erklärt und sich Zeit genommen "
-            },
-            {
-                "_id": "271150271",
-                "date": {
-                    "$date": "2018-05-31T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "113681020",
-                "reviewer_name": "Patricia",
-                "comments": "Uitstekende locatie en hele innemende gastheer die alles vertelde over de mogelijkheden in Porto.\nMooi appartement met alle voorzieningen en brandschoon!\nEen aanrader !"
-            },
-            {
-                "_id": "273174697",
-                "date": {
-                    "$date": "2018-06-05T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "1938281",
-                "reviewer_name": "Carlos Augusto",
-                "comments": "Não hesitem em se hospedarem no apartamento de Fábio. A denominação \"Be Happy em Porto\" não poderia ser mais adequada ao espaço, tanto por sua localização privilegiada, a uma tranquila caminhada das principais atrações da cidade, quanto pelo conforto e, principalmente, a amabilidade com que Fábio nos recebeu e atendeu desde o primeiro contato. Host padrão cinco estrelas, altamente recomendável!"
-            },
-            {
-                "_id": "278666091",
-                "date": {
-                    "$date": "2018-06-18T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "60237178",
-                "reviewer_name": "Eva",
-                "comments": "You will find a modern, clean and stylish apartment in a perfect Porto location. We couldn't have asked for anything better.  "
-            },
-            {
-                "_id": "280447961",
-                "date": {
-                    "$date": "2018-06-23T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "170326915",
-                "reviewer_name": "Nicole",
-                "comments": "Ich war mit meiner Tochter in Fabios Wohnung! Es war super schön! Alles blitzeblank sauber! Sehr zentral gelegen! Wir haben eine sehr gute Einweisung bekommen und einige Tipps zur Freizeitgestaltung! Ich werde es auf jedenfalls weiterempfehlen! Danke Fabio!"
-            },
-            {
-                "_id": "282052831",
-                "date": {
-                    "$date": "2018-06-26T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "121476557",
-                "reviewer_name": "Rossend",
-                "comments": "Fabio's apartment is great! It has everything you need and more! The place IS super clean and Fabio treats you really well and gives helpful advices. The apartment couldn't be better located."
-            },
-            {
-                "_id": "286997841",
-                "date": {
-                    "$date": "2018-07-07T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "22012828",
-                "reviewer_name": "Antoinette",
-                "comments": "Tres bien accueillis par Fabio, qui nous a conseillé plein d’endroits sympas que nous avons appréciés! L’appartement est idéalement situé, dans le centre de Porto. Des bonnes vacances!"
-            },
-            {
-                "_id": "288227686",
-                "date": {
-                    "$date": "2018-07-09T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "3309811",
-                "reviewer_name": "Mikaël",
-                "comments": "It’s one of our best reservation EVER! \nWe will come again if we come again to Porto. Very clean, everything was clear and nothing got wrong in this apartment. Don’t hesitate to book!"
-            },
-            {
-                "_id": "290448416",
-                "date": {
-                    "$date": "2018-07-14T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "79485603",
-                "reviewer_name": "Cedric",
-                "comments": "Fàbio est très accueillant et vous conseils et vous donne les bonnes adresses l'appartement était super aussi bien l'emplacement que ça propreté."
-            },
-            {
-                "_id": "291786947",
-                "date": {
-                    "$date": "2018-07-16T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "37367942",
-                "reviewer_name": "Gabriella",
-                "comments": "This is a wonderful place in a central and fun area. You can walk everywhere or take public transport very close. The apartment is spacious and very well designed. Everything is brand new and super clean. We especially loved the huge, fluffy towels.  There is a full kitchen and the shower is great too. The tv has international channels and that was also an appreciated plus.  Fabio was extremely accomodating with the check in and out and made our short stay a complete success. "
-            },
-            {
-                "_id": "293517179",
-                "date": {
-                    "$date": "2018-07-20T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "18827905",
-                "reviewer_name": "Sara",
-                "comments": "Fabio's place was by far the best air b&b we have stayed in. His place is better equipped and more comfortable than a hotel & Fabio himself is very friendly & accomodating. His place is in the center and the street itself has a lot of bars, restaurants, market & laundry service if you don't feel like walking anywhere. Fabio was very accomodating and explained everything in the apartment when he checked us in. He even sent a message to check if we needed anything. Do not miss out if you can book his place!"
-            },
-            {
-                "_id": "295418728",
-                "date": {
-                    "$date": "2018-07-23T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "199248312",
-                "reviewer_name": "Linda",
-                "comments": "Het appartement ligt in het centrum van Porto en is van alle gemakken voorzien.\nFábio heeft ons hartelijk ontvangen en allerlei tips over de stad gegeven.\nEen ideale verblijfplaats in hartje Porto."
-            },
-            {
-                "_id": "296639530",
-                "date": {
-                    "$date": "2018-07-26T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "170033943",
-                "reviewer_name": "Maribel",
-                "comments": "Muy agradable y perfecta ubicación"
-            },
-            {
-                "_id": "298506116",
-                "date": {
-                    "$date": "2018-07-29T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "40280659",
-                "reviewer_name": "Carla",
-                "comments": "Excellent location! Walkable to the main train and metro stations, and close to the centre where it all happens. Building is old but the apartment is modern and has all the creature comforts and space to move. Great place to stay!"
-            },
-            {
-                "_id": "300860178",
-                "date": {
-                    "$date": "2018-08-03T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "40200390",
-                "reviewer_name": "Susan",
-                "comments": "I really liked it here. Fabio is a great host and the apartment is in a brilliant location. The apartment is lovely and has everything you need. If I ever come back to Porto I'd definitely stay here again."
-            },
-            {
-                "_id": "302967303",
-                "date": {
-                    "$date": "2018-08-06T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "20471450",
-                "reviewer_name": "Pradeep",
-                "comments": "Fabio is very nice and uncomplicated. He showed us everything and explained the things to do and see. We had a very nice stay in the flat. It is very clean and perfect located in Porto. You can go by foot to all the important places and the metro station is 3min away."
-            },
-            {
-                "_id": "304322020",
-                "date": {
-                    "$date": "2018-08-09T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "77449447",
-                "reviewer_name": "Elodie",
-                "comments": "Fábio est super et très disponible si besoin.\nl'appartement est identique aux photos et très propre et très très bien situé nous avons tout fait à pied.\nje le recommande amplement."
-            },
-            {
-                "_id": "307842900",
-                "date": {
-                    "$date": "2018-08-15T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "9112541",
-                "reviewer_name": "Martha",
-                "comments": "Fábio was a super host. He met us at the apartment and gave us a tour, instructions for check-out, etc. He offered lots of ideas for things to see and do in Porto. He also wrote down a list of restaurants that he liked. He told us to get in touch with him any time if we had more questions. The apartment was spotlessly clean and the kitchen was well equipped with cooking utensils, coffee maker, kettle, stove, etc. there was even salt, pepper and oil. Much appreciated as my husband and I cooked breakfast every morning. We LOVED the location. We walked everywhere from the apartment. Minutes from the Sao Bento(?) train station and many other attractions. There was a supermarket and laundromat within a few blocks as well as a variety of different cafes and restaurants. The apartment has been completely and tastefully updated and is completely secure.  We had a wonderful five days in Fábio’s apartment and would stay there again if back in Porto. "
-            },
-            {
-                "_id": "311868666",
-                "date": {
-                    "$date": "2018-08-22T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "9134060",
-                "reviewer_name": "Simona",
-                "comments": "Posto accogliente dove fermarsi. \nÈ centralissimo. \nFabio è un padrone di casa molto gentile e attento! \nL’appartamento è curato in ogni suo minimo particolare. \nSiamo stati benissimo. "
-            },
-            {
-                "_id": "313299207",
-                "date": {
-                    "$date": "2018-08-25T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "203598478",
-                "reviewer_name": "António",
-                "comments": "O espaço do Fábio tem uma localização privilegiada no coração da Cidade de Porto. Está próximo de tudo, com facilidade de deslocação para onde se queira ir. O espaço em si é limpo, confortável para quem gosta de tranquilidade e de privacidade em viagens, além do a vontade. "
-            },
-            {
-                "_id": "315313374",
-                "date": {
-                    "$date": "2018-08-28T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "45419232",
-                "reviewer_name": "Jampal",
-                "comments": "The Loft's location is perfect. Not too loud and you can walk easly to the main places. There are nice Shops and Restaurants just nearby. Fabio is a very friendly guy who will help you with everything. \n\nCheers"
-            },
-            {
-                "_id": "316990620",
-                "date": {
-                    "$date": "2018-09-01T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "210976161",
-                "reviewer_name": "Menno",
-                "comments": "Fabio is a true host that takes the time to help you enjoy the city. The appt itself is great and in an even better location. Dont hesitate to book this one, you will not regret!"
-            },
-            {
-                "_id": "319075077",
-                "date": {
-                    "$date": "2018-09-05T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "28694968",
-                "reviewer_name": "Jean Pierre",
-                "comments": "Fabio has a clean and  modernly decorated place  at a very typical Porto  street close to interesting touristic spots and convenient restaurants and nightlife, it made our stay extra special and comfortable. We met him when we arrived, he's was super nice , and he answered all our questions and gave us very useful tips. We loved our stay at his place!"
-            },
-            {
-                "_id": "320897602",
-                "date": {
-                    "$date": "2018-09-09T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "201803728",
-                "reviewer_name": "Alberto",
-                "comments": "La verdad que todo fue perfecto. El piso estaba como nuevo y moderno. Ubicación en todo el centro, cerca de todo, un privilegio. Y Fabio muy agradable, te enseña todo muy bien y te da buenas indicaciones para todo lo necesario e importante. Fue una estancia de 10 para estar en Oporto 4 días. Lo recomiendo sin dudar. Saludos :)"
-            },
-            {
-                "_id": "323972472",
-                "date": {
-                    "$date": "2018-09-16T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "210359218",
-                "reviewer_name": "Luiz Marcelo",
-                "comments": "Excelentes, tanto o anfitrião como a localização e condições da moradia!"
-            },
-            {
-                "_id": "326095856",
-                "date": {
-                    "$date": "2018-09-21T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "181602069",
-                "reviewer_name": "Carmel",
-                "comments": "Apartment exactly as described. Spotlessly clean.\n5 minute walk from metro.\nGood location to all the tourist sights.\nFabio responded to emails promptly and gave great information.\nHighly recommended"
-            },
-            {
-                "_id": "327802604",
-                "date": {
-                    "$date": "2018-09-24T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "181152357",
-                "reviewer_name": "Justine",
-                "comments": "Logement impeccable autant pour la situation, la propreté et les équipements. Fabio est très accueillant et disponible. Je recommande ce logement."
-            },
-            {
-                "_id": "328542326",
-                "date": {
-                    "$date": "2018-09-26T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "5591525",
-                "reviewer_name": "Lee",
-                "comments": "Fabio welcomed us personally.  His place is very well located, super clean, and very attractive."
-            },
-            {
-                "_id": "330946004",
-                "date": {
-                    "$date": "2018-10-01T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "16296967",
-                "reviewer_name": "Shaukat",
-                "comments": "Fabio's studio is in the heart of Porto, close to attractions and restaurants and bars. Fabio was showed us around the place and was very helpful. For light sleepers it might get a bit busy at night. The place was sparkling clean and very stylish. We enjoyed our stay and would highly recommend it."
-            },
-            {
-                "_id": "332475028",
-                "date": {
-                    "$date": "2018-10-05T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "283228",
-                "reviewer_name": "Dan",
-                "comments": "Perfect host, perfect location and super cozy and clean apartment!"
-            },
-            {
-                "_id": "336509630",
-                "date": {
-                    "$date": "2018-10-14T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "155412796",
-                "reviewer_name": "Rafael",
-                "comments": "Bem localizado, confortável,  banheiro novo. Exatamente como as fotos."
-            },
-            {
-                "_id": "337782582",
-                "date": {
-                    "$date": "2018-10-17T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "71357141",
-                "reviewer_name": "Jan",
-                "comments": "Very well located and cute and cozy place in downtown Porto. Really easy to walk everywhere. Kitchen is good if you feel like doing a little cooking as well. Happy to recommend Fabio’s place if you’re coming to Porto!!"
-            },
-            {
-                "_id": "338758478",
-                "date": {
-                    "$date": "2018-10-20T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "137144829",
-                "reviewer_name": "Carlos",
-                "comments": "Fue todo muy bien, excelente localización en el centro de Porto, encantador anfitrión que nos recomendó donde ir y el piso estaba impecable."
-            },
-            {
-                "_id": "341645695",
-                "date": {
-                    "$date": "2018-10-27T04:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "68674266",
-                "reviewer_name": "Julie",
-                "comments": "Accueil impeccable, bonnes explications. Appartement idéalement situé, propre, chaleureux, avec tout l’équipement nécessaire tout nouveau. Nous avons été content de notre séjour chez Fabio :-)"
-            },
-            {
-                "_id": "345845946",
-                "date": {
-                    "$date": "2018-11-06T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "209126371",
-                "reviewer_name": "Lylian",
-                "comments": "A hospedagem foi incrível! O apartamento é perfeito! Exatamente como nas fotos. Super bem localizado, extremamente limpo e equipado.\nSuper recomendo!"
-            },
-            {
-                "_id": "347938917",
-                "date": {
-                    "$date": "2018-11-12T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "222087197",
-                "reviewer_name": "José Antonio",
-                "comments": "Todo muy bien, tanto el trato con Favio como el alojamiento.\nMuy satisfactorio todo."
-            },
-            {
-                "_id": "349927584",
-                "date": {
-                    "$date": "2018-11-18T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "48782818",
-                "reviewer_name": "Radia",
-                "comments": "Super beau appartement à proximité des points touristiques de porto, super-propre, très pratique, Fabio est un super hôte.\nJe recommande cet appartement si vous allez à Porto."
-            },
-            {
-                "_id": "352529206",
-                "date": {
-                    "$date": "2018-11-25T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "65618655",
-                "reviewer_name": "Alicia",
-                "comments": "El apartamento está genial, súper bien ubicado, muy limpio y decorado con mucho gusto.  Es muy práctico y tiene todo lo necesario. Hay un supermercado cerquita que facilita mucho el comprar lo básico. Fábio es un gran anfitrión, nos estaba esperando en el alojamiento a nuestra llegada, nos explicó todo lo que teníamos en el alojamiento, así como cualquier duda que pudiéramos tener de la ciudad. Sin duda, si volvemos a Oporto, repetiremos alojamiento."
-            },
-            {
-                "_id": "355187511",
-                "date": {
-                    "$date": "2018-12-03T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "26197803",
-                "reviewer_name": "Núria",
-                "comments": "El apartamento es tal cual se ve en las fotos muy bien ubicado y limpio! Fabio nos explicó todo muy bien!"
-            },
-            {
-                "_id": "356824268",
-                "date": {
-                    "$date": "2018-12-09T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "144838963",
-                "reviewer_name": "Yacine",
-                "comments": "Fabio was very responsive and the flat's location is perfect. I'd definetely recommend his flat."
-            },
-            {
-                "_id": "364300484",
-                "date": {
-                    "$date": "2018-12-30T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "227851521",
-                "reviewer_name": "Paula",
-                "comments": "Gracias"
-            },
-            {
-                "_id": "369087499",
-                "date": {
-                    "$date": "2019-01-09T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "168461684",
-                "reviewer_name": "Leandro",
-                "comments": "Espaço super aconchegante e muito bem localizado. Apartamento é o que se vê nas fotos, com tudo o que se precisa para ter uma excelente estadia."
-            },
-            {
-                "_id": "410014317",
-                "date": {
-                    "$date": "2019-02-09T05:00:00.000Z"
-                },
-                "listing_id": "10083468",
-                "reviewer_id": "62603902",
-                "reviewer_name": "Alfonso",
-                "comments": "100% recomendable"
+                "listing_id": "10141950",
+                "reviewer_id": "1205536",
+                "reviewer_name": "Winnie",
+                "comments": "Regg's place is clean and bright and at the best location in Hong Kong. Regg is communicative and easy going. We enjoyed our stay very much."
             }
         ]
     }

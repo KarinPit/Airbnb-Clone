@@ -1,9 +1,8 @@
 import { userService } from "../../services/user.service.js"
 
-import { SPEND_BALANCE, REMOVE_USER, SET_USER, SET_USERS } from "../reducers/user.reducer.js"
+import { SET_CURRENT_LOCATION, REMOVE_USER, SET_USER, SET_USERS } from "../reducers/user.reducer.js"
 
 import { store } from "../store.js"
-
 
 
 export async function loadUsers() {
@@ -75,5 +74,22 @@ export async function logout() {
     } catch (err) {
         console.log('Cannot logout', err)
         throw err
+    }
+}
+
+export async function getUserLocation() {
+    try {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition((position) => {
+                const { latitude, longitude } = position.coords
+                store.dispatch({ type: SET_CURRENT_LOCATION, currentLocation: { latitude: latitude, longitude: longitude } })
+            })
+        }
+        else {
+            throw 'Geolocation is not supported by this browser.'
+        }
+    }
+    catch (err) {
+        console.log('Cannot get current location', err);
     }
 }

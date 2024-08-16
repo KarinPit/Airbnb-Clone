@@ -4,6 +4,7 @@ import { Provider, useDispatch, useSelector } from "react-redux";
 
 import { store } from "./store/store";
 import { handleScroll, handleResize } from "./store/actions/app.actions"
+import { getUserLocation } from "./store/actions/user.actions";
 
 
 export function App() {
@@ -13,6 +14,7 @@ export function App() {
     useEffect(() => {
         window.addEventListener('resize', handleResize)
         window.addEventListener('scroll', handleScroll)
+        getUserLocation()
 
         return () => {
             window.removeEventListener('resize', handleResize)

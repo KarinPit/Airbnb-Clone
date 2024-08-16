@@ -19,16 +19,16 @@
 .main-app {
     display: grid;
     grid-template-columns: auto 1fr auto;
-    grid-template-rows: minmax(auto, 100px) 1fr auto;
+    grid-template-rows: minmax(auto, 180px) 1fr auto;
     justify-content: center;
 
     header {
         grid-column: 1/-1;
         grid-row: 1;
         height: fit-content;
-        // max-height: rem(157px);
         background-color: #fff;
         padding-block-end: rem(10px);
+        border-bottom: 1px solid #ededed;
         padding-inline: rem($padding-xl);
         z-index: 2;
     }
@@ -73,11 +73,11 @@
 
     @include for-wide-layout {
         header {
-            padding-inline: rem($padding-xxxl);
+            padding-inline: rem($padding-xxl);
         }
 
         main {
-            padding-inline: rem($padding-xxxl);
+            padding-inline: rem($padding-xxl);
         }
     }
 }
