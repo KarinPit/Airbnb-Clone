@@ -7,11 +7,12 @@ import { SearchIcon } from '../../SVG/HeaderSvg'
 
 
 export function FilterStayMinimized() {
+    const isScrolled = useSelector((storeState) => storeState.appModule.isScrolled)
     const isOpenFilter = useSelector((storeState) => storeState.filterModule.isOpenFilter)
     const dispatch = useDispatch()
     const isActive = (inputName) => isOpenFilter === inputName
 
-    function handleClick(element) {
+function handleClick(element) {
         dispatch({ type: 'SET_EXPANDED_FILTER', isExpandedFilter: true })
         dispatch({ type: 'SET_OPEN_FILTER', isOpenFilter: element })
     }

@@ -19,8 +19,9 @@ export function MainLayout() {
 
             <main>
                 <div className={`${isScrolled && isExpandedFilter ? 'overlay' : ''}`}
-                    onClick={(ev) => dispatch({ type: 'SET_EXPANDED_FILTER', isExpandedFilter: false })}></div>
-
+                    onClick={(ev) => {
+                        dispatch({ type: 'SET_EXPANDED_FILTER', isExpandedFilter: false })
+                    }}></div>
                 <Outlet />
             </main>
         </>

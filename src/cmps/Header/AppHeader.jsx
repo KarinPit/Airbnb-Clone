@@ -65,8 +65,8 @@ export default function AppHeader() {
     ), [isOpenFilter, filterClassName]);
 
     const renderMinimizedFilter = useCallback(() => (
-        <>
-            <motion.div
+        <AnimatePresence>
+            {isScrolled && <motion.div
                 key="MinimizedFilter"
                 className={filterClassName}
                 initial={{ opacity: 0, y: 50, scaleX: 2 }}
@@ -78,9 +78,9 @@ export default function AppHeader() {
                     scaleX: { duration: 0.25 }
                 }}
             >
-                {isScrolled && <FilterStayMinimized />}
-            </motion.div>
-        </>
+                <FilterStayMinimized />
+            </motion.div>}
+        </AnimatePresence>
     ), [isScrolled, filterClassName]);
 
     const renderMobileFilter = useCallback(() => (

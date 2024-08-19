@@ -19,7 +19,7 @@
 .main-app {
     display: grid;
     grid-template-columns: auto 1fr auto;
-    grid-template-rows: minmax(auto, 180px) 1fr auto;
+    grid-template-rows: minmax(auto, 180px) 1fr;
     justify-content: center;
 
     header {
