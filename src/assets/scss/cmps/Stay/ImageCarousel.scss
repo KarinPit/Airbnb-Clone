@@ -1,0 +1,90 @@
+.stay-carousel {
+    position: relative;
+    margin-block-end: rem(12px);
+
+    img {
+        aspect-ratio: 20/19;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+    }
+
+    .add-to-favorites {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        height: fit-content;
+        z-index: 1;
+        padding: rem(12px) rem(12px) 0 rem(12px);
+
+        .guest-favorite {
+            background-color: #ffff;
+            padding: rem(2px) rem(6px);
+            border-radius: rem(14px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16);
+
+            p {
+                font-family: AirbnbCereal-Book;
+                font-size: rem(14px);
+            }
+        }
+
+        .heart-icons {
+            margin-left: auto;
+
+            svg {
+                width: rem(26px);
+                height: rem(26px);
+                fill: rgba(0, 0, 0, 0.5);
+                stroke: #ffff;
+                stroke-width: 2;
+                transition: scale 300ms ease;
+                cursor: pointer;
+
+                &:hover {
+                    scale: 1.1;
+                }
+            }
+        }
+    }
+
+    .arrows {
+        display: none;
+        position: absolute;
+        top: 50%;
+        justify-content: space-between;
+        width: 100%;
+        padding-inline: rem(12px);
+
+        &.show {
+            display: flex;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: rem(32px);
+            height: rem(32px);
+            background-color: #ffff;
+            border-radius: 50%;
+            box-shadow: 0 0 0 1px transparent, 0 0 0 4px transparent, 0 2px 4px rgba(0, 0, 0, 0.18);
+            opacity: 0.5;
+            transition: opacity 200ms ease-in;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 1;
+            }
+
+        }
+
+        svg {
+            width: rem(18px);
+            height: rem(18px);
+        }
+    }
+}

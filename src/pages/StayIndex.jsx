@@ -6,6 +6,8 @@ import { getDistance } from 'geolib'
 import { getMonthName } from '../utils/CalendarUtils'
 import { stayService } from '../services/stay.service'
 
+import { ImageCarousel } from '../cmps/Stay/ImageCarousel'
+
 
 export function StayIndex() {
     const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
@@ -61,9 +63,7 @@ export function StayIndex() {
         <div className='stay-gallery'>
             {stays.map(stay => (
                 <div key={stay._id}>
-                    <div className='stay-carousel'>
-                        <img src={stay.images.picture_url}></img>
-                    </div>
+                    <ImageCarousel stayImages={stay.images} isGuestFavorite={stay.is_guest_favorite} stayId={stay._id} />
 
                     <div className='stay-desc'>
                         <div className='desc-info'>

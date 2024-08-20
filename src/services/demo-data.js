@@ -90,7 +90,14 @@ export const DemoData = [
             "thumbnail_url": "",
             "medium_url": "",
             "picture_url": "https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large",
-            "xl_picture_url": ""
+            "xl_picture_url": "",
+            "additional": [
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436975/hx9ravtjop3uqv4giupt.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436496/ihozxprafjzuhil9qhh4.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436952/aef9ajipinpjhkley1e3.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg"
+            ],
         },
         "host": {
             "host_id": "51399391",
@@ -150,6 +157,7 @@ export const DemoData = [
             "review_scores_value": 9,
             "review_scores_rating": 89
         },
+        "is_guest_favorite" : true,
         "reviews": [
             {
                 "_id": "58663741",
@@ -734,7 +742,14 @@ export const DemoData = [
             "thumbnail_url": "",
             "medium_url": "",
             "picture_url": "https://a0.muscache.com/im/pictures/5b408b9e-45da-4808-be65-4edc1f29c453.jpg?aki_policy=large",
-            "xl_picture_url": ""
+            "xl_picture_url": "",
+            "additional": [
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436975/hx9ravtjop3uqv4giupt.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436496/ihozxprafjzuhil9qhh4.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436952/aef9ajipinpjhkley1e3.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg"
+            ],
         },
         "host": {
             "host_id": "1282196",
@@ -789,6 +804,7 @@ export const DemoData = [
             "review_scores_value": 9,
             "review_scores_rating": 89
         },
+        "is_guest_favorite" : false,
         "reviews": [
             {
                 "_id": "58663741",
@@ -1400,7 +1416,14 @@ export const DemoData = [
             "thumbnail_url": "",
             "medium_url": "",
             "picture_url": "https://a0.muscache.com/im/pictures/15037101/5aff14a7_original.jpg?aki_policy=large",
-            "xl_picture_url": ""
+            "xl_picture_url": "",
+            "additional": [
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436975/hx9ravtjop3uqv4giupt.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436496/ihozxprafjzuhil9qhh4.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436952/aef9ajipinpjhkley1e3.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg"
+            ],
         },
         "host": {
             "host_id": "5448114",
@@ -1458,6 +1481,7 @@ export const DemoData = [
             "review_scores_value": 9,
             "review_scores_rating": 84
         },
+        "is_guest_favorite" : false,
         "reviews": [
             {
                 "_id": "4765259",
@@ -2484,7 +2508,14 @@ export const DemoData = [
             "thumbnail_url": "",
             "medium_url": "",
             "picture_url": "https://a0.muscache.com/im/pictures/72844c8c-fec2-440e-a752-bba9b268c361.jpg?aki_policy=large",
-            "xl_picture_url": ""
+            "xl_picture_url": "",
+            "additional": [
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436975/hx9ravtjop3uqv4giupt.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436496/ihozxprafjzuhil9qhh4.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436952/aef9ajipinpjhkley1e3.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg"
+            ],
         },
         "host": {
             "host_id": "11275734",
@@ -2540,6 +2571,7 @@ export const DemoData = [
             "review_scores_value": 8,
             "review_scores_rating": 100
         },
+        "is_guest_favorite" : true,
         "reviews": [
             {
                 "_id": "61050713",
@@ -2622,7 +2654,14 @@ export const DemoData = [
             "thumbnail_url": "",
             "medium_url": "",
             "picture_url": "https://a0.muscache.com/im/pictures/59c516bd-c7c3-4dae-8625-aff5f55ece53.jpg?aki_policy=large",
-            "xl_picture_url": ""
+            "xl_picture_url": "",
+            "additional": [
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436975/hx9ravtjop3uqv4giupt.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436496/ihozxprafjzuhil9qhh4.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436952/aef9ajipinpjhkley1e3.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg"
+            ],
         },
         "host": {
             "host_id": "51496939",
@@ -2678,6 +2717,7 @@ export const DemoData = [
             "review_scores_value": 9,
             "review_scores_rating": 89
         },
+        "is_guest_favorite" : false,
         "reviews": [
             {
                 "_id": "58663741",
@@ -3261,7 +3301,14 @@ export const DemoData = [
             "thumbnail_url": "",
             "medium_url": "",
             "picture_url": "https://a0.muscache.com/im/pictures/15074036/a97119ed_original.jpg?aki_policy=large",
-            "xl_picture_url": ""
+            "xl_picture_url": "",
+            "additional": [
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436975/hx9ravtjop3uqv4giupt.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436496/ihozxprafjzuhil9qhh4.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436952/aef9ajipinpjhkley1e3.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg"
+            ],
         },
         "host": {
             "host_id": "454250",
@@ -3321,6 +3368,7 @@ export const DemoData = [
             "review_scores_value": 10,
             "review_scores_rating": 94
         },
+        "is_guest_favorite" : false,
         "reviews": [
             {
                 "_id": "4351675",
@@ -4114,7 +4162,14 @@ export const DemoData = [
             "thumbnail_url": "",
             "medium_url": "",
             "picture_url": "https://a0.muscache.com/im/pictures/159d489e-62ad-44c4-80a0-fab2a8f3b455.jpg?aki_policy=large",
-            "xl_picture_url": ""
+            "xl_picture_url": "",
+            "additional": [
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436975/hx9ravtjop3uqv4giupt.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436496/ihozxprafjzuhil9qhh4.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436952/aef9ajipinpjhkley1e3.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg"
+            ],
         },
         "host": {
             "host_id": "51530266",
@@ -4173,6 +4228,7 @@ export const DemoData = [
             "review_scores_value": 10,
             "review_scores_rating": 98
         },
+        "is_guest_favorite" : false,
         "reviews": [
             {
                 "_id": "60037020",
@@ -4951,7 +5007,14 @@ export const DemoData = [
             "thumbnail_url": "",
             "medium_url": "",
             "picture_url": "https://a0.muscache.com/im/pictures/231120b6-e6e5-4514-93cd-53722ac67de1.jpg?aki_policy=large",
-            "xl_picture_url": ""
+            "xl_picture_url": "",
+            "additional": [
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436975/hx9ravtjop3uqv4giupt.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436496/ihozxprafjzuhil9qhh4.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436952/aef9ajipinpjhkley1e3.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg"
+            ],
         },
         "host": {
             "host_id": "1241644",
@@ -5009,6 +5072,7 @@ export const DemoData = [
             "review_scores_value": 10,
             "review_scores_rating": 100
         },
+        "is_guest_favorite" : false,
         "reviews": [
             {
                 "_id": "68162172",
@@ -5092,7 +5156,14 @@ export const DemoData = [
             "thumbnail_url": "",
             "medium_url": "",
             "picture_url": "https://a0.muscache.com/im/pictures/b2119f25-42e1-4770-8072-20de92e65893.jpg?aki_policy=large",
-            "xl_picture_url": ""
+            "xl_picture_url": "",
+            "additional": [
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436975/hx9ravtjop3uqv4giupt.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436496/ihozxprafjzuhil9qhh4.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436952/aef9ajipinpjhkley1e3.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg"
+            ],
         },
         "host": {
             "host_id": "51326285",
@@ -5152,6 +5223,7 @@ export const DemoData = [
             "review_scores_value": 8,
             "review_scores_rating": 80
         },
+        "is_guest_favorite" : false,
         "reviews": [
             {
                 "_id": "61992538",
@@ -5229,7 +5301,14 @@ export const DemoData = [
             "thumbnail_url": "",
             "medium_url": "",
             "picture_url": "https://a0.muscache.com/im/pictures/9fa69ad8-c9be-45dd-966b-b8f59bdccb2b.jpg?aki_policy=large",
-            "xl_picture_url": ""
+            "xl_picture_url": "",
+            "additional": [
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436975/hx9ravtjop3uqv4giupt.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436496/ihozxprafjzuhil9qhh4.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436952/aef9ajipinpjhkley1e3.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg"
+            ],
         },
         "host": {
             "host_id": "51612949",
@@ -5288,6 +5367,7 @@ export const DemoData = [
             "review_scores_value": 9,
             "review_scores_rating": 89
         },
+        "is_guest_favorite" : false,
         "reviews": [
             {
                 "_id": "58663741",
@@ -5861,7 +5941,14 @@ export const DemoData = [
             "thumbnail_url": "",
             "medium_url": "",
             "picture_url": "https://a0.muscache.com/im/pictures/af5c069c-ef73-490a-9e47-b48c0ae47c2f.jpg?aki_policy=large",
-            "xl_picture_url": ""
+            "xl_picture_url": "",
+            "additional": [
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436975/hx9ravtjop3uqv4giupt.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436496/ihozxprafjzuhil9qhh4.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436952/aef9ajipinpjhkley1e3.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg"
+            ],
         },
         "host": {
             "host_id": "7140229",
@@ -5920,6 +6007,7 @@ export const DemoData = [
             "review_scores_value": 9,
             "review_scores_rating": 89
         },
+        "is_guest_favorite" : false,
         "reviews": [
             {
                 "_id": "58663741",
@@ -6499,7 +6587,14 @@ export const DemoData = [
             "thumbnail_url": "",
             "medium_url": "",
             "picture_url": "https://a0.muscache.com/im/pictures/4533a1dc-6fd8-4167-938d-391c6eebbc19.jpg?aki_policy=large",
-            "xl_picture_url": ""
+            "xl_picture_url": "",
+            "additional": [
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436975/hx9ravtjop3uqv4giupt.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436496/ihozxprafjzuhil9qhh4.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436952/aef9ajipinpjhkley1e3.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg"
+            ],
         },
         "host": {
             "host_id": "51624384",
@@ -6556,6 +6651,7 @@ export const DemoData = [
             "review_scores_value": 8,
             "review_scores_rating": 100
         },
+        "is_guest_favorite" : false,
         "reviews": [
             {
                 "_id": "56904633",
@@ -6649,7 +6745,14 @@ export const DemoData = [
             "thumbnail_url": "",
             "medium_url": "",
             "picture_url": "https://a0.muscache.com/im/pictures/f208bdd7-bdab-4d4d-b529-8e6b1e5a83c1.jpg?aki_policy=large",
-            "xl_picture_url": ""
+            "xl_picture_url": "",
+            "additional": [
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436975/hx9ravtjop3uqv4giupt.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436496/ihozxprafjzuhil9qhh4.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436952/aef9ajipinpjhkley1e3.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg"
+            ],
         },
         "host": {
             "host_id": "9036477",
@@ -6705,6 +6808,7 @@ export const DemoData = [
             "review_scores_value": 9,
             "review_scores_rating": 89
         },
+        "is_guest_favorite" : true,
         "reviews": [
             {
                 "_id": "58663741",
@@ -7288,7 +7392,14 @@ export const DemoData = [
             "thumbnail_url": "",
             "medium_url": "",
             "picture_url": "https://a0.muscache.com/im/pictures/5b1f4beb-6e06-41f0-970b-044f2f28d957.jpg?aki_policy=large",
-            "xl_picture_url": ""
+            "xl_picture_url": "",
+            "additional": [
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436975/hx9ravtjop3uqv4giupt.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436496/ihozxprafjzuhil9qhh4.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436952/aef9ajipinpjhkley1e3.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg"
+            ],
         },
         "host": {
             "host_id": "51670240",
@@ -7344,6 +7455,7 @@ export const DemoData = [
             "review_scores_value": 9,
             "review_scores_rating": 89
         },
+        "is_guest_favorite" : false,
         "reviews": [
             {
                 "_id": "58663741",
@@ -7920,7 +8032,14 @@ export const DemoData = [
             "thumbnail_url": "",
             "medium_url": "",
             "picture_url": "https://a0.muscache.com/im/pictures/aed1923a-69a6-4614-99d0-fd5c8f41ebda.jpg?aki_policy=large",
-            "xl_picture_url": ""
+            "xl_picture_url": "",
+            "additional": [
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436975/hx9ravtjop3uqv4giupt.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436496/ihozxprafjzuhil9qhh4.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436952/aef9ajipinpjhkley1e3.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg"
+            ],
         },
         "host": {
             "host_id": "30393403",
@@ -7974,6 +8093,7 @@ export const DemoData = [
             "review_scores_value": 9,
             "review_scores_rating": 89
         },
+        "is_guest_favorite" : false,
         "reviews": [
             {
                 "_id": "58663741",
@@ -8549,7 +8669,14 @@ export const DemoData = [
             "thumbnail_url": "",
             "medium_url": "",
             "picture_url": "https://a0.muscache.com/im/pictures/7280244f-cd51-4ac1-a9fd-9acef8a7f0bc.jpg?aki_policy=large",
-            "xl_picture_url": ""
+            "xl_picture_url": "",
+            "additional": [
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436975/hx9ravtjop3uqv4giupt.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436496/ihozxprafjzuhil9qhh4.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436952/aef9ajipinpjhkley1e3.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg"
+            ],
         },
         "host": {
             "host_id": "52316085",
@@ -8604,6 +8731,7 @@ export const DemoData = [
             "review_scores_value": 9,
             "review_scores_rating": 89
         },
+        "is_guest_favorite" : false,
         "reviews": [
             {
                 "_id": "58663741",
@@ -9175,7 +9303,14 @@ export const DemoData = [
             "thumbnail_url": "",
             "medium_url": "",
             "picture_url": "https://a0.muscache.com/im/pictures/7636a27c-6f18-41d4-b2ce-ecfa1e561451.jpg?aki_policy=large",
-            "xl_picture_url": ""
+            "xl_picture_url": "",
+            "additional": [
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436975/hx9ravtjop3uqv4giupt.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436496/ihozxprafjzuhil9qhh4.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436952/aef9ajipinpjhkley1e3.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg"
+            ],
         },
         "host": {
             "host_id": "52299431",
@@ -9229,6 +9364,7 @@ export const DemoData = [
             "review_scores_value": 9,
             "review_scores_rating": 89
         },
+        "is_guest_favorite" : false,
         "reviews": [
             {
                 "_id": "58663741",
@@ -9811,7 +9947,14 @@ export const DemoData = [
             "thumbnail_url": "",
             "medium_url": "",
             "picture_url": "https://a0.muscache.com/im/pictures/aee73a00-c7dd-43bd-93eb-8d96de467a89.jpg?aki_policy=large",
-            "xl_picture_url": ""
+            "xl_picture_url": "",
+            "additional": [
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436975/hx9ravtjop3uqv4giupt.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436496/ihozxprafjzuhil9qhh4.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436952/aef9ajipinpjhkley1e3.jpg",
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg"
+            ],
         },
         "host": {
             "host_id": "11435086",
@@ -9870,6 +10013,7 @@ export const DemoData = [
             "review_scores_value": 10,
             "review_scores_rating": 100
         },
+        "is_guest_favorite" : true,
         "reviews": [
             {
                 "_id": "59088971",
