@@ -76,6 +76,11 @@
             transition: opacity 200ms ease-in;
             cursor: pointer;
 
+            &.hide {
+                visibility: hidden;
+                pointer-events: none;
+            }
+
             &:hover {
                 opacity: 1;
             }
