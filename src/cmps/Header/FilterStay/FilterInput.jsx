@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { useSearchParams } from 'react-router-dom'
 
 import { format } from 'date-fns'
 import { getMonthName } from '../../../utils/CalendarUtils'
@@ -10,6 +9,7 @@ import { useSelector } from 'react-redux'
 
 
 export function FilterInput({
+    filterKey,
     className,
     label,
     refElement,
@@ -21,7 +21,6 @@ export function FilterInput({
     hideBorder,
     pseudoElements,
 }) {
-
     const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
     const [filterByToEdit, setFilterByToEdit] = useState({ loc: filterBy.loc })
     const isHoveredClass = isHovered && isHovered.current.className.includes(className) ? 'hovered' : ''
@@ -38,6 +37,10 @@ export function FilterInput({
         setFilterByToEdit(prev => ({ ...prev, loc: value }))
     }
 
+    function handleSubmit(ev) {
+        ev.preventDefault()
+    }
+
     return (
         <div
             className={`${className} ${activeClass} ${isHoveredClass} ${pseudoElements}`.replace(/\s+/g, ' ').trim()}
@@ -49,7 +52,7 @@ export function FilterInput({
             <div>
                 <p>{label}</p>
                 {className === 'where-input' ?
-                    <input placeholder={!filterBy.loc ? 'Search destinations' : filterBy.loc}
+                    <input placeholder='Search destinations'
                         type="text"
                         name="loc"
                         value={filterBy.loc}
@@ -88,7 +91,8 @@ export function FilterInput({
             )}
 
             {className === 'who-input' && (
-                <button className="primary-bg">
+                <button className="primary-bg"
+                    onClick={(ev) => { handleSubmit(ev) }}>
                     <SearchIcon />
                 </button>
             )}

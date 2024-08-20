@@ -115,8 +115,9 @@ function sanitizeFilterParams(filterBy) {
             if (filterBy.who[key] > 0) {
                 sanitizedFilter[key] = filterBy.who[key];
             }
-        });
+        })
     }
+
     return sanitizedFilter;
 }
 

@@ -15,9 +15,8 @@ import { LeftArrow, RightArrow } from '../../../../SVG/HeaderSvg'
 export default function CalendarPicker() {
     const currentWidth = useSelector((storeState) => storeState.appModule.currentWidth)
     const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
-    const [filterByToEdit, setFilterByToEdit] = useState({ checkIn: filterBy.checkIn, checkOut: filterBy.checkOut })
+    const [filterByToEdit, setFilterByToEdit] = useState(filterBy)
     const [searchParams, setSearchParams] = useSearchParams()
-    const dispatch = useDispatch()
 
     const calendarWideBreakpoint = 850
     const [currentDate, setCurrentDate] = useState(new Date())
@@ -25,12 +24,8 @@ export default function CalendarPicker() {
     const [hoveredDate, setHoveredDate] = useState(null)
     const [isDisabled, setIsDisabled] = useState(true)
     const [isMinimizedCalendar, setIsMinimizedCalendar] = useState(window.innerWidth < calendarWideBreakpoint)
-
     const nextMonthDate = addMonths(currentDate, 1)
 
-    useEffect(() => {
-        setSearchParams(stayService.sanitizeFilterParams(filterBy))
-    }, [filterBy.checkIn, filterBy.checkOut])
 
     useEffect(() => {
         setFilterBy(filterByToEdit)

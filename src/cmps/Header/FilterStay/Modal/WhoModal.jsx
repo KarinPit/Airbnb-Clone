@@ -32,9 +32,9 @@ export function WhoModal() {
     const [searchParams, setSearchParams] = useSearchParams()
 
 
-    useEffect(() => {
-        setSearchParams(stayService.sanitizeFilterParams(filterBy))
-    }, [filterBy.who])
+    // useEffect(() => {
+    //     setSearchParams(stayService.sanitizeFilterParams(filterBy))
+    // }, [filterBy.who])
 
     useEffect(() => {
         checkIsAdultDisabled();

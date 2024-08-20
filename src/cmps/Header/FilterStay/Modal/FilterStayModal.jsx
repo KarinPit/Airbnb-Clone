@@ -16,15 +16,6 @@ export function FilterStayModal() {
     useEffect(() => {
     }, [isWideScreen])
 
-    // async function loadStays() {
-    //     try {
-    //         const stays = await stayService.query(filterBy)
-    //     }
-    //     catch (err) {
-    //         console.log('error in loadStays', err)
-    //     }
-    // }
-
     const renderModalContent = () => {
         if (isOpenFilter.includes('where-input')) {
             return <WhereModal />

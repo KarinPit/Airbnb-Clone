@@ -76,13 +76,15 @@ export function FilterStay() {
     ]
 
     useEffect(() => {
-        const initialFilter = stayService.getFilterFromParams(searchParams);
-        setFilterBy(initialFilter)
+        setFilterBy(stayService.getFilterFromParams(searchParams))
     }, [])
 
     useEffect(() => {
-        setSearchParams(stayService.sanitizeFilterParams(filterBy))
+        const newParams = stayService.sanitizeFilterParams(filterBy);
+        setSearchParams((prev) => ({ ...prev, ...newParams }));
     }, [filterBy])
+
+
 
 
     function handleClick(element) {
@@ -93,10 +95,6 @@ export function FilterStay() {
         if (!isWideScreen) {
             dispatch({ type: 'SET_OPEN_FILTER_MOBILE', isOpenFilterMobile: true })
         }
-    }
-
-    function handleSubmit(ev) {
-        ev.preventDefault()
     }
 
     return (
@@ -114,6 +112,7 @@ export function FilterStay() {
             {filterInputs.map(({ className, label, subLabel, refElement, hideBorderCondition, pseudoElements, filterKey }) => (
                 <FilterInput
                     key={className}
+                    filterKey={filterKey}
                     className={className}
                     label={label}
                     subLabel={subLabel}
