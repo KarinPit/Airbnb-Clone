@@ -1,14 +1,9 @@
 .stay-carousel {
     position: relative;
+    overflow: hidden;
+    height: 250px;
     margin-block-end: rem(12px);
-
-    img {
-        aspect-ratio: 20/19;
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-        border-radius: 12px;
-    }
+    border-radius: 12px;
 
     .add-to-favorites {
         position: absolute;
@@ -52,16 +47,13 @@
     }
 
     .arrows {
-        display: none;
+        display: flex;
         position: absolute;
         top: 50%;
         justify-content: space-between;
         width: 100%;
         padding-inline: rem(12px);
-
-        &.show {
-            display: flex;
-        }
+        z-index: 1;
 
         div {
             display: flex;
@@ -90,6 +82,51 @@
         svg {
             width: rem(18px);
             height: rem(18px);
+        }
+    }
+
+    .carousel {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        transition: transform 300ms ease-in-out;
+
+        img {
+            width: 100%;
+            height: 100%;
+            flex: 0 0 100%;
+            aspect-ratio: 20/19;
+            object-fit: cover;
+        }
+    }
+
+    .carousel-dots {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 45px;
+        height: 30px;
+        overflow: hidden;
+        
+        .dots-container {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 3px;
+            width: max-content;
+            height: 100%;
+
+            div {
+                width: 6px;
+                height: 6px;
+                background-color: rgba(255, 255, 255, 0.6);
+                border-radius: 50%;
+
+                &.active-dot {
+                    background-color: #ffff;
+                }
+            }
         }
     }
 }
