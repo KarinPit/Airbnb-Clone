@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 
 
@@ -6,15 +6,9 @@ export function ImageCarousel({ stayImages, isGuestFavorite, stayId }) {
     const [currentIndexes, setCurrentIndexes] = useState({ [stayId]: 0 })
     const [isHovered, setIsHovered] = useState(null)
     const [slideDirection, setSlideDirection] = useState('');
+    const [dotCycle, setDotCycle] = useState(0);
     const totalImages = stayImages.additional.length;
-    const dotTransform = currentIndexes[stayId] > 2 && currentIndexes[stayId] < totalImages - 2
-        ? `translateX(-18px)`
-        : 'translateX(0)';
 
-
-    useEffect(() => {
-        setCurrentIndexes({ [stayId]: 0 })
-    }, [stayId])
 
     function handleArrowClick(direction) {
         setSlideDirection(direction)
@@ -24,18 +18,51 @@ export function ImageCarousel({ stayImages, isGuestFavorite, stayId }) {
                 ? Math.min(prev[stayId] + 1, stayImages.additional.length - 1)
                 : Math.max(prev[stayId] - 1, 0)
         }))
+
+        setDotCycle(prev => {
+            if (direction === 'right') {
+                if (currentIndexes[stayId] < 2) {
+                    return 0
+                }
+                else {
+                    return prev + 18;
+                }
+            } else {
+                return prev > 18 ? prev - 18 : 0;
+            }
+        });
     }
 
     function getDotClass(index) {
         const currentIndex = currentIndexes[stayId];
+        const activeDotIndex = 2 * (dotCycle / 18) + 2
+        const shrinkDotIndex = 2 * (dotCycle / 18) + 2
 
         if (currentIndex < 3) {
-            return currentIndex === index ? 'active-dot' : '';
-        } else if (currentIndex >= 3 && currentIndex <= totalImages - 3) {
-            return index === 2 ? 'active-dot' : '';
-        } else {
-            return currentIndex === index + (totalImages - 3) ? 'active-dot' : '';
+            const className = `${currentIndex === index ? 'active-dot' : ''} ${index === 3 || index === 4 ? 'shrinked-dot' : ''}`
+            return className
         }
+
+        else if (currentIndex >= 3 && currentIndex <= totalImages - 3) {
+            const className = `${index === activeDotIndex ? 'active-dot' : ''} ${index % 5 === 0 || index % 5 === 1 ? 'shrinked-dot' : ''}`
+            return className
+        }
+
+        else {
+            const className = `${currentIndex === (totalImages - (3 - index)) ? 'active-dot' : ''} ${index % 5 === 0 || index % 5 === 1 ? 'shrinked-dot' : ''}`
+            return className
+        }
+    }
+
+    function dotTransform() {
+        const currentIndex = currentIndexes[stayId]
+        console.log(dotCycle);
+
+        if (currentIndex >= 3 && currentIndex <= totalImages - 4) {
+            return `translateX(${-dotCycle}px)`;
+        }
+        else if (currentIndex > (totalImages - 5))
+            return `translateX(${-dotCycle}px)`;
     }
 
     return (
@@ -99,7 +126,7 @@ export function ImageCarousel({ stayImages, isGuestFavorite, stayId }) {
             </div>
 
             <div className="carousel-dots">
-                <div className="dots-container" style={{ transform: dotTransform }}>
+                <div className="dots-container" style={{ transform: dotTransform() }}>
                     {Array.from({ length: 3 * stayImages.additional.length }).map((_, index) => (
                         <div key={index} className={`${getDotClass(index)}`}>
                         </div>

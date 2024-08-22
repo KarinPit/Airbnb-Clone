@@ -96,7 +96,10 @@ export const DemoData = [
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436496/ihozxprafjzuhil9qhh4.jpg",
                 "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436952/aef9ajipinpjhkley1e3.jpg",
-                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg"
+                "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg",
+                "https://a0.muscache.com/im/pictures/miso/Hosting-676044415326884478/original/e32429f8-56bd-4ba1-a98a-46efc64e3e69.jpeg?im_w=720",
+                "https://a0.muscache.com/im/pictures/miso/Hosting-676044415326884478/original/0d8d0414-02a0-4174-9cb1-c22974d566de.jpeg?im_w=720",
+                "https://a0.muscache.com/im/pictures/miso/Hosting-676044415326884478/original/910041bb-c256-4b6c-9705-7ab68d391e56.jpeg?im_w=720",
             ],
         },
         "host": {
@@ -157,7 +160,7 @@ export const DemoData = [
             "review_scores_value": 9,
             "review_scores_rating": 89
         },
-        "is_guest_favorite" : true,
+        "is_guest_favorite": true,
         "reviews": [
             {
                 "_id": "58663741",
@@ -804,7 +807,7 @@ export const DemoData = [
             "review_scores_value": 9,
             "review_scores_rating": 89
         },
-        "is_guest_favorite" : false,
+        "is_guest_favorite": false,
         "reviews": [
             {
                 "_id": "58663741",
@@ -1481,7 +1484,7 @@ export const DemoData = [
             "review_scores_value": 9,
             "review_scores_rating": 84
         },
-        "is_guest_favorite" : false,
+        "is_guest_favorite": false,
         "reviews": [
             {
                 "_id": "4765259",
@@ -2571,7 +2574,7 @@ export const DemoData = [
             "review_scores_value": 8,
             "review_scores_rating": 100
         },
-        "is_guest_favorite" : true,
+        "is_guest_favorite": true,
         "reviews": [
             {
                 "_id": "61050713",
@@ -2717,7 +2720,7 @@ export const DemoData = [
             "review_scores_value": 9,
             "review_scores_rating": 89
         },
-        "is_guest_favorite" : false,
+        "is_guest_favorite": false,
         "reviews": [
             {
                 "_id": "58663741",
@@ -3368,7 +3371,7 @@ export const DemoData = [
             "review_scores_value": 10,
             "review_scores_rating": 94
         },
-        "is_guest_favorite" : false,
+        "is_guest_favorite": false,
         "reviews": [
             {
                 "_id": "4351675",
@@ -4228,7 +4231,7 @@ export const DemoData = [
             "review_scores_value": 10,
             "review_scores_rating": 98
         },
-        "is_guest_favorite" : false,
+        "is_guest_favorite": false,
         "reviews": [
             {
                 "_id": "60037020",
@@ -5072,7 +5075,7 @@ export const DemoData = [
             "review_scores_value": 10,
             "review_scores_rating": 100
         },
-        "is_guest_favorite" : false,
+        "is_guest_favorite": false,
         "reviews": [
             {
                 "_id": "68162172",
@@ -5223,7 +5226,7 @@ export const DemoData = [
             "review_scores_value": 8,
             "review_scores_rating": 80
         },
-        "is_guest_favorite" : false,
+        "is_guest_favorite": false,
         "reviews": [
             {
                 "_id": "61992538",
@@ -5367,7 +5370,7 @@ export const DemoData = [
             "review_scores_value": 9,
             "review_scores_rating": 89
         },
-        "is_guest_favorite" : false,
+        "is_guest_favorite": false,
         "reviews": [
             {
                 "_id": "58663741",
@@ -6007,7 +6010,7 @@ export const DemoData = [
             "review_scores_value": 9,
             "review_scores_rating": 89
         },
-        "is_guest_favorite" : false,
+        "is_guest_favorite": false,
         "reviews": [
             {
                 "_id": "58663741",
@@ -6651,7 +6654,7 @@ export const DemoData = [
             "review_scores_value": 8,
             "review_scores_rating": 100
         },
-        "is_guest_favorite" : false,
+        "is_guest_favorite": false,
         "reviews": [
             {
                 "_id": "56904633",
@@ -6808,7 +6811,7 @@ export const DemoData = [
             "review_scores_value": 9,
             "review_scores_rating": 89
         },
-        "is_guest_favorite" : true,
+        "is_guest_favorite": true,
         "reviews": [
             {
                 "_id": "58663741",
@@ -7455,7 +7458,7 @@ export const DemoData = [
             "review_scores_value": 9,
             "review_scores_rating": 89
         },
-        "is_guest_favorite" : false,
+        "is_guest_favorite": false,
         "reviews": [
             {
                 "_id": "58663741",
@@ -8093,7 +8096,7 @@ export const DemoData = [
             "review_scores_value": 9,
             "review_scores_rating": 89
         },
-        "is_guest_favorite" : false,
+        "is_guest_favorite": false,
         "reviews": [
             {
                 "_id": "58663741",
@@ -8731,7 +8734,7 @@ export const DemoData = [
             "review_scores_value": 9,
             "review_scores_rating": 89
         },
-        "is_guest_favorite" : false,
+        "is_guest_favorite": false,
         "reviews": [
             {
                 "_id": "58663741",
@@ -9364,7 +9367,7 @@ export const DemoData = [
             "review_scores_value": 9,
             "review_scores_rating": 89
         },
-        "is_guest_favorite" : false,
+        "is_guest_favorite": false,
         "reviews": [
             {
                 "_id": "58663741",
@@ -10013,7 +10016,7 @@ export const DemoData = [
             "review_scores_value": 10,
             "review_scores_rating": 100
         },
-        "is_guest_favorite" : true,
+        "is_guest_favorite": true,
         "reviews": [
             {
                 "_id": "59088971",
