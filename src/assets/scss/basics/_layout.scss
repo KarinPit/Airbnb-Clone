@@ -19,7 +19,7 @@
 .main-app {
     display: grid;
     grid-template-columns: auto 1fr auto;
-    grid-template-rows: minmax(auto, 180px) 1fr;
+    grid-template-rows: auto 1fr;
     justify-content: center;
 
     header {
@@ -27,7 +27,7 @@
         grid-row: 1;
         height: fit-content;
         background-color: #fff;
-        padding-block-end: rem(10px);
+        padding-block: rem(10px);
         border-bottom: 1px solid #ededed;
         padding-inline: rem($padding-xl);
         z-index: 2;
@@ -50,34 +50,37 @@
         }
     }
 
-    // @include for-extra-narrow-layout {}
-
-    // @include for-narrow-layout {}
-
     @include for-normal-layout {
 
-        grid-template-columns: rem(80px) 1fr rem(80px);
-
-        .main-app {
-            grid-template-rows: minmax(auto, 200px) 1fr auto;
-        }
+        grid-template-columns: auto 1fr auto;
+        grid-template-rows: minmax(auto, 240px) 1fr;
 
         header {
             padding-inline: rem($padding-xxl);
+            padding-block-start: 0;
+            padding-block-end: rem(10px);
         }
 
         main {
             padding-inline: rem($padding-xxl);
         }
+
     }
 
     @include for-wide-layout {
+        grid-template-columns: rem(80px) 1fr rem(80px);
+        grid-template-rows: minmax(80px, 180px) 1fr 80px;
+
+        &.scrolled {
+            margin-block-start: rem(-80px);
+        }
+
         header {
-            padding-inline: rem($padding-xxl);
+            padding-inline: rem($padding-xxxl);
         }
 
         main {
-            padding-inline: rem($padding-xxl);
+            padding-inline: rem($padding-xxxl);
         }
     }
 }

@@ -9,6 +9,7 @@ import { getUserLocation } from "./store/actions/user.actions";
 
 export function App() {
     const isOpenFilterMobile = useSelector((storeState) => storeState.filterModule.isOpenFilterMobile)
+    const isScrolled = useSelector((storeState) => storeState.appModule.isScrolled)
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -24,7 +25,7 @@ export function App() {
 
     return (
         <Provider store={store}>
-            <section className={`main-app ${isOpenFilterMobile ? 'hide-overflow' : ''}`} onClick={(e) => {
+            <section className={`main-app ${isOpenFilterMobile ? 'hide-overflow' : ''}${isScrolled? 'scrolled' : ''}`} onClick={(e) => {
                 if (e.target.className === 'container'
                     || e.target.className === 'main-app'
                     || e.target.className === 'header'
@@ -34,7 +35,6 @@ export function App() {
                     dispatch({ type: 'SET_OPEN_FILTER', isOpenFilter: false })
                 }
             }}>
-
                 {createRouting()}
             </section>
         </Provider>

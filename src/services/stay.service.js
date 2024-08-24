@@ -15,7 +15,8 @@ export const stayService = {
     remove,
     getDefaultFilter,
     getFilterFromParams,
-    sanitizeFilterParams
+    sanitizeFilterParams,
+    fetchImages
 }
 window.cs = stayService
 
@@ -69,6 +70,7 @@ async function save(stay) {
 
 function getDefaultFilter() {
     return {
+        category_tag: '',
         loc: '',
         checkIn: '',
         checkOut: '',
@@ -130,3 +132,16 @@ async function _createStays() {
     }
 }
 
+async function fetchImages() {
+    return fetch("/public/images/filter-category/filter.json")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+            throw error;
+        });
+};

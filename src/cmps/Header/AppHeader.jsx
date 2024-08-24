@@ -35,7 +35,7 @@ export default function AppHeader() {
                     className="nav-options"
                     initial={{ opacity: 0, y: -50, scale: 0 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: normalBreakpoint < currentWidth ? -50 : -150, x: normalBreakpoint < currentWidth ? 0 : -200, scale: 0 }}
+                    exit={{ opacity: 0, y: normalBreakpoint < currentWidth ? -50 : -150, x: normalBreakpoint < currentWidth ? -50 : -200, scale: 0 }}
                     transition={{ duration: 0.25 }}
                 >
                     <GeneralNav />

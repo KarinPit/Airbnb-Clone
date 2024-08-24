@@ -1,0 +1,363 @@
+[
+  {
+    "src": "off-the-grid.jpeg",
+    "alt": "Remote off-the-grid accommodations for a digital detox",
+    "title": "Off-the-grid",
+    "value": "Off-the-grid"
+  },
+  {
+    "src": "farms.jpeg",
+    "alt": "Working farms offering stays and agricultural experiences",
+    "title": "Farms",
+    "value": "Farms"
+  },
+  {
+    "src": "iconic-cities.jpeg",
+    "alt": "Properties located in the heart of the world's most iconic cities",
+    "title": "Iconic cities",
+    "value": "Iconic cities"
+  },
+  {
+    "src": "lakefront.jpeg",
+    "alt": "Charming lakefront properties ideal for water activities",
+    "title": "Lakefront",
+    "value": "Lakefront"
+  },
+  {
+    "src": "new.jpeg",
+    "alt": "Newly listed properties showcasing modern amenities and designs",
+    "title": "New",
+    "value": "New"
+  },
+  {
+    "src": "boats.jpeg",
+    "alt": "Unique accommodations on boats docked or at sea",
+    "title": "Boats",
+    "value": "Boats"
+  },
+  {
+    "src": "grand-pianos.jpeg",
+    "alt": "Elegant spaces featuring grand pianos",
+    "title": "Grand pianos",
+    "value": "Grand pianos"
+  },
+  {
+    "src": "trulli.jpeg",
+    "alt": "Traditional Trulli houses in Italy with conical stone roofs",
+    "title": "Trulli",
+    "value": "Trulli"
+  },
+  {
+    "src": "lake.jpeg",
+    "alt": "Peaceful lake houses with stunning water views",
+    "title": "Lake",
+    "value": "Lake"
+  },
+  {
+    "src": "treehouses.jpeg",
+    "alt": "Whimsical treehouses nestled in lush canopies",
+    "title": "Treehouses",
+    "value": "Treehouses"
+  },
+  {
+    "src": "vineyards.jpeg",
+    "alt": "Estates and accommodations nestled within vineyards for wine enthusiasts",
+    "title": "Vineyards",
+    "value": "Vineyards"
+  },
+  {
+    "src": "historical-homes.jpeg",
+    "alt": "Preserved historical homes offering a trip through time",
+    "title": "Historical Homes",
+    "value": "Historical Homes"
+  },
+  {
+    "src": "earth-homes.jpeg",
+    "alt": "Eco-friendly earth homes built with sustainable materials",
+    "title": "Earth homes",
+    "value": "Earth homes"
+  },
+  {
+    "src": "amazing-pools.jpeg",
+    "alt": "Luxurious homes with stunning swimming pools",
+    "title": "Amazing pools",
+    "value": "Amazing pools"
+  },
+  {
+    "src": "country-side.jpeg",
+    "alt": "Idyllic countryside retreats away from the hustle and bustle",
+    "title": "Countryside",
+    "value": "Countryside"
+  },
+  {
+    "src": "amazing-views.jpeg",
+    "alt": "Properties offering breathtaking panoramic views",
+    "title": "Amazing views",
+    "value": "Amazing views"
+  },
+  {
+    "src": "skiing.jpeg",
+    "alt": "Mountain lodges and chalets perfect for skiing enthusiasts",
+    "title": "Skiing",
+    "value": "Skiing"
+  },
+  {
+    "src": "beach.jpeg",
+    "alt": "Beachside homes offering direct access to sandy shores",
+    "title": "Beach",
+    "value": "Beach"
+  },
+  {
+    "src": "creative-spaces.jpeg",
+    "alt": "Inspirational spaces designed to spark creativity",
+    "title": "Creative spaces",
+    "value": "Creative spaces"
+  },
+  {
+    "src": "a-frames.jpeg",
+    "alt": "A-frame cabins nestled in a forest",
+    "title": "A-Frame Cabins",
+    "value": "A-Frame Cabins"
+  },
+  {
+    "src": "mansions.jpeg",
+    "alt": "Grand mansions with lavish gardens and expansive estates",
+    "title": "Mansions",
+    "value": "Mansions"
+  },
+  {
+    "src": "beachfront.jpeg",
+    "alt": "Stunning beachfront properties with ocean views",
+    "title": "Beachfront",
+    "value": "Beachfront"
+  },
+  {
+    "src": "luxe.jpeg",
+    "alt": "Luxurious accommodations offering premium amenities and services",
+    "title": "Luxe",
+    "value": "Luxe"
+  },
+  {
+    "src": "design.jpeg",
+    "alt": "Accommodations featuring cutting-edge architectural design",
+    "title": "Design",
+    "value": "Design"
+  },
+  {
+    "src": "national-parks.jpeg",
+    "alt": "Accommodations nestled within or near national parks",
+    "title": "National parks",
+    "value": "National parks"
+  },
+  {
+    "src": "castles.jpeg",
+    "alt": "Historic castles that have been converted into luxury accommodations",
+    "title": "Castles",
+    "value": "Castles"
+  },
+  {
+    "src": "caves.jpeg",
+    "alt": "Cave dwellings modernized for unique stays",
+    "title": "Caves",
+    "value": "Caves"
+  },
+  {
+    "src": "omg!.jpeg",
+    "alt": "Jaw-dropping properties that offer an unforgettable experience",
+    "title": "OMG! Stays",
+    "value": "OMG! Stays"
+  },
+  {
+    "src": "desert.jpeg",
+    "alt": "Desert oases offering solitude and stunning landscapes",
+    "title": "Desert",
+    "value": "Desert"
+  },
+  {
+    "src": "islands.jpeg",
+    "alt": "Private island retreats offering unparalleled solitude and beauty",
+    "title": "Private Island Retreats",
+    "value": "Private Island Retreats"
+  },
+  {
+    "src": "cabins.jpeg",
+    "alt": "Secluded cabins surrounded by natural beauty",
+    "title": "Cabins",
+    "value": "Cabins"
+  },
+  {
+    "src": "campers.jpeg",
+    "alt": "Customized campers for adventurous road trips",
+    "title": "Campers",
+    "value": "Campers"
+  },
+  {
+    "src": "arctic.jpeg",
+    "alt": "Accommodations surrounded by arctic snowscapes",
+    "title": "Arctic",
+    "value": "Arctic"
+  },
+  {
+    "src": "tiny-homes.jpeg",
+    "alt": "Eco-friendly tiny homes offering minimalist living",
+    "title": "Tiny homes",
+    "value": "Tiny homes"
+  },
+  {
+    "src": "surfing.jpeg",
+    "alt": "Beach homes and hostels popular with surfing communities",
+    "title": "Surfing",
+    "value": "Surfing"
+  },
+  {
+    "src": "tropical.jpeg",
+    "alt": "Tropical retreats surrounded by lush vegetation and exotic wildlife",
+    "title": "Tropical",
+    "value": "Tropical"
+  },
+  {
+    "src": "trending.jpeg",
+    "alt": "Trending properties gaining popularity for their unique features",
+    "title": "Trending",
+    "value": "Trending"
+  },
+  {
+    "src": "golfing.jpeg",
+    "alt": "Luxury accommodations with access to premier golf courses",
+    "title": "Golfing",
+    "value": "Golfing"
+  },
+  {
+    "src": "rooms.jpeg",
+    "alt": "Comfortable rooms in shared homes or apartments",
+    "title": "Rooms",
+    "value": "Rooms"
+  },
+  {
+    "src": "bed-and-breakfasts.jpeg",
+    "alt": "Charming bed and breakfasts with welcoming hosts",
+    "title": "Bed & Breakfasts",
+    "value": "Bed & Breakfasts"
+  },
+  {
+    "src": "chef-kitchens.jpeg",
+    "alt": "Accommodations featuring gourmet kitchens for culinary enthusiasts",
+    "title": "Chef's kitchens",
+    "value": "Chef's kitchens"
+  },
+  {
+    "src": "hanoks.jpeg",
+    "alt": "Traditional Korean Hanok houses with classic tiled roofs",
+    "title": "Hanoks",
+    "value": "Hanoks"
+  },
+  {
+    "src": "top-of-the-world.jpeg",
+    "alt": "Elevated properties with views that make you feel on top of the world",
+    "title": "Top of the world",
+    "value": "Top of the world"
+  },
+
+  {
+    "src": "cycladic-homes.jpeg",
+    "alt": "Traditional Cycladic homes with white-washed walls in the Greek islands",
+    "title": "Cycladic homes",
+    "value": "Cycladic homes"
+  },
+  {
+    "src": "casas-particulares.jpeg",
+    "alt": "Traditional Casas Particulares in Cuba offering authentic experiences",
+    "title": "Casas particulares",
+    "value": "Casas particulares"
+  },
+  {
+    "src": "domes.jpeg",
+    "alt": "Geodesic domes providing a unique glamping experience",
+    "title": "Domes",
+    "value": "Domes"
+  },
+  {
+    "src": "yurts.jpeg",
+    "alt": "Traditional yurts offering a nomadic living experience",
+    "title": "Yurts",
+    "value": "Yurts"
+  },
+  {
+    "src": "minsus.jpeg",
+    "alt": "Traditional Taiwanese Minsu guesthouses offering local hospitality",
+    "title": "Minsus",
+    "value": "Minsus"
+  },
+  {
+    "src": "ryokans.jpeg",
+    "alt": "Traditional Japanese Ryokan inns with tatami mat floors",
+    "title": "Ryokans",
+    "value": "Ryokans"
+  },
+  {
+    "src": "play.jpeg",
+    "alt": "Fun-filled accommodations with game rooms and entertainment options",
+    "title": "Play",
+    "value": "Play"
+  },
+  {
+    "src": "shepherds-huts.jpeg",
+    "alt": "Quaint shepherd's huts in pastoral settings",
+    "title": "Shepherd's Huts",
+    "value": "Shepherd's Huts"
+  },
+  {
+    "src": "ski-in-out.jpeg",
+    "alt": "Ski-in, ski-out accommodations for easy access to the slopes",
+    "title": "Ski-in/out",
+    "value": "Ski-in/out"
+  },
+  {
+    "src": "windmills.jpeg",
+    "alt": "Converted windmills offering a unique and historical stay",
+    "title": "Windmills",
+    "value": "Windmills"
+  },
+  {
+    "src": "barns.jpeg",
+    "alt": "Renovated barns transformed into cozy living spaces",
+    "title": "Barns",
+    "value": "Barns"
+  },
+  {
+    "src": "towers.jpeg",
+    "alt": "Historic tower homes offering panoramic views and unique stays",
+    "title": "Towers",
+    "value": "Towers"
+  },
+  {
+    "src": "houseboats.jpeg",
+    "alt": "Houseboats docked in serene waters for a peaceful stay",
+    "title": "Houseboats",
+    "value": "Houseboats"
+  },
+  {
+    "src": "adapted.jpeg",
+    "alt": "Adapted homes with accessibility features",
+    "title": "Adapted",
+    "value": "Adapted"
+  },
+  {
+    "src": "containers.jpeg",
+    "alt": "Innovative homes made from repurposed shipping containers",
+    "title": "Containers",
+    "value": "Containers"
+  },
+  {
+    "src": "riads.jpeg",
+    "alt": "Traditional Moroccan Riads with courtyard gardens",
+    "title": "Riads",
+    "value": "Riads"
+  },
+  {
+    "src": "dammusi.jpeg",
+    "alt": "Traditional Dammusi stone houses in Sicily with iconic domed roofs",
+    "title": "Dammusi",
+    "value": "Dammusi"
+  }
+]

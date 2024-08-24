@@ -1,11 +1,20 @@
 header {
     position: sticky;
-    top: rem(10px);
+    top: 0;
     display: grid;
     grid-template-columns: auto 1fr auto;
-    grid-template-rows: 180px;
     place-items: center;
-    margin-block-start: rem(10px);
+
+    &.scrolled {
+
+        .filter-search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-column: 2;
+            grid-row: 1;
+        }
+    }
 
     .user-nav,
     .nav-options,
@@ -27,24 +36,12 @@ header {
             width: 100%;
         }
     }
-
-    &.scrolled {
-
-        .filter-search-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            grid-column: 2;
-            grid-row: 1;
-        }
-    }
 }
 
 @include for-normal-layout {
     header {
         top: 0;
         grid-template-rows: rem(80px) auto auto;
-        margin-block-start: 0;
 
         .logo {
             grid-column: 1;
@@ -159,7 +156,7 @@ header {
 
 @include for-wide-layout {
     header {
-        grid-template-columns: minmax(auto, 300px) 1fr minmax(auto, 300px);
+        grid-template-columns: 1fr 2fr 1fr;
 
         .logo {
             span {
@@ -168,7 +165,7 @@ header {
         }
 
         .nav-options {
-            grid-column: 2;
+            grid-column: 1/-1;
             grid-row: 1;
         }
 

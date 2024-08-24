@@ -38,8 +38,6 @@
     width: 100%;
     font-size: rem(12px);
     padding-inline-start: rem(10px);
-    margin-block-end: rem(12px);
-
 
     .border-div {
         display: none;
@@ -134,6 +132,7 @@
 
     .filter-search {
         min-height: rem(56px);
+        margin-block-end: rem(12px);
         padding-inline-start: 0;
 
         input {
