@@ -27,19 +27,31 @@ export function ImageCarousel({ stayImages, isGuestFavorite, stayId }) {
     const getDotClass = (index) => {
         const currentIndex = currentIndexes[stayId];
 
-        if (currentIndex < 3) {
-            return `${currentIndex === index ? "active-dot" : ""} ${index >= 3 ? "shrinked-dot" : ""}`;
-        } else if (currentIndex >= 3 && currentIndex <= totalImages - 3) {
-            const activeDotIndex = 2 * (dotCycle / 18) + 2;
-            return `${index === activeDotIndex ? "active-dot" : ""} ${Math.abs(index - activeDotIndex) === 2 ? "shrinked-dot" : ""}`;
-        } else {
-            if (totalImages <= 5) {
-                return `${index === currentIndex ? "active-dot" : ""} ${Math.abs(index) === 2 ? "shrinked-dot" : ""}`;
+        if (totalImages <= 5) {
+            return `${index === currentIndex ? "active-dot" : ""}`;
+        }
+
+        else {
+            if (currentIndex < 3) {
+                return `${currentIndex === index ? "active-dot" : ""} ${index >= 3 ? "shrinked-dot" : ""}`;
             }
+
+            else if (currentIndex >= 3 && currentIndex < totalImages - 3) {
+                const activeDotIndex = 2 * (dotCycle / 18) + 2;
+                return `${index === activeDotIndex ? "active-dot" : ""} ${Math.abs(index - activeDotIndex) === 2 ? "shrinked-dot" : ""}`;
+            }
+
             else {
-                const dotsIndex = 2 * (dotCycle / 18)
-                const toAdd = (dotCycle / 18 % 2) === 0 ? dotsIndex + 1 : dotsIndex
-                return `${index === toAdd ? "active-dot" : ""} ${Math.abs(index) === 2 ? "shrinked-dot" : ""}`;
+                if (currentIndex === totalImages - 3) {
+                    const activeDotIndex = 2 * (dotCycle / 18) + 2;
+                    return `${index === activeDotIndex ? "active-dot" : ""} ${index === activeDotIndex - 2 || index === activeDotIndex - 1 ? "shrinked-dot" : ""}`;
+                }
+                else {
+                    const dotsIndex = 2 * (dotCycle / 18)
+                    const toAdd = (dotCycle / 18 % 2) === 0 ? dotsIndex + 1 : dotsIndex
+                    const toShrink = (dotCycle / 18 % 2) === 0 ? dotsIndex - 2 : dotsIndex - 4
+                    return `${index === toAdd ? "active-dot" : ""} ${index === toShrink || index === toShrink + 1 ? "shrinked-dot" : ""}`;
+                }
             }
         }
     };
