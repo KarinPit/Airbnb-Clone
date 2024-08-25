@@ -3,8 +3,7 @@ import { ScrollMenu } from "./ScrollMenu";
 import { LeftArrowIcon, RightArrowIcon } from "../../../services/svg.service";
 import { stayService } from "../../../services/stay.service"
 
-// export function FilterCategories() {
-  export function FilterCategories({ onSetFilter, filterBy }) {
+export function FilterCategories({ onSetFilter, filterBy }) {
   const [images, setImages] = useState([]);
   const labelRefs = useRef([]);
   const scrollContainerRef = useRef(null);
@@ -77,7 +76,7 @@ import { stayService } from "../../../services/stay.service"
               onChange={(e) => handleClick(e)}
             />
             <img
-              src={`/assets/img/filter-category/${image.src}`}
+              src={`/public/images/filter-category/${image.src}`}
               alt={image.alt}
             />
             <span>{image.title}</span>

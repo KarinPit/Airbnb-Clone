@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 
 export function ScrollMenu({
   children,
@@ -6,10 +7,13 @@ export function ScrollMenu({
   RightIcon,
   scrollRef,
 }) {
+  const isScrolled = useSelector((storeState) => storeState.appModule.isScrolled)
   const [isAtStart, setIsAtStart] = useState(true);
   const [isAtEnd, setIsAtEnd] = useState(false);
 
   useEffect(() => {
+    console.log('scrolled', scrollRef.current.scrollLeft);
+
     const checkScrollPosition = () => {
       if (scrollRef.current) {
         const el = scrollRef.current;
@@ -29,7 +33,8 @@ export function ScrollMenu({
   }, [children, scrollRef]);
 
   return (
-    <div className="scroll-menu-wrapper">
+    <div className={`scroll-menu-wrapper ${isScrolled ? 'scrolled' : ''}`}>
+
       {!isAtStart && (
         <div className="scroll-menu-arrows left">
           <button
@@ -43,9 +48,11 @@ export function ScrollMenu({
           </button>
         </div>
       )}
+
       <div className="scroll-menu-childrens" ref={scrollRef}>
         {children}
       </div>
+
       {!isAtEnd && (
         <div className="scroll-menu-arrows right">
           <button

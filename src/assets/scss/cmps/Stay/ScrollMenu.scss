@@ -1,0 +1,107 @@
+.scroll-menu-wrapper {
+    overflow: hidden;
+    position: sticky;
+    top: rem(90px);
+    background-color: #ffff;
+    z-index: 2;
+    margin-block-end: rem(16px);
+    padding-block: rem(12px);
+    padding-inline: rem($padding-xl);
+    border-top: 1px solid #efefef;
+
+    &.scrolled {
+        border-top: 1px solid #efefef;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.094);
+    }
+
+    .scroll-menu-childrens {
+        overflow-x: auto;
+        scroll-behavior: smooth;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .scroll-menu-arrows {
+        height: 100%;
+        z-index: 5;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        background-color: hsl(0, 0%, 100%);
+
+        &.left {
+            display: none;
+
+            &::after {
+                @include arrow-fade(left);
+                right: -#{$scroll-arrow-width};
+            }
+        }
+
+        &.right {
+            display: none;
+
+            &::before {
+                @include arrow-fade(right);
+                left: -#{$scroll-arrow-width};
+            }
+        }
+    }
+
+    .scroll-menu-arrow {
+        height: 32px;
+        width: 32px;
+        cursor: pointer;
+        border: 0.5px solid rgba(0, 0, 0, 0.3);
+        outline: none;
+        border-radius: 50%;
+        transition: box-shadow 0.2s cubic-bezier(0.2, 0, 0, 1);
+        background-color: #ffff;
+
+        svg {
+            margin: auto;
+            display: block;
+            height: 12px;
+            width: 12px;
+        }
+    }
+}
+
+
+@include for-normal-layout {
+    .scroll-menu-wrapper {
+        padding-inline: 0;
+
+        .scroll-menu-arrows {
+            
+            &.left {
+                display: flex;
+                left: rem($padding-xxl);
+            }
+            
+            &.right {
+                display: flex;
+                right: rem($padding-xxl);
+            }
+        }
+    }
+}
+
+@include for-wide-layout {
+    .scroll-menu-wrapper {
+        .scroll-menu-arrows {
+
+            &.left {
+                left: rem($padding-xxxl);
+            }
+
+            &.right {
+                right: rem($padding-xxxl);
+            }
+        }
+    }
+}
