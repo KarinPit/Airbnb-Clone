@@ -52,14 +52,15 @@ export function FilterCategories({ onSetFilter, filterBy }) {
 
   const handleClick = (title) => {
     onSetFilter({ category_tag: title });
-  };
+  }
+  
   return (
     <ScrollMenu
       RightIcon={RightArrowIcon}
       LeftIcon={LeftArrowIcon}
       scrollRef={scrollContainerRef}
     >
-      <div className="filter-categories-wrapper full">
+      <div className="filter-categories-wrapper">
         {images.map((image, index) => (
           <label
             key={index}

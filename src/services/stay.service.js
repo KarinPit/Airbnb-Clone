@@ -26,9 +26,11 @@ async function query(filterBy) {
     let stays = await storageService.query(STORAGE_KEY)
 
     if (filterBy) {
-        let { loc = '', checkIn = '', checkOut = '', who = 0 } = filterBy
-        const regexLoc = new RegExp(loc, 'i')
-        stays = stays.filter(stay => regexLoc.test(stay.address.country))
+        let { loc = '', checkIn = '', checkOut = '', who = 0, category_tag } = filterBy
+        const regexLoc = new RegExp(category_tag, 'i')
+        stays = stays.filter(stay => stay.property_category.some(category => regexLoc.test(category)));
+        // const regexLoc = new RegExp(loc, 'i')
+        // stays = stays.filter(stay => regexLoc.test(stay.property_category))
         return stays
     }
 
@@ -99,6 +101,7 @@ function getFilterFromParams(searchParams) {
 
 function sanitizeFilterParams(filterBy) {
     const defaultFilter = {
+        category_tag: '',
         loc: '',
         checkIn: '',
         checkOut: '',

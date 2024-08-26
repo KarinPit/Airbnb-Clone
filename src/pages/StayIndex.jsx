@@ -10,6 +10,7 @@ import { ImageCarousel } from '../cmps/Stay/ImageCarousel'
 
 
 export function StayIndex() {
+    const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
     const userLoc = useSelector((storeState) => storeState.userModule.currentLocation)
     const [stays, setStays] = useState(null)
 
@@ -17,9 +18,13 @@ export function StayIndex() {
         loadStays()
     }, [])
 
-    async function loadStays() {
+    useEffect(() => {
+        loadStays(filterBy)
+    }, [filterBy.category_tag])
+
+    async function loadStays(filterBy) {
         try {
-            const stays = await stayService.query()
+            const stays = await stayService.query(filterBy)
             setStays(stays)
         }
         catch (err) {

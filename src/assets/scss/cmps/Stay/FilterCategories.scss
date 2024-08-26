@@ -1,9 +1,7 @@
 .filter-categories-wrapper {
-    // position: sticky;
-    // top: 0;
     display: grid;
     grid-auto-flow: column;
-    gap: rem(56px);
+    gap: rem(28px);
 
     &::-webkit-scrollbar {
         display: none;
@@ -63,6 +61,7 @@
 
             &::after {
                 opacity: 1;
+                border-bottom: 2px solid black;
             }
         }
     }
@@ -74,5 +73,12 @@
         color: transparent;
         border: transparent;
         outline: none;
+    }
+}
+
+
+@include for-normal-layout {
+    .filter-categories-wrapper {
+        gap: rem(56px);
     }
 }
