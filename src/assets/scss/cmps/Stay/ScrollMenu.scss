@@ -1,9 +1,9 @@
 .scroll-menu-wrapper {
-    overflow: hidden;
+    overflow-x: hidden;
     position: sticky;
     top: rem(85px);
     background-color: #ffff;
-    z-index: 3;
+    z-index: 2;
     margin-block-end: rem(36px);
     padding-inline: rem($padding-xl);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.094);

@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: rem(40px);
+    padding-block-end: rem(52px);
 
     >div {
         display: flex;

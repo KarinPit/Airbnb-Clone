@@ -24,7 +24,7 @@ export default function AppHeader() {
     const filterClassName = `filter-search-container ${isWideScreen ? '' : 'mobile'}`
 
     useEffect(() => {
-    }, [isWideScreen, isScrolled]);
+    }, [isWideScreen]);
 
 
     const renderNavOptions = useCallback(() => (

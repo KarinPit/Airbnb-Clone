@@ -3,8 +3,12 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Outlet } from 'react-router-dom';
 
 import { stayService } from '../../services/stay.service';
+import { AnimatePresence } from 'framer-motion';
 
 import AppHeader from "../../cmps/Header/AppHeader"
+import { Footer } from '../../cmps/Footer/Footer'
+import { MobileFooter } from '../../cmps/Footer/MobileFooter';
+import { FilterMobileFooter } from '../../cmps/Footer/FilterMobileFooter';
 import { FilterCategories } from '../../cmps/Stay/CategoryFilter/FilterCategories';
 import { FilterStayMobile } from "../../cmps/Header/FilterStay/FilterStayMobile"
 import { setFilterBy } from '../../store/actions/filter.actions';
@@ -12,7 +16,9 @@ import { setFilterBy } from '../../store/actions/filter.actions';
 export function MainLayout() {
     const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
     const { isExpandedFilter } = useSelector((storeState) => storeState.filterModule)
+    const { isOpenFilterMobile } = useSelector((storeState) => storeState.filterModule)
     const isScrolled = useSelector((storeState) => storeState.appModule.isScrolled)
+    const isWideScreen = useSelector((storeState) => storeState.appModule.isWideScreen)
     const [options, setOptions] = useState([]);
     const dispatch = useDispatch()
 
@@ -50,6 +56,14 @@ export function MainLayout() {
                     }}></div>
                 <Outlet />
             </main>
+
+            {!isOpenFilterMobile ?
+                isWideScreen ?
+                    <Footer /> : <MobileFooter />
+                : <AnimatePresence>
+                    <FilterMobileFooter />
+                </AnimatePresence>}
+
         </>
     )
 }
