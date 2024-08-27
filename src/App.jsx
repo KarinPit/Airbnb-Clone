@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { createRouting } from "./routes";
 import { Provider, useDispatch, useSelector } from "react-redux";
 
+import { motion } from "framer-motion";
 import { store } from "./store/store";
 import { handleScroll, handleResize } from "./store/actions/app.actions"
 import { getUserLocation } from "./store/actions/user.actions";
@@ -25,7 +26,7 @@ export function App() {
 
     return (
         <Provider store={store}>
-            <section className={`main-app ${isOpenFilterMobile ? 'hide-overflow' : ''}${isScrolled? 'scrolled' : ''}`} onClick={(e) => {
+            <section className={`main-app ${isOpenFilterMobile ? 'hide-overflow' : ''}${isScrolled ? 'scrolled' : ''}`} onClick={(e) => {
                 if (e.target.className === 'container'
                     || e.target.className === 'main-app'
                     || e.target.className === 'header'

@@ -59,6 +59,13 @@
 
         grid-template-columns: auto 1fr auto;
         grid-template-rows: minmax(auto, 240px) auto 1fr;
+        margin-block-start: 0;
+        transition: margin-block-start 300ms ease;
+
+        &.scrolled {
+            margin-block-start: rem(-150px);
+        }
+
 
         header {
             padding-inline: rem($padding-xxl);

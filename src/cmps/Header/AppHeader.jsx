@@ -101,7 +101,7 @@ export default function AppHeader() {
     ), [isOpenFilterMobile, filterClassName]);
 
     return (
-        <header className={`header${isScrolled && !isExpandedFilter ? ' scrolled' : ''}`}>
+        <header className={`header ${isScrolled && !isExpandedFilter ? 'scrolled' : ''}`}>
 
             <Link to="/" className="logo">
                 <img src={airbnbLogo} alt="airbnb logo" />

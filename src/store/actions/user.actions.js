@@ -1,6 +1,7 @@
 import { userService } from "../../services/user.service.js"
 
 import { SET_CURRENT_LOCATION, REMOVE_USER, SET_USER, SET_USERS } from "../reducers/user.reducer.js"
+import { SET_IS_LOADING } from "../reducers/app.reducer.js"
 
 import { store } from "../store.js"
 

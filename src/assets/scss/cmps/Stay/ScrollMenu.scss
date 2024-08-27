@@ -1,15 +1,14 @@
 .scroll-menu-wrapper {
     overflow: hidden;
     position: sticky;
-    top: rem(90px);
+    top: rem(85px);
     background-color: #ffff;
-    z-index: 2;
+    z-index: 3;
     margin-block-end: rem(36px);
     padding-inline: rem($padding-xl);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.094);
 
     &.scrolled {
-        border-top: 1px solid #efefef;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.094);
     }
 
@@ -78,6 +77,7 @@
         padding-inline: 0;
         box-shadow: none;
         margin-block-end: rem(16px);
+        top: rem(90px);
 
         .scroll-menu-arrows {
 
