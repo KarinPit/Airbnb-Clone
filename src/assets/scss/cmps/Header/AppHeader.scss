@@ -1,3 +1,4 @@
+
 header {
     position: sticky;
     top: 0;
@@ -74,6 +75,7 @@ header {
                 font-family: AirbnbCereal-Light;
                 font-size: rem(16px);
                 color: grey;
+                padding-block-end: rem(24px);
 
                 &.active {
                     color: #000;
@@ -167,6 +169,10 @@ header {
         .nav-options {
             grid-column: 1/-1;
             grid-row: 1;
+
+            a {
+                padding-block-end: rem(10px);
+            }
         }
 
         .filter-search-container {

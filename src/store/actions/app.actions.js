@@ -22,6 +22,7 @@ export function handleScroll() {
 	if (window.scrollY > 0) {
 		store.dispatch({ type: SET_IS_SCROLLED, isScrolled: true })
 		store.dispatch({ type: SET_EXPANDED_FILTER, isExpandedFilter: false })
+		store.dispatch({ type: SET_OPEN_FILTER, isOpenFilter: false })
 	}
 	else {
 		store.dispatch({ type: SET_IS_SCROLLED, isScrolled: false })

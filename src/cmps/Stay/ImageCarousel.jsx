@@ -1,22 +1,39 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
 import { motion, AnimatePresence } from "framer-motion";
+import { useSelector } from "react-redux";
+import { loadWishes, addWish, removeWish } from '../../store/actions/stay.actions'
+
+
 
 export function ImageCarousel({ stayImages, isGuestFavorite, stayId }) {
     const [currentIndexes, setCurrentIndexes] = useState({ [stayId]: 0 });
     const [isHovered, setIsHovered] = useState(null);
     const [slideDirection, setSlideDirection] = useState("");
     const [dotCycle, setDotCycle] = useState(0);
+    const wishlist = useSelector((storeState) => storeState.stayModule.wishlist)
     const totalImages = stayImages.additional.length;
+    const isInWishlist = wishlist.includes(stayId);
 
-    const updateDotCycle = (direction) => {
+    useEffect(() => {
+        loadWishes()
+    }, [])
+
+    useEffect(() => {
+        console.log(wishlist);
+    }, [wishlist])
+
+    function updateDotCycle(direction) {
         return direction === "right"
             ? (currentIndexes[stayId] < 2 ? 0 : dotCycle + 18)
             : (dotCycle > 18 ? dotCycle - 18 : 0);
     };
 
-    const handleArrowClick = (direction) => {
+    function handleArrowClick(direction) {
         const newIndex = direction === "right"
-            ? Math.min(currentIndexes[stayId] + 1, totalImages - 1)
+            ? Math.min(currentIndexes[stayId] + 1, totalImages - 1
+
+            )
             : Math.max(currentIndexes[stayId] - 1, 0);
 
         setSlideDirection(direction);
@@ -24,7 +41,7 @@ export function ImageCarousel({ stayImages, isGuestFavorite, stayId }) {
         setDotCycle(updateDotCycle(direction));
     };
 
-    const getDotClass = (index) => {
+    function getDotClass(index) {
         const currentIndex = currentIndexes[stayId];
 
         if (totalImages <= 5) {
@@ -56,7 +73,7 @@ export function ImageCarousel({ stayImages, isGuestFavorite, stayId }) {
         }
     };
 
-    const dotTransform = () => {
+    function dotTransform() {
         const currentIndex = currentIndexes[stayId];
 
         if (currentIndex >= 3 && currentIndex <= totalImages - 3) {
@@ -67,6 +84,24 @@ export function ImageCarousel({ stayImages, isGuestFavorite, stayId }) {
             return "";
         }
     };
+
+    async function addToWishlist(stayId) {
+        try {
+            await addWish(stayId)
+        }
+        catch (err) {
+            console.log('Error adding wish to wishlist', err);
+        }
+
+    }
+    async function removeFromWishlist(stayId) {
+        try {
+            await removeWish(stayId)
+        }
+        catch (err) {
+            console.log('Error removing wish from wishlist', err);
+        }
+    }
 
     return (
         <div
@@ -80,7 +115,8 @@ export function ImageCarousel({ stayImages, isGuestFavorite, stayId }) {
                         <p>Guest favorite</p>
                     </div>
                 )}
-                <div className="heart-icons">
+
+                <div className={`heart-icons ${isInWishlist ? 'in-wish-list' : ''}`} onClick={() => isInWishlist ? removeFromWishlist(stayId) : addToWishlist(stayId)}>
                     <svg xmlns="http://www.w3.org/2000/svg" id="heart" viewBox="0 0 29 29">
                         <path d="M14.854 6.083l-.354.353-.354-.354a6.5 6.5 0 00-9.192 9.192l.354.354L14.5 24.82l9.192-9.192.354-.354a6.5 6.5 0 00-9.192-9.191z"></path>
                     </svg>

@@ -5,11 +5,13 @@ export const storageService = {
     post,
     put,
     remove,
+    postWish,
+    removeWish
 }
 
-function query(entityType, delay = 1200) {
+function query(entityType) {
     var entities = JSON.parse(localStorage.getItem(entityType)) || []
-    return new Promise(resolve => setTimeout(() => resolve(entities), delay))
+    return new Promise(resolve => resolve(entities))
 }
 
 async function get(entityType, entityId) {
@@ -38,7 +40,6 @@ async function put(entityType, updatedEntity) {
 
 async function remove(entityType, entityId) {
     const entities = await query(entityType)
-    // throw new Error('Oops!')
     const idx = entities.findIndex(entity => entity.id === entityId)
     if (idx < 0) throw new Error(`Remove failed, cannot find entity with id: ${entityId} in: ${entityType}`)
     entities.splice(idx, 1)
@@ -58,4 +59,19 @@ function _makeId(length = 5) {
         text += possible.charAt(Math.floor(Math.random() * possible.length))
     }
     return text
+}
+
+async function postWish(entityType, newEntity) {
+    const entities = await query(entityType)
+    entities.push(newEntity)
+    _save(entityType, entities)
+    return newEntity
+}
+
+async function removeWish(entityType, entityId) {
+    const entities = await query(entityType)
+    const idx = entities.findIndex(entity => entity === entityId)
+    if (idx < 0) throw new Error(`Remove failed, cannot find entity with id: ${entityId} in: ${entityType}`)
+    entities.splice(idx, 1)
+    _save(entityType, entities)
 }

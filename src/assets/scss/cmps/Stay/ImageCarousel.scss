@@ -29,6 +29,12 @@
         .heart-icons {
             margin-left: auto;
 
+            &.in-wish-list {
+                svg {
+                    fill: #ff385d94;
+                }
+            }
+
             svg {
                 width: rem(26px);
                 height: rem(26px);

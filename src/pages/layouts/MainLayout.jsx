@@ -11,6 +11,7 @@ import { MobileFooter } from '../../cmps/Footer/MobileFooter';
 import { FilterMobileFooter } from '../../cmps/Footer/FilterMobileFooter';
 import { FilterCategories } from '../../cmps/Stay/CategoryFilter/FilterCategories';
 import { FilterStayMobile } from "../../cmps/Header/FilterStay/FilterStayMobile"
+import { FilterStayModal } from '../../cmps/Header/FilterStay/Modal/FilterStayModal';
 import { setFilterBy } from '../../store/actions/filter.actions';
 
 export function MainLayout() {

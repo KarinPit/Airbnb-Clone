@@ -8,6 +8,7 @@
     box-shadow: 0 3px 12px 0 rgb(0 0 0/0.15);
     padding: rem(32px) rem(24px) rem(32px) rem(32px);
     background-color: #fff;
+    z-index: 10;
 
     &.who-adjusted {
         align-self: end;

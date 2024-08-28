@@ -20,7 +20,6 @@ export default function AppHeader() {
     const currentWidth = useSelector((storeState) => storeState.appModule.currentWidth);
     const normalBreakpoint = useSelector((storeState) => storeState.appModule.normalBreakpoint);
     const isScrolled = useSelector((storeState) => storeState.appModule.isScrolled);
-
     const filterClassName = `filter-search-container ${isWideScreen ? '' : 'mobile'}`
 
     useEffect(() => {
@@ -69,9 +68,9 @@ export default function AppHeader() {
             {isScrolled && <motion.div
                 key="MinimizedFilter"
                 className={filterClassName}
-                initial={{ opacity: 0, y: 50, scaleX: 2 }}
+                initial={{ opacity: 0, y: 30, scaleX: 2 }}
                 animate={{ opacity: 1, y: 0, scaleX: 1 }}
-                exit={{ opacity: 0, y: 50, scaleX: 2 }}
+                exit={{ opacity: 0, y: 30, scaleX: 2 }}
                 transition={{
                     opacity: { duration: 0 },
                     y: { duration: 0.25 },
@@ -102,7 +101,6 @@ export default function AppHeader() {
 
     return (
         <header className={`header ${isScrolled && !isExpandedFilter ? 'scrolled' : ''}`}>
-
             <Link to="/" className="logo">
                 <img src={airbnbLogo} alt="airbnb logo" />
                 <span className="primary-color">airbnb</span>

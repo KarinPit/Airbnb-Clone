@@ -1,11 +1,10 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 
 import { format } from 'date-fns'
 import { getDistance } from 'geolib'
 import { getMonthName } from '../utils/CalendarUtils'
 import { loadStays } from '../store/actions/stay.actions'
-
 import { ImageCarousel } from '../cmps/Stay/ImageCarousel'
 
 
@@ -14,6 +13,7 @@ export function StayIndex() {
     const userLoc = useSelector((storeState) => storeState.userModule.currentLocation)
     const isLoading = useSelector((storeState) => storeState.appModule.isLoading)
     const stays = useSelector((storeState) => storeState.stayModule.stays)
+
 
     useEffect(() => {
         loadStays()
@@ -34,11 +34,12 @@ export function StayIndex() {
         return { latitude: lat, longitude: long }
     }
 
+
     if (isLoading || !userLoc) return <div>Loading...</div>
 
     return (
 
-        <div className='stay-gallery'> 
+        <div className='stay-gallery'>
             {stays.map(stay => (
                 <div key={stay._id}>
                     <ImageCarousel stayImages={stay.images} isGuestFavorite={stay.is_guest_favorite} stayId={stay._id} />
