@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSelector } from "react-redux";
 import { loadWishes, addWish, removeWish } from '../../store/actions/stay.actions'
+import { Link } from "react-router-dom";
 
 
 
@@ -20,7 +21,6 @@ export function ImageCarousel({ stayImages, isGuestFavorite, stayId }) {
     }, [])
 
     useEffect(() => {
-        console.log(wishlist);
     }, [wishlist])
 
     function updateDotCycle(direction) {
@@ -109,6 +109,8 @@ export function ImageCarousel({ stayImages, isGuestFavorite, stayId }) {
             onMouseEnter={() => setIsHovered(stayId)}
             onMouseLeave={() => setIsHovered(null)}
         >
+            <Link to={`/${stayId}`}></Link>
+            
             <div className="add-to-favorites">
                 {isGuestFavorite && (
                     <div className="guest-favorite">

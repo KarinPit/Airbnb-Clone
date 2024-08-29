@@ -29,9 +29,10 @@ export function App() {
             <section className={`main-app ${isOpenFilterMobile ? 'hide-overflow' : ''}${isScrolled ? 'scrolled' : ''}`} onClick={(e) => {
                 if (e.target.className === 'container'
                     || e.target.className === 'main-app'
-                    || e.target.className === 'header'
+                    || e.target.className === 'header '
                     || e.target.className === 'filter-search-container '
                     || e.target.className === 'stay-gallery'
+                    || e.target.closest('main')
                     || e.target.className === 'primary-bg') {
                     dispatch({ type: 'SET_OPEN_FILTER', isOpenFilter: false })
                 }

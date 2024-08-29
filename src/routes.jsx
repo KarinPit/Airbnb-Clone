@@ -3,7 +3,9 @@ import { Routes, Route, Navigate } from "react-router-dom";
 
 import { AuthGuard } from "./guards/AuthGuard"
 import { MainLayout } from "./pages/layouts/MainLayout";
+import { MinimizedFilterLayout } from "./pages/layouts/MinimizedFilterLayout";
 import { StayIndex } from "./pages/StayIndex"
+import { StayDetails } from "./pages/StayDetails";
 
 
 const routes = [
@@ -16,6 +18,18 @@ const routes = [
         index: true,
         element: <StayIndex />,
         // path: "/home"
+      }
+    ],
+    key: "main",
+  },
+  {
+    path: "/:stayId",
+    element: <MinimizedFilterLayout />,
+    children: [
+      {
+        key: 'stay-details',
+        index: true,
+        element: <StayDetails />,
       }
     ],
     key: "main",

@@ -101,10 +101,10 @@ export default function AppHeader() {
 
     return (
         <header className={`header ${isScrolled && !isExpandedFilter ? 'scrolled' : ''}`}>
-            <Link to="/" className="logo">
+            <a href="/" className="logo">
                 <img src={airbnbLogo} alt="airbnb logo" />
                 <span className="primary-color">airbnb</span>
-            </Link>
+            </a>
 
             <AnimatePresence>
                 {renderNavOptions()}
