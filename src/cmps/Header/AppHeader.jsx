@@ -12,7 +12,7 @@ import { FilterStayModal } from './FilterStay/Modal/FilterStayModal';
 
 import airbnbLogo from '../../../public/svg/airbnb-logo.svg';
 
-export default function AppHeader() {
+export function AppHeader() {
     const isExpandedFilter = useSelector((storeState) => storeState.filterModule.isExpandedFilter);
     const isOpenFilter = useSelector((storeState) => storeState.filterModule.isOpenFilter);
     const isOpenFilterMobile = useSelector((storeState) => storeState.filterModule.isOpenFilterMobile);

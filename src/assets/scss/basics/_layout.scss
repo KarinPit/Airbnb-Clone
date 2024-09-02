@@ -29,7 +29,7 @@
         background-color: #fff;
         padding-block: rem(10px);
         padding-inline: rem($padding-xl);
-        z-index: 3;
+        z-index: 4;
     }
 
     main {
@@ -58,6 +58,7 @@
 
         &.mobile-footer {
             grid-column: 1/-1;
+            grid-row: 4;
         }
     }
 
@@ -77,6 +78,10 @@
             margin-block-start: rem(-150px);
         }
 
+        &.stay-details-layout {
+            // grid-template-columns: auto minmax(1fr, rem(1280px)) auto;
+            grid-template-rows: 80px auto 1fr 80px;
+        }
 
         header {
             padding-inline: rem($padding-xxl);
@@ -97,7 +102,7 @@
         footer {
             position: relative;
             grid-column: 1/-1;
-            grid-row: 4;
+            grid-row: 5;
             padding-block: rem(10px);
             padding-inline: rem($padding-xxl);
         }

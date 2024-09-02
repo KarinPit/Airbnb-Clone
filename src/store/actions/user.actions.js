@@ -84,6 +84,7 @@ export async function getUserLocation() {
             navigator.geolocation.getCurrentPosition((position) => {
                 const { latitude, longitude } = position.coords
                 store.dispatch({ type: SET_CURRENT_LOCATION, currentLocation: { latitude: latitude, longitude: longitude } })
+                store.dispatch({ type: SET_IS_LOADING, isLoading: false })
             })
         }
         else {

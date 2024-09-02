@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom';
 import { stayService } from '../../services/stay.service';
 import { AnimatePresence } from 'framer-motion';
 
-import AppHeader from "../../cmps/Header/AppHeader"
+import { AppHeader } from "../../cmps/Header/AppHeader"
 import { Footer } from '../../cmps/Footer/Footer'
 import { MobileFooter } from '../../cmps/Footer/MobileFooter';
 import { FilterMobileFooter } from '../../cmps/Footer/FilterMobileFooter';
@@ -13,6 +13,7 @@ import { FilterCategories } from '../../cmps/Stay/CategoryFilter/FilterCategorie
 import { FilterStayMobile } from "../../cmps/Header/FilterStay/FilterStayMobile"
 import { FilterStayModal } from '../../cmps/Header/FilterStay/Modal/FilterStayModal';
 import { setFilterBy } from '../../store/actions/filter.actions';
+
 
 export function MainLayout() {
     const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)

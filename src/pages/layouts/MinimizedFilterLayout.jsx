@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 
 import { AnimatePresence } from 'framer-motion';
 
-import AppHeader from "../../cmps/Header/AppHeader"
+import { AppHeaderMinimized } from '../../cmps/Header/AppHeaderMinimized';
 import { Footer } from '../../cmps/Footer/Footer'
 import { MobileFooter } from '../../cmps/Footer/MobileFooter';
 import { FilterMobileFooter } from '../../cmps/Footer/FilterMobileFooter';
@@ -22,10 +22,10 @@ export function MinimizedFilterLayout() {
 
     return (
         <>
-            <AppHeader />
+            <AppHeaderMinimized />
             <FilterStayMobile />
 
-            <main>
+            <main className='stay-details'>
                 <Outlet />
             </main>
 

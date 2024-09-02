@@ -15,10 +15,12 @@
 /* Pages */
 
 @import "pages/StayIndex.scss";
+@import "pages/StayDetails.scss";
 
 /* Components */
 
 @import "cmps/Header/AppHeader.scss";
+@import "cmps/Header/AppHeaderMinimized.scss";
 @import "cmps/Header/FilterStay/FilterStay.scss";
 @import "cmps/Header/FilterStay/FilterStayMobile.scss";
 @import "cmps/Header/FilterStay/Modal/FilterStayModal.scss";
@@ -29,4 +31,7 @@
 @import "cmps/Stay/CardSelectList.scss";
 @import "cmps/Stay/FilterCategories.scss";
 @import "cmps/Stay/ScrollMenu.scss";
+@import "cmps/Stay/MapView.scss";
+@import "cmps/Stay/OrderSideBar.scss";
+@import "cmps/Stay/StayDetailsSkeleton.scss";
 @import "cmps/Footer/Footer.scss"

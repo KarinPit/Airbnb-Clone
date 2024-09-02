@@ -109,7 +109,7 @@ export function ImageCarousel({ stayImages, isGuestFavorite, stayId }) {
             onMouseEnter={() => setIsHovered(stayId)}
             onMouseLeave={() => setIsHovered(null)}
         >
-            <Link to={`/${stayId}`}></Link>
+            <Link to={`/stay/${stayId}`}></Link>
             
             <div className="add-to-favorites">
                 {isGuestFavorite && (

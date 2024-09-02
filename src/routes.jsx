@@ -23,7 +23,7 @@ const routes = [
     key: "main",
   },
   {
-    path: "/:stayId",
+    path: "/stay/:stayId",
     element: <MinimizedFilterLayout />,
     children: [
       {

@@ -4,7 +4,7 @@ import { CalendarCells } from '../../../../../utils/CalendarCells'
 import { getMonthName } from '../../../../../utils/CalendarUtils'
 import { setFilterBy } from '../../../../../store/actions/filter.actions'
 import { useSearchParams } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { stayService } from '../../../../../services/stay.service'
 
 const screenWidth = 850
@@ -26,6 +26,7 @@ export default function CalendarPickerMobile() {
     const [hoveredDate, setHoveredDate] = useState(null)
     const [filterByToEdit, setFilterByToEdit] = useState({ checkIn: filterBy.checkIn, checkOut: filterBy.checkOut })
     const [searchParams, setSearchParams] = useSearchParams()
+    const dispatch = useDispatch()
 
     useEffect(() => {
         setSearchParams(stayService.sanitizeFilterParams(filterBy))
@@ -123,13 +124,16 @@ export default function CalendarPickerMobile() {
                 </tbody>
             </table>
 
-            <div className='load-dates'>
-                <button onClick={handleNextClick}>Load more dates</button>
-            </div>
+            <div className="modal-calendar-controls">
+                <div className='load-dates'>
+                    <button onClick={handleNextClick}>Load more dates</button>
+                </div>
 
-            <div className='control-buttons'>
-                <button className='skip-button'>Skip</button>
-                <button className='next-button'>Next</button>
+                <div className='control-buttons'>
+                    <button className='skip-button'>Skip</button>
+                    <button className='next-button'
+                        onClick={() => { dispatch({ type: 'SET_OPEN_FILTER_MOBILE', isOpenFilterMobile: 'who-input-mobile' }) }}>Next</button>
+                </div>
             </div>
         </div>
     )
