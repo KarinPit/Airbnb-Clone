@@ -7,6 +7,7 @@ import { MapView } from "../cmps/Stay/MapView"
 import { useParams, useSearchParams } from "react-router-dom";
 import { differenceInYears, format, intervalToDuration } from "date-fns";
 import CalendarPicker from "../cmps/Header/FilterStay/Modal/CalendarPicker/CalendarPicker"
+import { OrderSidebar } from "../cmps/Order/OrderSidebar"
 import { setFilterBy } from '../store/actions/filter.actions'
 
 import chatBoxIcon from "../../public/svg/amenities/chat-box.svg"
@@ -25,6 +26,8 @@ export function StayDetails() {
     const { checkIn, checkOut } = useSelector(storeState => storeState.filterModule.filterBy);
     const { stayId } = useParams()
     const [searchParams, setSearchParams] = useSearchParams()
+
+    const currentOrder = []
 
 
     useEffect(() => {
@@ -99,41 +102,49 @@ export function StayDetails() {
 
     return (
         <>
-            <div className="stay-header">
-                <h1>{stay.name}</h1>
-                <div className="stay-header-actions">
-                    <button className="share">
-                        <svg xmlns="http://www.w3.org/2000/svg" enableBackground="new 0 0 24 24" viewBox="0 0 24 24" id="share">
-                            <path d="M21,12c-0.6,0-1,0.4-1,1v6c0,0.6-0.4,1-1,1H5c-0.6,0-1-0.4-1-1v-6c0-0.6-0.4-1-1-1s-1,0.4-1,1v6c0,1.7,1.3,3,3,3h14
+            <div className="stay-main-area">
+                <div className="stay-header">
+                    <h1>{stay.name}</h1>
+                    <div className="stay-header-actions">
+                        <button className="share">
+                            <svg xmlns="http://www.w3.org/2000/svg" enableBackground="new 0 0 24 24" viewBox="0 0 24 24" id="share">
+                                <path d="M21,12c-0.6,0-1,0.4-1,1v6c0,0.6-0.4,1-1,1H5c-0.6,0-1-0.4-1-1v-6c0-0.6-0.4-1-1-1s-1,0.4-1,1v6c0,1.7,1.3,3,3,3h14
                                 c1.7,0,3-1.3,3-3v-6C22,12.4,21.6,12,21,12z M8.7,7.7L11,5.4V15c0,0.6,0.4,1,1,1s1-0.4,1-1V5.4l2.3,2.3c0.4,0.4,1,0.4,1.4,0
                                 c0,0,0,0,0,0c0.4-0.4,0.4-1,0-1.4c0,0,0,0,0,0l-4-4c-0.1-0.1-0.2-0.2-0.3-0.2c-0.2-0.1-0.5-0.1-0.8,0c-0.1,0-0.2,0.1-0.3,0.2l-4,4
                                 c-0.4,0.4-0.4,1,0,1.4C7.7,8.1,8.3,8.1,8.7,7.7z"></path>
-                        </svg>
-                        <p>Share</p>
-                    </button>
-                    <button className="save">
-                        <svg xmlns="http://www.w3.org/2000/svg" id="heart" viewBox="0 0 29 29">
-                            <path d="M14.854 6.083l-.354.353-.354-.354a6.5 6.5 0 00-9.192 9.192l.354.354L14.5 24.82l9.192-9.192.354-.354a6.5 6.5 0 00-9.192-9.191z"></path>
-                        </svg>
-                        <p>Save</p>
-                    </button>
+                            </svg>
+                            <p>Share</p>
+                        </button>
+                        <button className="save">
+                            <svg xmlns="http://www.w3.org/2000/svg" id="heart" viewBox="0 0 29 29">
+                                <path d="M14.854 6.083l-.354.353-.354-.354a6.5 6.5 0 00-9.192 9.192l.354.354L14.5 24.82l9.192-9.192.354-.354a6.5 6.5 0 00-9.192-9.191z"></path>
+                            </svg>
+                            <p>Save</p>
+                        </button>
+                    </div>
                 </div>
-            </div>
-            <div className="image-gallery">
-                {stay.images.additional.map((img, idx) => {
-                    if (idx <= 4) {
-                        return (
-                            <img
-                                key={idx}
-                                src={img}
-                                className={idx === 0 ? "main-img" : ""}
-                                alt={`Description ${idx + 1}`}
-                            />
-                        )
-                    }
-                    return null
-                })}
-                {/* <div className="overlay"></div> */}
+
+                <div className="image-gallery">
+                    {isWideScreen ? stay.images.additional.map((img, idx) => {
+                        if (idx <= 4) {
+                            return (
+                                <img
+                                    key={idx}
+                                    src={img}
+                                    className={idx === 0 ? "main-img" : ""}
+                                    alt={`Description ${idx + 1}`}
+                                />
+                            )
+                        }
+                        return null
+                    })
+                        : <img
+                            src={stay.images.picture_url}
+                            className="main-image"
+                            alt="Description 1"
+                        />}
+                    {/* <div className="overlay"></div> */}
+                </div>
             </div>
 
             <div className="main-desc">
@@ -261,7 +272,7 @@ export function StayDetails() {
                         </div>
                     </div>
                     <div className="order-stay">
-                        {/* <OrderSidebar currentOrder={currentOrder} /> */}
+                        <OrderSidebar currentOrder={currentOrder} />
                     </div>
                 </div>
 

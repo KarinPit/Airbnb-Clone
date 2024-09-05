@@ -32,6 +32,15 @@
         z-index: 4;
     }
 
+    &.stay-details-layout {
+        grid-template-rows: 1fr auto;
+
+        main {
+            grid-row: 1;
+            padding-inline: 0;
+        }
+    }
+
     main {
         position: relative;
         grid-column: 1/-1;
@@ -79,8 +88,12 @@
         }
 
         &.stay-details-layout {
-            // grid-template-columns: auto minmax(1fr, rem(1280px)) auto;
             grid-template-rows: 80px auto 1fr 80px;
+
+            main {
+                grid-row: 2;
+                padding-inline: rem($padding-xxl);
+            }
         }
 
         header {

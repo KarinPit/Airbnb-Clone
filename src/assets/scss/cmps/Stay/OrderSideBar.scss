@@ -1,4 +1,10 @@
 .book-it-sidebar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: fit-content;
+    padding-block: rem(48px);
+
     h2 {
         margin-block-end: 24px;
 
