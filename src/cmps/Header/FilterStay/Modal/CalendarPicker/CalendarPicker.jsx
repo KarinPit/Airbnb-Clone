@@ -75,7 +75,7 @@ export default function CalendarPicker() {
                 setFilterByToEdit(prev => ({ ...prev, 'checkIn': day, 'checkOut': '' }))
                 setTimeout(() => {
                     changeFilterInput('checkout-input')
-                }, 0)
+                }, 1)
             }
         } else {
             const newRange = {
@@ -88,7 +88,7 @@ export default function CalendarPicker() {
                 setFilterByToEdit(prev => ({ ...prev, 'checkOut': day }))
                 setTimeout(() => {
                     changeFilterInput('who-input')
-                }, 0)
+                }, 1)
             }
         }
     }

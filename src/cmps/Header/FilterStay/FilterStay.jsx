@@ -85,8 +85,6 @@ export function FilterStay() {
     }, [filterBy])
 
 
-
-
     function handleClick(element) {
         dispatch({ type: 'SET_OPEN_FILTER', isOpenFilter: element.current.className })
     }

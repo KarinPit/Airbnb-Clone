@@ -4,9 +4,10 @@ import { stayService } from "../services/stay.service"
 import { useSelector } from "react-redux";
 import { StayDetailsSkeleton } from "../cmps/Stay/Skeletons/StayDetailsSkeleton"
 import { MapView } from "../cmps/Stay/MapView"
-import { useParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 import { differenceInYears, format, intervalToDuration } from "date-fns";
 import CalendarPicker from "../cmps/Header/FilterStay/Modal/CalendarPicker/CalendarPicker"
+import { setFilterBy } from '../store/actions/filter.actions'
 
 import chatBoxIcon from "../../public/svg/amenities/chat-box.svg"
 import CheckCircleIcon from "../../public/svg/amenities/check-circle.svg"
@@ -17,11 +18,23 @@ import sprayerIcon from "../../public/svg/amenities/sprayer.svg"
 
 
 export function StayDetails() {
+    const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
     const [stay, setStay] = useState(null)
     const isLoading = useSelector(storeState => storeState.appModule.isLoading);
     const isWideScreen = useSelector(storeState => storeState.appModule.isWideScreen);
     const { checkIn, checkOut } = useSelector(storeState => storeState.filterModule.filterBy);
     const { stayId } = useParams()
+    const [searchParams, setSearchParams] = useSearchParams()
+
+
+    useEffect(() => {
+        setFilterBy(stayService.getFilterFromParams(searchParams))
+    }, [])
+
+    useEffect(() => {
+        const newParams = stayService.sanitizeFilterParams(filterBy);
+        setSearchParams((prev) => ({ ...prev, ...newParams }));
+    }, [filterBy])
 
     useEffect(() => {
         stayService.getById(stayId)

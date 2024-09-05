@@ -1,5 +1,5 @@
 import { useEffect, useCallback } from 'react';
-import { Link } from 'react-router-dom';
+import { createSearchParams, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { motion, AnimatePresence } from "framer-motion";
@@ -9,11 +9,13 @@ import { FilterStay } from '../Header/FilterStay/FilterStay';
 import { FilterStayMinimized } from "./FilterStay/FilterStayMinimized";
 import { FilterStayMobile } from './FilterStay/FilterStayMobile';
 import { FilterStayModal } from './FilterStay/Modal/FilterStayModal';
+import { stayService } from '../../services/stay.service';
 
 import airbnbLogo from '../../../public/svg/airbnb-logo.svg';
 
 
 export function AppHeaderMinimized() {
+    const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
     const isExpandedFilter = useSelector((storeState) => storeState.filterModule.isExpandedFilter);
     const isOpenFilter = useSelector((storeState) => storeState.filterModule.isOpenFilter);
     const isOpenFilterMobile = useSelector((storeState) => storeState.filterModule.isOpenFilterMobile);
@@ -102,29 +104,33 @@ export function AppHeaderMinimized() {
 
     return (
         <>
-        <header className={`stay-details-header ${isOpenFilter ? 'expanded-filter' : ''}`}>
-            <a href="/" className="logo">
-                <img src={airbnbLogo} alt="airbnb logo" />
-                <span className="primary-color">airbnb</span>
-            </a>
+            <header className={`stay-details-header ${isOpenFilter ? 'expanded-filter' : ''}`}>
 
-            <AnimatePresence>
-                {renderNavOptions()}
-            </AnimatePresence>
+                <Link className="logo" to={{
+                    pathname: "/",
+                    search: `?${createSearchParams({...stayService.sanitizeFilterParams(filterBy)})}`
+                }}>
+                    <img src={airbnbLogo} alt="airbnb logo" />
+                    <span className="primary-color">airbnb</span>
+                </Link>
 
-            <UserNav />
+                <AnimatePresence>
+                    {renderNavOptions()}
+                </AnimatePresence>
 
-            <AnimatePresence>
-                {isOpenFilter
-                    ? renderFilter()
-                    : renderMinimizedFilter()
-                }
-            </AnimatePresence>
+                <UserNav />
 
-            {renderMobileFilter()}
-        </header>
-        
-        <hr></hr>
+                <AnimatePresence>
+                    {isOpenFilter
+                        ? renderFilter()
+                        : renderMinimizedFilter()
+                    }
+                </AnimatePresence>
+
+                {renderMobileFilter()}
+            </header>
+
+            <hr></hr>
         </>
     );
 }

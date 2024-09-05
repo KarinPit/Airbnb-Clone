@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSelector } from "react-redux";
 import { loadWishes, addWish, removeWish } from '../../store/actions/stay.actions'
-import { Link } from "react-router-dom";
+import { createSearchParams, Link } from "react-router-dom";
+import { stayService } from "../../services/stay.service";
 
 
 
@@ -13,6 +14,7 @@ export function ImageCarousel({ stayImages, isGuestFavorite, stayId }) {
     const [slideDirection, setSlideDirection] = useState("");
     const [dotCycle, setDotCycle] = useState(0);
     const wishlist = useSelector((storeState) => storeState.stayModule.wishlist)
+    const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
     const totalImages = stayImages.additional.length;
     const isInWishlist = wishlist.includes(stayId);
 
@@ -109,8 +111,13 @@ export function ImageCarousel({ stayImages, isGuestFavorite, stayId }) {
             onMouseEnter={() => setIsHovered(stayId)}
             onMouseLeave={() => setIsHovered(null)}
         >
-            <Link to={`/stay/${stayId}`}></Link>
-            
+
+            <Link to={{
+                pathname: `/stay/${stayId}`,
+                search: `?${createSearchParams({ ...stayService.sanitizeFilterParams(filterBy) })}`
+            }}>
+            </Link>
+
             <div className="add-to-favorites">
                 {isGuestFavorite && (
                     <div className="guest-favorite">

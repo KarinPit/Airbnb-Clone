@@ -24,7 +24,6 @@ export function MapView({ stay }) {
 
     useEffect(() => {
         if (stay) {
-            console.log(stay);
             const cleanLng = parseFloat(stay.address.location.coordinates[0].toString().replace(/\s+/g, ''));
             const cleanLat = parseFloat(stay.address.location.coordinates[1].toString().replace(/\s+/g, ''));
 

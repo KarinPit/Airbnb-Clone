@@ -74,19 +74,3 @@ export function StayIndex() {
 
     )
 }
-
-
-
-// useEffect(() => {
-//     loadStays()
-// }, [filterBy])
-
-// async function loadStays() {
-//     try {
-//         const stays = await stayService.query(filterBy)
-//         setStays(stays)
-//     }
-//     catch (err) {
-//         console.log('Error in loadStays', err)
-//     }
-// }
