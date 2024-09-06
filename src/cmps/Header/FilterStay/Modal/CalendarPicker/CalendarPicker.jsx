@@ -12,13 +12,13 @@ import { getMonthName } from '../../../../../utils/CalendarUtils'
 import { LeftArrow, RightArrow } from '../../../../SVG/HeaderSvg'
 
 
-export default function CalendarPicker() {
+export default function CalendarPicker({breakPoint}) {
     const currentWidth = useSelector((storeState) => storeState.appModule.currentWidth)
     const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
     const [filterByToEdit, setFilterByToEdit] = useState(filterBy)
     const [searchParams, setSearchParams] = useSearchParams()
 
-    const calendarWideBreakpoint = 850
+    const calendarWideBreakpoint = breakPoint
     const [currentDate, setCurrentDate] = useState(new Date())
     const [range, setRange] = useState({ start: filterBy.checkIn, end: filterBy.checkOut })
     const [hoveredDate, setHoveredDate] = useState(null)

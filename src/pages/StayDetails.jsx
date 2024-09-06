@@ -265,7 +265,7 @@ export function StayDetails() {
                                             <h2>Select check-in date</h2>
                                             <p>Add your travel dates for exact pricing</p>
                                         </>}
-                                    <CalendarPicker />
+                                    <CalendarPicker breakPoint={1200}/>
                                 </div>
                             </div>
 

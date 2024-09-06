@@ -22,7 +22,7 @@ export function FilterStayModal() {
         }
 
         if (isOpenFilter.includes('checkin-input') || isOpenFilter.includes('checkout-input')) {
-            return isWideScreen ? <CalendarPicker /> : <CalendarPickerMobile />
+            return isWideScreen ? <CalendarPicker breakPoint={850}/> : <CalendarPickerMobile />
         }
 
         if (isOpenFilter.includes('who-input')) {

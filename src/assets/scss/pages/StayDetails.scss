@@ -313,8 +313,8 @@
 
                         th:not(.month-name),
                         td {
-                            width: rem(32px);
-                            height: rem(32px);
+                            width: clamp(32px, 10vw, 70px);
+                            height: clamp(32px, 10vw, 70px);
                         }
                     }
                 }
@@ -427,17 +427,23 @@
 
         .review-list {
             display: flex;
-            flex-wrap: wrap;
             gap: 10px;
             margin-block-start: 24px;
             padding-block-end: 24px;
             border-bottom: 1px solid rgba(190, 190, 190, 0.6);
+            overflow-x: scroll;
+
+            div {
+                width: fit-content;
+            }
 
             .review-card {
-                width: 45%;
-                border: none;
+                min-width: 75vw;
+                height: rem(260px);
+                border: 1px solid black;
                 padding: 16px;
                 margin-bottom: 16px;
+                overflow-y: clip;
             }
 
             .review-header {
@@ -497,9 +503,6 @@
                 font-family: AirbnbCereal-Light, sans-serif;
                 font-size: 16px;
                 margin-bottom: 12px;
-                height: 100px;
-                overflow-y: hidden;
-                height: fit-content;
             }
 
             .review-more {
@@ -733,14 +736,27 @@
 
                             th:not(.month-name),
                             td {
-                                width: rem(48px);
-                                height: rem(48px);
+                                width: clamp(32px, 7vw, 80px);
+                                height: clamp(32px, 7vw, 80px);
                             }
                         }
                     }
                 }
             }
 
+            .review-list {
+                flex-wrap: wrap;
+                gap: 0;
+                justify-content: space-between;
+
+                .review-card {
+                    height: fit-content;
+                    min-width: 0;
+                    max-width: 50%;
+                    border: none;
+                    padding-inline-end: 8%;
+                }
+            }
         }
 
         .stay-main-area {
@@ -771,6 +787,33 @@
         }
     }
 }
+
+
+@media screen and (min-width: 1200px) {
+
+    .stay-details {
+
+        .main-desc {
+
+            .more-info {
+                .order-calendar {
+                    .calendar-picker {
+
+                        table {
+
+                            th:not(.month-name),
+                            td {
+                                width: 48px;
+                                height: 48px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 
 
