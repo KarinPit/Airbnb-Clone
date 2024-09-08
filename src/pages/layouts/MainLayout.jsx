@@ -17,6 +17,7 @@ import { setFilterBy } from '../../store/actions/filter.actions';
 
 export function MainLayout() {
     const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
+    const { isOpenFilter } = useSelector((storeState) => storeState.filterModule)
     const { isExpandedFilter } = useSelector((storeState) => storeState.filterModule)
     const { isOpenFilterMobile } = useSelector((storeState) => storeState.filterModule)
     const isScrolled = useSelector((storeState) => storeState.appModule.isScrolled)
@@ -51,11 +52,14 @@ export function MainLayout() {
             <FilterStayMobile />
             <FilterCategories onSetFilter={onSetFilter} filterBy={filterBy.category_tag} />
 
+
             <main>
-                <div className={`${isScrolled && isExpandedFilter ? 'overlay' : ''}`}
+                <div className={`${isOpenFilter ? 'overlay' : ''}`}
                     onClick={(ev) => {
+                        dispatch({ type: 'SET_OPEN_FILTER', isOpenFilter: false })
                         dispatch({ type: 'SET_EXPANDED_FILTER', isExpandedFilter: false })
-                    }}></div>
+                    }}>
+                </div>
                 <Outlet />
             </main>
 

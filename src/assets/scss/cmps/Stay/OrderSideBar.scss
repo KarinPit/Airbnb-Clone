@@ -1,9 +1,12 @@
 .book-it-sidebar {
     position: sticky;
-    top: 0;
+    top: rem(16px);
     width: 100%;
     height: fit-content;
-    padding-block: rem(48px);
+    padding: rem(24px);
+    border-radius: rem(16px);
+    margin-block: rem(32px);
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
 
     h2 {
         margin-block-end: 24px;
@@ -113,80 +116,3 @@
     }
 }
 
-// /* Mobile Styles */
-// @media (max-width: 768px) {
-//     .order-stay {
-//         top: auto;
-//         position: fixed;
-//         bottom: 0;
-//         left: 0;
-//         width: 100%;
-//         margin: 0;
-//         border-radius: 0;
-//         padding: 0;
-//         box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-//     }
-
-//     .book-it-sidebar {
-//         position: relative;
-//         width: 100%;
-//         background-color: white;
-//         box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-//         padding: 16px 24px;
-//         z-index: 1000;
-//         display: flex;
-//         justify-content: space-between;
-//         align-items: center;
-//     }
-
-//     .book-it-sidebar h2 {
-//         margin: 0;
-//         flex: 1;
-//         font-size: 1rem;
-//         display: flex;
-//         flex-direction: row;
-//         text-align: left;
-//     }
-
-//     .book-it-sidebar h2 span {
-//         align-items: center;
-//         display: flex;
-//         margin-left: 5px;
-//         font-size: 0.875rem;
-//         color: #717171;
-//     }
-
-//     .book-it-sidebar button {
-//         flex: 0 0 auto;
-//         margin: 0;
-//         height: 40px;
-//         width: 100px;
-//         padding: 0 20px;
-//         border-radius: 8px;
-//         background: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%);
-//         background-color: #fc466b; /* Fallback color */
-//         color: white;
-//         border: none;
-//         display: flex;
-//         font-size: 16px;
-//         font-weight: 600;
-//         align-items: center;
-//         justify-content: center;
-//     }
-
-//     .book-it-sidebar .price-calc {
-//         display: none;
-//     }
-
-//     .book-it-sidebar .total-price {
-//         display: none;
-//     }
-
-//     .book-it-sidebar form {
-//         display: none;
-//     }
-
-//     .book-it-sidebar p {
-//         display: none;
-//     }
-// }

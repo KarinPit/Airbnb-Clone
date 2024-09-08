@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Outlet } from 'react-router-dom';
 
 import { AnimatePresence } from 'framer-motion';
@@ -12,9 +12,10 @@ import { FilterStayMobile } from "../../cmps/Header/FilterStay/FilterStayMobile"
 
 
 export function MinimizedFilterLayout() {
-    const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
+    const { isOpenFilter } = useSelector((storeState) => storeState.filterModule)
     const { isOpenFilterMobile } = useSelector((storeState) => storeState.filterModule)
     const isWideScreen = useSelector((storeState) => storeState.appModule.isWideScreen)
+    const dispatch = useDispatch()
 
 
     useEffect(() => {
@@ -24,6 +25,13 @@ export function MinimizedFilterLayout() {
         <>
             <AppHeaderMinimized />
             <FilterStayMobile />
+
+            <div className={`${isOpenFilter ? 'overlay' : ''}`}
+                onClick={(ev) => {
+                    dispatch({ type: 'SET_OPEN_FILTER', isOpenFilter: false })
+                    dispatch({ type: 'SET_EXPANDED_FILTER', isExpandedFilter: false })
+                }}>
+            </div>
 
             <main className='stay-details'>
                 <Outlet />

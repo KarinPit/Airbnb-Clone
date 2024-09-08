@@ -33,7 +33,7 @@
             padding: rem(2px) rem(6px);
             border-radius: rem(14px);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16);
-            z-index: 2;
+            z-index: 1;
 
             p {
                 font-family: AirbnbCereal-Bold;
@@ -43,7 +43,7 @@
 
         .heart-icons {
             margin-left: auto;
-            z-index: 2;
+            z-index: 1;
 
             &.in-wish-list {
                 svg {

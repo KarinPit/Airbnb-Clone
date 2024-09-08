@@ -129,8 +129,6 @@ export function AppHeaderMinimized() {
 
                 {renderMobileFilter()}
             </header>
-
-            <hr></hr>
         </>
     );
 }
