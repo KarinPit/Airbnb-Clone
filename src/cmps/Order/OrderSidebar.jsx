@@ -7,6 +7,8 @@ export function OrderSidebar({ stay }) {
     const filterBy = useSelector(storeState => storeState.filterModule.filterBy);
     const [totalPrice, setTotalPrice] = useState(0)
     const [totalDays, setTotalDays] = useState(0)
+    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+
 
     useEffect(() => {
         const calcDays = intervalToDuration({ start: new Date(filterBy.checkIn), end: new Date(filterBy.checkOut) })
@@ -21,6 +23,15 @@ export function OrderSidebar({ stay }) {
         }
 
     }, [filterBy.checkIn, filterBy.checkOut])
+
+
+    function handleMouseMove(e) {
+        const rect = e.target.getBoundingClientRect()
+        const x = (e.clientX - rect.left) / rect.width * 100
+        const y = (e.clientY - rect.top) / rect.height * 100
+
+        setMousePosition({ x, y })
+    }
 
     return (
         <div className="book-it-sidebar">
@@ -41,17 +52,33 @@ export function OrderSidebar({ stay }) {
                     value={filterBy.checkOut ? format(filterBy.checkOut, 'dd.MM.yyyy') : 'CHECK-OUT'}
                     readOnly
                 />
-                <input className="guests" placeholder="GUESTS"
+                <input
+                    className="guests"
+                    placeholder="GUESTS"
                     value={filterBy.who ? Object.entries(filterBy.who)
-                        .filter(([key, count]) => key != 'adults' && key != 'children' && count > 0)
-                        .map(([key, count]) => `${count} ${key === 'totalCount' ? 'guests' : key}`)
+                        .filter(([key, count]) => key !== 'adults' && key !== 'children' && count > 0)
+                        .map(([key, count]) => {
+                            let label = key;
+                            if (count === 1) {
+                                if (key === 'infants') label = 'infant';
+                                if (key === 'pets') label = 'pet';
+                            } else {
+                                if (key === 'infants') label = 'infants';
+                                if (key === 'pets') label = 'pets';
+                            }
+                            return `${count} ${label === 'totalCount' ? 'guests' : label}`;
+                        })
                         .join(', ') : ''}
                     readOnly
                 />
             </form>
 
             {/* <Link to={`/order/${stay._id}`}> */}
-            <button>Reserve</button>
+            <button style={{
+                backgroundPositionX: `${100 - mousePosition.x}%`,
+                backgroundPositionY: `${100 - mousePosition.y}%`
+            }}
+                onMouseMove={handleMouseMove}>Reserve</button>
             {/* </Link> */}
 
             <p>You won't be charged yet</p>
