@@ -6,6 +6,7 @@ import { MainLayout } from "./pages/layouts/MainLayout";
 import { MinimizedFilterLayout } from "./pages/layouts/MinimizedFilterLayout";
 import { StayIndex } from "./pages/StayIndex"
 import { StayDetails } from "./pages/StayDetails";
+import { OrderIndex } from "./pages/OrderIndex";
 
 
 const routes = [
@@ -33,6 +34,17 @@ const routes = [
       }
     ],
     key: "main",
+  },
+  {
+    path: "/stay/:stayId/confirm-order",
+    element: <MinimizedFilterLayout />,
+    children: [
+      {
+        key: 'confirm-order',
+        index: true,
+        element: <OrderIndex />,
+      }
+    ]
   },
   { path: "*", element: <Navigate to="/" replace />, key: "404" },
 ];

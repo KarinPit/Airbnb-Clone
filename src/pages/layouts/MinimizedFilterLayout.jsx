@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Outlet } from 'react-router-dom';
+import { useLocation } from "react-router";
 
 import { AnimatePresence } from 'framer-motion';
 
@@ -16,14 +17,16 @@ export function MinimizedFilterLayout() {
     const { isOpenFilterMobile } = useSelector((storeState) => storeState.filterModule)
     const isWideScreen = useSelector((storeState) => storeState.appModule.isWideScreen)
     const dispatch = useDispatch()
+    const location = useLocation()
 
 
-    useEffect(() => {
-    }, [])
+    // useEffect(() => {
+    //     console.log(location.pathname.includes('confirm-order'));
+    // }, [])
 
     return (
         <>
-            <AppHeaderMinimized />
+            <AppHeaderMinimized hideFilter={location.pathname.includes('confirm-order')}/>
             <FilterStayMobile />
 
             <div className={`${isOpenFilter ? 'overlay' : ''}`}

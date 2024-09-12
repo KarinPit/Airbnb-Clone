@@ -1,4 +1,5 @@
-import React from "react";
+import React from "react"
+
 export function SmallLogo() {
   return (
     <svg
@@ -148,7 +149,7 @@ export function CheckedIcon() {
         stroke: "currentcolor",
         color: "#FFFF",
       }}
-      // style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; strokeWidth: 4; overflow: visible;"
+    // style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; strokeWidth: 4; overflow: visible;"
     >
       <path fill="none" d="m4 16.5 8 8 16-16"></path>
     </svg>
@@ -170,7 +171,7 @@ export function HomeIcon() {
         transform: "translate3d(0px, 0px, 0px)",
         contentVisibility: "visible",
       }}
-      // style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;"
+    // style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;"
     >
       <defs id="l_d_5414">
         <clipPath id="__lottie_element_2310">
@@ -1019,4 +1020,20 @@ export function ImageIcon() {
       <path d="M27 3a4 4 0 0 1 4 4v18a4 4 0 0 1-4 4H5a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zM8.89 19.04l-.1.08L3 24.92V25a2 2 0 0 0 1.85 2H18.1l-7.88-7.88a1 1 0 0 0-1.32-.08zm12.5-6-.1.08-7.13 7.13L20.92 27H27a2 2 0 0 0 2-1.85v-5.73l-6.3-6.3a1 1 0 0 0-1.31-.08zM27 5H5a2 2 0 0 0-2 2v15.08l4.38-4.37a3 3 0 0 1 4.1-.14l.14.14 1.13 1.13 7.13-7.13a3 3 0 0 1 4.1-.14l.14.14L29 16.59V7a2 2 0 0 0-1.85-2zM8 7a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm0 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"></path>
     </svg>
   );
+}
+
+export function circleSelect() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" id="circle">
+      <path d="M896 256q-130 0-248.5 51t-204 136.5-136.5 204T256 896t51 248.5 136.5 204 204 136.5 248.5 51 248.5-51 204-136.5 136.5-204 51-248.5-51-248.5-136.5-204-204-136.5T896 256zm768 640q0 209-103 385.5T1281.5 1561 896 1664t-385.5-103T231 1281.5 128 896t103-385.5T510.5 231 896 128t385.5 103T1561 510.5 1664 896z"></path>
+    </svg>
+  )
+}
+
+export function circleSelected() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" id="circle">
+      <path d="M1664 896q0 209-103 385.5T1281.5 1561 896 1664t-385.5-103T231 1281.5 128 896t103-385.5T510.5 231 896 128t385.5 103T1561 510.5 1664 896z"></path>
+    </svg>
+  )
 }

@@ -73,13 +73,13 @@ export function OrderSidebar({ stay }) {
                 />
             </form>
 
-            {/* <Link to={`/order/${stay._id}`}> */}
-            <button style={{
-                backgroundPositionX: `${100 - mousePosition.x}%`,
-                backgroundPositionY: `${100 - mousePosition.y}%`
-            }}
-                onMouseMove={handleMouseMove}>Reserve</button>
-            {/* </Link> */}
+            <Link to={`/stay/${stay._id}/confirm-order`}>
+                <button style={{
+                    backgroundPositionX: `${100 - mousePosition.x}%`,
+                    backgroundPositionY: `${100 - mousePosition.y}%`
+                }}
+                    onMouseMove={handleMouseMove}>Reserve</button>
+            </Link>
 
             <p>You won't be charged yet</p>
             <div className="price-calc">

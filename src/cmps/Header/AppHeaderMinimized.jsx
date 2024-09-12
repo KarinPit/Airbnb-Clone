@@ -14,7 +14,7 @@ import { stayService } from '../../services/stay.service';
 import airbnbLogo from '../../../public/svg/airbnb-logo.svg';
 
 
-export function AppHeaderMinimized() {
+export function AppHeaderMinimized({ hideFilter }) {
     const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
     const isExpandedFilter = useSelector((storeState) => storeState.filterModule.isExpandedFilter);
     const isOpenFilter = useSelector((storeState) => storeState.filterModule.isOpenFilter);
@@ -24,6 +24,7 @@ export function AppHeaderMinimized() {
     const normalBreakpoint = useSelector((storeState) => storeState.appModule.normalBreakpoint);
     const isScrolled = useSelector((storeState) => storeState.appModule.isScrolled);
     const filterClassName = `filter-search-container ${isOpenFilter ? 'open-filter' : ''} ${isWideScreen ? '' : 'mobile'}`
+
 
     useEffect(() => {
     }, [isWideScreen, isOpenFilter]);
@@ -108,7 +109,7 @@ export function AppHeaderMinimized() {
 
                 <Link className="logo" to={{
                     pathname: "/",
-                    search: `?${createSearchParams({...stayService.sanitizeFilterParams(filterBy)})}`
+                    search: `?${createSearchParams({ ...stayService.sanitizeFilterParams(filterBy) })}`
                 }}>
                     <img src={airbnbLogo} alt="airbnb logo" />
                     <span className="primary-color">airbnb</span>
@@ -120,12 +121,14 @@ export function AppHeaderMinimized() {
 
                 <UserNav />
 
-                <AnimatePresence>
-                    {isOpenFilter
-                        ? renderFilter()
-                        : renderMinimizedFilter()
-                    }
-                </AnimatePresence>
+                {!hideFilter &&
+                    <AnimatePresence>
+                        {isOpenFilter
+                            ? renderFilter()
+                            : renderMinimizedFilter()
+                        }
+                    </AnimatePresence>
+                }
 
                 {renderMobileFilter()}
             </header>
