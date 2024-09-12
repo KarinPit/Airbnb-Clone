@@ -21,15 +21,12 @@ import sprayerIcon from "../../public/svg/amenities/sprayer.svg"
 
 export function StayDetails() {
     const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
-    const isOpenFilter = useSelector((storeState) => storeState.filterModule.isOpenFilter)
     const [stay, setStay] = useState(null)
     const isLoading = useSelector(storeState => storeState.appModule.isLoading);
     const isWideScreen = useSelector(storeState => storeState.appModule.isWideScreen);
     const { checkIn, checkOut } = useSelector(storeState => storeState.filterModule.filterBy);
     const { stayId } = useParams()
     const [searchParams, setSearchParams] = useSearchParams()
-
-    const currentOrder = []
 
 
     useEffect(() => {
@@ -50,6 +47,7 @@ export function StayDetails() {
                 console.log('Error loading stay', err);
             })
     }, [stayId])
+
 
     const stayAmenities = {
         amenities: [
@@ -280,7 +278,7 @@ export function StayDetails() {
                         </div>
                     </div>
                     <div className="order-stay">
-                        <OrderSidebar currentOrder={currentOrder} />
+                        <OrderSidebar stay={stay} />
                     </div>
                 </div>
 
