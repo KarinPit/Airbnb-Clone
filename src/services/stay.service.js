@@ -16,6 +16,7 @@ export const stayService = {
     getDefaultFilter,
     getFilterFromParams,
     sanitizeFilterParams,
+    calcGeneralScore,
     fetchImages
 }
 window.cs = stayService
@@ -124,6 +125,12 @@ function sanitizeFilterParams(filterBy) {
     }
 
     return sanitizedFilter;
+}
+
+function calcGeneralScore(stay) {
+    return Number.isInteger(stay.review_scores.review_scores_rating * 5 / 100)
+        ? (stay.review_scores.review_scores_rating * 5 / 100).toFixed(1)
+        : parseFloat((stay.review_scores.review_scores_rating * 5 / 100).toFixed(2))
 }
 
 // Private functions

@@ -21,7 +21,7 @@ const routes = [
         // path: "/home"
       }
     ],
-    key: "main",
+    key: "main-layout",
   },
   {
     path: "/stay/:stayId",
@@ -33,7 +33,7 @@ const routes = [
         element: <StayDetails />,
       }
     ],
-    key: "main",
+    key: "minimized-layout",
   },
   {
     path: "/stay/:stayId/confirm-order",
@@ -44,7 +44,8 @@ const routes = [
         index: true,
         element: <OrderIndex />,
       }
-    ]
+    ],
+    key: "order-index",
   },
   { path: "*", element: <Navigate to="/" replace />, key: "404" },
 ];

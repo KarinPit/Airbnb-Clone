@@ -1,4 +1,4 @@
-import { isBefore } from "date-fns"
+import { format } from 'date-fns'
 
 export function getDaysInMonth(year, month) {
     return new Date(year, month + 1, 0).getDate()
@@ -19,4 +19,14 @@ export function getMonthName(monthNum) {
     } else {
         throw new Error('Invalid month number. Please provide a number between 0 and 11.')
     }
+}
+
+export function getDateName(checkIn, checkOut) {
+    const checkInDate = new Date(checkIn)
+    const checkOutDate = new Date(checkOut)
+    const checkInMonth = getMonthName(checkInDate.getMonth())
+    const checkOutMonth = getMonthName(checkOutDate.getMonth())
+    const checkInDay = format(checkInDate, 'd')
+    const checkOutDay = format(checkOutDate, 'd')
+    return `${checkInMonth} ${checkInDay} - ${checkOutMonth} ${checkOutDay}`
 }
