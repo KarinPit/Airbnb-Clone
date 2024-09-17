@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { createSearchParams, Link } from 'react-router-dom';
 import { format, intervalToDuration } from 'date-fns';
+import { stayService } from '../../services/stay.service';
 
 export function OrderSidebar({ stay }) {
     const filterBy = useSelector(storeState => storeState.filterModule.filterBy);
@@ -73,12 +74,25 @@ export function OrderSidebar({ stay }) {
                 />
             </form>
 
-            <Link to={`/stay/${stay._id}/confirm-order`}>
-                <button style={{
-                    backgroundPositionX: `${100 - mousePosition.x}%`,
-                    backgroundPositionY: `${100 - mousePosition.y}%`
-                }}
-                    onMouseMove={handleMouseMove}>Reserve</button>
+            <Link to={{
+                pathname: `/stay/${stay._id}/confirm-order`,
+                search: `?${createSearchParams({ ...stayService.sanitizeFilterParams(filterBy) })}`
+            }}>
+                <button
+                    style={{
+                        backgroundPositionX: `${100 - mousePosition.x}%`,
+                        backgroundPositionY: `${100 - mousePosition.y}%`
+                    }}
+                    onClick={(event) => {
+
+                        if (!filterBy.checkIn && !filterBy.checkOut && !filterBy.who.totalCount > 0) {
+                            event.preventDefault();
+                        }
+                    }}
+                    onMouseMove={handleMouseMove}
+                >
+                    Reserve
+                </button>
             </Link>
 
             <p>You won't be charged yet</p>

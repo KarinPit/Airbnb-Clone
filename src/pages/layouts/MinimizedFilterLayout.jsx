@@ -19,11 +19,6 @@ export function MinimizedFilterLayout() {
     const dispatch = useDispatch()
     const location = useLocation()
 
-
-    // useEffect(() => {
-    //     console.log(location.pathname.includes('confirm-order'));
-    // }, [])
-
     return (
         <>
             <AppHeaderMinimized hideFilter={location.pathname.includes('confirm-order')}/>

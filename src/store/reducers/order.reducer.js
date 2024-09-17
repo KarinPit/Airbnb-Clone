@@ -42,11 +42,11 @@ export function orderReducer(state = initialState, action) {
                 currentOrder: action.order,
             };
 
-        case SET_FILTER_BY:
-            return {
-                ...state,
-                filterBy: { ...state.filterBy, ...action.fieldsToUpdate },
-            };
+        // case SET_FILTER_BY:
+        //     return {
+        //         ...state,
+        //         filterBy: { ...state.filterBy, ...action.fieldsToUpdate },
+        //     };
 
         case GET_TOTAL_ORDERS_FILTERED:
             return {

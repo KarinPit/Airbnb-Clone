@@ -14,21 +14,28 @@ export function App() {
     const isScrolled = useSelector((storeState) => storeState.appModule.isScrolled)
     const location = useLocation()
     const dispatch = useDispatch()
+    const shouldAddScrollListener = !location.pathname.includes('confirm-order') && !location.pathname.includes('stay');
 
     useEffect(() => {
         window.addEventListener('resize', handleResize)
-        window.addEventListener('scroll', handleScroll)
         getUserLocation()
+
+        if (shouldAddScrollListener) {
+            window.addEventListener('scroll', handleScroll)
+        }
 
         return () => {
             window.removeEventListener('resize', handleResize)
-            window.removeEventListener('scroll', handleScroll)
+
+            if (shouldAddScrollListener) {
+                window.removeEventListener('scroll', handleScroll)
+            }
         }
-    }, [])
+    }, [location.pathname])
 
     return (
         <Provider store={store}>
-            <section className={`main-app ${isOpenFilterMobile ? 'hide-overflow' : ''}${isScrolled ? 'scrolled' : ''} ${location.pathname.includes('stay') ? 'stay-details-layout' : ''}`}
+            <section className={`main-app ${isOpenFilterMobile ? 'hide-overflow' : ''}${isScrolled && shouldAddScrollListener ? 'scrolled' : ''} ${location.pathname.includes('stay') ? 'stay-details-layout' : ''}`}
                 onClick={(e) => {
                     // {console.log(e.target.className)}
                     if (e.target.className === 'container'

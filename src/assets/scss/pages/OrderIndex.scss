@@ -264,8 +264,7 @@
 
 
             .stay-info-container {
-                // height: 74px;
-                // width: 415.656px;
+                width: 100%;
                 display: flex;
                 flex-direction: column;
                 align-items: start;
@@ -288,21 +287,35 @@
                     flex-direction: column;
                     align-items: start;
                     justify-content: space-between;
-                    margin-bottom: 5px;
                     text-size-adjust: 100%;
                     font-size: 16px;
-                    line-height: 20px;
                     font-weight: 400;
                     text-align: left;
+                    width: 100%;
 
-                    .stay-info-price {
-                        display: block;
-                        text-size-adjust: 100%;
-                        font-size: 16px;
-                        line-height: 20px;
-                        font-weight: 400;
-                        color: rgb(34, 34, 34);
+                    div {
+                        display: flex;
+                        width: 100%;
+                        justify-content: space-between;
+
+                        p {
+                            padding-block: rem(5px);
+                        }
+
+                        &:nth-of-type(2),
+                        &:nth-of-type(3) {
+                            p:first-of-type {
+                                text-decoration: underline;
+                            }
+                        }
+
+                        &:nth-of-type(4) {
+                            p {
+                                font-weight: 700;
+                            }
+                        }
                     }
+
                 }
 
             }
@@ -335,11 +348,12 @@
 
     .btn-link {
         margin-block: 24px;
-        font-size: 18px;
+        font-size: 14px;
+        font-weight: 500;
         background-color: transparent;
         padding: rem(10px);
         border-radius: rem(10px);
-        border: 1px solid grey;
+        border: 1px dashed grey;
     }
 
     form {

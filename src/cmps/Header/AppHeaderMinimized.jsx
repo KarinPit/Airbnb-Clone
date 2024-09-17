@@ -119,7 +119,9 @@ export function AppHeaderMinimized({ hideFilter }) {
                     {renderNavOptions()}
                 </AnimatePresence>
 
-                <UserNav />
+
+                {!hideFilter &&
+                    <UserNav />}
 
                 {!hideFilter &&
                     <AnimatePresence>

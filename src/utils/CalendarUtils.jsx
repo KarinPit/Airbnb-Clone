@@ -1,4 +1,4 @@
-import { format } from 'date-fns'
+import { format, intervalToDuration } from 'date-fns'
 
 export function getDaysInMonth(year, month) {
     return new Date(year, month + 1, 0).getDate()
@@ -29,4 +29,11 @@ export function getDateName(checkIn, checkOut) {
     const checkInDay = format(checkInDate, 'd')
     const checkOutDay = format(checkOutDate, 'd')
     return `${checkInMonth} ${checkInDay} - ${checkOutMonth} ${checkOutDay}`
+}
+
+export function calcDaysBetweenDates(checkIn, checkOut) {
+    return intervalToDuration({
+        start: new Date(checkIn),
+        end: new Date(checkOut)
+    }).days
 }

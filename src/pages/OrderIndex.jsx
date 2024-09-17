@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { NavLink, useNavigate, useParams } from 'react-router-dom';
+import { createSearchParams, NavLink, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { format, intervalToDuration } from 'date-fns';
 
 import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service.js';
@@ -8,6 +8,8 @@ import { login, logout, signup } from '../store/actions/user.actions.js';
 import { saveOrder } from '../store/actions/order.actions.js';
 import { stayService } from '../services/stay.service';
 import { LoginSignup } from '../cmps/Header/LoginSingup.jsx';
+import { calcDaysBetweenDates } from '../utils/CalendarUtils.jsx';
+import { setFilterBy } from '../store/actions/filter.actions.js';
 
 import { LeftArrow } from '../cmps/SVG/HeaderSvg.jsx'
 import { useSelector } from 'react-redux';
@@ -23,8 +25,19 @@ export function OrderIndex() {
     const svgRef2 = useRef(null);
     const { stayId } = useParams();
     const navigate = useNavigate();
-    const cleaningFee = 10;
-    const airbnbFee = 25;
+    const [totalPrice, setTotalPrice] = useState(0)
+    const [totalDays, setTotalDays] = useState(0)
+    const [searchParams, setSearchParams] = useSearchParams()
+
+
+    useEffect(() => {
+        setFilterBy(stayService.getFilterFromParams(searchParams))
+    }, [])
+
+    useEffect(() => {
+        const newParams = stayService.sanitizeFilterParams(filterBy);
+        setSearchParams((prev) => ({ ...prev, ...newParams }));
+    }, [filterBy]);
 
     useEffect(() => {
         setLoggedUser(sessionStorage.loggedinUser ? JSON.parse(sessionStorage.loggedinUser) : null);
@@ -37,7 +50,17 @@ export function OrderIndex() {
                 console.log('Error loading current stay in order preview', err);
             });
 
-    }, [stayId]);
+    }, []);
+
+    useEffect(() => {
+        if (currentStay) {
+            const calcDays = calcDaysBetweenDates(filterBy.checkIn, filterBy.checkOut)
+            const calcPrice = calcDays * currentStay.price.$numberDecimal
+            setTotalDays(calcDays)
+            setTotalPrice(calcPrice)
+        }
+    }, [currentStay, filterBy.checkIn, filterBy.checkOut])
+
 
 
     // function handleReserve() {
@@ -124,7 +147,10 @@ export function OrderIndex() {
             <div className="order-preview">
                 {/* <div className="order-summary"> */}
 
-                <NavLink to={`/stay/${stayId}`}>
+                <NavLink to={{
+                    pathname: `/stay/${stayId}`,
+                    search: `?${createSearchParams({ ...stayService.sanitizeFilterParams(filterBy) })}`
+                }}>
                     <LeftArrow />
                 </NavLink>
 
@@ -205,6 +231,7 @@ export function OrderIndex() {
                         {loggedUser ? <button className="confirm-btn" onClick={createOrder}>Confirm and pay</button> : <div className='login-menu'>
                             <h3>Log in or sign up to book</h3>
                             <LoginSignup onLogin={onLogin} onSignup={onSignup} isOrderPreview={true} />
+                            {/* <LoginSignup onLogin={onLogin} onSignup={onSignup} isOrderPreview={true} /> */}
                         </div>}
                     </div>
                     {/* </div> */}
@@ -232,8 +259,7 @@ export function OrderIndex() {
                                         d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z">
                                     </path>
                                 </svg>
-                                <p>{stayService.calcGeneralScore(currentStay)}</p>
-                                {/* <p className='stay-reviews'>{currentStay.avgRating.toFixed(1)} ({currentStay.reviews.length} reviews)</p> */}
+                                <p>{stayService.calcGeneralScore(currentStay)} ({currentStay.reviews.length} reviews)</p>
                             </div>
                         </div>
                     </div>
@@ -244,17 +270,28 @@ export function OrderIndex() {
                                 <p>Price details</p>
                             </div>
 
-                            {currentOrder?.range?.start && currentOrder?.range?.end ?
+                            {filterBy.checkIn && filterBy.checkOut ?
                                 <div className='stay-info-price-container'>
-                                    <p>Accommodation: ${currentStay.price * intervalToDuration({
-                                        start: new Date(currentOrder.range.start),
-                                        end: new Date(currentOrder.range.end)
-                                    }).days}</p>
-                                    <p>Taxes: ${cleaningFee + airbnbFee}</p>
-                                    <p>Total: ${currentStay.price * intervalToDuration({
-                                        start: new Date(currentOrder.range.start),
-                                        end: new Date(currentOrder.range.end)
-                                    }).days - cleaningFee - airbnbFee}</p>
+                                    <div>
+                                        <p>${Math.round(currentStay.price.$numberDecimal)} x {`${totalDays === 1 ? '1 night' : `${totalDays} nights`}`}
+                                        </p>
+                                        <p>${Math.round(currentStay.price.$numberDecimal) * totalDays}</p>
+                                    </div>
+
+                                    <div>
+                                        <p>Cleaning fee</p>
+                                        <p>${Math.round(currentStay.cleaning_fee.$numberDecimal)}</p>
+                                    </div>
+
+                                    <div>
+                                        <p>Airbnb service fee</p>
+                                        <p>${Math.round(totalPrice * 0.03)}</p>
+                                    </div>
+
+                                    <div>
+                                        <p>Total (USD)</p>
+                                        <p>${currentStay.price.$numberDecimal * totalDays + Math.round(totalPrice * 0.03) + Math.round(currentStay.cleaning_fee.$numberDecimal)}</p>
+                                    </div>
                                 </div> : ''}
                         </div>
                     </div>

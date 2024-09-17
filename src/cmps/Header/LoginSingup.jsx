@@ -8,7 +8,7 @@ export function LoginSignup(props) {
 
     useEffect(() => {
         loadUsers();
-    }, []);
+    }, [])
 
     async function loadUsers() {
         const users = await userService.getUsers();
@@ -28,7 +28,7 @@ export function LoginSignup(props) {
 
     function onLogin(ev = null) {
         if (ev) ev.preventDefault();
-        if (!credentials.username) return;
+        if (!credentials.username) return
         props.onLogin(credentials);
         clearState();
         if (props.onUserLogIn) {
