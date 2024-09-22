@@ -4,7 +4,7 @@
     max-width: rem(1280px);
     margin-inline: auto;
 
-    >div:not(.stay-main-area) {
+    >div:not(.stay-main-area, .order-preview) {
         padding-inline: rem(24px);
     }
 

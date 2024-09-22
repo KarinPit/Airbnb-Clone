@@ -6,6 +6,7 @@ footer {
     justify-content: space-between;
     font-size: rem(14px);
     z-index: 1;
+    overflow: hidden;
 
     &.mobile-footer {
         justify-content: center;

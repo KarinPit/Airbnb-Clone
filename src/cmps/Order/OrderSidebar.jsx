@@ -85,7 +85,7 @@ export function OrderSidebar({ stay }) {
                     }}
                     onClick={(event) => {
 
-                        if (!filterBy.checkIn && !filterBy.checkOut && !filterBy.who.totalCount > 0) {
+                        if (filterBy.checkIn === '' || filterBy.checkOut === '' || filterBy.who.totalCount === 0) {
                             event.preventDefault();
                         }
                     }}

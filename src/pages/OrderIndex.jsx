@@ -10,6 +10,7 @@ import { stayService } from '../services/stay.service';
 import { LoginSignup } from '../cmps/Header/LoginSingup.jsx';
 import { calcDaysBetweenDates } from '../utils/CalendarUtils.jsx';
 import { setFilterBy } from '../store/actions/filter.actions.js';
+import { OrderIndexMobile } from './OrderIndexMobile.jsx';
 
 import { LeftArrow } from '../cmps/SVG/HeaderSvg.jsx'
 import { useSelector } from 'react-redux';
@@ -28,6 +29,7 @@ export function OrderIndex() {
     const [totalPrice, setTotalPrice] = useState(0)
     const [totalDays, setTotalDays] = useState(0)
     const [searchParams, setSearchParams] = useSearchParams()
+    const isWideScreen = useSelector((storeState) => storeState.appModule.isWideScreen)
 
 
     useEffect(() => {
@@ -143,7 +145,7 @@ export function OrderIndex() {
 
 
     return (
-        <>
+        isWideScreen ? <>
             <div className="order-preview">
                 {/* <div className="order-summary"> */}
 
@@ -259,7 +261,7 @@ export function OrderIndex() {
                                         d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z">
                                     </path>
                                 </svg>
-                                <p>{stayService.calcGeneralScore(currentStay)} ({currentStay.reviews.length} reviews)</p>
+                                <p><span>{stayService.calcGeneralScore(currentStay)}</span> ({currentStay.reviews.length} reviews)</p>
                             </div>
                         </div>
                     </div>
@@ -298,6 +300,7 @@ export function OrderIndex() {
                 </div>
             </div>
 
-        </>
+        </> : <OrderIndexMobile />
+
     );
 }

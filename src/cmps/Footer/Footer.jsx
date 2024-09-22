@@ -1,8 +1,8 @@
 import { GlobeIcon, FacebookIcon, InstagramIcon, TwitterIcon } from '../SVG/FooterSvg'
 
-export function Footer() {
+export function Footer({ isSticky }) {
     return (
-        <footer>
+        <footer className={`${isSticky ? 'sticky' : ''}`}>
             <div className="footer-info">
                 <p>&copy; 2024 Airbnb, Inc.</p>
             </div>

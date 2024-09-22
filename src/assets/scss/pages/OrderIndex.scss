@@ -1,7 +1,7 @@
 .order-preview {
     position: relative;
     display: grid;
-    grid-template-columns: auto 1fr 1fr;
+    grid-template-columns: auto 1fr 1fr 1fr;
     grid-template-rows: auto rem(24px) 1fr;
     width: 100%;
     margin: 20px 0;
@@ -12,42 +12,51 @@
 
     h2 {
         font-family: AirbnbCereal-Bold;
-        font-size: rem(30px);
-        grid-column: 2;
+        font-size: rem(16px);
+        grid-column: 1/-1;
         grid-row: 1;
+        text-align: center;
+    }
+
+    h3 {
+        font-family: AirbnbCereal-Bold;
+        font-size: rem(20px);
+        padding-block-end: rem(24px);
     }
 
     a {
-        align-self: end;
-        grid-column: 1;
+        align-self: center;
+        grid-column: 2;
         grid-row: 1;
-        padding: 0 rem(16px) 0 0;
         height: fit-content;
-        padding-block-end: rem(5px);
+        padding-block: 0;
 
         svg {
-            width: rem(24px);
-            height: rem(24px);
+            width: rem(20px);
+            height: rem(20px);
         }
     }
 
     .trip-summary {
-        display: grid;
-        grid-template-columns: subgrid;
-        grid-template-rows: subgrid;
-        grid-column: 2;
-        grid-row: 3;
+        grid-column: 1/-1;
+        grid-row: 4;
+
+        &>div {
+            border-bottom: 8px solid #ddd;
+            padding: rem(24px) rem(20px);
+
+            &:nth-of-type(1) {
+                padding-block-start: 0;
+            }
+
+            &:nth-of-type(5) {
+                border-bottom: none;
+            }
+        }
 
         .trip-details {
             grid-column: 2;
             padding-block-end: 24px;
-            border-bottom: 1px solid rgb(221, 221, 221);
-
-            h3 {
-                font-family: AirbnbCereal-Bold;
-                font-size: rem(20px);
-                padding-block-end: rem(24px);
-            }
 
             .dates {
                 padding-block-end: rem(24px);
@@ -78,13 +87,6 @@
         }
 
         .payment-summary {
-            margin-block-end: rem(30px);
-
-            h3 {
-                font-family: AirbnbCereal-Bold;
-                font-size: rem(20px);
-                padding-block: rem(24px);
-            }
 
             .payment-options {
                 border: 1px solid rgb(221, 221, 221);
@@ -134,6 +136,110 @@
             }
 
         }
+
+        .stay-details {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+
+            &>div {
+                padding-inline: 0;
+            }
+
+            &>div:first-of-type {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                align-items: center;
+                border-bottom: 1px solid #ddd;
+
+                img {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 10px;
+                    margin-bottom: 20px;
+                }
+
+                .stay-detail-container {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    justify-content: start;
+                    padding-left: 16px;
+                    letter-spacing: normal;
+                    line-height: 20px;
+                    line-break: strict;
+                    padding-top: 0px;
+                    margin-bottom: 5px;
+                    text-size-adjust: 100%;
+
+                    .stay-name {
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: rgb(0, 0, 0);
+                    }
+
+                    .stay-type {
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: rgb(34, 34, 34);
+                        font-weight: 400;
+                    }
+
+                    .stay-reviews {
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: rgb(34, 34, 34);
+                        line-height: 18px;
+                    }
+
+                    .stay-review-container {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        align-content: start;
+                        justify-content: start;
+                        gap: rem(5px);
+
+                        p {
+                            display: -webkit-box;
+                            -webkit-line-clamp: 1;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            font-size: 14px;
+                            color: rgb(0, 0, 0);
+
+                            span {
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            &>div:last-of-type {
+                display: flex;
+                justify-content: space-between;
+                gap: rem(16px);
+                padding-block-start: rem(16px);
+
+                svg {
+                    width: rem(26px);
+                    height: rem(26px);
+                }
+            }
+
+        }
+
     }
 
     .order-header {
@@ -157,9 +263,6 @@
     .price-details {
         margin-bottom: 20px;
 
-        h3 {
-            margin-bottom: 10px;
-        }
     }
 
     .confirm-btn {
@@ -174,86 +277,22 @@
 
     .order-details {
         justify-self: end;
-        grid-column: 3;
+        grid-column: 1/-1;
         grid-row: 3;
-        position: sticky;
-        top: rem(80px);
         height: fit-content;
-        width: 82%;
-        min-height: 289px;
+        width: 100%;
+        // min-height: 289px;
         display: flex;
         flex-direction: column;
-        border: 1px solid #ddd;
-        padding: 24px 24px 24px 24px;
+        // border: 1px solid #ddd;
+        // padding: 24px 24px 24px 24px;
         align-items: center;
-        border-bottom-color: rgb(221, 221, 221);
-        border-radius: 12px;
-        margin-bottom: 88px;
+        // border-bottom-color: rgb(221, 221, 221);
+        // border-radius: 12px;
+        // margin-bottom: 88px;
         // margin-inline-start: 8.33%;
         line-height: 20px;
 
-        .stay-details {
-            position: relative;
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-            border-bottom: 1px solid #ddd;
-            align-items: center;
-
-            img {
-                width: 100px;
-                height: 100px;
-                border-radius: 10px;
-                margin-bottom: 20px;
-            }
-
-            .stay-detail-container {
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: start;
-                justify-content: start;
-                padding-left: 16px;
-                letter-spacing: normal;
-                line-height: 20px;
-                line-break: strict;
-                padding-top: 0px;
-                margin-bottom: 5px;
-                text-size-adjust: 100%;
-
-                .stay-name {
-                    font-size: 16px;
-                    font-weight: 600;
-                    color: rgb(0, 0, 0);
-                }
-
-                .stay-type {
-                    font-size: 14px;
-                    font-weight: 400;
-                    color: rgb(34, 34, 34);
-                    font-weight: 400;
-                }
-
-                .stay-reviews {
-                    font-size: 14px;
-                    font-weight: 400;
-                    color: rgb(34, 34, 34);
-                    line-height: 18px;
-                }
-
-                .stay-review-container {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    align-content: start;
-                    justify-content: start;
-
-                    .stay-reviews {
-                        padding-left: 4px;
-                    }
-                }
-            }
-        }
 
         .stay-info {
             display: flex;
@@ -268,7 +307,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: start;
-                margin-bottom: 5px;
+                // margin-bottom: 5px;
                 text-size-adjust: 100%;
 
                 .stay-info-container-title {
@@ -278,8 +317,6 @@
                     line-height: 26px;
                     font-weight: 600;
                     color: rgb(0, 0, 0);
-                    padding-top: 24px;
-                    padding-bottom: 24px;
                 }
 
                 .stay-info-price-container {
@@ -320,10 +357,6 @@
 
             }
 
-            h3 {
-                margin-bottom: 10px;
-            }
-
             p {
                 margin-bottom: 5px;
             }
@@ -333,11 +366,9 @@
 
 .login-menu {
     padding-block-start: 24px;
-    border-top: 1px solid rgb(221, 221, 221);
 
     h3 {
-        font-family: AirbnbCereal-Bold;
-        font-size: rem(20px);
+        padding-block-end: 0;
     }
 }
 
@@ -407,5 +438,377 @@
             border-radius: 8px;
             border: none;
         }
+    }
+}
+
+
+@include for-normal-layout {
+    .order-preview {
+        grid-template-columns: auto 1fr 1fr;
+        grid-template-rows: auto rem(24px) 1fr;
+
+
+        h2 {
+            grid-column: 2;
+            grid-row: 1;
+            font-size: rem(30px);
+            text-align: start;
+        }
+
+        a {
+            align-self: end;
+            grid-column: 1;
+            grid-row: 1;
+            padding-block-end: rem(5px);
+
+            svg {
+                width: rem(24px);
+                height: rem(24px);
+            }
+        }
+
+        .trip-summary {
+            display: grid;
+            grid-template-columns: subgrid;
+            grid-template-rows: subgrid;
+            grid-column: 2/-1;
+            grid-row: 3;
+
+            &>div {
+                padding: 0;
+                border: none;
+            }
+
+            .trip-details {
+                grid-column: 2;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .payment-summary {
+                margin-block-end: rem(30px);
+
+                h3 {
+                    font-family: AirbnbCereal-Bold;
+                    font-size: rem(20px);
+                    padding-block: rem(24px);
+                }
+
+                .payment-options {
+                    border: 1px solid rgb(221, 221, 221);
+                    outline: 1px solid rgb(221, 221, 221);
+                    border-radius: rem(8px);
+
+                    .payment-option {
+                        display: flex;
+                        width: 100%;
+                        justify-content: space-between;
+                        border: 1px solid #ffff;
+                        border-radius: rem(8px);
+
+                        &:not(.selected):first-child {
+                            border-bottom: 1px solid rgb(221, 221, 221);
+                        }
+
+                        &.selected {
+                            border: 1px solid #000;
+                            outline: 1px solid #000;
+                        }
+
+                        &.selected:first-of-type {
+                            border-radius: rem(8px) rem(8px) 0 0;
+                        }
+
+                        &.selected:last-of-type {
+                            border-radius: 0 0 rem(8px) rem(8px);
+                        }
+
+                        p {
+                            padding: rem(16px) rem(10px);
+                        }
+
+                        button {
+                            background-color: transparent;
+                            border: none;
+                            padding-inline-end: rem(10px);
+
+                            svg {
+                                width: rem(30px);
+                                height: rem(30px);
+                            }
+                        }
+
+                    }
+                }
+
+            }
+
+            .stay-details {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+
+                &>div {
+                    padding-inline: 0;
+                }
+
+                &>div:first-of-type {
+                    position: relative;
+                    display: flex;
+                    flex-direction: row;
+                    width: 100%;
+                    align-items: center;
+
+                    img {
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 10px;
+                        margin-bottom: 20px;
+                    }
+
+                    .stay-detail-container {
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: start;
+                        justify-content: start;
+                        padding-left: 16px;
+                        letter-spacing: normal;
+                        line-height: 20px;
+                        line-break: strict;
+                        padding-top: 0px;
+                        margin-bottom: 5px;
+                        text-size-adjust: 100%;
+
+                        .stay-name {
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            font-size: 16px;
+                            font-weight: 600;
+                            color: rgb(0, 0, 0);
+                        }
+
+                        .stay-type {
+                            font-size: 14px;
+                            font-weight: 400;
+                            color: rgb(34, 34, 34);
+                            font-weight: 400;
+                        }
+
+                        .stay-reviews {
+                            font-size: 14px;
+                            font-weight: 400;
+                            color: rgb(34, 34, 34);
+                            line-height: 18px;
+                        }
+
+                        .stay-review-container {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            align-content: start;
+                            justify-content: start;
+                            gap: rem(5px);
+
+                            p {
+                                display: -webkit-box;
+                                -webkit-line-clamp: 1;
+                                -webkit-box-orient: vertical;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                font-size: 14px;
+                                color: rgb(0, 0, 0);
+
+                                span {
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .order-details {
+            justify-self: end;
+            grid-column: 3;
+            grid-row: 3;
+            position: sticky;
+            top: rem(80px);
+            height: fit-content;
+            width: 82%;
+            min-height: 289px;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #ddd;
+            padding: 24px 24px 24px 24px;
+            align-items: center;
+            border-bottom-color: rgb(221, 221, 221);
+            border-radius: 12px;
+            margin-bottom: 88px;
+            // margin-inline-start: 8.33%;
+            line-height: 20px;
+
+
+            .stay-details {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                border-bottom: 1px solid #ddd;
+                align-items: center;
+
+                img {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 10px;
+                    margin-bottom: 20px;
+                }
+
+                .stay-detail-container {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    justify-content: start;
+                    padding-left: 16px;
+                    letter-spacing: normal;
+                    line-height: 20px;
+                    line-break: strict;
+                    padding-top: 0px;
+                    margin-bottom: 5px;
+                    text-size-adjust: 100%;
+
+                    .stay-name {
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: rgb(0, 0, 0);
+                    }
+
+                    .stay-type {
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: rgb(34, 34, 34);
+                        font-weight: 400;
+                    }
+
+                    .stay-reviews {
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: rgb(34, 34, 34);
+                        line-height: 18px;
+                    }
+
+                    .stay-review-container {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        align-content: start;
+                        justify-content: start;
+                        gap: rem(5px);
+
+                        p {
+                            display: -webkit-box;
+                            -webkit-line-clamp: 1;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            font-size: 14px;
+                            color: rgb(0, 0, 0);
+
+                            span {
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .stay-info {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: space-between;
+                width: 100%;
+
+
+                .stay-info-container {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    margin-bottom: 5px;
+                    text-size-adjust: 100%;
+
+                    .stay-info-container-title {
+                        display: block;
+                        text-size-adjust: 100%;
+                        font-size: 22px;
+                        line-height: 26px;
+                        font-weight: 600;
+                        color: rgb(0, 0, 0);
+                        padding-top: 24px;
+                        padding-bottom: 24px;
+                    }
+
+                    .stay-info-price-container {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: start;
+                        justify-content: space-between;
+                        text-size-adjust: 100%;
+                        font-size: 16px;
+                        font-weight: 400;
+                        text-align: left;
+                        width: 100%;
+
+                        div {
+                            display: flex;
+                            width: 100%;
+                            justify-content: space-between;
+
+                            p {
+                                padding-block: rem(5px);
+                            }
+
+                            &:nth-of-type(2),
+                            &:nth-of-type(3) {
+                                p:first-of-type {
+                                    text-decoration: underline;
+                                }
+                            }
+
+                            &:nth-of-type(4) {
+                                p {
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+
+                    }
+
+                }
+
+                h3 {
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+
+    .login-menu {
+        border-top: 1px solid rgb(221, 221, 221);
     }
 }
