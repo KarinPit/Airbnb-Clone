@@ -35,7 +35,7 @@ export function App() {
 
     return (
         <Provider store={store}>
-            <section className={`main-app ${isOpenFilterMobile ? 'hide-overflow' : ''}${isScrolled && shouldAddScrollListener ? 'scrolled' : ''} ${location.pathname.includes('stay') ? 'stay-details-layout' : ''}`}
+            <section className={`main-app ${isOpenFilterMobile ? 'hide-overflow' : ''}${isScrolled && shouldAddScrollListener ? 'scrolled' : ''} ${location.pathname.includes('stay') ? 'stay-details-layout' : ''} ${location.pathname.includes('profile') ? 'profile-layout' : ''}`}
                 onClick={(e) => {
                     // {console.log(e.target.className)}
                     if (e.target.className === 'container'

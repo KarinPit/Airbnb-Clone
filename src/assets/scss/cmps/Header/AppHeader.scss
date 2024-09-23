@@ -1,4 +1,3 @@
-
 header {
     position: sticky;
     top: 0;
@@ -114,6 +113,7 @@ header {
             }
 
             .user-menu {
+                position: relative;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -151,6 +151,52 @@ header {
                     }
                 }
 
+                .user-menu-modal {
+                    position: absolute;
+                    top: rem(60px);
+                    right: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    background-color: #fff;
+                    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.12);
+                    border-radius: rem(10px);
+                    min-width: rem(240px);
+                    max-height: calc(100vh - 100px);
+                    z-index: 5;
+                    padding-block: rem(16px);
+
+                    &>div {
+                        display: block;
+                        width: 100%;
+
+                        &:first-of-type {
+                            border-bottom: 1px solid #efefef;
+                            padding-block-end: rem(10px);
+                            margin-block-end: rem(10px);
+                        }
+
+                        p,
+                        a {
+                            padding: rem(8px) rem(16px);
+                            font-size: rem(14px);
+                            border-radius: 0;
+                            font-family: AirbnbCereal-Book;
+                            cursor: pointer;
+
+                            &:hover {
+                                font-family: AirbnbCereal-Bold;
+                                background-color: #F7F7F7;
+                                font-weight: 500;
+                            }
+                        }
+
+                    }
+
+                    &.hide {
+                        display: none;
+                    }
+                }
             }
         }
     }

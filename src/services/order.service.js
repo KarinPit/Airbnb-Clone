@@ -42,7 +42,7 @@ async function remove(orderId) {
 
 async function save(order) {
     var savedorder
-    if (order._id) {
+    if (order.id) {
         savedorder = await storageService.put(STORAGE_KEY, order)
     } else {
         // Later, owner is set by the backend
@@ -81,13 +81,3 @@ function _createOrders() {
         utilService.saveToStorage(STORAGE_KEY, orders);
     }
 }
-
-function _createCurrentOrder() {
-    let currentOrder = utilService.loadFromStorage(STORAGE_KEY_CURRENT_ORDER);
-    if (!currentOrder || !currentOrder.length) {
-        currentOrder = {};
-        utilService.saveToStorage(STORAGE_KEY_CURRENT_ORDER, currentOrder);
-    }
-}
-
-

@@ -49,10 +49,22 @@
             top: rem(168px)
         }
 
-
         main {
             grid-row: 1;
             padding-inline: 0;
+        }
+    }
+
+    &.profile-layout {
+        grid-template-rows: auto 1fr auto;
+
+        main {
+            grid-row: 2;
+            padding-inline: 0;
+        }
+
+        footer {
+            grid-row: 3;
         }
     }
 
@@ -73,7 +85,7 @@
             bottom: 0;
             left: 0;
         }
-        
+
         &.mobile-footer {
             position: sticky;
             bottom: 0;
@@ -104,6 +116,18 @@
 
             main {
                 grid-row: 2;
+                padding-inline: rem($padding-xxl);
+            }
+        }
+
+        &.profile-layout {
+
+            main {
+                grid-row: 2;
+                padding-inline: rem($padding-xxl);
+            }
+
+            footer {
                 padding-inline: rem($padding-xxl);
             }
         }

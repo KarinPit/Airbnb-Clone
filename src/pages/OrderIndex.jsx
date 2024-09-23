@@ -17,7 +17,6 @@ import { useSelector } from 'react-redux';
 
 
 export function OrderIndex() {
-    const [currentOrder, setCurrentOrder] = useState(JSON.parse(localStorage.getItem('currentOrder')));
     const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
     const [currentStay, setCurrentStay] = useState(null);
     const [loggedUser, setLoggedUser] = useState(null);
@@ -64,45 +63,31 @@ export function OrderIndex() {
     }, [currentStay, filterBy.checkIn, filterBy.checkOut])
 
 
-
-    // function handleReserve() {
-    //   setCurrentOrder(prevOrder => {
-    //     const updatedOrder = {
-    //       ...prevOrder,
-    //       stayId: currentStay._id
-    //     };
-    //     localStorage.setItem('currentOrder', JSON.stringify(updatedOrder));
-    //     return updatedOrder;
-    //   });
-    // }
-
     function createOrder() {
         const order = {
-            hostId: currentStay.host._id,
+            hostId: currentStay.host.host_id,
             buyer: {
-                _id: loggedUser._id,
-                fullname: loggedUser.fullname,
+                _id: loggedUser.id,
+                fullname: loggedUser.fullname
             },
-            totalPrice: currentStay.price * intervalToDuration({
-                start: new Date(currentOrder.range.start),
-                end: new Date(currentOrder.range.end)
-            }).days - cleaningFee - airbnbFee,
-            startDate: currentOrder.range.start,
-            endDate: currentOrder.range.end,
-            guests: { ...currentOrder.guests },
+            totalPrice: totalPrice,
+            totalDays: totalDays,
+            checkIn: filterBy.checkIn,
+            checkOut: filterBy.checkOut,
+            guests: filterBy.who,
             stay: {
                 _id: currentStay._id,
                 name: currentStay.name,
-                price: currentStay.price,
+                price: currentStay.price.$numberDecimal,
+                address: currentStay.address,
+                images: currentStay.images
             },
-            msgs: [],
-            status: "pending",
-        };
-
-        console.log(order);
+            message: "",
+            status: "pending"
+        }
 
         saveOrder(order);
-        navigate(`/profile/buyer/${loggedUser._id}`);
+        navigate(`/profile/${loggedUser.id}/buyer`);
     }
 
     async function onLogin(credentials) {
@@ -211,11 +196,9 @@ export function OrderIndex() {
                                             </svg>}
                                     </button>
                                 </div>
+
                                 <div className={`payment-option ${selectedPayment === 'pay-later' ? 'selected' : ''}`}>
-
                                     <p>Pay part now, part later</p>
-                                    {/* <p>$774.09 due today, $774.09 on Jun 20, 2024. No extra fees.</p> */}
-
 
                                     <button className="pay-later" ref={svgRef2} onClick={() => onSelectPayment(svgRef2)}>
                                         {selectedPayment === "pay-later" ?
@@ -230,13 +213,12 @@ export function OrderIndex() {
                             </div>
                         </div>
 
-                        {loggedUser ? <button className="confirm-btn" onClick={createOrder}>Confirm and pay</button> : <div className='login-menu'>
-                            <h3>Log in or sign up to book</h3>
-                            <LoginSignup onLogin={onLogin} onSignup={onSignup} isOrderPreview={true} />
-                            {/* <LoginSignup onLogin={onLogin} onSignup={onSignup} isOrderPreview={true} /> */}
-                        </div>}
+                        {loggedUser ? <button className="confirm-btn" onClick={createOrder}>Confirm and pay</button>
+                            : <div className='login-menu'>
+                                <h3>Log in or sign up to book</h3>
+                                <LoginSignup onLogin={onLogin} onSignup={onSignup} isOrderPreview={true} />
+                            </div>}
                     </div>
-                    {/* </div> */}
 
                 </div>
 
