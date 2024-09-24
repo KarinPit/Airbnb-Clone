@@ -103,7 +103,7 @@ export const DemoData = [
             ],
         },
         "host": {
-            "host_id": "51399391",
+            "host_id": "NqbDW",
             "host_url": "https://www.airbnb.com/users/show/51399391",
             "host_name": "Ana&Gonçalo",
             "host_location": "Porto, Porto District, Portugal",
@@ -1432,7 +1432,7 @@ export const DemoData = [
             ],
         },
         "host": {
-            "host_id": "5448114",
+            "host_id": "NqbDW",
             "host_url": "https://www.airbnb.com/users/show/5448114",
             "host_name": "David",
             "host_location": "Honolulu, Hawaii, United States",
@@ -2679,7 +2679,7 @@ export const DemoData = [
             ],
         },
         "host": {
-            "host_id": "51496939",
+            "host_id": "NqbDW",
             "host_url": "https://www.airbnb.com/users/show/51496939",
             "host_name": "Livia",
             "host_location": "BR",
@@ -5035,7 +5035,7 @@ export const DemoData = [
             ],
         },
         "host": {
-            "host_id": "1241644",
+            "host_id": "NqbDW",
             "host_url": "https://www.airbnb.com/users/show/1241644",
             "host_name": "Zeynep",
             "host_location": "Istanbul, Istanbul, Turkey",
@@ -10057,49 +10057,49 @@ export const DemoData = [
     }
 ]
 
-export const dummyorders = [
-    {
-        _id: "o1225",
-        hostId: "u102",
-        buyer: {
-            _id: "JVPxK",
-            fullname: "User 1",
-        },
-        totalPrice: 160,
-        startDate: "2025/10/15",
-        endDate: "2025/10/17",
-        guests: {
-            adults: 2,
-            kids: 1,
-        },
-        stay: {
-            _id: "h102",
-            name: "House Of Uncle My",
-            price: 80.0,
-        },
-        msgs: [],
-        status: "pending", // pending, approved
-    },
-    {
-        _id: "o1225",
-        hostId: "JVPxK",
-        buyer: {
-            _id: "JVPxK",
-            fullname: "User 1",
-        },
-        totalPrice: 160,
-        startDate: "2025/10/15",
-        endDate: "2025/10/17",
-        guests: {
-            adults: 2,
-            kids: 1,
-        },
-        stay: {
-            _id: "h102",
-            name: "House Of Uncle My",
-            price: 80.0,
-        },
-        msgs: [],
-        status: "pending", // pending, approved
-    }
-]
+// export const dummyorders = [
+//     {
+//         _id: "o1225",
+//         hostId: "u102",
+//         buyer: {
+//             _id: "JVPxK",
+//             fullname: "User 1",
+//         },
+//         totalPrice: 160,
+//         startDate: "2025/10/15",
+//         endDate: "2025/10/17",
+//         guests: {
+//             adults: 2,
+//             kids: 1,
+//         },
+//         stay: {
+//             _id: "h102",
+//             name: "House Of Uncle My",
+//             price: 80.0,
+//         },
+//         msgs: [],
+//         status: "pending", // pending, approved
+//     },
+//     {
+//         _id: "o1225",
+//         hostId: "JVPxK",
+//         buyer: {
+//             _id: "JVPxK",
+//             fullname: "User 1",
+//         },
+//         totalPrice: 160,
+//         startDate: "2025/10/15",
+//         endDate: "2025/10/17",
+//         guests: {
+//             adults: 2,
+//             kids: 1,
+//         },
+//         stay: {
+//             _id: "h102",
+//             name: "House Of Uncle My",
+//             price: 80.0,
+//         },
+//         msgs: [],
+//         status: "pending", // pending, approved
+//     }
+// ]

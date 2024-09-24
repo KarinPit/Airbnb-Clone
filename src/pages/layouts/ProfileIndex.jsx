@@ -5,16 +5,17 @@ import { orderService } from '../../services/order.service';
 import { AppHeaderMinimized } from '../../cmps/Header/AppHeaderMinimized';
 import { Footer } from '../../cmps/Footer/Footer'
 import { format } from 'date-fns';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { updateOrder } from '../../store/actions/order.actions';
 
 export function ProfileIndex() {
     const [loggedUser, setLoggedUser] = useState(null);
-    const [orders, setOrders] = useState(null);
+    const orders = useSelector((storeState) => storeState.orderModule.orders)
     const location = useLocation()
+    const dispatch = useDispatch()
     const userType = location.pathname.includes("renter")
 
-
-    useEffect(() => {
-    }, [location])
 
     useEffect(() => {
         setLoggedUser(sessionStorage.loggedinUser ? JSON.parse(sessionStorage.loggedinUser) : null)
@@ -23,8 +24,15 @@ export function ProfileIndex() {
     useEffect(() => {
         orderService.query()
             .then((orders) => {
-                const userOrders = orders.filter((order) => order.buyer._id === loggedUser?.id)
-                setOrders(userOrders)
+                if (userType) {
+                    const userOrders = orders.filter((order) => order.hostId === loggedUser?.id)
+                    dispatch({ type: 'SET_ORDERS', orders: userOrders })
+                }
+
+                else {
+                    const userOrders = orders.filter((order) => order.buyer._id === loggedUser?.id)
+                    dispatch({ type: 'SET_ORDERS', orders: userOrders })
+                }
             })
             .catch((err) => {
                 console.log('Failed to load orders in ProfileIndex', err);
@@ -34,14 +42,11 @@ export function ProfileIndex() {
 
     function onUpdateOrder(order, value) {
         const newOrder = { ...order, status: value }
-        orderService.save(newOrder).then((updatedOrder) => {
-            // Update the local orders state to reflect the change
-            setOrders((prevOrders) =>
-                prevOrders.map((o) => (o.id === updatedOrder.id ? updatedOrder : o))
-            );
+        updateOrder(newOrder).then((order) => {
+            console.log('saved order', order);
         }).catch((err) => {
-            console.log('Failed to update order', err);
-        });
+            console.log('Error in updating order in ProfileIndex', err);
+        })
     }
 
     function capitalizeFirstLetter(string) {
@@ -55,6 +60,7 @@ export function ProfileIndex() {
 
             <main className='profile'>
                 <h1>Welcome, {loggedUser?.fullname.split(' ')[0]}!</h1>
+                <h1>{userType ? 'Upcoming orders' : 'Upcoming reservations'}</h1>
 
                 <div className="reservations">
                     {orders && orders.map((order, idx) => (
@@ -64,8 +70,7 @@ export function ProfileIndex() {
                                 <p>Order placed by {order.buyer.fullname}</p>
                             </div>
                             <div className="order-dates">
-                                <p>{format(new Date(order.checkIn), 'dd MMM')} - {format(new Date(order.checkOut), 'dd MMM')}</p>
-                                <p>{format(new Date(order.checkIn), 'yyyy')}</p>
+                                <p>{format(new Date(order.checkIn), 'dd MMM')} - {format(new Date(order.checkOut), 'dd MMM')} ({format(new Date(order.checkIn), 'yyyy')})</p>
                             </div>
                             <div className='order-status'>
                                 {order.status === 'pending' && userType ? (

@@ -14,7 +14,7 @@ export function App() {
     const isScrolled = useSelector((storeState) => storeState.appModule.isScrolled)
     const location = useLocation()
     const dispatch = useDispatch()
-    const shouldAddScrollListener = !location.pathname.includes('confirm-order') && !location.pathname.includes('stay');
+    const shouldAddScrollListener = !location.pathname.includes('confirm-order') && !location.pathname.includes('stay') && !location.pathname.includes('profile');
 
     useEffect(() => {
         window.addEventListener('resize', handleResize)

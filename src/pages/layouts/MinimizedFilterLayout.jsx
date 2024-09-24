@@ -23,7 +23,7 @@ export function MinimizedFilterLayout() {
 
     return (
         <>
-            <AppHeaderMinimized hideFilter={isConfirmOrderPage} />
+            <AppHeaderMinimized hideFilter={isConfirmOrderPage} hideUserNav={isConfirmOrderPage}/>
             <FilterStayMobile />
 
             <div className={`${isOpenFilter ? 'overlay' : ''}`}

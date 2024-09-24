@@ -14,7 +14,7 @@ import { stayService } from '../../services/stay.service';
 import airbnbLogo from '../../../public/svg/airbnb-logo.svg';
 
 
-export function AppHeaderMinimized({ hideFilter }) {
+export function AppHeaderMinimized({ hideFilter, hideUserNav }) {
     const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
     const isExpandedFilter = useSelector((storeState) => storeState.filterModule.isExpandedFilter);
     const isOpenFilter = useSelector((storeState) => storeState.filterModule.isOpenFilter);
@@ -120,7 +120,7 @@ export function AppHeaderMinimized({ hideFilter }) {
                 </AnimatePresence>
 
 
-                {!hideFilter &&
+                {!hideUserNav &&
                     <UserNav />}
 
                 {!hideFilter &&

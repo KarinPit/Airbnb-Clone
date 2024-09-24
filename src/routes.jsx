@@ -8,8 +8,6 @@ import { StayIndex } from "./pages/StayIndex"
 import { StayDetails } from "./pages/StayDetails";
 import { OrderIndex } from "./pages/OrderIndex";
 import { ProfileIndex } from "./pages/layouts/ProfileIndex";
-import { RenterProfile } from "./pages/UserProfiles/RenterProfile";
-import { BuyerProfile } from "./pages/UserProfiles/BuyerProfile";
 
 
 const routes = [
@@ -51,22 +49,8 @@ const routes = [
     key: "order-index",
   },
   {
-    path: "/profile/:userId",
+    path: "/profile/:userId/:userType",
     element: <ProfileIndex />,
-    children: [
-      {
-        key: 'renter-user',
-        index: true,
-        path: "renter",
-        element: <RenterProfile />,
-      },
-      {
-        key: 'buyer-user',
-        index: true,
-        path: "buyer",
-        element: <BuyerProfile />,
-      }
-    ],
     key: "user-profile",
   },
   { path: "*", element: <Navigate to="/" replace />, key: "404" },

@@ -2,7 +2,6 @@
 import { storageService } from './async-storage.service.js'
 import { utilService } from './util.service.js'
 import { userService } from './user.service.js'
-import { dummyorders } from "./demo-data.js";
 
 const STORAGE_KEY = 'order'
 const STORAGE_KEY_CURRENT_ORDER = 'currentOrder'
@@ -17,9 +16,6 @@ export const orderService = {
     addorderMsg,
 }
 window.cs = orderService
-
-_createOrders()
-// _createCurrentzOrder()
 
 async function query() {
     var orders = await storageService.query(STORAGE_KEY)
@@ -74,10 +70,10 @@ async function addorderMsg(orderId, txt) {
     return msg
 }
 
-function _createOrders() {
-    let orders = utilService.loadFromStorage(STORAGE_KEY);
-    if (!orders || !orders.length) {
-        orders = dummyorders;
-        utilService.saveToStorage(STORAGE_KEY, orders);
-    }
-}
+// function _createOrders() {
+//     let orders = utilService.loadFromStorage(STORAGE_KEY);
+//     if (!orders || !orders.length) {
+//         orders = dummyorders;
+//         utilService.saveToStorage(STORAGE_KEY, orders);
+//     }
+// }
