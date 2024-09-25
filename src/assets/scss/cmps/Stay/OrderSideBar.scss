@@ -29,38 +29,99 @@
         grid-template-columns: 50% 50%;
         grid-template-rows: 56px 56px;
 
-        input {
-            padding-inline-start: 10px;
-            font-size: 0.8rem;
-            font-family: AirbnbCereal-Bold;
-        }
-
-        input::placeholder {
-            color: black;
-        }
-
-        .check-in {
-            grid-column: 1;
+        .calendar-inputs {
+            position: relative;
+            display: flex;
             grid-row: 1;
-            border: 1px solid grey;
-            border-right: 0;
-            border-radius: 8px 0 0 0;
-        }
-
-        .check-out {
-            grid-column: 2;
-            grid-row: 1;
-            border: 1px solid grey;
-            border-radius: 0 8px 0 0;
-        }
-
-        .guests {
             grid-column: 1/-1;
-            grid-row: 2;
-            border: 1px solid grey;
-            border-top: 0;
-            border-radius: 0 0 8px 8px;
+
+            &>div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                flex: 1;
+
+                &.check-in {
+                    border: 1px solid grey;
+                    border-right: 0;
+                    border-radius: 8px 0 0 0;
+                }
+
+                &.check-out {
+                    border: 1px solid grey;
+                    border-radius: 0 8px 0 0;
+                }
+
+
+                &.check-in,
+                &.check-out {
+                    p {
+                        font-family: AirbnbCereal-Bold;
+                        font-size: rem(11px);
+                        margin-inline-start: 10px;
+                    }
+                }
+
+                .calendar-picker {
+                    position: absolute;
+                    top: 0;
+                    right: rem(-40px);
+                    z-index: 5;
+                    width: fit-content;
+                    min-height: rem(460px);
+                    background-color: #fff;
+                    padding: rem(24px) rem(32px) rem(16px);
+                    box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px;
+                    border-radius: rem(16px);
+                }
+            }
         }
+
+        &>div:nth-of-type(2) {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+
+            &.guests {
+                grid-column: 1/-1;
+                grid-row: 2;
+                border: 1px solid grey;
+                border-top: 0;
+                border-radius: 0 0 8px 8px;
+
+                p {
+                    font-family: AirbnbCereal-Bold;
+                    font-size: rem(11px);
+                    margin-inline-start: 10px;
+                }
+            }
+
+            .who-modal {
+                position: absolute;
+                top: rem(60px);
+                right: 0;
+                z-index: 5;
+                width: 100%;
+                background-color: #fff;
+                padding: rem(24px) rem(32px) rem(16px);
+                box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px;
+                border-radius: rem(16px);
+            }
+        }
+
+        input {
+            margin-inline-start: 10px;
+            font-size: 0.8rem;
+            border: none;
+
+            &::placeholder {
+                color: rgb(106, 106, 106);
+            }
+        }
+
     }
 
     a {

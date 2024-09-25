@@ -3,6 +3,9 @@ import { useSelector } from 'react-redux';
 import { createSearchParams, Link } from 'react-router-dom';
 import { format, intervalToDuration } from 'date-fns';
 import { stayService } from '../../services/stay.service';
+import CalendarPicker from "../Header/FilterStay/Modal/CalendarPicker/CalendarPicker"
+import { WhoModal } from "../Header/FilterStay/Modal/WhoModal"
+
 
 export function OrderSidebar({ stay }) {
     const filterBy = useSelector(storeState => storeState.filterModule.filterBy);
@@ -41,37 +44,50 @@ export function OrderSidebar({ stay }) {
                 : <h2>Add dates for prices</h2>}
 
             <form>
-                <input
-                    className="check-in"
-                    placeholder={filterBy.checkIn ? format(filterBy.checkIn, 'dd.MM.yyyy') : "CHECK-IN"}
-                    value={filterBy.checkIn ? format(filterBy.checkIn, 'dd.MM.yyyy') : 'CHECK-IN'}
-                    readOnly
-                />
-                <input
-                    className="check-out"
-                    placeholder={filterBy.checkOut ? format(filterBy.checkOut, 'dd.MM.yyyy') : "CHECK-OUT"}
-                    value={filterBy.checkOut ? format(filterBy.checkOut, 'dd.MM.yyyy') : 'CHECK-OUT'}
-                    readOnly
-                />
-                <input
-                    className="guests"
-                    placeholder="GUESTS"
-                    value={filterBy.who ? Object.entries(filterBy.who)
-                        .filter(([key, count]) => key !== 'adults' && key !== 'children' && count > 0)
-                        .map(([key, count]) => {
-                            let label = key;
-                            if (count === 1) {
-                                if (key === 'infants') label = 'infant';
-                                if (key === 'pets') label = 'pet';
-                            } else {
-                                if (key === 'infants') label = 'infants';
-                                if (key === 'pets') label = 'pets';
-                            }
-                            return `${count} ${label === 'totalCount' ? 'guests' : label}`;
-                        })
-                        .join(', ') : ''}
-                    readOnly
-                />
+                <div className='calendar-inputs'>
+                    <div className="check-in">
+                        <p>CHECK-IN</p>
+                        <input
+                            className="check-in"
+                            placeholder={filterBy.checkIn ? format(filterBy.checkIn, 'dd/MM/yyyy') : "Add date"}
+                            value={filterBy.checkIn ? format(filterBy.checkIn, 'dd/MM/yyyy') : 'Add date'}
+                            readOnly
+                        />
+                        {/* <CalendarPicker /> */}
+                    </div>
+
+                    <div className="check-out">
+                        <p>CHECK-OUT</p>
+                        <input
+                            placeholder={filterBy.checkOut ? format(filterBy.checkOut, 'dd/MM/yyyy') : "Add date"}
+                            value={filterBy.checkOut ? format(filterBy.checkOut, 'dd/MM/yyyy') : 'Add date'}
+                            readOnly
+                        />
+                    </div>
+                </div>
+
+                <div className="guests">
+                    <p>GUESTS</p>
+                    <input
+                        placeholder="Add guests"
+                        value={filterBy.who ? Object.entries(filterBy.who)
+                            .filter(([key, count]) => key !== 'adults' && key !== 'children' && count > 0)
+                            .map(([key, count]) => {
+                                let label = key;
+                                if (count === 1) {
+                                    if (key === 'infants') label = 'infant';
+                                    if (key === 'pets') label = 'pet';
+                                } else {
+                                    if (key === 'infants') label = 'infants';
+                                    if (key === 'pets') label = 'pets';
+                                }
+                                return `${count} ${label === 'totalCount' ? 'guests' : label}`;
+                            })
+                            .join(', ') : ''}
+                        readOnly
+                    />
+                    <WhoModal />
+                </div>
             </form>
 
             <Link to={{
