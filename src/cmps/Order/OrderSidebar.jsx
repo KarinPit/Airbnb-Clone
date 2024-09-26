@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect, useRef, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { createSearchParams, Link } from 'react-router-dom';
 import { format, intervalToDuration } from 'date-fns';
 import { stayService } from '../../services/stay.service';
@@ -9,10 +9,16 @@ import { WhoModal } from "../Header/FilterStay/Modal/WhoModal"
 
 export function OrderSidebar({ stay }) {
     const filterBy = useSelector(storeState => storeState.filterModule.filterBy);
+    const isOpenModal = useSelector(storeState => storeState.filterModule.isOpenModal);
+    const dispatch = useDispatch()
     const [totalPrice, setTotalPrice] = useState(0)
     const [totalDays, setTotalDays] = useState(0)
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
+
+    useEffect(() => {
+        console.log(isOpenModal);
+    }, [isOpenModal])
 
     useEffect(() => {
         const calcDays = intervalToDuration({ start: new Date(filterBy.checkIn), end: new Date(filterBy.checkOut) })
@@ -37,6 +43,10 @@ export function OrderSidebar({ stay }) {
         setMousePosition({ x, y })
     }
 
+    function handleInputClick(input) {
+        dispatch({ type: 'SET_OPEN_MODAL', isOpenModal: input })
+    }
+
     return (
         <div className="book-it-sidebar">
             {filterBy.checkIn && filterBy.checkOut ?
@@ -45,7 +55,9 @@ export function OrderSidebar({ stay }) {
 
             <form>
                 <div className='calendar-inputs'>
-                    <div className="check-in">
+                    <div className="check-in"
+                        onClick={() => { handleInputClick('check-in') }}
+                    >
                         <p>CHECK-IN</p>
                         <input
                             className="check-in"
@@ -53,10 +65,12 @@ export function OrderSidebar({ stay }) {
                             value={filterBy.checkIn ? format(filterBy.checkIn, 'dd/MM/yyyy') : 'Add date'}
                             readOnly
                         />
-                        {/* <CalendarPicker /> */}
+                        {isOpenModal === 'check-in' || isOpenModal === 'check-out' ? <CalendarPicker disableOverlay={true} /> : ''}
                     </div>
 
-                    <div className="check-out">
+                    <div className="check-out"
+                        onClick={() => { handleInputClick('check-out') }}
+                    >
                         <p>CHECK-OUT</p>
                         <input
                             placeholder={filterBy.checkOut ? format(filterBy.checkOut, 'dd/MM/yyyy') : "Add date"}
@@ -66,7 +80,9 @@ export function OrderSidebar({ stay }) {
                     </div>
                 </div>
 
-                <div className="guests">
+                <div className="guests"
+                    onClick={() => { handleInputClick('who') }}
+                >
                     <p>GUESTS</p>
                     <input
                         placeholder="Add guests"
@@ -86,7 +102,7 @@ export function OrderSidebar({ stay }) {
                             .join(', ') : ''}
                         readOnly
                     />
-                    <WhoModal />
+                    {isOpenModal === 'who' ? <WhoModal /> : ''}
                 </div>
             </form>
 

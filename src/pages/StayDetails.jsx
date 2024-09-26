@@ -149,7 +149,6 @@ export function StayDetails() {
                             className="main-image"
                             alt="Description 1"
                         />}
-                    {/* <div className="overlay"></div> */}
                 </div>
             </div>
 
@@ -271,7 +270,7 @@ export function StayDetails() {
                                             <h2>Select check-in date</h2>
                                             <p>Add your travel dates for exact pricing</p>
                                         </>}
-                                    <CalendarPicker breakPoint={1200} />
+                                    <CalendarPicker breakPoint={1200} disableOverlay={true}/>
                                 </div>
                             </div>
 

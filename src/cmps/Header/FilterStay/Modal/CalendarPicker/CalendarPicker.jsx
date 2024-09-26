@@ -12,11 +12,10 @@ import { getMonthName } from '../../../../../utils/CalendarUtils'
 import { LeftArrow, RightArrow } from '../../../../SVG/HeaderSvg'
 
 
-export default function CalendarPicker({breakPoint}) {
+export default function CalendarPicker({ breakPoint, disableOverlay }) {
     const currentWidth = useSelector((storeState) => storeState.appModule.currentWidth)
     const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
     const [filterByToEdit, setFilterByToEdit] = useState(filterBy)
-    const [searchParams, setSearchParams] = useSearchParams()
 
     const calendarWideBreakpoint = breakPoint
     const [currentDate, setCurrentDate] = useState(new Date())
@@ -74,7 +73,9 @@ export default function CalendarPicker({breakPoint}) {
                 setRange({ start: day, end: null })
                 setFilterByToEdit(prev => ({ ...prev, 'checkIn': day, 'checkOut': '' }))
                 setTimeout(() => {
-                    changeFilterInput('checkout-input')
+                    if (!disableOverlay) {
+                        changeFilterInput('checkout-input')
+                    }
                 }, 1)
             }
         } else {
@@ -87,7 +88,9 @@ export default function CalendarPicker({breakPoint}) {
                 setRange(newRange)
                 setFilterByToEdit(prev => ({ ...prev, 'checkOut': day }))
                 setTimeout(() => {
-                    changeFilterInput('who-input')
+                    if (!disableOverlay) {
+                        changeFilterInput('who-input')
+                    }
                 }, 1)
             }
         }

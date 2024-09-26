@@ -15,7 +15,6 @@ import { FilterStayMobile } from "../../cmps/Header/FilterStay/FilterStayMobile"
 export function MinimizedFilterLayout() {
     const { isOpenFilter } = useSelector((storeState) => storeState.filterModule)
     const { isOpenFilterMobile } = useSelector((storeState) => storeState.filterModule)
-    const isMobile = useSelector((storeState) => storeState.appModule.isMobile)
     const isWideScreen = useSelector((storeState) => storeState.appModule.isWideScreen)
     const dispatch = useDispatch()
     const location = useLocation()

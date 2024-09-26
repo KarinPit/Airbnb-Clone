@@ -37,7 +37,7 @@ export function App() {
         <Provider store={store}>
             <section className={`main-app ${isOpenFilterMobile ? 'hide-overflow' : ''}${isScrolled && shouldAddScrollListener ? 'scrolled' : ''} ${location.pathname.includes('stay') ? 'stay-details-layout' : ''} ${location.pathname.includes('profile') ? 'profile-layout' : ''}`}
                 onClick={(e) => {
-                    // {console.log(e.target.className)}
+                    { console.log(e.target.className) }
                     if (e.target.className === 'container'
                         || e.target.className === 'main-app '
                         || e.target.className === 'header '
@@ -46,6 +46,16 @@ export function App() {
                         || e.target.closest('main')
                         || e.target.className === 'primary-bg') {
                         dispatch({ type: 'SET_OPEN_FILTER', isOpenFilter: false })
+                    }
+
+                    if (e.target.className === 'review-summary'
+                        || e.target.className === 'place-offers-summary'
+                        || e.target.className === 'host-info'
+                        || e.target.className === 'amenity'
+                        || e.target.className === 'order-stay'
+                        || e.target.className === 'stay-details'
+                    ) {
+                        dispatch({ type: 'SET_OPEN_MODAL', isOpenModal: false })
                     }
                 }}>
                 {createRouting()}
