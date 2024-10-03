@@ -11,14 +11,6 @@ export function UserNav() {
     const userMenu = useRef(null)
     const userModal = useRef(null)
     const [isUserMenuOpen, setIsUserMenuOpen] = useState(false)
-    const isScrolled = useSelector((storeState) => storeState.appModule.isScrolled)
-
-    useEffect(() => {
-        if (isScrolled) {
-            setIsUserMenuOpen(false)
-        }
-
-    }, [isScrolled])
 
     useEffect(() => {
         setLoggedUser(sessionStorage.loggedinUser ? JSON.parse(sessionStorage.loggedinUser) : null);
@@ -49,7 +41,7 @@ export function UserNav() {
                     <UserIcon />
                 </div>
 
-                <div className={`user-menu-modal ${isUserMenuOpen && !isScrolled ? '' : 'hide'}`}
+                <div className={`user-menu-modal ${isUserMenuOpen ? '' : 'hide'}`}
                     ref={userModal} onClick={onUserModalClick}>
                     <div>
                         <p>Signup</p>

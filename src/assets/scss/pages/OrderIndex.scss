@@ -362,6 +362,25 @@
             }
         }
     }
+
+}
+
+.modals {
+
+    .calendar-picker,
+    .who-modal {
+        position: absolute;
+        top: 0;
+        right: 50%;
+        transform: translateX(50%) translateY(50%);
+        z-index: 5;
+        background-color: #fff;
+        min-height: rem(460px);
+        width: fit-content;
+        border-radius: rem(12px);
+        padding: rem(64px) rem(32px) rem(16px) rem(32px);
+        box-shadow: 0 8px 28px rgba(0,0,0,0.28);
+    }
 }
 
 .login-menu {

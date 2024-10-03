@@ -17,10 +17,6 @@ export function OrderSidebar({ stay }) {
 
 
     useEffect(() => {
-        console.log(isOpenModal);
-    }, [isOpenModal])
-
-    useEffect(() => {
         const calcDays = intervalToDuration({ start: new Date(filterBy.checkIn), end: new Date(filterBy.checkOut) })
 
         if (Object.keys(calcDays).length === 0) {
@@ -120,6 +116,7 @@ export function OrderSidebar({ stay }) {
                         if (filterBy.checkIn === '' || filterBy.checkOut === '' || filterBy.who.totalCount === 0) {
                             event.preventDefault();
                         }
+                        dispatch({ type: 'SET_OPEN_MODAL', isOpenModal: false })
                     }}
                     onMouseMove={handleMouseMove}
                 >

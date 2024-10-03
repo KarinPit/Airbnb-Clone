@@ -14,6 +14,7 @@ import { FilterStayMobile } from "../../cmps/Header/FilterStay/FilterStayMobile"
 
 export function MinimizedFilterLayout() {
     const { isOpenFilter } = useSelector((storeState) => storeState.filterModule)
+    const { isOpenModal } = useSelector((storeState) => storeState.filterModule)
     const { isOpenFilterMobile } = useSelector((storeState) => storeState.filterModule)
     const isWideScreen = useSelector((storeState) => storeState.appModule.isWideScreen)
     const dispatch = useDispatch()
@@ -22,10 +23,10 @@ export function MinimizedFilterLayout() {
 
     return (
         <>
-            <AppHeaderMinimized hideFilter={isConfirmOrderPage} hideUserNav={isConfirmOrderPage}/>
+            <AppHeaderMinimized hideFilter={isConfirmOrderPage} hideUserNav={isConfirmOrderPage} />
             <FilterStayMobile />
 
-            <div className={`${isOpenFilter ? 'overlay' : ''}`}
+            <div className={`${isOpenFilter || isOpenModal && isConfirmOrderPage ? `overlay ${isOpenModal ? 'modal' : ''}` : ''}`}
                 onClick={(ev) => {
                     dispatch({ type: 'SET_OPEN_FILTER', isOpenFilter: false })
                     dispatch({ type: 'SET_EXPANDED_FILTER', isExpandedFilter: false })

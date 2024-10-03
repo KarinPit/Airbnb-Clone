@@ -1,4 +1,4 @@
-import { useEffect, useCallback } from 'react';
+import { useEffect, useCallback, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -13,48 +13,77 @@ import { FilterStayModal } from './FilterStay/Modal/FilterStayModal';
 import airbnbLogo from '../../../public/svg/airbnb-logo.svg';
 
 export function AppHeader() {
-    const isExpandedFilter = useSelector((storeState) => storeState.filterModule.isExpandedFilter);
-    const isOpenFilter = useSelector((storeState) => storeState.filterModule.isOpenFilter);
-    const isOpenFilterMobile = useSelector((storeState) => storeState.filterModule.isOpenFilterMobile);
-    const isWideScreen = useSelector((storeState) => storeState.appModule.isWideScreen);
-    const currentWidth = useSelector((storeState) => storeState.appModule.currentWidth);
-    const normalBreakpoint = useSelector((storeState) => storeState.appModule.normalBreakpoint);
-    const isScrolled = useSelector((storeState) => storeState.appModule.isScrolled);
-    const filterClassName = `filter-search-container ${isWideScreen ? '' : 'mobile'}`
+    const isExpandedFilter = useSelector((state) => state.filterModule.isExpandedFilter);
+    const isOpenFilter = useSelector((state) => state.filterModule.isOpenFilter);
+    const isOpenFilterMobile = useSelector((state) => state.filterModule.isOpenFilterMobile);
+    const isWideScreen = useSelector((state) => state.appModule.isWideScreen);
+    const isScrolled = useSelector((state) => state.appModule.isScrolled);
+    const currentWidth = useSelector((state) => state.appModule.currentWidth);
+    const normalBreakpoint = useSelector((state) => state.appModule.normalBreakpoint);
+    const firstRender = useRef(true);
+
+    const filterClassName = `filter-search-container ${isWideScreen ? '' : 'mobile'}`;
+
+    // Animation Variants
+    const animations = {
+        filterStay: {
+            initial: { opacity: 0, y: -100, scaleX: 0.5 },
+            animate: { opacity: 1, y: 0, scaleX: 1 },
+            exit: { opacity: 0, y: -50, scaleX: 0.5 },
+        },
+        minimizedFilterStay: {
+            initial: { opacity: 0, y: 30, scaleX: 2 },
+            animate: { opacity: 1, y: 0, scaleX: 1 },
+            exit: { opacity: 0, y: 30, scaleX: 2 }
+        },
+        mobileFilterStay: {
+            initial: { opacity: 0, y: -50, scale: 0.5 },
+            animate: { opacity: 1, y: 0, scale: 1 },
+            exit: { opacity: 0, y: -50, scale: 0.5 }
+        },
+        navOptions: {
+            initial: { opacity: 0, y: -50, scale: 0 },
+            animate: { opacity: 1, y: 0, scale: 1 },
+            exit: { opacity: 0, y: normalBreakpoint < currentWidth ? -50 : -150, x: normalBreakpoint < currentWidth ? -50 : -200, scale: 0 }
+        }
+    };
+
+    // Transition Utility
+    const createTransition = (duration = 0.25) => ({
+        opacity: { duration: 0 },
+        y: { duration },
+        scaleX: { duration }
+    });
 
     useEffect(() => {
-    }, [isWideScreen]);
+        firstRender.current = false;
+    }, []);
 
-
-    const renderNavOptions = useCallback(() => (
-        <AnimatePresence>
-            {(!isScrolled || isExpandedFilter) && (
-                <motion.div
-                    key="nav-options"
-                    className="nav-options"
-                    initial={{ opacity: 0, y: -50, scale: 0 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: normalBreakpoint < currentWidth ? -50 : -150, x: normalBreakpoint < currentWidth ? -50 : -200, scale: 0 }}
-                    transition={{ duration: 0.25 }}
-                >
-                    <GeneralNav />
-                </motion.div>
-            )}
-        </AnimatePresence>
+    const renderNavigation = useCallback(() => (
+        (!isScrolled || isExpandedFilter) && (
+            <motion.div
+                key="nav-options"
+                className="nav-options"
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                transition={{ duration: 0.25 }}
+                variants={firstRender.current ? {} : animations.navOptions}
+            >
+                <GeneralNav />
+            </motion.div>
+        )
     ), [isScrolled, isExpandedFilter]);
 
-    const renderFilter = useCallback(() => (
+    const renderExpandedFilter = useCallback(() => (
         <motion.div
             key="FilterStay"
             className={filterClassName}
-            initial={{ opacity: 0, y: -100, scaleX: 0.5 }}
-            animate={{ opacity: 1, y: 0, scaleX: 1 }}
-            exit={{ opacity: 0, y: -50, scaleX: 0.5 }}
-            transition={{
-                opacity: { duration: 0 },
-                y: { duration: 0.25 },
-                scaleX: { duration: 0.25 }
-            }}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition={createTransition()}
+            variants={firstRender.current ? {} : animations.filterStay}
         >
             <div className="filter-search-sub-container">
                 <FilterStay />
@@ -64,39 +93,35 @@ export function AppHeader() {
     ), [isOpenFilter, filterClassName]);
 
     const renderMinimizedFilter = useCallback(() => (
-        <AnimatePresence>
-            {isScrolled && <motion.div
+        isScrolled && (
+            <motion.div
                 key="MinimizedFilter"
                 className={filterClassName}
-                initial={{ opacity: 0, y: 30, scaleX: 2 }}
-                animate={{ opacity: 1, y: 0, scaleX: 1 }}
-                exit={{ opacity: 0, y: 30, scaleX: 2 }}
-                transition={{
-                    opacity: { duration: 0 },
-                    y: { duration: 0.25 },
-                    scaleX: { duration: 0.25 }
-                }}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                transition={createTransition()}
+                variants={firstRender.current ? {} : animations.minimizedFilterStay}
             >
                 <FilterStayMinimized />
-            </motion.div>}
-        </AnimatePresence>
+            </motion.div>
+        )
     ), [isScrolled, filterClassName]);
 
     const renderMobileFilter = useCallback(() => (
-        <AnimatePresence>
-            {isOpenFilterMobile && (
-                <motion.div
-                    key="FilterStayMobile"
-                    className={filterClassName}
-                    initial={{ opacity: 0, y: -50, scale: 0.5 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: -50, scale: 0.5 }}
-                    transition={{ duration: 0.25 }}
-                >
-                    <FilterStayMobile />
-                </motion.div>
-            )}
-        </AnimatePresence>
+        isOpenFilterMobile && (
+            <motion.div
+                key="FilterStayMobile"
+                className={filterClassName}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                transition={{ duration: 0.25 }}
+                variants={firstRender.current ? {} : animations.mobileFilterStay}
+            >
+                <FilterStayMobile />
+            </motion.div>
+        )
     ), [isOpenFilterMobile, filterClassName]);
 
     return (
@@ -106,21 +131,19 @@ export function AppHeader() {
                 <span className="primary-color">airbnb</span>
             </a>
 
-            <AnimatePresence>
-                {renderNavOptions()}
-            </AnimatePresence>
+            <AnimatePresence>{renderNavigation()}</AnimatePresence>
 
             <UserNav />
 
             <AnimatePresence>
                 {isScrolled && isWideScreen
                     ? isExpandedFilter
-                        ? renderFilter()
+                        ? renderExpandedFilter()
                         : renderMinimizedFilter()
-                    : renderFilter()}
+                    : renderExpandedFilter()}
             </AnimatePresence>
 
-            {renderMobileFilter()}
+            <AnimatePresence>{renderMobileFilter()}</AnimatePresence>
         </header>
     );
 }

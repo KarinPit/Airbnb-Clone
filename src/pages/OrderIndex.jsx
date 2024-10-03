@@ -11,9 +11,11 @@ import { LoginSignup } from '../cmps/Header/LoginSingup.jsx';
 import { calcDaysBetweenDates } from '../utils/CalendarUtils.jsx';
 import { setFilterBy } from '../store/actions/filter.actions.js';
 import { OrderIndexMobile } from './OrderIndexMobile.jsx';
+import CalendarPicker from '../cmps/Header/FilterStay/Modal/CalendarPicker/CalendarPicker.jsx';
+import { WhoModal } from '../cmps/Header/FilterStay/Modal/WhoModal.jsx';
 
 import { LeftArrow } from '../cmps/SVG/HeaderSvg.jsx'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 
 export function OrderIndex() {
@@ -29,6 +31,8 @@ export function OrderIndex() {
     const [totalDays, setTotalDays] = useState(0)
     const [searchParams, setSearchParams] = useSearchParams()
     const isWideScreen = useSelector((storeState) => storeState.appModule.isWideScreen)
+    const isOpenModal = useSelector(storeState => storeState.filterModule.isOpenModal);
+    const dispatch = useDispatch()
 
 
     useEffect(() => {
@@ -126,14 +130,16 @@ export function OrderIndex() {
         })
     }
 
+    function handleEditClick(input) {
+        dispatch({ type: 'SET_OPEN_MODAL', isOpenModal: input })
+    }
+
     if (!currentStay) return ''
 
 
     return (
         isWideScreen ? <>
             <div className="order-preview">
-                {/* <div className="order-summary"> */}
-
                 <NavLink to={{
                     pathname: `/stay/${stayId}`,
                     search: `?${createSearchParams({ ...stayService.sanitizeFilterParams(filterBy) })}`
@@ -154,7 +160,10 @@ export function OrderIndex() {
                                     <p>Dates</p>
                                     <p>{filterBy.checkIn && filterBy.checkOut && getDateName(filterBy.checkIn, filterBy.checkOut)}</p>
                                 </div>
-                                <button>Edit</button>
+
+                                <button
+                                    onClick={() => { handleEditClick('dates') }}>Edit
+                                </button>
                             </div>
 
                             <div className="guests">
@@ -175,7 +184,10 @@ export function OrderIndex() {
                                         })
                                         .join(', ')}</p>
                                 </div>
-                                <button>Edit</button>
+
+                                <button
+                                    onClick={() => { handleEditClick('who') }}>Edit
+                                </button>
                             </div>
                         </div>
 
@@ -280,6 +292,12 @@ export function OrderIndex() {
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div className='modals'>
+                {isOpenModal === 'dates' ?
+                    <CalendarPicker disableOverlay={true} /> : ''}
+                {isOpenModal === 'who' ? <WhoModal /> : ''}
             </div>
 
         </> : <OrderIndexMobile />
