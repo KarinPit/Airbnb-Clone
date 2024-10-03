@@ -1,4 +1,4 @@
-import { useEffect, useCallback } from 'react';
+import { useEffect, useCallback, useRef } from 'react';
 import { createSearchParams, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -24,11 +24,36 @@ export function AppHeaderMinimized({ hideFilter, hideUserNav }) {
     const normalBreakpoint = useSelector((storeState) => storeState.appModule.normalBreakpoint);
     const isScrolled = useSelector((storeState) => storeState.appModule.isScrolled);
     const filterClassName = `filter-search-container ${isOpenFilter ? 'open-filter' : ''} ${isWideScreen ? '' : 'mobile'}`
+    const firstRender = useRef(true);
 
+    const animations = {
+        filterStay: {
+            initial: { opacity: 0, y: -100, scaleX: 0.5 },
+            animate: { opacity: 1, y: 0, scaleX: 1 },
+            exit: { opacity: 0, y: -50, scaleX: 0.5 }
+        },
+        minimizedFilterStay: {
+            initial: { opacity: 0, y: 30, scaleX: 2 },
+            animate: { opacity: 1, y: 0, scaleX: 1 },
+            exit: { opacity: 0, y: 30, scaleX: 2 }
+        },
+        mobileFilterStay: {
+            initial: { opacity: 0, y: -50, scale: 0.5 },
+            animate: { opacity: 1, y: 0, scale: 1 },
+            exit: { opacity: 0, y: -50, scale: 0.5 }
+        },
+        navOptions: {
+            initial: { opacity: 0, y: -50, scale: 0 },
+            animate: { opacity: 1, y: 0, scale: 1 }
+        }
+    };
 
     useEffect(() => {
     }, [isWideScreen, isOpenFilter]);
 
+    useEffect(() => {
+        firstRender.current = false;
+    }, []);
 
     const renderNavOptions = useCallback(() => (
         <AnimatePresence>
@@ -36,10 +61,11 @@ export function AppHeaderMinimized({ hideFilter, hideUserNav }) {
                 <motion.div
                     key="nav-options"
                     className="nav-options"
-                    initial={{ opacity: 0, y: -50, scale: 0 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    initial="initial"
+                    animate="animate"
                     exit={{ opacity: 0, y: normalBreakpoint < currentWidth ? -50 : -150, x: normalBreakpoint < currentWidth ? -50 : -200, scale: 0 }}
                     transition={{ duration: 0.25 }}
+                    variants={firstRender.current ? {} : animations.navOptions}
                 >
                     <GeneralNav />
                 </motion.div>
@@ -51,14 +77,16 @@ export function AppHeaderMinimized({ hideFilter, hideUserNav }) {
         <motion.div
             key="FilterStay"
             className={filterClassName}
-            initial={{ opacity: 0, y: -100, scaleX: 0.5 }}
-            animate={{ opacity: 1, y: 0, scaleX: 1 }}
-            exit={{ opacity: 0, y: -50, scaleX: 0.5 }}
+            initial="initial"
+            animate="animate"
+            exit="exit"
             transition={{
                 opacity: { duration: 0 },
                 y: { duration: 0.25 },
                 scaleX: { duration: 0.25 }
             }}
+            variants={firstRender.current ? {} : animations.filterStay}
+
         >
             <div className="filter-search-sub-container">
                 <FilterStay />
@@ -72,14 +100,15 @@ export function AppHeaderMinimized({ hideFilter, hideUserNav }) {
             <motion.div
                 key="MinimizedFilter"
                 className={filterClassName}
-                initial={{ opacity: 0, y: 30, scaleX: 2 }}
-                animate={{ opacity: 1, y: 0, scaleX: 1 }}
-                exit={{ opacity: 0, y: 30, scaleX: 2 }}
+                initial="initial"
+                animate="animate"
+                exit="exit"
                 transition={{
                     opacity: { duration: 0 },
                     y: { duration: 0.25 },
                     scaleX: { duration: 0.25 }
                 }}
+                variants={firstRender.current ? {} : animations.minimizedFilterStay}
             >
                 <FilterStayMinimized />
             </motion.div>
@@ -92,10 +121,11 @@ export function AppHeaderMinimized({ hideFilter, hideUserNav }) {
                 <motion.div
                     key="FilterStayMobile"
                     className={filterClassName}
-                    initial={{ opacity: 0, y: -50, scale: 0.5 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: -50, scale: 0.5 }}
+                    initial="initial"
+                    animate="animate"
+                    exit="exit"
                     transition={{ duration: 0.25 }}
+                    variants={firstRender.current ? {} : animations.mobileFilterStay}
                 >
                     <FilterStayMobile />
                 </motion.div>
@@ -104,7 +134,7 @@ export function AppHeaderMinimized({ hideFilter, hideUserNav }) {
     ), [isOpenFilterMobile, filterClassName]);
 
     return (
-        <>
+        <div className="stay-details-header-container">
             <header className={`stay-details-header ${isOpenFilter ? 'expanded-filter' : ''}`}>
 
                 <Link className="logo" to={{
@@ -134,6 +164,6 @@ export function AppHeaderMinimized({ hideFilter, hideUserNav }) {
 
                 {renderMobileFilter()}
             </header>
-        </>
+        </div>
     );
 }

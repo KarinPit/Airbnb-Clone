@@ -52,14 +52,14 @@ export function MainLayout() {
             <FilterStayMobile />
             <FilterCategories onSetFilter={onSetFilter} filterBy={filterBy.category_tag} />
 
+            <div className={`${isOpenFilter ? 'overlay' : ''}`}
+                onClick={(ev) => {
+                    dispatch({ type: 'SET_OPEN_FILTER', isOpenFilter: false })
+                    dispatch({ type: 'SET_EXPANDED_FILTER', isExpandedFilter: false })
+                }}>
+            </div>
 
             <main>
-                <div className={`${isOpenFilter ? 'overlay' : ''}`}
-                    onClick={(ev) => {
-                        dispatch({ type: 'SET_OPEN_FILTER', isOpenFilter: false })
-                        dispatch({ type: 'SET_EXPANDED_FILTER', isExpandedFilter: false })
-                    }}>
-                </div>
                 <Outlet />
             </main>
 

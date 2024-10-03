@@ -26,6 +26,6 @@ export function handleScroll() {
 	}
 	else {
 		store.dispatch({ type: SET_IS_SCROLLED, isScrolled: false })
-		store.dispatch({ type: 'SET_EXPANDED_FILTER', isExpandedFilter: true })
+		// store.dispatch({ type: 'SET_EXPANDED_FILTER', isExpandedFilter: true })
 	}
 }

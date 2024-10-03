@@ -5,7 +5,6 @@ import { store } from "./store/store";
 import { BrowserRouter as Router } from "react-router-dom";
 
 import { App } from './App.jsx'
-import FilterContext from './context/FilterContext'
 import './assets/scss/main.scss'
 import 'animate.css'
 

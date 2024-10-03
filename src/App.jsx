@@ -10,6 +10,7 @@ import { useLocation } from "react-router";
 
 
 export function App() {
+    const isOpenFilter = useSelector((storeState) => storeState.filterModule.isOpenFilter)
     const isOpenFilterMobile = useSelector((storeState) => storeState.filterModule.isOpenFilterMobile)
     const isScrolled = useSelector((storeState) => storeState.appModule.isScrolled)
     const location = useLocation()
@@ -35,7 +36,7 @@ export function App() {
 
     return (
         <Provider store={store}>
-            <section className={`main-app ${isOpenFilterMobile ? 'hide-overflow' : ''}${isScrolled && shouldAddScrollListener ? 'scrolled' : ''} ${location.pathname.includes('stay') ? 'stay-details-layout' : ''} ${location.pathname.includes('profile') ? 'profile-layout' : ''}`}
+            <section className={`main-app ${isOpenFilterMobile ? 'hide-overflow' : ''}${isScrolled && shouldAddScrollListener ? 'scrolled' : ''} ${isOpenFilter ? 'expanded-filter' : ''} ${location.pathname.includes('stay') ? 'stay-details-layout' : ''} ${location.pathname.includes('profile') ? 'profile-layout' : ''}`}
                 onClick={(e) => {
                     // { console.log(e.target.className) }
                     if (e.target.className === 'container'
@@ -46,6 +47,7 @@ export function App() {
                         || e.target.closest('main')
                         || e.target.className === 'primary-bg') {
                         dispatch({ type: 'SET_OPEN_FILTER', isOpenFilter: false })
+                        dispatch({ type: 'SET_EXPANDED_FILTER', isExpandedFilter: false })
                     }
 
                     if (e.target.className === 'review-summary'
