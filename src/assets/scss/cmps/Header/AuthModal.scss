@@ -6,7 +6,7 @@
     width: 100%;
     height: 100%;
     max-width: rem(568px);
-    max-height: rem(400px);
+    max-height: rem(360px);
     background-color: #fff;
     z-index: 1000;
     box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
@@ -49,6 +49,7 @@
     .enter-credentials {
         flex-direction: column;
         padding: rem(24px) rem(24px) rem(10px) rem(24px);
+        height: 100%;
 
         h1 {
             font-family: AirbnbCereal-Bold;
@@ -56,16 +57,47 @@
         }
 
         form {
-            position: relative;
+            &>div {
+                position: relative;
+
+                &.phone-number {
+
+                    div {
+                        position: relative;
+                        width: 100%;
+
+                        p {
+                            position: absolute;
+                            top: 50%;
+                            left: rem(10px);
+                            transform: translate(0, -3px);
+                        }
+
+                        input {
+                            padding-inline-start: rem(54px);
+                        }
+                    }
+
+                }
+            }
 
             label {
                 position: absolute;
-                top: 0;
-                left: 0;
                 color: rgb(106, 106, 106);
                 font-size: rem(12px);
                 font-family: AirbnbCereal-Book;
                 padding-inline-start: rem(12px);
+                z-index: 1;
+
+                &:nth-last-of-type(1) {
+                    top: rem(10px);
+                    left: 0;
+                }
+
+                &:nth-last-of-type(2) {
+                    top: rem(10px);
+                    left: 0;
+                }
             }
 
 
@@ -74,7 +106,7 @@
                 display: block;
                 border: 1px solid black;
                 width: 100%;
-                padding: rem(26px) rem(36px) rem(10px) rem(12px);
+                padding: rem(28px) rem(36px) rem(10px) rem(12px);
             }
 
             select {
@@ -96,6 +128,22 @@
                 border-top: none;
                 border-radius: 0 0 rem(12px) rem(12px);
             }
+        }
+    }
+
+    .submit-button {
+        margin-block: rem(20px);
+
+        button {
+            background-image: radial-gradient(circle at center, #FF385C 0%, #E61E4D 27.5%, #E31C5F 40%, #D70466 57.5%, #BD1E59 75%, #BD1E59 100%), radial-gradient(circle at center, #FF385C 0%, #E61E4D 27.5%, #E31C5F 40%, #D70466 57.5%, #BD1E59 75%, #BD1E59 100%);
+            background-size: 200% 200%;
+            border: none;
+            width: 100%;
+            height: 48px;
+            border-radius: 12px;
+            color: #ffff;
+            font-size: 1rem;
+            font-family: AirbnbCereal-Bold;
         }
     }
 }
