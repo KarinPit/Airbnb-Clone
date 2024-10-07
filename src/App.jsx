@@ -58,7 +58,9 @@ export function App() {
                         || e.target.className === 'stay-details'
                         || e.target.className === 'trip-summary'
                         || e.target.className === 'overlay'
+                        || e.target.className === 'overlay modal'
                     ) {
+                        dispatch({ type: 'SET_IS_OPEN_AUTH_MODAL', isOpenAuthModal: false })
                         dispatch({ type: 'SET_OPEN_MODAL', isOpenModal: false })
                     }
                 }}>

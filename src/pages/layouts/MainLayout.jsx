@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Outlet } from 'react-router-dom';
 
 import { stayService } from '../../services/stay.service';
-import { AnimatePresence } from 'framer-motion';
 
 import { AppHeader } from "../../cmps/Header/AppHeader"
 import { Footer } from '../../cmps/Footer/Footer'
@@ -12,17 +11,16 @@ import { FilterMobileFooter } from '../../cmps/Footer/FilterMobileFooter';
 import { FilterCategories } from '../../cmps/Stay/CategoryFilter/FilterCategories';
 import { FilterStayMobile } from "../../cmps/Header/FilterStay/FilterStayMobile"
 import { FilterStayModal } from '../../cmps/Header/FilterStay/Modal/FilterStayModal';
+import { AuthModal } from '../../cmps/Header/AuthModal';
 import { setFilterBy } from '../../store/actions/filter.actions';
 
 
 export function MainLayout() {
     const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
     const { isOpenFilter } = useSelector((storeState) => storeState.filterModule)
-    const { isExpandedFilter } = useSelector((storeState) => storeState.filterModule)
     const { isOpenFilterMobile } = useSelector((storeState) => storeState.filterModule)
-    const isScrolled = useSelector((storeState) => storeState.appModule.isScrolled)
+    const isOpenAuthModal = useSelector((storeState) => storeState.appModule.isOpenAuthModal)
     const isWideScreen = useSelector((storeState) => storeState.appModule.isWideScreen)
-    const [options, setOptions] = useState([]);
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -33,7 +31,7 @@ export function MainLayout() {
                     value: image.value,
                     icon: `${image.src}`,
                 }));
-                setOptions(mappedOptions);
+                // setOptions(mappedOptions);
                 // setLoading(false);
             })
             .catch((error) => {
@@ -52,12 +50,14 @@ export function MainLayout() {
             <FilterStayMobile />
             <FilterCategories onSetFilter={onSetFilter} filterBy={filterBy.category_tag} />
 
-            <div className={`${isOpenFilter ? 'overlay' : ''}`}
+            <div className={`${isOpenFilter || isOpenAuthModal ? 'overlay' : ''} ${isOpenAuthModal ? 'modal' : ''}`}
                 onClick={(ev) => {
                     dispatch({ type: 'SET_OPEN_FILTER', isOpenFilter: false })
                     dispatch({ type: 'SET_EXPANDED_FILTER', isExpandedFilter: false })
                 }}>
             </div>
+
+            <AuthModal />
 
             <main>
                 <Outlet />

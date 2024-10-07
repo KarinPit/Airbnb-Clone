@@ -23,7 +23,8 @@
     "react-router": "^6.15.0",
     "react-router-dom": "^6.15.0",
     "redux": "^5.0.1",
-    "sass": "^1.72.0"
+    "sass": "^1.72.0",
+    "use-react-countries": "^2.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

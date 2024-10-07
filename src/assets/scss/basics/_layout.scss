@@ -17,6 +17,7 @@
 /* Responsive Layout */
 
 .main-app {
+    position: relative;
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-template-rows: auto auto 1fr;
@@ -121,10 +122,6 @@
 
         &.scrolled {
             margin-block-start: rem(-150px);
-
-            &.expanded-filter {
-                // margin-block-start: 0;
-            }
         }
 
         &.stay-details-layout {
@@ -143,20 +140,25 @@
                 padding-inline: rem($padding-xxl);
             }
 
+            .stay-details-header-container {
+                header {
+                    padding-inline: rem($padding-xxl);
+                }
+            }
+
             footer {
                 padding-inline: rem($padding-xxl);
             }
         }
 
-        header {
-            padding-inline: rem($padding-xxl);
-            padding-block-start: 0;
-            padding-block-end: rem(10px);
+        .stay-details-header-container {
 
-            &.stay-details-header-container {
-                padding-inline: rem($padding-xxl);
+            header {
+                padding-inline: rem($padding-xl);
+                padding-block-start: 0;
+                padding-block-end: rem(10px);
 
-                .stay-details-header {
+                &.stay-details-header {
                     &.expanded-filter {
                         background-color: #fff;
                     }

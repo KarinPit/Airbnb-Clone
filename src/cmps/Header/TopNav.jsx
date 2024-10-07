@@ -3,14 +3,15 @@ import { NavLink, Link } from 'react-router-dom'
 
 import { LoginSignup } from './LoginSingup'
 import { GlobeIcon, ListIcon, UserIcon } from '../SVG/HeaderSvg'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 
 export function UserNav() {
+    const isUserMenuOpen = useSelector((storeState) => storeState.appModule.isUserMenuOpen)
     const [loggedUser, setLoggedUser] = useState(null);
+    const dispatch = useDispatch()
     const userMenu = useRef(null)
     const userModal = useRef(null)
-    const [isUserMenuOpen, setIsUserMenuOpen] = useState(false)
 
     useEffect(() => {
         setLoggedUser(sessionStorage.loggedinUser ? JSON.parse(sessionStorage.loggedinUser) : null);
@@ -18,12 +19,12 @@ export function UserNav() {
 
 
     function onUserMenuClick() {
-        setIsUserMenuOpen(prev => !prev)
+        dispatch({ type: 'SET_IS_OPEN_USER_MENU', isUserMenuOpen: !isUserMenuOpen })
     }
 
-    function onUserModalClick(event) {
-        event.stopPropagation()
-    }
+    // function onUserModalClick(event) {
+    //     event.stopPropagation()
+    // }
 
     return (
         <div className='user-nav'>
@@ -42,16 +43,28 @@ export function UserNav() {
                 </div>
 
                 <div className={`user-menu-modal ${isUserMenuOpen ? '' : 'hide'}`}
-                    ref={userModal} onClick={onUserModalClick}>
-                    <div>
-                        <p>Signup</p>
-                        <p>Log in</p>
-                    </div>
+                    ref={userModal}>
 
-                    <div>
+                    {loggedUser ?
+                        <div>
+                            <p>Sign out</p>
+                        </div>
+                        :
+                        <div>
+                            <p onClick={() => dispatch({ type: 'SET_IS_OPEN_AUTH_MODAL', isOpenAuthModal: true })}>Log in</p>
+                            <p onClick={() => dispatch({ type: 'SET_IS_OPEN_AUTH_MODAL', isOpenAuthModal: true })}>Signup</p>
+                        </div>
+                    }
+
+                    {loggedUser ? <div>
                         <Link to={`/profile/${loggedUser?.id}/buyer`}>See my orders</Link>
                         <Link to={`/profile/${loggedUser?.id}/renter`}>Manage my homes</Link>
                     </div>
+                        :
+                        <div>
+                            <p>Airbnb your home</p>
+                        </div>
+                    }
                 </div>
             </div>
         </div>

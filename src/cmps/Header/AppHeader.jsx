@@ -17,7 +17,6 @@ export function AppHeader() {
     const currentWidth = useSelector((state) => state.appModule.currentWidth);
     const normalBreakpoint = useSelector((state) => state.appModule.normalBreakpoint);
     const firstRender = useRef(true);
-
     const filterClassName = `filter-search-container ${isWideScreen ? '' : 'mobile'}`;
 
     // Animation Variants

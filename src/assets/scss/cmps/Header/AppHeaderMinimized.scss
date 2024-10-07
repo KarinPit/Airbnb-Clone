@@ -1,6 +1,7 @@
 .stay-details-header-container {
+    grid-column: 1/-1;
+    grid-row: 1;
     height: fit-content;
-    background-color: #fff;
     z-index: 4;
 
     header {

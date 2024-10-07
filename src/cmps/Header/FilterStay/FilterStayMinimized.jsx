@@ -1,20 +1,31 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 
 import { motion } from 'framer-motion'
-
 import { SearchIcon } from '../../SVG/HeaderSvg'
 
 
 export function FilterStayMinimized() {
-    const isScrolled = useSelector((storeState) => storeState.appModule.isScrolled)
     const isOpenFilter = useSelector((storeState) => storeState.filterModule.isOpenFilter)
     const dispatch = useDispatch()
     const isActive = (inputName) => isOpenFilter === inputName
+    const firstRender = useRef(true);
 
-function handleClick(element) {
+    useEffect(() => {
+        firstRender.current = false;
+    }, []);
+
+    function handleClick(element) {
         dispatch({ type: 'SET_EXPANDED_FILTER', isExpandedFilter: true })
         dispatch({ type: 'SET_OPEN_FILTER', isOpenFilter: element })
+    }
+
+    const animations = {
+        filterStay: {
+            initial: { scaleX: 0.5 },
+            animate: { scaleX: 1 },
+            exit: { scaleX: 0.5 }
+        }
     }
 
     return (
@@ -24,10 +35,11 @@ function handleClick(element) {
                     <div className={inputName} onClick={() => handleClick(inputName)}>
                         <motion.p
                             key={`${inputName}-p`}
-                            initial={{ scaleX: 0.5 }}
-                            animate={{ scaleX: 1 }}
-                            exit={{ scaleX: 0.5 }}
+                            initial="initial"
+                            animate="animate"
+                            exit="exit"
                             transition={{ duration: 0.25 }}
+                            variants={firstRender.current ? {} : animations.navOptions}
                         >
                             {inputName === "where-input" ? "Anywhere" : inputName === "checkin-input" ? "Any week" : "Add guests"}
                         </motion.p>

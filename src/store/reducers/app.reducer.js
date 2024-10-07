@@ -4,6 +4,8 @@ export const SET_CURRENT_WIDTH = 'SET_CURRENT_WIDTH'
 export const SET_IS_WIDE_SCREEN = 'SET_IS_WIDE_SCREEN'
 export const SET_IS_MOBILE = 'SET_IS_MOBILE'
 export const SET_IS_SCROLLED = 'SET_IS_SCROLLED'
+export const SET_IS_OPEN_AUTH_MODAL = 'SET_IS_OPEN_AUTH_MODAL'
+export const SET_IS_OPEN_USER_MENU = 'SET_IS_OPEN_USER_MENU'
 
 
 const initialState = {
@@ -16,6 +18,8 @@ const initialState = {
 	isScrolled: window.scrollY > 0,
 	isLoading: true,
 	modalData: null,
+	isOpenAuthModal: false,
+	isUserMenuOpen: false
 }
 
 export function appReducer(state = initialState, cmd = {}) {
@@ -54,6 +58,18 @@ export function appReducer(state = initialState, cmd = {}) {
 			return {
 				...state,
 				isScrolled: cmd.isScrolled
+			}
+
+		case SET_IS_OPEN_AUTH_MODAL:
+			return {
+				...state,
+				isOpenAuthModal: cmd.isOpenAuthModal
+			}
+
+		case SET_IS_OPEN_USER_MENU:
+			return {
+				...state,
+				isUserMenuOpen: cmd.isUserMenuOpen
 			}
 
 		default:
