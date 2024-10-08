@@ -1,11 +1,14 @@
 import { useState, useEffect } from 'react';
 import { userService } from '../../services/user.service';
+import { useDispatch } from 'react-redux';
 
 
 export function LoginSignup(props) {
     const [credentials, setCredentials] = useState({ username: '', password: '', fullname: '' });
     const [isSignup, setIsSignup] = useState(false);
     const [users, setUsers] = useState([]);
+    const dispatch = useDispatch()
+
 
     useEffect(() => {
         loadUsers();
@@ -67,7 +70,7 @@ export function LoginSignup(props) {
                     <option value="">Select User</option>
                     {users.map(user => <option key={user._id} value={user.username}>{user.fullname}</option>)}
                 </select>
-                <button>Continue</button>
+                <button onClick={() => dispatch({ type: 'SET_IS_OPEN_AUTH_MODAL', isOpenAuthModal: false })}>Continue</button>
             </form>}
 
             <div className="signup-section">
@@ -96,7 +99,7 @@ export function LoginSignup(props) {
                         onChange={handleChange}
                         required
                     />
-                    <button>Continue</button>
+                    <button onClick={() => dispatch({ type: 'SET_IS_OPEN_AUTH_MODAL', isOpenAuthModal: false })}>Continue</button>
                 </form>}
             </div>
         </div>

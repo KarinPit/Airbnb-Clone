@@ -1,22 +1,27 @@
 import { useEffect, useRef, useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 
-import { LoginSignup } from './LoginSingup'
+import { logout } from '../../store/actions/user.actions';
 import { GlobeIcon, ListIcon, UserIcon } from '../SVG/HeaderSvg'
 import { useDispatch, useSelector } from 'react-redux'
 
 
 export function UserNav() {
     const isUserMenuOpen = useSelector((storeState) => storeState.appModule.isUserMenuOpen)
-    const [loggedUser, setLoggedUser] = useState(null);
+    const loggedUser = useSelector((storeState) => storeState.userModule.user)
     const dispatch = useDispatch()
     const userMenu = useRef(null)
     const userModal = useRef(null)
 
-    useEffect(() => {
-        setLoggedUser(sessionStorage.loggedinUser ? JSON.parse(sessionStorage.loggedinUser) : null);
-    }, []);
 
+    async function onLogout() {
+        try {
+            await logout();
+            showSuccessMsg(`Bye now`);
+        } catch (err) {
+            showErrorMsg('Cannot logout');
+        }
+    }
 
     function onUserMenuClick() {
         dispatch({ type: 'SET_IS_OPEN_USER_MENU', isUserMenuOpen: !isUserMenuOpen })
@@ -47,7 +52,7 @@ export function UserNav() {
 
                     {loggedUser ?
                         <div>
-                            <p>Sign out</p>
+                            <p onClick={onLogout}>Sign out</p>
                         </div>
                         :
                         <div>

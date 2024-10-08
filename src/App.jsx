@@ -38,7 +38,7 @@ export function App() {
         <Provider store={store}>
             <section className={`main-app ${isOpenFilterMobile ? 'hide-overflow' : ''}${isScrolled && shouldAddScrollListener ? 'scrolled' : ''} ${isOpenFilter ? 'expanded-filter' : ''} ${location.pathname.includes('stay') ? 'stay-details-layout' : ''} ${location.pathname.includes('profile') ? 'profile-layout' : ''}`}
                 onClick={(e) => {
-                    // { console.log(e.target.className) }
+                    { console.log(e.target.className) }
                     if (e.target.className === 'container'
                         || e.target.className === 'main-app '
                         || e.target.className === 'header '

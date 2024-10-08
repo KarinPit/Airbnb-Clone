@@ -5,6 +5,7 @@ import { useLocation } from "react-router";
 
 import { AnimatePresence } from 'framer-motion';
 
+import { AuthModal } from '../../cmps/Header/AuthModal';
 import { AppHeaderMinimized } from '../../cmps/Header/AppHeaderMinimized';
 import { Footer } from '../../cmps/Footer/Footer'
 import { MobileFooter } from '../../cmps/Footer/MobileFooter';
@@ -16,6 +17,7 @@ export function MinimizedFilterLayout() {
     const { isOpenFilter } = useSelector((storeState) => storeState.filterModule)
     const { isOpenModal } = useSelector((storeState) => storeState.filterModule)
     const { isOpenFilterMobile } = useSelector((storeState) => storeState.filterModule)
+    const isOpenAuthModal = useSelector((storeState) => storeState.appModule.isOpenAuthModal)
     const isWideScreen = useSelector((storeState) => storeState.appModule.isWideScreen)
     const dispatch = useDispatch()
     const location = useLocation()
@@ -26,12 +28,14 @@ export function MinimizedFilterLayout() {
             <AppHeaderMinimized hideFilter={isConfirmOrderPage} hideUserNav={isConfirmOrderPage} />
             <FilterStayMobile />
 
-            <div className={`${isOpenFilter || isOpenModal && isConfirmOrderPage ? `overlay ${isOpenModal ? 'modal' : ''}` : ''}`}
+            <div className={`${isOpenFilter || isOpenModal && isConfirmOrderPage || isOpenAuthModal ? `overlay ${isOpenModal || isOpenAuthModal ? 'modal' : ''}` : ''}`}
                 onClick={(ev) => {
                     dispatch({ type: 'SET_OPEN_FILTER', isOpenFilter: false })
                     dispatch({ type: 'SET_EXPANDED_FILTER', isExpandedFilter: false })
                 }}>
             </div>
+
+            <AuthModal />
 
             <main className='stay-details'>
                 <Outlet />

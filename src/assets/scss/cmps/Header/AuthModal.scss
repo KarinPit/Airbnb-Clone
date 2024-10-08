@@ -6,7 +6,7 @@
     width: 100%;
     height: 100%;
     max-width: rem(568px);
-    max-height: rem(360px);
+    max-height: rem(400px);
     background-color: #fff;
     z-index: 1000;
     box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
@@ -129,14 +129,85 @@
                 border-radius: 0 0 rem(12px) rem(12px);
             }
         }
+
+        &.login-layout {
+            padding-block-start: 0;
+
+            .login-page {
+                margin-block-end: 32px;
+                padding-block-end: 32px;
+                // border-bottom: 1px solid rgb(221, 221, 221);
+
+                .btn-link {
+                    margin-block: 24px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    background-color: transparent;
+                    padding: rem(10px);
+                    border-radius: rem(10px);
+                    border: 1px dashed grey;
+                }
+
+                form {
+
+                    input,
+                    select {
+                        width: 100%;
+                        padding: 16px 36px 16px 12px;
+                    }
+
+                    select {
+                        border: 1px solid rgb(221, 221, 221);
+                        border-radius: 8px;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        appearance: none;
+                        background: transparent;
+                        background-image: url("../../../../public/svg/arrow-down.svg");
+                        background-size: rem(16px);
+                        background-repeat: no-repeat;
+                        background-position-x: 97%;
+                        background-position-y: 50%;
+                    }
+
+                    input {
+                        width: 1fr;
+                        display: block;
+
+                        &:nth-child(1) {
+                            border: 1px solid rgb(221, 221, 221);
+                            border-radius: 8px 8px 0 0;
+                        }
+
+                        &:nth-child(2) {
+                            border: 1px solid rgb(221, 221, 221);
+                        }
+
+                        &:nth-child(3) {
+                            border: 1px solid rgb(221, 221, 221);
+                            border-radius: 0 0 8px 8px;
+                        }
+                    }
+
+                    button {
+                        margin-block-start: 24px;
+                        width: 100%;
+                        height: rem(50px);
+                        background-color: rgb(255, 56, 92);
+                        color: white;
+                        padding: 10px 20px;
+                        border-radius: 8px;
+                        border: none;
+                    }
+                }
+            }
+        }
     }
 
     .submit-button {
         margin-block: rem(20px);
 
         button {
-            background-image: radial-gradient(circle at center, #FF385C 0%, #E61E4D 27.5%, #E31C5F 40%, #D70466 57.5%, #BD1E59 75%, #BD1E59 100%), radial-gradient(circle at center, #FF385C 0%, #E61E4D 27.5%, #E31C5F 40%, #D70466 57.5%, #BD1E59 75%, #BD1E59 100%);
-            background-size: 200% 200%;
             border: none;
             width: 100%;
             height: 48px;

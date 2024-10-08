@@ -21,7 +21,7 @@ import { useDispatch, useSelector } from 'react-redux';
 export function OrderIndex() {
     const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
     const [currentStay, setCurrentStay] = useState(null);
-    const [loggedUser, setLoggedUser] = useState(null);
+    const loggedUser = useSelector((storeState) => storeState.userModule.user)
     const [selectedPayment, setSelectedPayment] = useState(null);
     const svgRef1 = useRef(null);
     const svgRef2 = useRef(null);
@@ -45,7 +45,7 @@ export function OrderIndex() {
     }, [filterBy]);
 
     useEffect(() => {
-        setLoggedUser(sessionStorage.loggedinUser ? JSON.parse(sessionStorage.loggedinUser) : null);
+        // setLoggedUser(sessionStorage.loggedinUser ? JSON.parse(sessionStorage.loggedinUser) : null);
 
         stayService.getById(stayId)
             .then((stay) => {
@@ -98,7 +98,6 @@ export function OrderIndex() {
         try {
             const user = await login(credentials);
             showSuccessMsg(`Welcome: ${user.fullname}`);
-            setLoggedUser(user);
         } catch (err) {
             showErrorMsg('Cannot login');
         }
@@ -108,7 +107,6 @@ export function OrderIndex() {
         try {
             const user = await signup(credentials);
             showSuccessMsg(`Welcome new user: ${user.fullname}`);
-            setLoggedUser(user);
         } catch (err) {
             showErrorMsg('Cannot signup');
         }
@@ -118,7 +116,6 @@ export function OrderIndex() {
         try {
             await logout();
             showSuccessMsg(`Bye now`);
-            setLoggedUser(null);
         } catch (err) {
             showErrorMsg('Cannot logout');
         }

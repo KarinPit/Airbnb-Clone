@@ -1,8 +1,9 @@
 import { motion, AnimatePresence } from "framer-motion"
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { LoginSignup } from '../Header/LoginSingup'
 import { useCountries } from "use-react-countries";
+import { login, signup } from '../../store/actions/user.actions';
 
 
 export function AuthModal() {
@@ -12,11 +13,15 @@ export function AuthModal() {
     const [isSubmitted, setIsSubmitted] = useState(false); // New state to track submission
     const { countries } = useCountries()
     const [selectedcountry, setSelectedcountry] = useState(countries[0]);
+    const loggedUser = useSelector((storeState) => storeState.userModule.user)
     const phoneNumberRegex = /^\+?(\d{1,3})?[-.\s]?(\d{3})[-.\s]?(\d{3})[-.\s]?(\d{4})$/;
 
     useEffect(() => {
         setIsSubmitted(false)
     }, [])
+
+    useEffect(() => {
+    }, [loggedUser])
 
     function handleChange(event) {
         const value = event.target.value;
@@ -43,6 +48,25 @@ export function AuthModal() {
             setIsSubmitted(false); // Remain false if not valid
         }
     }
+
+    async function onLogin(credentials) {
+        try {
+            const user = await login(credentials);
+            showSuccessMsg(`Welcome: ${user.fullname}`);
+        } catch (err) {
+            showErrorMsg('Cannot login');
+        }
+    }
+
+    async function onSignup(credentials) {
+        try {
+            const user = await signup(credentials);
+            showSuccessMsg(`Welcome new user: ${user.fullname}`);
+        } catch (err) {
+            showErrorMsg('Cannot signup');
+        }
+    }
+
 
     return (
         <AnimatePresence >
@@ -100,13 +124,13 @@ export function AuthModal() {
                                 </div>
 
                                 <div className="submit-button">
-                                    <button type="submit">Continue</button>
+                                    <button className="primary-bg" type="submit">Continue</button>
                                 </div>
                             </form>
 
                         </div> :
-                        <div className="enter-credentials">
-                            <LoginSignup />
+                        <div className="enter-credentials login-layout">
+                            <LoginSignup onLogin={onLogin} onSignup={onSignup} isOrderPreview={false} />
                         </div>}
 
                 </motion.div>}

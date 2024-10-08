@@ -10,16 +10,16 @@ import { useDispatch, useSelector } from 'react-redux';
 import { updateOrder } from '../../store/actions/order.actions';
 
 export function ProfileIndex() {
-    const [loggedUser, setLoggedUser] = useState(null);
+    const loggedUser = useSelector((storeState) => storeState.userModule.user)
     const orders = useSelector((storeState) => storeState.orderModule.orders)
     const location = useLocation()
     const dispatch = useDispatch()
     const userType = location.pathname.includes("renter")
 
 
-    useEffect(() => {
-        setLoggedUser(sessionStorage.loggedinUser ? JSON.parse(sessionStorage.loggedinUser) : null)
-    }, [])
+    // useEffect(() => {
+    //     setLoggedUser(sessionStorage.loggedinUser ? JSON.parse(sessionStorage.loggedinUser) : null)
+    // }, [])
 
     useEffect(() => {
         orderService.query()

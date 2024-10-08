@@ -21,6 +21,7 @@ export function MainLayout() {
     const { isOpenFilterMobile } = useSelector((storeState) => storeState.filterModule)
     const isOpenAuthModal = useSelector((storeState) => storeState.appModule.isOpenAuthModal)
     const isWideScreen = useSelector((storeState) => storeState.appModule.isWideScreen)
+    const loggedUser = useSelector((storeState) => storeState.userModule.user)
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -39,6 +40,9 @@ export function MainLayout() {
                 // setLoading(false);
             });
     }, [])
+
+    useEffect(() => {
+    }, [loggedUser])
 
     function onSetFilter(fieldsToUpdate) {
         setFilterBy(fieldsToUpdate);
