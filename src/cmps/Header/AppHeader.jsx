@@ -6,9 +6,13 @@ import { useEffect, useCallback, useRef } from 'react';
 import { useSelector } from 'react-redux';
 import { motion, AnimatePresence } from 'framer-motion';
 import { GeneralNav, UserNav } from './TopNav';
+import { FilterCategories } from '../Stay/CategoryFilter/FilterCategories';
+import { setFilterBy } from '../../store/actions/filter.actions';
+
 import airbnbLogo from '../../../public/svg/airbnb-logo.svg';
 
 export function AppHeader() {
+    const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
     const isExpandedFilter = useSelector((state) => state.filterModule.isExpandedFilter);
     const isOpenFilter = useSelector((state) => state.filterModule.isOpenFilter);
     const isOpenFilterMobile = useSelector((state) => state.filterModule.isOpenFilterMobile);
@@ -45,6 +49,10 @@ export function AppHeader() {
     useEffect(() => {
         firstRender.current = false;
     }, []);
+
+    function onSetFilter(fieldsToUpdate) {
+        setFilterBy(fieldsToUpdate);
+    }
 
     const renderNavigation = useCallback(() => (
         <motion.div
@@ -137,6 +145,8 @@ export function AppHeader() {
             </AnimatePresence>
 
             <AnimatePresence>{isOpenFilterMobile && renderMobileFilter()}</AnimatePresence>
+
+            <FilterCategories onSetFilter={onSetFilter} filterBy={filterBy.category_tag} />
         </header>
     );
 }

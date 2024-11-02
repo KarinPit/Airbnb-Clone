@@ -1,11 +1,12 @@
 .scroll-menu-wrapper {
+    display: none;
     overflow-x: hidden;
     position: sticky;
-    top: rem(85px);
     background-color: #ffff;
     z-index: 3;
-    margin-block-start: rem(12px);
-    margin-block-end: rem(36px);
+    width: 100%;
+    // margin-block-start: rem(12px);
+    // margin-block-end: rem(36px);
     padding-inline: rem($padding-xl);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.094);
 
@@ -72,13 +73,14 @@
 
 
 @include for-normal-layout {
+    
     .scroll-menu-wrapper {
+        display: block;
         border-top: 1px solid #efefef;
         padding-block: rem(12px);
         padding-inline: 0;
         box-shadow: none;
-        margin-block-end: rem(16px);
-        top: rem(90px);
+        // margin-block-end: rem(16px);
 
         .scroll-menu-arrows {
 

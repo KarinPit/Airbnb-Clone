@@ -12,11 +12,11 @@ import { FilterCategories } from '../../cmps/Stay/CategoryFilter/FilterCategorie
 import { FilterStayMobile } from "../../cmps/Header/FilterStay/FilterStayMobile"
 import { FilterStayModal } from '../../cmps/Header/FilterStay/Modal/FilterStayModal';
 import { AuthModal } from '../../cmps/Header/AuthModal';
-import { setFilterBy } from '../../store/actions/filter.actions';
+// import { setFilterBy } from '../../store/actions/filter.actions';
 
 
 export function MainLayout() {
-    const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
+    // const filterBy = useSelector((storeState) => storeState.filterModule.filterBy)
     const { isOpenFilter } = useSelector((storeState) => storeState.filterModule)
     const { isOpenFilterMobile } = useSelector((storeState) => storeState.filterModule)
     const isOpenAuthModal = useSelector((storeState) => storeState.appModule.isOpenAuthModal)
@@ -44,15 +44,15 @@ export function MainLayout() {
     useEffect(() => {
     }, [loggedUser])
 
-    function onSetFilter(fieldsToUpdate) {
-        setFilterBy(fieldsToUpdate);
-    }
+    // function onSetFilter(fieldsToUpdate) {
+    //     setFilterBy(fieldsToUpdate);
+    // }
 
     return (
         <>
             <AppHeader />
             <FilterStayMobile />
-            <FilterCategories onSetFilter={onSetFilter} filterBy={filterBy.category_tag} />
+            {/* <FilterCategories onSetFilter={onSetFilter} filterBy={filterBy.category_tag} /> */}
 
             <div className={`${isOpenFilter || isOpenAuthModal ? 'overlay' : ''} ${isOpenAuthModal ? 'modal' : ''}`}
                 onClick={(ev) => {
