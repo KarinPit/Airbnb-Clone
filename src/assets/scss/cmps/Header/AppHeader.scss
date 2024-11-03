@@ -6,9 +6,12 @@ header {
     place-items: center;
     background-color: transparent;
 
-    .filter-search-container {
-        padding-inline: rem($padding-xl);
-        margin-block-end: rem(20px);
+    &:not(.stay-details-header) {
+
+        .filter-search-container {
+            padding-inline: rem($padding-xl);
+            margin-block-end: rem(20px);
+        }
     }
 
     &.scrolled {
@@ -59,21 +62,25 @@ header {
         top: 0;
         grid-template-rows: rem(80px) auto auto auto;
 
-        .logo {
-            padding-inline-start: rem($padding-xxl);
+        &:not(.stay-details-header) {
+
+            .logo {
+                padding-inline-start: rem($padding-xxl);
+            }
+
+            .filter-search-container {
+                padding-inline: rem($padding-xxl);
+            }
+
+            .user-nav {
+                padding-inline-end: rem($padding-xxl);
+            }
+
+            .scroll-menu-wrapper {
+                padding-inline: rem($padding-xxl);
+            }
         }
 
-        .filter-search-container {
-            padding-inline: rem($padding-xxl);
-        }
-
-        .user-nav {
-            padding-inline-end: rem($padding-xxl);
-        }
-
-        .scroll-menu-wrapper {
-            padding-inline: rem($padding-xxl);
-        }
 
         .logo {
             grid-column: 1;
@@ -239,25 +246,28 @@ header {
     header {
         grid-template-columns: 1fr 2fr 1fr;
 
-        .logo {
-            padding-inline-start: rem($padding-xxxl);
-        }
+        &:not(.stay-details-header) {
 
-        .filter-search-container {
-            padding-inline: rem($padding-xxxl);
-        }
+            .logo {
+                padding-inline-start: rem($padding-xxxl);
+            }
 
-        .user-nav {
-            padding-inline-end: rem($padding-xxxl);
-        }
+            .filter-search-container {
+                padding-inline: rem($padding-xxxl);
+            }
 
-        .scroll-menu-wrapper {
-            padding-inline: rem($padding-xxxl);
-        }
+            .user-nav {
+                padding-inline-end: rem($padding-xxxl);
+            }
 
-        .logo {
-            span {
-                display: block;
+            .scroll-menu-wrapper {
+                padding-inline: rem($padding-xxxl);
+            }
+
+            .logo {
+                span {
+                    display: block;
+                }
             }
         }
 

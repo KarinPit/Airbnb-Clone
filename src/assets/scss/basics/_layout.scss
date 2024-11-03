@@ -40,7 +40,6 @@
         grid-row: 1;
         height: fit-content;
         padding-block-start: rem(10px);
-        // padding-inline: rem($padding-xl);
         z-index: 4;
         background-color: #fff;
     }
@@ -64,6 +63,7 @@
         grid-template-rows: 1fr auto;
 
         .stay-details-header-container {
+            background-color: #fff;
             grid-column: 1/-1;
             grid-row: 1;
 
@@ -180,13 +180,14 @@
         }
 
         main {
-            margin-block-start: rem(120px);
             padding-inline: rem($padding-xxl);
+
+            &:not(.stay-details, .profile) {
+                margin-block-start: rem(120px);
+            }
         }
 
         .scroll-menu-wrapper {
-            // grid-row: 4;
-            // grid-column: 1/-1;
             padding-inline: rem($padding-xxl);
         }
 
@@ -212,7 +213,10 @@
         // }
 
         main {
-            margin-block-start: rem(100px);
+            &:not(.stay-details, .profile) {
+                margin-block-start: rem(100px);
+            }
+
             padding-inline: rem($padding-xxxl);
         }
 
