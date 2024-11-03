@@ -1,5 +1,5 @@
 .scroll-menu-wrapper {
-    // display: none;
+    display: none;
     overflow-x: hidden;
     background-color: #ffff;
     z-index: 3;
@@ -72,6 +72,7 @@
 @include for-normal-layout {
 
     .scroll-menu-wrapper {
+        display: block;
         position: fixed;
         top: 240px;
         left: 0;

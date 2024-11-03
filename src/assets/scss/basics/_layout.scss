@@ -23,6 +23,18 @@
     grid-template-rows: auto auto 1fr;
     justify-content: center;
 
+    .grouped-header-comps {
+        position: sticky;
+        top: 0;
+        display: grid;
+        grid-template-columns: subgrid;
+        grid-template-rows: subgrid;
+        grid-column: 1 / -1;
+        grid-row: 1 / 3;
+        background: #fff;
+        z-index: 10;
+    }
+
     header {
         grid-column: 1/-1;
         grid-row: 1;
@@ -135,18 +147,6 @@
             }
         }
 
-        .grouped-header-comps {
-            position: sticky;
-            top: 0;
-            display: grid;
-            grid-template-columns: subgrid;
-            grid-template-rows: subgrid;
-            grid-column: 1 / -1;
-            grid-row: 1 / 3;
-            background: #fff;
-            z-index: 10;
-        }
-
         &.profile-layout {
 
             main {
@@ -168,7 +168,6 @@
         .stay-details-header-container {
 
             header {
-                // padding-inline: rem($padding-xl);
                 padding-block-start: 0;
                 padding-block-end: rem(10px);
 
@@ -181,6 +180,7 @@
         }
 
         main {
+            margin-block-start: rem(120px);
             padding-inline: rem($padding-xxl);
         }
 
@@ -212,6 +212,7 @@
         // }
 
         main {
+            margin-block-start: rem(100px);
             padding-inline: rem($padding-xxxl);
         }
 
