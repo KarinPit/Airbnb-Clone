@@ -145,8 +145,7 @@ export function AppHeader() {
             </AnimatePresence>
 
             <AnimatePresence>{isOpenFilterMobile && renderMobileFilter()}</AnimatePresence>
-
-            <FilterCategories onSetFilter={onSetFilter} filterBy={filterBy.category_tag} />
+            
         </header>
     );
 }
