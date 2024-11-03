@@ -23,23 +23,60 @@ window.cs = stayService
 
 _createStays()
 
+// async function query(filterBy) {
+//     let stays = await storageService.query(STORAGE_KEY)
+
+//     if (filterBy) {
+//         let { loc = '', checkIn = '', checkOut = '', who = 0, category_tag } = filterBy
+//         const regexLoc = new RegExp(category_tag, 'i')
+//         stays = stays.filter(stay => stay.property_category.some(category => regexLoc.test(category)));
+//         // const regexLoc = new RegExp(loc, 'i')
+//         // stays = stays.filter(stay => regexLoc.test(stay.property_category))
+//         return stays
+//     }
+
+//     // if (filterBy.checkIn && filterBy.checkOut) {
+//     //     // stays = stays.filter(stay => stay.price <= filterBy.price)
+//     // }
+
+//     return stays
+// }
+
 async function query(filterBy) {
-    let stays = await storageService.query(STORAGE_KEY)
+    let stays = await storageService.query(STORAGE_KEY);
 
     if (filterBy) {
-        let { loc = '', checkIn = '', checkOut = '', who = 0, category_tag } = filterBy
-        const regexLoc = new RegExp(category_tag, 'i')
-        stays = stays.filter(stay => stay.property_category.some(category => regexLoc.test(category)));
-        // const regexLoc = new RegExp(loc, 'i')
-        // stays = stays.filter(stay => regexLoc.test(stay.property_category))
-        return stays
+        let { loc = '', checkIn = '', checkOut = '', who = 0, category_tag = '' } = filterBy;
+
+        if (loc) {
+            const regexLoc = new RegExp(loc, 'i');
+            stays = stays.filter(stay => regexLoc.test(stay.address.country));
+            console.log(loc, stays);
+        }
+
+        if (category_tag) {
+            const regexCategory = new RegExp(category_tag, 'i');
+            stays = stays.filter(stay => stay.property_category.some(category => regexCategory.test(category)));
+        }
+
+        if (checkIn && checkOut) {
+            const checkInDate = new Date(checkIn);
+            const checkOutDate = new Date(checkOut);
+            stays = stays.filter(stay => {
+                const stayAvailableFrom = new Date(stay.availability.avalable_checkIn.$date)
+                const stayAvailableTo = new Date(stay.availability.avalable_checkOut.$date);
+
+                console.log(stayAvailableFrom, stayAvailableTo);
+                
+                return (
+                    checkInDate >= stayAvailableFrom &&
+                    checkOutDate <= stayAvailableTo
+                );
+            });
+        }
     }
 
-    // if (filterBy.checkIn && filterBy.checkOut) {
-    //     // stays = stays.filter(stay => stay.price <= filterBy.price)
-    // }
-
-    return stays
+    return stays;
 }
 
 function getById(stayId) {
