@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Outlet, useLocation } from 'react-router-dom';
+import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 
 import { orderService } from '../../services/order.service';
 import { AppHeaderMinimized } from '../../cmps/Header/AppHeaderMinimized';
@@ -14,29 +14,31 @@ export function ProfileIndex() {
     const orders = useSelector((storeState) => storeState.orderModule.orders)
     const location = useLocation()
     const dispatch = useDispatch()
+    const navigate = useNavigate()
     const userType = location.pathname.includes("renter")
 
-
-    // useEffect(() => {
-    //     setLoggedUser(sessionStorage.loggedinUser ? JSON.parse(sessionStorage.loggedinUser) : null)
-    // }, [])
-
     useEffect(() => {
-        orderService.query()
-            .then((orders) => {
-                if (userType) {
-                    const userOrders = orders.filter((order) => order.hostId === loggedUser?.id)
-                    dispatch({ type: 'SET_ORDERS', orders: userOrders })
-                }
+        if (!loggedUser) {
+            navigate("/")
+        }
 
-                else {
-                    const userOrders = orders.filter((order) => order.buyer._id === loggedUser?.id)
-                    dispatch({ type: 'SET_ORDERS', orders: userOrders })
-                }
-            })
-            .catch((err) => {
-                console.log('Failed to load orders in ProfileIndex', err);
-            })
+        else {
+            orderService.query()
+                .then((orders) => {
+                    if (userType) {
+                        const userOrders = orders.filter((order) => order.hostId === loggedUser?.id)
+                        dispatch({ type: 'SET_ORDERS', orders: userOrders })
+                    }
+
+                    else {
+                        const userOrders = orders.filter((order) => order.buyer._id === loggedUser?.id)
+                        dispatch({ type: 'SET_ORDERS', orders: userOrders })
+                    }
+                })
+                .catch((err) => {
+                    console.log('Failed to load orders in ProfileIndex', err);
+                })
+        }
     }, [loggedUser])
 
 

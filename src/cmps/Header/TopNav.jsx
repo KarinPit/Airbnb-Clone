@@ -6,13 +6,13 @@ import { GlobeIcon, ListIcon, UserIcon } from '../SVG/HeaderSvg'
 import { useDispatch, useSelector } from 'react-redux'
 
 
+
 export function UserNav() {
     const isUserMenuOpen = useSelector((storeState) => storeState.appModule.isUserMenuOpen)
     const loggedUser = useSelector((storeState) => storeState.userModule.user)
     const dispatch = useDispatch()
     const userMenu = useRef(null)
     const userModal = useRef(null)
-
 
     async function onLogout() {
         try {
@@ -27,10 +27,6 @@ export function UserNav() {
         dispatch({ type: 'SET_IS_OPEN_USER_MENU', isUserMenuOpen: !isUserMenuOpen })
     }
 
-    // function onUserModalClick(event) {
-    //     event.stopPropagation()
-    // }
-
     return (
         <div className='user-nav'>
             <Link to="/">Switch to hosting</Link>
@@ -44,7 +40,9 @@ export function UserNav() {
                 </div>
 
                 <div className='profile-icon'>
-                    <UserIcon />
+                    {loggedUser ?
+                        <p>{loggedUser.fullname[0].toUpperCase()}</p>
+                        : <UserIcon />}
                 </div>
 
                 <div className={`user-menu-modal ${isUserMenuOpen ? '' : 'hide'}`}

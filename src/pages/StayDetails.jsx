@@ -34,6 +34,17 @@ export function StayDetails() {
     }, [])
 
     useEffect(() => {
+        if (isLoading) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "auto";
+        }
+        return () => {
+            document.body.style.overflow = "auto";
+        };
+    }, [isLoading]);
+
+    useEffect(() => {
         const newParams = stayService.sanitizeFilterParams(filterBy);
         setSearchParams((prev) => ({ ...prev, ...newParams }));
     }, [filterBy])
@@ -270,7 +281,7 @@ export function StayDetails() {
                                             <h2>Select check-in date</h2>
                                             <p>Add your travel dates for exact pricing</p>
                                         </>}
-                                    <CalendarPicker breakPoint={1200} disableOverlay={true}/>
+                                    <CalendarPicker breakPoint={1200} disableOverlay={true} />
                                 </div>
                             </div>
 

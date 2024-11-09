@@ -13,9 +13,11 @@ export function App() {
     const isOpenFilter = useSelector((storeState) => storeState.filterModule.isOpenFilter)
     const isOpenFilterMobile = useSelector((storeState) => storeState.filterModule.isOpenFilterMobile)
     const isScrolled = useSelector((storeState) => storeState.appModule.isScrolled)
+    const isUserMenuOpen = useSelector((storeState) => storeState.appModule.isUserMenuOpen)
     const location = useLocation()
     const dispatch = useDispatch()
-    const shouldAddScrollListener = !location.pathname.includes('confirm-order') && !location.pathname.includes('stay') && !location.pathname.includes('profile');
+    const shouldAddScrollListener = !location.pathname.includes('confirm-order')  && !location.pathname.includes('profile');
+    // const shouldAddScrollListener = !location.pathname.includes('confirm-order') && !location.pathname.includes('stay') && !location.pathname.includes('profile');
 
     useEffect(() => {
         window.addEventListener('resize', handleResize)
@@ -38,7 +40,7 @@ export function App() {
         <Provider store={store}>
             <section className={`main-app ${isOpenFilterMobile ? 'hide-overflow' : ''}${isScrolled && shouldAddScrollListener ? 'scrolled' : ''} ${isOpenFilter ? 'expanded-filter' : ''} ${location.pathname.includes('stay') ? 'stay-details-layout' : ''} ${location.pathname.includes('profile') ? 'profile-layout' : ''}`}
                 onClick={(e) => {
-                    { console.log(e.target.className) }
+                    // { console.log(e.target.className) }
                     if (e.target.className === 'container'
                         || e.target.className === 'main-app '
                         || e.target.className === 'header '
@@ -48,6 +50,7 @@ export function App() {
                         || e.target.className === 'primary-bg') {
                         dispatch({ type: 'SET_OPEN_FILTER', isOpenFilter: false })
                         dispatch({ type: 'SET_EXPANDED_FILTER', isExpandedFilter: false })
+                        dispatch({ type: 'SET_IS_OPEN_USER_MENU', isUserMenuOpen: false })
                     }
 
                     if (e.target.className === 'review-summary'
@@ -62,6 +65,7 @@ export function App() {
                     ) {
                         dispatch({ type: 'SET_IS_OPEN_AUTH_MODAL', isOpenAuthModal: false })
                         dispatch({ type: 'SET_OPEN_MODAL', isOpenModal: false })
+                        dispatch({ type: 'SET_IS_OPEN_USER_MENU', isUserMenuOpen: false })
                     }
                 }}>
                 {createRouting()}

@@ -6,11 +6,16 @@ header {
     place-items: center;
     background-color: transparent;
 
+    &.stay-details-header {
+        .filter-search-container {
+            margin-block-end: 0;
+        }
+    }
+
     &:not(.stay-details-header) {
 
         .filter-search-container {
             padding-inline: rem($padding-xl);
-            margin-block-end: rem(20px);
         }
     }
 
@@ -184,9 +189,17 @@ header {
                     }
 
                     &.profile-icon {
+                        width: rem(32px);
+                        height: rem(32px);
+                        background-color: #2f2f2f;
+                        border-radius: 50%;
+                        color: #fff;
+                        font-size: rem(12px);
+
                         svg {
-                            width: rem(32px);
-                            height: rem(32px);
+                            width: 100%;
+                            height: 100%;
+                            background-color: #fff;
                         }
                     }
                 }

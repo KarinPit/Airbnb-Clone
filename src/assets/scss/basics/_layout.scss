@@ -41,7 +41,6 @@
         height: fit-content;
         padding-block-start: rem(10px);
         z-index: 4;
-        background-color: #fff;
     }
 
     .overlay {
@@ -50,6 +49,7 @@
         grid-column: 1/-1;
         grid-row: 1/6;
         grid-row: 1/6;
+        height: 100%;
 
         &.modal {
             grid-column: 1/-1;

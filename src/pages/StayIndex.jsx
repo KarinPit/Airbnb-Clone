@@ -14,7 +14,6 @@ export function StayIndex() {
     const isLoading = useSelector((storeState) => storeState.appModule.isLoading)
     const stays = useSelector((storeState) => storeState.stayModule.stays)
 
-
     useEffect(() => {
         loadStays()
     }, [filterBy.category_tag])
